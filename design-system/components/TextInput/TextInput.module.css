@@ -1,0 +1,83 @@
+/* TextInput Component Styles */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #3c3d40;
+}
+
+.required {
+  color: #dd2222;
+  margin-left: 2px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+  background-color: #ffffff;
+  border: 1px solid #b7bac7;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+  color: #9b9da8;
+}
+
+.input:hover:not(:disabled) {
+  border-color: #9b9da8;
+}
+
+.input.focused {
+  outline: none;
+  border: 2px solid #5a51e7;
+  padding: 7px 15px; /* Adjust padding to account for thicker border */
+}
+
+.input.error {
+  border-color: #dd2222;
+}
+
+.input.error.focused {
+  border: 2px solid #dd2222;
+  padding: 7px 15px;
+}
+
+.input.disabled {
+  background-color: #f3f4f8;
+  color: #9b9da8;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #df320c;
+  padding-left: 2px;
+}
+
+.helperText {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #7b7d85;
+  padding-left: 2px;
+}

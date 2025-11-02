@@ -1,0 +1,96 @@
+/**
+ * Notification Component Styles
+ * Matches Figma Notification design
+ */
+
+.notification {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 51px;
+  padding: 16px;
+  background: #ffffff;
+  border-top: 1px solid #e4e7f5;
+  width: 450px;
+  max-width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.notification.clickable {
+  cursor: pointer;
+}
+
+.notification.clickable:hover {
+  background-color: #f8f8ff;
+}
+
+/* Content */
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.avatarWrapper {
+  flex-shrink: 0;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Meta */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.timestamp {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000000;
+  text-align: right;
+  white-space: nowrap;
+  min-width: 48px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}

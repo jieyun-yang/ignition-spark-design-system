@@ -1,0 +1,20 @@
+/**
+ * Overlayer Component Styles
+ * Matches Figma Overlayer design
+ */
+
+.overlayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e1e20;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.overlayer:hover {
+  opacity: 0.75;
+}

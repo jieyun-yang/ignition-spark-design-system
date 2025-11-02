@@ -1,0 +1,118 @@
+/**
+ * CopyField Component Styles
+ *
+ * All values reference design tokens from Figma
+ * States: Default, Hover, Copied, Disabled
+ */
+
+/* Container */
+.container {
+  display: inline-flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #ced2e0;
+  border-radius: 3px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.container:hover:not(.disabled) {
+  border-color: #b7bac7;
+}
+
+.container:focus-within:not(.disabled) {
+  border-color: #5a51e7;
+  outline: 2px solid rgba(90, 81, 231, 0.1);
+  outline-offset: 0;
+}
+
+.container.disabled {
+  background-color: #f5f6f8;
+  border-color: #e4e7f5;
+  cursor: not-allowed;
+}
+
+/* Copy Button */
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: none;
+  border-right: 1px solid #ced2e0;
+  background-color: #e4e7f5;
+  color: #3c3d40;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.copyButton:hover:not(:disabled) {
+  background-color: #d4d7e5;
+}
+
+.copyButton:active:not(:disabled) {
+  background-color: #c4c7d5;
+}
+
+.copyButton:disabled {
+  color: #9b9da8;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.copyButton.copied {
+  background-color: #e4e7f5;
+  color: #3c3d40;
+}
+
+.copyButton.copied:hover:not(:disabled) {
+  background-color: #d4d7e5;
+}
+
+/* Icon */
+.icon {
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+}
+
+/* Button Text */
+.buttonText {
+  user-select: none;
+}
+
+/* Input Field */
+.input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent;
+  color: #3c3d40;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #9b9da8;
+}
+
+.input:disabled {
+  color: #9b9da8;
+  cursor: not-allowed;
+}
+
+/* Remove default focus styles */
+.input:focus {
+  outline: none;
+}

@@ -1,0 +1,116 @@
+/**
+ * PageHeader Component
+ *
+ * A page header component with title, optional tabs, and action buttons.
+ * Matches Figma Page Header design.
+ *
+ * Figma: https://www.figma.com/design/pFe8ykz2F9QdvabPsTGl1L/Spark-%7C-Components?node-id=4570-9845
+ *
+ * @example
+ * <PageHeader
+ *   title="Page title"
+ *   tabs={[{ label: 'Page 1', active: true }, { label: 'Page 2' }]}
+ *   primaryAction={{ label: 'Primary', onClick: () => {} }}
+ *   secondaryAction={{ label: 'More actions', onClick: () => {} }}
+ * />
+ */
+
+import React from 'react';
+import clsx from 'clsx';
+import styles from './PageHeader.module.css';
+
+export interface PageHeaderTab {
+  label: string;
+  active?: boolean;
+  onClick?: () => void;
+}
+
+export interface PageHeaderAction {
+  label: string;
+  icon?: React.ReactNode;
+  onClick: () => void;
+}
+
+export interface PageHeaderProps {
+  /** Page title */
+  title: string;
+
+  /** Optional icon next to title */
+  icon?: React.ReactNode;
+
+  /** Optional tabs */
+  tabs?: PageHeaderTab[];
+
+  /** Primary action button */
+  primaryAction?: PageHeaderAction;
+
+  /** Secondary action button (menu button) */
+  secondaryAction?: PageHeaderAction;
+
+  /** Additional CSS class */
+  className?: string;
+}
+
+export function PageHeader({
+  title,
+  icon,
+  tabs,
+  primaryAction,
+  secondaryAction,
+  className,
+}: PageHeaderProps) {
+  return (
+    <div className={clsx(styles.pageHeader, className)}>
+      <div className={styles.header}>
+        <div className={styles.titleRow}>
+          <h1 className={styles.title}>
+            {title}
+            {icon && <span className={styles.titleIcon}>{icon}</span>}
+          </h1>
+        </div>
+
+        {(primaryAction || secondaryAction) && (
+          <div className={styles.actions}>
+            {secondaryAction && (
+              <button
+                className={clsx(styles.button, styles.secondaryButton)}
+                onClick={secondaryAction.onClick}
+              >
+                {secondaryAction.label}
+                {secondaryAction.icon && (
+                  <span className={styles.buttonIcon}>{secondaryAction.icon}</span>
+                )}
+              </button>
+            )}
+
+            {primaryAction && (
+              <button
+                className={clsx(styles.button, styles.primaryButton)}
+                onClick={primaryAction.onClick}
+              >
+                {primaryAction.icon && (
+                  <span className={styles.buttonIcon}>{primaryAction.icon}</span>
+                )}
+                {primaryAction.label}
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+
+      {tabs && tabs.length > 0 && (
+        <div className={styles.tabs}>
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              className={clsx(styles.tab, tab.active && styles.tabActive)}
+              onClick={tab.onClick}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

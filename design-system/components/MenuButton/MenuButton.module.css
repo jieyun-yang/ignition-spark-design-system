@@ -1,0 +1,57 @@
+/**
+ * MenuButton Component Styles
+ *
+ * All values reference design tokens from Figma
+ * States: Default, Hover, Focus, Disabled
+ */
+
+/* Base menu button */
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 3px;
+  background-color: #e4e7f5;
+  color: #3c3d40;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* States */
+.menuButton:hover {
+  background-color: #d5d9ed;
+}
+
+.menuButton:focus {
+  background-color: #e4e7f5;
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+}
+
+.menuButton:active {
+  background-color: #c6cbe5;
+}
+
+.menuButton.disabled {
+  background-color: #f3f4f8;
+  color: #c6c9d4;
+  cursor: not-allowed;
+}

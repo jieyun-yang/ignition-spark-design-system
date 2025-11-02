@@ -1,0 +1,84 @@
+/* RadioButton Component Styles */
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.container.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ced2e0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.radio:hover:not(.disabled) {
+  border-color: #5a51e7;
+}
+
+.radio:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1);
+}
+
+.radio.checked {
+  border-color: #5a51e7;
+  background-color: #ffffff;
+}
+
+.container.invalid .radio {
+  border-color: #dd2222;
+}
+
+.container.invalid .radio:focus {
+  box-shadow: 0 0 0 3px rgba(221, 34, 34, 0.1);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #5a51e7;
+  transition: transform 0.2s ease;
+}
+
+.container.invalid .dot {
+  background-color: #dd2222;
+}
+
+.label {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+  user-select: none;
+}
+
+.container.disabled .label {
+  color: #9b9da8;
+}
+
+.container.invalid .label {
+  color: #dd2222;
+}

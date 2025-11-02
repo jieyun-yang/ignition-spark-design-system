@@ -1,0 +1,51 @@
+/**
+ * Skeleton Component Styles
+ * Matches Figma Skeleton design with shimmer animation
+ */
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton {
+  position: relative;
+  background-color: #ced2e0;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+/* Text variant */
+.variant-text {
+  height: 16px;
+  border-radius: 20px;
+}
+
+/* Circular variant */
+.variant-circular {
+  border-radius: 50%;
+}
+
+/* Rectangular variant */
+.variant-rectangular {
+  border-radius: 4px;
+}

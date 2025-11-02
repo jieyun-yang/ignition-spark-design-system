@@ -1,0 +1,243 @@
+/**
+ * Drawer Component Styles
+ * Matches Figma Drawer design
+ * Figma: https://www.figma.com/design/pFe8ykz2F9QdvabPsTGl1L/Spark-%7C-Components?node-id=1337-6476
+ */
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Drawer Panel */
+.drawer {
+  position: relative;
+  background-color: var(--color-white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-drawer);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4e7f5;
+}
+
+.headerContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 24px 0;
+}
+
+.headerContentNoTabs {
+  padding-bottom: 24px;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #1e1e20; /* Figma: Gray/900 Primary text */
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5a5b60; /* Figma: Gray/700 Tertiary text */
+  margin: 0;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.moreActionsWrapper {
+  position: relative;
+}
+
+.moreActionsButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 13px;
+  background-color: #e4e7f5;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3c3d40;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.moreActionsButton:hover {
+  background-color: #d4d7e5;
+}
+
+.chevronIcon {
+  font-size: 10px;
+  color: #3c3d40;
+}
+
+.moreActionsDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 180px;
+  background-color: var(--color-white);
+  border: 1px solid #e4e7f5;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-dropdown);
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.moreActionItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3c3d40;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.moreActionItem:hover {
+  background-color: #f8f8ff;
+}
+
+.actionIcon {
+  font-size: 14px;
+  color: #5a5b60;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 13px;
+  background-color: #5a51e7; /* Figma: Primary/Purple/500 Buttons */
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.primaryButton:hover {
+  background-color: #4841cc;
+}
+
+.primaryButton:active {
+  background-color: #3931b1;
+}
+
+.buttonIcon {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #5a5b60;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: #f0f2fa;
+}
+
+/* Tabs */
+.tabsWrapper {
+  padding: 24px 24px 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e4e7f5; /* Figma: Gray/200 Dividers */
+}
+
+/* Body */
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  background-color: #f8f8fc; /* Figma: Light grey background */
+}

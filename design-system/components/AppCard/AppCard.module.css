@@ -1,0 +1,160 @@
+/**
+ * AppCard Component Styles
+ * Matches Figma App card design
+ * Fixed size: 218x218px
+ */
+
+.appCard {
+  display: flex;
+  flex-direction: column;
+  width: 218px;
+  height: 218px;
+  background-color: #ffffff;
+  border: 1px solid #ced2e0; /* Figma: Gray border */
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+/* Locked state - Different layout with gap and padding */
+.appCard.locked {
+  padding: 12px 8px;
+  justify-content: center;
+}
+
+.appCard.clickable {
+  cursor: pointer;
+}
+
+/* Hover state - Add subtle shadow for better UX feedback */
+.appCard.clickable:hover {
+  background-color: #ffffff;
+  border-color: #ced2e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Selected State */
+.appCard.selected {
+  background-color: #f4f3ff; /* Figma: Primary/Purple/25 */
+  border-color: #7169ea; /* Figma: Primary purple border */
+}
+
+.appCard.selected:hover {
+  background-color: #f4f3ff;
+  border-color: #7169ea;
+}
+
+/* Disabled State */
+.appCard.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Premium Banner */
+.premiumBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4px 0;
+  background-color: #5a51e7; /* Figma: Primary/Purple/500 */
+  flex-shrink: 0;
+}
+
+.premiumText {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 0;
+  flex: 1;
+}
+
+/* Logo Wrapper */
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* App Details */
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 0 12px;
+}
+
+/* App Name */
+.appName {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1e1e20; /* Figma: Gray/900 Primary text */
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Description */
+.description {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40; /* Figma: Gray/800 Secondary text */
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Badge Wrapper */
+.badgeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Locked Icon Wrapper */
+.lockedIconWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Locked Icon */
+.lockedIcon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #807d7a; /* Figma: Neutral/600 Graphics */
+  font-size: 18px; /* Figma: 18px icon size */
+}

@@ -1,0 +1,53 @@
+/**
+ * ActionBar Component Styles
+ *
+ * All values reference design tokens from Figma
+ * Variants: Workflow, Equal Weight, Primary Action
+ * Positions: Left, Right
+ */
+
+/* Container */
+.actionBar {
+  display: flex;
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-top: 1px solid #e4e7f5;
+}
+
+/* Actions container */
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Position variants */
+.position-left .actions {
+  justify-content: flex-start;
+}
+
+.position-right {
+  justify-content: flex-end;
+}
+
+.position-right .actions {
+  justify-content: flex-end;
+}
+
+/* Variant-specific styles */
+
+/* Workflow: Primary button with secondary actions and cancel */
+.variant-workflow .actions {
+  gap: 12px;
+}
+
+/* Equal weight: All buttons have equal visual prominence */
+.variant-equal-weight .actions {
+  gap: 12px;
+}
+
+/* Primary action: One emphasized primary button, others secondary */
+.variant-primary-action .actions {
+  gap: 12px;
+}

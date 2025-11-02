@@ -1,0 +1,126 @@
+/**
+ * DatePicker Component Styles
+ *
+ * All values reference design tokens from Figma
+ * States: Default, Hover, Focus, Disabled, Open
+ */
+
+/* Wrapper for relative positioning */
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Base date picker container */
+.datePicker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 240px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid #b7bac7;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Input field */
+.input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.input::placeholder {
+  color: #9b9da8;
+}
+
+/* Icon button */
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.iconButton:hover {
+  opacity: 0.7;
+}
+
+/* Calendar icon */
+.icon {
+  width: 16px;
+  height: 16px;
+  color: #7b7d85;
+}
+
+/* Hover state */
+.datePicker:hover:not(.disabled) {
+  border-color: #9b9da8;
+}
+
+/* Focus/Open state */
+.datePicker.open,
+.datePicker:focus-within:not(.disabled) {
+  border-color: #5a51e7;
+  box-shadow: 0 0 0 2px rgba(90, 81, 231, 0.2);
+}
+
+/* Disabled state */
+.datePicker.disabled {
+  background-color: #f3f4f8;
+  border-color: #e4e7f5;
+  cursor: not-allowed;
+}
+
+.datePicker.disabled .input {
+  color: #9b9da8;
+  cursor: not-allowed;
+}
+
+.datePicker.disabled .iconButton {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.datePicker.disabled .icon {
+  color: #c6c9d4;
+}
+
+/* Calendar popover */
+.popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 1000;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

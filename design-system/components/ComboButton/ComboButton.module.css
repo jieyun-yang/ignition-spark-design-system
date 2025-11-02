@@ -1,0 +1,157 @@
+/**
+ * ComboButton Component Styles
+ *
+ * All values reference design tokens from Figma
+ * Hierarchy: Primary, Secondary
+ * States: Default, Hover, Focus, Disabled (per button)
+ */
+
+/* Base combo button container */
+.comboButton {
+  display: inline-flex;
+  gap: 2px;
+  align-items: stretch;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Main action button */
+.mainButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 7.5px 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+/* Menu button (chevron) */
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Primary hierarchy */
+.hierarchy-primary .mainButton {
+  background-color: #5a51e7;
+  color: #ffffff;
+}
+
+.hierarchy-primary .mainButton:hover {
+  background-color: #4a41d7;
+}
+
+.hierarchy-primary .mainButton:focus {
+  background-color: #5a51e7;
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+}
+
+.hierarchy-primary .mainButton:active {
+  background-color: #3a31c7;
+}
+
+.hierarchy-primary .mainButton.mainDisabled {
+  background-color: #e4e7f5;
+  color: #9b9da8;
+  cursor: not-allowed;
+}
+
+.hierarchy-primary .menuButton {
+  background-color: #5a51e7;
+  color: #ffffff;
+}
+
+.hierarchy-primary .menuButton:hover {
+  background-color: #4a41d7;
+}
+
+.hierarchy-primary .menuButton:focus {
+  background-color: #5a51e7;
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+}
+
+.hierarchy-primary .menuButton:active {
+  background-color: #3a31c7;
+}
+
+.hierarchy-primary .menuButton.menuDisabled {
+  background-color: #e4e7f5;
+  color: #9b9da8;
+  cursor: not-allowed;
+}
+
+/* Secondary hierarchy */
+.hierarchy-secondary .mainButton {
+  background-color: #e4e7f5;
+  color: #3c3d40;
+}
+
+.hierarchy-secondary .mainButton:hover {
+  background-color: #d5d9ed;
+}
+
+.hierarchy-secondary .mainButton:focus {
+  background-color: #e4e7f5;
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+}
+
+.hierarchy-secondary .mainButton:active {
+  background-color: #c6cbe5;
+}
+
+.hierarchy-secondary .mainButton.mainDisabled {
+  background-color: #f3f4f8;
+  color: #c6c9d4;
+  cursor: not-allowed;
+}
+
+.hierarchy-secondary .menuButton {
+  background-color: #e4e7f5;
+  color: #3c3d40;
+}
+
+.hierarchy-secondary .menuButton:hover {
+  background-color: #d5d9ed;
+}
+
+.hierarchy-secondary .menuButton:focus {
+  background-color: #e4e7f5;
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+}
+
+.hierarchy-secondary .menuButton:active {
+  background-color: #c6cbe5;
+}
+
+.hierarchy-secondary .menuButton.menuDisabled {
+  background-color: #f3f4f8;
+  color: #c6c9d4;
+  cursor: not-allowed;
+}

@@ -1,0 +1,75 @@
+/**
+ * Spinner Component Styles
+ * Matches Figma Spinner design
+ */
+
+.spinner {
+  display: inline-block;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  stroke-dasharray: 1, 150;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* Sizes */
+.size-small {
+  width: 16px;
+  height: 16px;
+}
+
+.size-medium {
+  width: 24px;
+  height: 24px;
+}
+
+.size-large {
+  width: 32px;
+  height: 32px;
+}
+
+/* Colors */
+.color-primary .circle {
+  stroke: #5a51e7;
+}
+
+.color-secondary .circle {
+  stroke: #3c3d40;
+}
+
+.color-white .circle {
+  stroke: #ffffff;
+}

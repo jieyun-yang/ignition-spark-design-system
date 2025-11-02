@@ -1,0 +1,74 @@
+/**
+ * ProgressStatus Component Styles
+ * Matches Figma Progress Status design
+ */
+
+.progressStatus {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 120px;
+}
+
+.progressStatus:has(.counter) {
+  width: 142px;
+}
+
+/* Label */
+.label {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5a5b60;
+  margin-bottom: 0;
+}
+
+/* Progress Wrapper */
+.progressWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Progress Track */
+.progressTrack {
+  flex: 1;
+  height: 8px;
+  background-color: #e4e7f5;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress Fill */
+.progressFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.progressFill.color-yellow {
+  background-color: #d97706;
+}
+
+.progressFill.color-green {
+  background-color: #08a674;
+}
+
+.progressFill.color-red {
+  background-color: #ec4b4b;
+}
+
+/* Counter */
+.counter {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #7b7d85;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 18px;
+  text-align: left;
+}

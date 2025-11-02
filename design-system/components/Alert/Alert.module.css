@@ -1,0 +1,169 @@
+/**
+ * Alert Component Styles
+ *
+ * All values reference design tokens from Figma
+ * Status: Info, Success, Warning, Error, Premium
+ * Content: Body, HeadingBody, HeadingBodyCTA
+ */
+
+/* Base alert styles */
+.alert {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border-radius: 3px;
+  gap: 8px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 4px 0;
+}
+
+/* Body-only variant: center align icon and text vertically */
+.content-body .container {
+  align-items: center;
+}
+
+/* Icon container */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+}
+
+.iconSvg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Content container */
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+  justify-content: center;
+  min-width: 0;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #3c3d40;
+  white-space: nowrap;
+}
+
+.body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+  min-width: 100%;
+}
+
+/* Action button */
+.actionButton {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 3px;
+  background-color: #5a51e7;
+  color: #ffffff;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #4a41d7;
+}
+
+.actionButton:active {
+  background-color: #3a31c7;
+}
+
+/* Close button */
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.closeIcon {
+  width: 16px;
+  height: 16px;
+  color: #7b7d85;
+}
+
+/* Status variants */
+.status-info {
+  background-color: #e6f0fe;
+}
+
+.status-info .iconSvg {
+  color: #0f65f0;
+}
+
+.status-success {
+  background-color: #e8fdf6;
+}
+
+.status-success .iconSvg {
+  color: #08a674;
+}
+
+.status-warning {
+  background-color: #fff8db;
+}
+
+.status-warning .iconSvg {
+  color: #d97706;
+}
+
+.status-error {
+  background-color: #fde7e7;
+}
+
+.status-error .iconSvg {
+  color: #dd2222;
+}
+
+.status-premium {
+  background-color: #e8e7ff;
+}
+
+.status-premium .iconSvg {
+  color: #5a51e7;
+}

@@ -1,0 +1,214 @@
+/**
+ * TableHeader Component Styles
+ *
+ * All values reference design tokens from Figma
+ * Width: 1196px (flexible in implementation)
+ * Height: 32px
+ */
+
+/* Main container */
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Left section: Search, Filters, Summary */
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Search input wrapper */
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 224px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid #d5d4d2;
+  border-radius: 4px;
+  padding: 6px 12px;
+  gap: 4px;
+}
+
+.searchIcon {
+  font-size: 12px;
+  color: #605e5b; /* Marketing grays/700 */
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+}
+
+.searchInput::placeholder {
+  color: #bdbab7; /* Marketing grays/400 */
+}
+
+/* Filters button */
+.filtersButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 13px;
+  background-color: #e4e7f5;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filtersButton:hover {
+  background-color: #d5d8ea;
+}
+
+.filterIcon {
+  font-size: 10px;
+  color: #3c3d40;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filtersLabel {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #3c3d40;
+  white-space: nowrap;
+}
+
+/* Summary section */
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.resultsCount {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+}
+
+.resultsLabel {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #7b7d85; /* Cooler/Gray 600 */
+}
+
+.separator {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #7b7d85;
+}
+
+.amountWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.amount {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+  white-space: nowrap;
+}
+
+.amountIcon {
+  font-size: 10px;
+  color: #7b7d85;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+}
+
+/* Bulk actions section */
+.bulkActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.bulkActionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 13px;
+  background-color: #e4e7f5;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.bulkActionButton:hover:not(.disabled) {
+  background-color: #d5d8ea;
+}
+
+.bulkActionButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bulkActionIcon {
+  font-size: 10px;
+  color: #3c3d40;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bulkActionLabel {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #3c3d40;
+  white-space: nowrap;
+}

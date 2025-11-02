@@ -1,0 +1,367 @@
+/**
+ * Modal Component Styles
+ * Matches Figma Modal design
+ */
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+/* Modal */
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1px 0px rgba(23, 30, 37, 0.31), 0px 8px 12px 0px rgba(23, 30, 37, 0.15);
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+/* Sizes */
+.size-xxsmall {
+  width: 100%;
+  max-width: 364px;
+}
+
+.size-xsmall {
+  width: 100%;
+  max-width: 416px;
+}
+
+.size-small {
+  width: 100%;
+  max-width: 468px;
+}
+
+.size-medium {
+  width: 100%;
+  max-width: 546px;
+}
+
+.size-large {
+  width: 100%;
+  max-width: 624px;
+}
+
+.size-xlarge {
+  width: 100%;
+  max-width: 728px;
+}
+
+.size-xxlarge {
+  width: 100%;
+  max-width: 768px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 24px 16px;
+  flex-shrink: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  border-bottom: 1.5px solid #e4e7f5;
+}
+
+.titleWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding-bottom: 8px;
+}
+
+.titleWithIcon {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 28px;
+}
+
+.title {
+  flex: 1;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1e1e20;
+  margin: 0;
+  min-width: 0;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.closeButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #807d7a;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #3c3d40;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e4e7f5;
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  flex-shrink: 0;
+}
+
+.caption {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5a5b60;
+  margin: 0;
+}
+
+/* Body */
+.body {
+  flex: 1;
+  padding: 0 24px;
+  overflow-y: auto;
+  min-height: 0;
+  flex-shrink: 0;
+}
+
+.body > *:first-child {
+  margin-top: 0;
+}
+
+.body > *:last-child {
+  margin-bottom: 0;
+}
+
+.body > * {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Action Buttons */
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.actionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  font-size: 10px;
+}
+
+/* Primary Action */
+.action-primary {
+  background-color: #5a51e7;
+  color: #ffffff;
+}
+
+.action-primary:hover {
+  background-color: #4940c7;
+}
+
+.action-primary:active {
+  background-color: #3830a7;
+}
+
+/* Secondary Action */
+.action-secondary {
+  background-color: #e4e7f5;
+  color: #3c3d40;
+}
+
+.action-secondary:hover {
+  background-color: #d4d7e5;
+}
+
+.action-secondary:active {
+  background-color: #c4c7d5;
+}
+
+/* Tertiary Action */
+.action-tertiary {
+  background-color: transparent;
+  color: #3c3d40;
+}
+
+.action-tertiary:hover {
+  background-color: #f8f8ff;
+}
+
+.action-tertiary:active {
+  background-color: #e8e7ff;
+}
+
+/* Illustration (for feature-gating variant) */
+.illustration {
+  width: 100%;
+  height: 324px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: #b8b4f5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hasIllustration {
+  gap: 0;
+}
+
+.hasIllustration .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 24px 16px;
+  background: transparent;
+  z-index: 10;
+}
+
+.hasIllustration .titleRow {
+  border-bottom: none;
+}
+
+.hasIllustration .closeButton {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.hasIllustration .closeButton:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hasIllustration .body {
+  padding: 20px 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hasIllustration .body > * {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.hasIllustration .body > h1,
+.hasIllustration .body > h2,
+.hasIllustration .body > h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #1e1e20;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+.hasIllustration .footer {
+  padding: 16px 240px;
+  justify-content: center;
+}
+
+/* Overflow behavior */
+.overflow {
+  max-height: 90vh;
+}
+
+.overflow .body {
+  overflow-y: auto;
+}
+
+/* Sticky Header */
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px 0px rgba(23, 30, 37, 0.1);
+}
+
+/* Sticky Footer */
+.stickyFooter {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0px -1px 0px 0px #e9eaeb, 0px -4px 8px 0px rgba(23, 30, 37, 0.1);
+  border-radius: 0 0 4px 4px;
+}

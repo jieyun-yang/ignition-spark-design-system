@@ -1,0 +1,136 @@
+/**
+ * DataList Component Styles
+ *
+ * All values reference design tokens from Figma
+ * Variants: Data Point, Data List
+ * Sizes: Large, Small
+ */
+
+/* Container for data list with header */
+.dataListContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling - Large */
+.dataListContainer.large .header {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Header styling - Small */
+.dataListContainer.small .header {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Data list container */
+.dataList {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Data point wrapper (single item) */
+.dataPointWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Item wrapper with separator */
+.itemWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Separator line */
+.separator {
+  height: 1px;
+  background-color: #e4e7f5;
+  width: 100%;
+}
+
+/* Data point - horizontal layout */
+.dataPoint {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Item - horizontal layout */
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Large size spacing */
+.large .dataPointWrapper {
+  gap: 8px;
+}
+
+.large .itemWrapper {
+  gap: 8px;
+}
+
+.large .itemWrapper:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+/* Small size spacing */
+.small .dataPointWrapper {
+  gap: 4px;
+}
+
+.small .itemWrapper {
+  gap: 4px;
+}
+
+.small .itemWrapper:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+/* Label styling - fixed width */
+.label {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #5a5b60; /* Gray/700 Tertiary text */
+  line-height: 1.5;
+  width: 145px;
+  flex-shrink: 0;
+}
+
+/* Label size variants */
+.large .label {
+  font-size: 14px;
+}
+
+.small .label {
+  font-size: 12px;
+}
+
+/* Value styling - flexible width */
+.value {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #1e1e20; /* Gray/900 Primary text */
+  line-height: 1.5;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Value size variants */
+.large .value {
+  font-size: 14px;
+}
+
+.small .value {
+  font-size: 12px;
+}

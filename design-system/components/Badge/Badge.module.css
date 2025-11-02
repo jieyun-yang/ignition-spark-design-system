@@ -1,0 +1,69 @@
+/**
+ * Badge Component Styles
+ *
+ * All values reference design tokens from Figma
+ * Variants: Green, Red, Grey, Yellow, Blue
+ * Sizes: Tiny (10px), Small (11px), Large (13px)
+ */
+
+/* Base badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* Size variants */
+.size-tiny {
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.size-small {
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+}
+
+.size-large {
+  padding: 1px 8px;
+  height: 24px;
+  border-radius: 100px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+/* Green variant */
+.variant-green {
+  background-color: #c5f6e6; /* Secondary/Green/100 */
+  color: #056647; /* Secondary/Green/700 */
+}
+
+/* Red variant */
+.variant-red {
+  background-color: #fecdcd; /* Secondary/Red/100 */
+  color: #940505; /* Secondary/Red/700 */
+}
+
+/* Grey variant */
+.variant-grey {
+  background-color: #e4e7f5; /* Gray/200 */
+  color: #5a5b60; /* Gray/700 Tertiary text */
+}
+
+/* Yellow variant */
+.variant-yellow {
+  background-color: #fdedaa; /* Secondary/Yellow/100 */
+  color: #92400e; /* Secondary/Yellow/700 */
+}
+
+/* Blue variant */
+.variant-blue {
+  background-color: #cfe0fc; /* Secondary/Blue/100 */
+  color: #103e89; /* Secondary/Blue/700 */
+}

@@ -1,0 +1,175 @@
+/**
+ * Accordion Component Styles
+ * Matches Figma Accordion design
+ */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e4e7f5;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Header Button */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.header:hover:not(:disabled) {
+  background-color: #f8f8ff;
+}
+
+.header:disabled {
+  cursor: not-allowed;
+}
+
+/* Stepper */
+.stepper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #e4e7f5;
+  border-radius: 100px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #9b9da8;
+}
+
+/* Title Wrapper */
+.titleWrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Heading */
+.heading {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  color: #3c3d40;
+  margin: 0;
+}
+
+.size-small .heading {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.size-large .heading {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Subheading */
+.subheading {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5a5b60;
+  margin: 0;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 10px;
+  border-radius: 100px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.badge-warning {
+  background-color: #fdedaa;
+  color: #92400e;
+}
+
+.badge-error {
+  background-color: #fecdcd;
+  color: #940505;
+}
+
+/* Icon Wrapper */
+.iconWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3c3d40;
+}
+
+.size-small .iconWrapper {
+  width: 16px;
+  height: 16px;
+}
+
+.size-large .iconWrapper {
+  width: 24px;
+  height: 24px;
+}
+
+/* Chevron */
+.chevron {
+  transition: transform 0.2s ease;
+}
+
+.chevron.expanded {
+  transform: rotate(180deg);
+}
+
+/* Divider */
+.dividerWrapper {
+  padding: 0 16px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e4e7f5;
+  width: 100%;
+}
+
+/* Body */
+.body {
+  padding: 16px 24px 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

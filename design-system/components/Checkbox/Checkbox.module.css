@@ -1,0 +1,141 @@
+/**
+ * Checkbox Component Styles
+ *
+ * All values reference design tokens from Figma
+ * Size: Sm (12px), Md (14px), Lg (16px)
+ * States: Default, Hover, Focus, Disabled
+ * Invalid: True/False
+ */
+
+/* Base checkbox container */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  user-select: none;
+  width: fit-content;
+}
+
+.checkbox.disabled {
+  cursor: not-allowed;
+}
+
+/* Hidden native input */
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Custom checkbox input */
+.checkboxInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #ced2e0;
+  border-radius: 3px;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Checked state */
+.checkboxInput.checked {
+  background-color: #5a51e7;
+  border-color: #5a51e7;
+}
+
+/* Check icon */
+.checkIcon {
+  width: 10px;
+  height: 10px;
+  color: #ffffff;
+  position: absolute;
+}
+
+/* Indeterminate icon */
+.indeterminateIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  position: absolute;
+}
+
+/* Label text */
+.label {
+  line-height: 1.5;
+  color: #3c3d40;
+}
+
+/* Size variants */
+.size-sm .label {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.size-md .label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.size-lg .label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Hover state */
+.checkbox:hover:not(.disabled) .checkboxInput:not(.checked) {
+  border-color: #9b9da8;
+}
+
+.checkbox:hover:not(.disabled) .checkboxInput.checked {
+  background-color: #4a41d7;
+  border-color: #4a41d7;
+}
+
+/* Focus state (when input is focused) */
+.hiddenInput:focus-visible + .checkboxInput {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+}
+
+/* Invalid state */
+.checkbox.invalid .checkboxInput:not(.checked) {
+  border-color: #dd2222;
+}
+
+.checkbox.invalid .label {
+  color: #dd2222;
+}
+
+/* Disabled state */
+.checkbox.disabled .checkboxInput {
+  background-color: #f3f4f8;
+  border-color: #e4e7f5;
+}
+
+.checkbox.disabled .checkboxInput.checked {
+  background-color: #e4e7f5;
+  border-color: #e4e7f5;
+}
+
+.checkbox.disabled .checkIcon {
+  color: #c6c9d4;
+}
+
+.checkbox.disabled .label {
+  color: #9b9da8;
+}

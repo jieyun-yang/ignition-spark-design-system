@@ -1,0 +1,176 @@
+/* Select Component Styles */
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 240px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 32px;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border: 1px solid #b7bac7;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.2s ease;
+}
+
+.container:hover:not(.disabled) {
+  border-color: #9b9da8;
+}
+
+.container.focused {
+  border-color: #5a51e7;
+  border-width: 1px;
+}
+
+.container.open {
+  border-color: #5a51e7;
+}
+
+.container.error {
+  border-color: #dd2222;
+}
+
+.container.error.focused,
+.container.error.open {
+  border-color: #dd2222;
+}
+
+.container.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3c3d40;
+}
+
+.container.placeholder .text {
+  color: #9b9da8;
+}
+
+/* Tags container for multi-select */
+.tagsContainer {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* Individual tag/chip */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 4px 3px 6px;
+  background-color: #d5d2f9;
+  border-radius: 2px;
+  max-width: 100%;
+}
+
+.tagLabel {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4940ce;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tagRemove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4940ce;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tagRemove:hover {
+  opacity: 0.7;
+}
+
+.tagRemoveIcon {
+  font-size: 10px;
+}
+
+/* Icons container */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Clear button */
+.clearButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #7b7d85;
+  transition: color 0.2s ease;
+}
+
+.clearButton:hover {
+  color: #3c3d40;
+}
+
+.clearIcon {
+  font-size: 12px;
+}
+
+/* Loading spinner */
+.spinner {
+  font-size: 12px;
+  color: #5a51e7;
+}
+
+/* Chevron */
+.chevron {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #7b7d85;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.errorMessage {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #df320c;
+  padding-left: 2px;
+}

@@ -1,0 +1,24 @@
+/**
+ * Signature Component Styles
+ * Matches Figma Signature design with handwriting font
+ */
+
+.signature {
+  font-family: 'Brush Script MT', 'Bradley Hand', 'Apple Chancery', cursive;
+  font-style: normal;
+  line-height: 1.5;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.size-small {
+  font-size: 28px;
+}
+
+.size-medium {
+  font-size: 46px;
+}
+
+.size-large {
+  font-size: 64px;
+}

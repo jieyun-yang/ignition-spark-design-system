@@ -1,0 +1,165 @@
+/**
+ * Table Component Styles
+ * Matches Figma Table design
+ */
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e4e7f5;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.thead {
+  background-color: #f5f6fa;
+}
+
+.th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5a5b60;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  border-bottom: 1px solid #e4e7f5;
+  box-sizing: border-box;
+  height: 44px;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.th.sortable:hover {
+  background-color: #eff0f5;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sortIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #5a51e7;
+  font-size: 12px;
+}
+
+/* Body */
+.tbody {
+  background: #ffffff;
+}
+
+.tr {
+  transition: background-color 0.2s ease;
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background-color: #f8f8ff;
+}
+
+.tr.selected {
+  background-color: #ededfc;
+}
+
+.tr.selected:hover {
+  background-color: #e3e3f9;
+}
+
+.tr.clickable {
+  cursor: pointer;
+}
+
+.td {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3c3d40;
+  vertical-align: middle;
+  border-bottom: 1px solid #e4e7f5;
+  box-sizing: border-box;
+  height: 56px;
+  line-height: 1.5;
+}
+
+/* Checkbox Cell */
+.checkboxCell {
+  width: 48px;
+  text-align: center;
+}
+
+/* Actions Cell */
+.actionsCell {
+  width: 48px;
+  text-align: center;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #5a5b60;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #e4e7f5;
+  color: #3c3d40;
+}
+
+.actionButton:active,
+.actionButton[aria-expanded="true"] {
+  background-color: #d4d7e5;
+}
+
+/* Menu Portal */
+.menuPortal {
+  /* Styles are applied inline for positioning */
+  /* This class exists for potential future styling */
+}
+
+.portalMenu {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: auto !important;
+}
+
+/* Empty State */
+.emptyCell {
+  padding: 48px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #5a5b60;
+}

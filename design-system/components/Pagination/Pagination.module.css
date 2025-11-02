@@ -1,0 +1,70 @@
+/**
+ * Pagination Component Styles
+ * Matches Figma Pagination design
+ */
+
+.pagination {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Navigation buttons (arrows) */
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  color: #5a51e7; /* Primary/Purple/500 */
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.navButton:hover:not(.disabled) {
+  background-color: #e8e7ff; /* Primary/Purple/50 */
+}
+
+.navButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #7169ea; /* Primary/Purple/400 */
+}
+
+/* Page number buttons */
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 7px 10px;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #5a51e7; /* Primary/Purple/500 */
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pageButton:hover:not(.active) {
+  background-color: #e8e7ff; /* Primary/Purple/50 */
+}
+
+.pageButton.active {
+  background-color: #5a51e7; /* Primary/Purple/500 */
+  color: #ffffff; /* White */
+}
+
+.pageButton.active:hover {
+  background-color: #4940ce; /* Primary/Purple/600 */
+}

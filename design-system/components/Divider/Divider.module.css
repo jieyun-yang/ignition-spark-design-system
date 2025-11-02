@@ -1,0 +1,13 @@
+/**
+ * Divider Component Styles
+ *
+ * All values reference design tokens from Figma
+ */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e4e7f5; /* Gray/200 Dividers */
+  border: none;
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="392.55" cy="163.747" r="124.55" fill="#2B266D"/>
+<circle cx="407.121" cy="163.747" r="123.55" fill="white" stroke="#2B266D" stroke-width="2"/>
+<path d="M463.325 54.3808C445.285 44.6666 422.5 41.1738 407.815 41.1738V166.788L499.2 82.8296C488.792 70.6868 475.487 60.9292 463.325 54.3808Z" fill="#FF5787"/>
+<rect x="399.143" y="44.7483" width="16.6529" height="31.9181" rx="8.32647" fill="#9C96F0"/>
+<rect x="399.143" y="249.441" width="16.6529" height="31.9181" rx="8.32647" fill="#9C96F0"/>
+<rect x="525.773" y="154.727" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(90 525.773 154.727)" fill="#9C96F0"/>
+<rect x="321.081" y="154.727" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(90 321.081 154.727)" fill="#9C96F0"/>
+<rect x="459.173" y="56.3188" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(29.8714 459.173 56.3188)" fill="#9C96F0"/>
+<rect x="357.225" y="233.817" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(29.8714 357.225 233.817)" fill="#9C96F0"/>
+<rect x="514.205" y="214.756" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(119.871 514.205 214.756)" fill="#9C96F0"/>
+<rect x="336.707" y="112.808" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(119.871 336.707 112.808)" fill="#9C96F0"/>
+<rect x="504.122" y="94.3257" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(58.6103 504.122 94.3257)" fill="#9C96F0"/>
+<rect x="329.388" y="200.941" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(58.6103 329.388 200.941)" fill="#9C96F0"/>
+<rect x="476.2" y="259.707" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(148.61 476.2 259.707)" fill="#9C96F0"/>
+<rect x="369.585" y="84.9727" width="16.6529" height="31.9181" rx="8.32647" transform="rotate(148.61 369.585 84.9727)" fill="#9C96F0"/>
+<circle cx="408.163" cy="162.707" r="15.2652" fill="#2DC495"/>
+<path d="M503.5 360.771H297" stroke="#2B266D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>

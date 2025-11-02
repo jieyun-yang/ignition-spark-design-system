@@ -1,0 +1,42 @@
+{
+  "name": "onbrand-design-system",
+  "version": "0.1.0",
+  "description": "Design system implementation based on Figma designs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/pro-light-svg-icons": "^7.1.0",
+    "@fortawesome/pro-regular-svg-icons": "^7.1.0",
+    "@fortawesome/pro-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
+    "clsx": "^2.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "playwright": "^1.56.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vite-plugin-svgr": "^4.5.0",
+    "vitest": "^2.0.5"
+  }
+}

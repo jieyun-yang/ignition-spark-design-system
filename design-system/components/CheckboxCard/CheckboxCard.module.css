@@ -1,0 +1,121 @@
+/* CheckboxCard Component Styles */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 200px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #ced2e0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover:not(.disabled) {
+  border-color: #5a51e7;
+}
+
+.card:focus {
+  outline: none;
+  border-color: #5a51e7;
+  box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1);
+}
+
+.card.checked {
+  border-color: #5a51e7;
+}
+
+.card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card.invalid:not(.checked) {
+  border-color: #dd2222;
+}
+
+/* Header section with icon and checkbox */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  font-size: 18px;
+  color: #5a51e7;
+}
+
+/* Checkbox styles */
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ced2e0;
+  border-radius: 2px;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.checkbox:hover:not(.disabled) {
+  border-color: #5a51e7;
+}
+
+.checkboxChecked {
+  background-color: #5a51e7;
+  border-color: #5a51e7;
+}
+
+.checkIcon {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+/* Content section */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+}
+
+.title {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #3c3d40;
+}
+
+.description {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5a5b60;
+}
+
+/* Disabled state for content */
+.card.disabled .title,
+.card.disabled .description {
+  color: #9b9da8;
+}
