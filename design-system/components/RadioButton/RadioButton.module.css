@@ -26,14 +26,14 @@
   justify-content: center;
   width: 16px;
   height: 16px;
-  border: 1px solid #ced2e0;
+  border: 1px solid var(--color-gray-200);
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   transition: all 0.2s ease;
 }
 
 .radio:hover:not(.disabled) {
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
 }
 
 .radio:focus {
@@ -42,12 +42,12 @@
 }
 
 .radio.checked {
-  border-color: #5a51e7;
-  background-color: #ffffff;
+  border-color: var(--color-primary-500);
+  background-color: var(--color-white);
 }
 
 .container.invalid .radio {
-  border-color: #dd2222;
+  border-color: var(--color-secondary-red-500);
 }
 
 .container.invalid .radio:focus {
@@ -58,12 +58,12 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #5a51e7;
+  background-color: var(--color-primary-500);
   transition: transform 0.2s ease;
 }
 
 .container.invalid .dot {
-  background-color: #dd2222;
+  background-color: var(--color-secondary-red-500);
 }
 
 .label {
@@ -71,14 +71,14 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   user-select: none;
 }
 
 .container.disabled .label {
-  color: #9b9da8;
+  color: var(--color-gray-500);
 }
 
 .container.invalid .label {
-  color: #dd2222;
+  color: var(--color-secondary-red-500);
 }

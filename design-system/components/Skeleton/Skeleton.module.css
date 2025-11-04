@@ -14,7 +14,7 @@
 
 .skeleton {
   position: relative;
-  background-color: #ced2e0;
+  background-color: var(--color-gray-200);
   overflow: hidden;
 }
 

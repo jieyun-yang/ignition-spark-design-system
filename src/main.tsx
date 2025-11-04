@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import '../design-system/tokens/tokens.css';
 import MainApp from './MainApp';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

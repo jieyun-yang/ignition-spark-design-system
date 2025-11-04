@@ -23,7 +23,7 @@
   gap: 8px;
   padding: 6px 12px;
   min-height: 33px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border: none;
   border-radius: 4px;
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -34,20 +34,20 @@
 
 /* Filter with value - purple background */
 .filter.hasValue {
-  background-color: #e8e7ff; /* Figma: Primary/Purple/50 */
+  background-color: var(--color-primary-50); /* Figma: Primary/Purple/50 */
 }
 
 .filter.hasValue.hovered {
-  background-color: #d5d2f9; /* Figma: Primary/Purple/100 */
+  background-color: var(--color-primary-100); /* Figma: Primary/Purple/100 */
 }
 
 /* Filter without value - white background */
 .filter:not(.hasValue) {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .filter:not(.hasValue).hovered {
-  background-color: #f0f2fa; /* Figma: Gray/100 */
+  background-color: var(--color-gray-100); /* Figma: Gray/100 */
 }
 
 /* Filter Content */
@@ -75,11 +75,11 @@
 }
 
 .filter.hasValue .subLabel {
-  color: #4940ce; /* Figma: Primary/Purple/600 */
+  color: var(--color-primary-600); /* Figma: Primary/Purple/600 */
 }
 
 .filter:not(.hasValue) .subLabel {
-  color: #7b7d85; /* Figma: Gray/600 Graphics */
+  color: var(--color-gray-600); /* Figma: Gray/600 Graphics */
 }
 
 .label {
@@ -91,11 +91,11 @@
 }
 
 .filter.hasValue .label {
-  color: #4940ce; /* Figma: Primary/Purple/600 */
+  color: var(--color-primary-600); /* Figma: Primary/Purple/600 */
 }
 
 .filter:not(.hasValue) .label {
-  color: #7b7d85; /* Figma: Gray/600 Graphics */
+  color: var(--color-gray-600); /* Figma: Gray/600 Graphics */
 }
 
 .value {
@@ -103,7 +103,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
-  color: #1e1e20; /* Figma: Gray/900 Primary text */
+  color: var(--color-gray-900); /* Figma: Gray/900 Primary text */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -122,11 +122,11 @@
 }
 
 .filter.hasValue .dropdownIcon {
-  color: #4940ce; /* Figma: Primary/Purple/600 */
+  color: var(--color-primary-600); /* Figma: Primary/Purple/600 */
 }
 
 .filter:not(.hasValue) .dropdownIcon {
-  color: #7b7d85; /* Figma: Gray/600 Graphics */
+  color: var(--color-gray-600); /* Figma: Gray/600 Graphics */
 }
 
 /* Remove Button - Circular badge */
@@ -140,10 +140,10 @@
   width: 16px;
   height: 16px;
   padding: 0;
-  background-color: #9c96f0; /* Figma: Primary/Purple/300 */
+  background-color: var(--color-primary-300); /* Figma: Primary/Purple/300 */
   border: none;
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -152,7 +152,7 @@
 }
 
 .removeButton:hover {
-  background-color: #5a51e7; /* Figma: Primary/Purple/500 Buttons */
+  background-color: var(--color-primary-500); /* Figma: Primary/Purple/500 Buttons */
 }
 
 /* Popover Dropdown */
@@ -162,8 +162,8 @@
   left: 0;
   z-index: 1000;
   min-width: 220px;
-  background-color: #ffffff;
-  border: 1px solid #e4e7f5;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -191,13 +191,13 @@
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .optionItem:hover {
-  background-color: #f8f8ff;
+  background-color: var(--color-gray-50);
 }
 
 .radio {
@@ -205,7 +205,7 @@
   height: 16px;
   margin: 0;
   cursor: pointer;
-  accent-color: #5a51e7;
+  accent-color: var(--color-primary-500);
 }
 
 .optionLabel {
@@ -216,7 +216,7 @@
 /* Custom Input */
 .customInput {
   padding: 12px 16px;
-  border-top: 1px solid #e4e7f5;
+  border-top: 1px solid var(--color-gray-200);
 }
 
 .textInput {
@@ -225,20 +225,20 @@
   padding: 0 12px;
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
-  color: #3c3d40;
-  background-color: #ffffff;
-  border: 1px solid #d4d7e5;
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
   border-radius: 4px;
   outline: none;
   transition: border-color 0.2s ease;
 }
 
 .textInput:focus {
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
 }
 
 .textInput::placeholder {
-  color: #a0a1a6;
+  color: var(--color-gray-450);
 }
 
 /* Popover Actions */
@@ -246,8 +246,8 @@
   display: flex;
   justify-content: flex-end;
   padding: 12px 16px;
-  border-top: 1px solid #e4e7f5;
-  background-color: #f8f8ff;
+  border-top: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-50);
 }
 
 .doneButton {
@@ -256,8 +256,8 @@
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #5a51e7;
+  color: var(--color-white);
+  background-color: var(--color-primary-500);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -265,9 +265,9 @@
 }
 
 .doneButton:hover {
-  background-color: #4841cc;
+  background-color: var(--color-primary-600);
 }
 
 .doneButton:active {
-  background-color: #3931b1;
+  background-color: var(--color-primary-700);
 }

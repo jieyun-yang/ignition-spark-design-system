@@ -6,25 +6,25 @@
   gap: 8px;
   width: 200px;
   padding: 16px;
-  background-color: #ffffff;
-  border: 1px solid #ced2e0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
   border-radius: 4px;
   cursor: pointer;
   transition: border-color 0.2s ease;
 }
 
 .card:hover:not(.disabled) {
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
 }
 
 .card:focus {
   outline: none;
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
   box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1);
 }
 
 .card.checked {
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
 }
 
 .card.disabled {
@@ -33,7 +33,7 @@
 }
 
 .card.invalid:not(.checked) {
-  border-color: #dd2222;
+  border-color: var(--color-secondary-red-500);
 }
 
 /* Header section with icon and checkbox */
@@ -54,7 +54,7 @@
 
 .icon {
   font-size: 18px;
-  color: #5a51e7;
+  color: var(--color-primary-500);
 }
 
 /* Checkbox styles */
@@ -70,24 +70,24 @@
   justify-content: center;
   width: 16px;
   height: 16px;
-  border: 1px solid #ced2e0;
+  border: 1px solid var(--color-gray-200);
   border-radius: 2px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   transition: all 0.2s ease;
 }
 
 .checkbox:hover:not(.disabled) {
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
 }
 
 .checkboxChecked {
-  background-color: #5a51e7;
-  border-color: #5a51e7;
+  background-color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
 }
 
 .checkIcon {
   font-size: 10px;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 /* Content section */
@@ -103,7 +103,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
 }
 
 .description {
@@ -111,11 +111,11 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  color: #5a5b60;
+  color: var(--color-gray-700);
 }
 
 /* Disabled state for content */
 .card.disabled .title,
 .card.disabled .description {
-  color: #9b9da8;
+  color: var(--color-gray-500);
 }

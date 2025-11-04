@@ -1,0 +1,61 @@
+/**
+ * TemplateLayout Component Styles
+ * Layout wrapper for page templates
+ * Uses design system tokens exclusively
+ */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-gray-50);
+}
+
+.mainContent {
+  flex: 1;
+  padding: var(--spacing-8) var(--spacing-10);
+  background-color: var(--color-white);
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: var(--font-size-1-5xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  font-family: var(--font-family-primary);
+  line-height: var(--line-height-normal);
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--spacing-1-5);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.sectionMeta {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  font-family: var(--font-family-primary);
+}
+
+.sectionActions {
+  display: flex;
+  gap: var(--spacing-1-5);
+}

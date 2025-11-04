@@ -40,30 +40,30 @@
 
 /* Green variant */
 .variant-green {
-  background-color: #c5f6e6; /* Secondary/Green/100 */
-  color: #056647; /* Secondary/Green/700 */
+  background-color: var(--color-secondary-green-100); /* Secondary/Green/100 */
+  color: var(--color-secondary-green-700); /* Secondary/Green/700 */
 }
 
 /* Red variant */
 .variant-red {
-  background-color: #fecdcd; /* Secondary/Red/100 */
-  color: #940505; /* Secondary/Red/700 */
+  background-color: var(--color-secondary-red-100); /* Secondary/Red/100 */
+  color: var(--color-secondary-red-700); /* Secondary/Red/700 */
 }
 
 /* Grey variant */
 .variant-grey {
-  background-color: #e4e7f5; /* Gray/200 */
-  color: #5a5b60; /* Gray/700 Tertiary text */
+  background-color: var(--color-gray-200); /* Gray/200 */
+  color: var(--color-gray-700); /* Gray/700 Tertiary text */
 }
 
 /* Yellow variant */
 .variant-yellow {
-  background-color: #fdedaa; /* Secondary/Yellow/100 */
-  color: #92400e; /* Secondary/Yellow/700 */
+  background-color: var(--color-secondary-yellow-100); /* Secondary/Yellow/100 */
+  color: var(--color-secondary-yellow-700); /* Secondary/Yellow/700 */
 }
 
 /* Blue variant */
 .variant-blue {
-  background-color: #cfe0fc; /* Secondary/Blue/100 */
-  color: #103e89; /* Secondary/Blue/700 */
+  background-color: var(--color-secondary-blue-100); /* Secondary/Blue/100 */
+  color: var(--color-secondary-blue-700); /* Secondary/Blue/700 */
 }

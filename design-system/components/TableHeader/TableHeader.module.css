@@ -31,8 +31,8 @@
   align-items: center;
   width: 224px;
   height: 32px;
-  background-color: #ffffff;
-  border: 1px solid #d5d4d2;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-245);
   border-radius: 4px;
   padding: 6px 12px;
   gap: 4px;
@@ -40,7 +40,7 @@
 
 .searchIcon {
   font-size: 12px;
-  color: #605e5b; /* Marketing grays/700 */
+  color: var(--color-marketing-gray-600); /* Marketing grays/700 */
   flex-shrink: 0;
   width: 16px;
   height: 16px;
@@ -59,11 +59,11 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
 }
 
 .searchInput::placeholder {
-  color: #bdbab7; /* Marketing grays/400 */
+  color: var(--color-marketing-gray-700); /* Marketing grays/400 */
 }
 
 /* Filters button */
@@ -74,7 +74,7 @@
   gap: 6px;
   height: 32px;
   padding: 0 13px;
-  background-color: #e4e7f5;
+  background-color: var(--color-gray-200);
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -82,12 +82,12 @@
 }
 
 .filtersButton:hover {
-  background-color: #d5d8ea;
+  background-color: var(--color-gray-240);
 }
 
 .filterIcon {
   font-size: 10px;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   width: 12px;
   height: 12px;
   display: flex;
@@ -100,7 +100,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   white-space: nowrap;
 }
 
@@ -117,7 +117,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
 }
 
 .resultsLabel {
@@ -125,7 +125,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #7b7d85; /* Cooler/Gray 600 */
+  color: var(--color-gray-600); /* Cooler/Gray 600 */
 }
 
 .separator {
@@ -133,7 +133,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  color: #7b7d85;
+  color: var(--color-gray-600);
 }
 
 .amountWrapper {
@@ -147,13 +147,13 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   white-space: nowrap;
 }
 
 .amountIcon {
   font-size: 10px;
-  color: #7b7d85;
+  color: var(--color-gray-600);
   width: 12px;
   height: 12px;
   display: flex;
@@ -177,7 +177,7 @@
   gap: 6px;
   height: 32px;
   padding: 0 13px;
-  background-color: #e4e7f5;
+  background-color: var(--color-gray-200);
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -186,7 +186,7 @@
 }
 
 .bulkActionButton:hover:not(.disabled) {
-  background-color: #d5d8ea;
+  background-color: var(--color-gray-240);
 }
 
 .bulkActionButton.disabled {
@@ -196,7 +196,7 @@
 
 .bulkActionIcon {
   font-size: 10px;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   width: 12px;
   height: 12px;
   display: flex;
@@ -209,6 +209,6 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   white-space: nowrap;
 }

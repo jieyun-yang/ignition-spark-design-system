@@ -1,0 +1,28 @@
+declare const styles: {
+  readonly "actionIcon": string;
+  readonly "actions": string;
+  readonly "body": string;
+  readonly "buttonIcon": string;
+  readonly "chevronIcon": string;
+  readonly "closeButton": string;
+  readonly "divider": string;
+  readonly "drawer": string;
+  readonly "fadeIn": string;
+  readonly "header": string;
+  readonly "headerContent": string;
+  readonly "headerContentNoTabs": string;
+  readonly "moreActionItem": string;
+  readonly "moreActionsButton": string;
+  readonly "moreActionsDropdown": string;
+  readonly "moreActionsWrapper": string;
+  readonly "overlay": string;
+  readonly "primaryButton": string;
+  readonly "slideIn": string;
+  readonly "subtitle": string;
+  readonly "tabsWrapper": string;
+  readonly "title": string;
+  readonly "titleRow": string;
+  readonly "titleSection": string;
+};
+export = styles;
+

@@ -20,7 +20,7 @@
   font-size: 11px;
   font-weight: 400;
   line-height: 1.5;
-  color: #5a5b60;
+  color: var(--color-gray-700);
   margin-bottom: 0;
 }
 
@@ -35,7 +35,7 @@
 .progressTrack {
   flex: 1;
   height: 8px;
-  background-color: #e4e7f5;
+  background-color: var(--color-gray-200);
   border-radius: 2px;
   overflow: hidden;
   position: relative;
@@ -49,15 +49,15 @@
 }
 
 .progressFill.color-yellow {
-  background-color: #d97706;
+  background-color: var(--color-secondary-yellow-500);
 }
 
 .progressFill.color-green {
-  background-color: #08a674;
+  background-color: var(--color-secondary-green-500);
 }
 
 .progressFill.color-red {
-  background-color: #ec4b4b;
+  background-color: var(--color-secondary-red-400);
 }
 
 /* Counter */
@@ -66,7 +66,7 @@
   font-size: 11px;
   font-weight: 400;
   line-height: 1.5;
-  color: #7b7d85;
+  color: var(--color-gray-600);
   white-space: nowrap;
   flex-shrink: 0;
   min-width: 18px;

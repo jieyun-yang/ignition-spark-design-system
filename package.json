@@ -1,23 +1,65 @@
 {
-  "name": "onbrand-design-system",
-  "version": "0.1.0",
-  "description": "Design system implementation based on Figma designs",
-  "main": "index.js",
+  "name": "@ignition/spark-design-system",
+  "version": "1.0.0",
+  "description": "Comprehensive React + TypeScript design system with 53 components. 100% token-based architecture.",
+  "main": "./design-system/index.ts",
+  "module": "./design-system/index.ts",
+  "types": "./design-system/index.ts",
   "type": "module",
+  "files": [
+    "design-system",
+    "README.md",
+    "AI-PROMPT-GUIDE.md",
+    "INSTALLATION.md",
+    "COMPONENTS.md",
+    "DESIGN-SYSTEM.md",
+    "ILLUSTRATIONS_GUIDE.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./design-system/index.ts",
+      "types": "./design-system/index.ts"
+    },
+    "./tokens": "./design-system/tokens/index.ts",
+    "./tokens.css": "./design-system/tokens/tokens.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "css-types": "tcm src",
+    "css-types:watch": "tcm src --watch"
   },
   "keywords": [
     "design-system",
     "react",
-    "typescript"
+    "typescript",
+    "components",
+    "ui-library",
+    "figma",
+    "design-tokens",
+    "css-modules",
+    "ignition"
   ],
-  "author": "",
+  "author": "Ignition Team",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ignition/spark-design-system"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
@@ -30,10 +72,12 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "playwright": "^1.56.1",
+    "typed-css-modules": "^0.9.1",
     "typescript": "^5.5.3",
     "vite": "^5.3.4",
     "vite-plugin-svgr": "^4.5.0",

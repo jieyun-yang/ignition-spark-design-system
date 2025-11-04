@@ -14,6 +14,7 @@ import { Pagination } from '../../design-system/components/Pagination';
 import { Tabs, Tab } from '../../design-system/components/Tabs';
 import { Checkbox } from '../../design-system/components/Checkbox';
 import { SideNav } from '../../design-system/components/SideNav';
+import { TemplateLayout } from '../../design-system/components/TemplateLayout';
 import { IgnitionLogo } from '../../design-system/components/Card/assets';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faFilter } from '@fortawesome/free-solid-svg-icons';
@@ -37,6 +38,7 @@ import {
 } from '@fortawesome/pro-light-svg-icons';
 import { faClipboard } from '@fortawesome/pro-regular-svg-icons';
 import '../App.css';
+import styles from './ProposalsTemplate.module.css';
 
 interface Proposal {
   id: string;
@@ -188,7 +190,7 @@ function ProposalsTemplate() {
       sortable: true,
       width: '18%',
       render: (row) => (
-        <div style={{ fontWeight: 500, color: '#3c3d40' }}>
+        <div className={styles.clientName}>
           {row.client}
         </div>
       )
@@ -199,7 +201,7 @@ function ProposalsTemplate() {
       sortable: true,
       width: '22%',
       render: (row) => (
-        <div style={{ color: '#3c3d40' }}>
+        <div className={styles.proposalName}>
           {row.proposalName}
         </div>
       )
@@ -221,7 +223,7 @@ function ProposalsTemplate() {
       sortable: true,
       width: '12%',
       render: (row) => (
-        <div style={{ color: '#7b7d85' }}>
+        <div className={styles.dateText}>
           {row.start}
         </div>
       )
@@ -232,7 +234,7 @@ function ProposalsTemplate() {
       sortable: true,
       width: '12%',
       render: (row) => (
-        <div style={{ color: '#7b7d85' }}>
+        <div className={styles.dateText}>
           {row.end}
         </div>
       )
@@ -243,7 +245,7 @@ function ProposalsTemplate() {
       sortable: true,
       width: '10%',
       render: (row) => (
-        <div style={{ color: '#7b7d85', fontSize: '13px' }}>
+        <div className={styles.activityText}>
           {row.activity}
         </div>
       )
@@ -255,7 +257,7 @@ function ProposalsTemplate() {
       width: '10%',
       align: 'right' as const,
       render: (row) => (
-        <div style={{ fontWeight: 600, color: '#3c3d40' }}>
+        <div className={styles.valueText}>
           {row.value}
         </div>
       )
@@ -268,9 +270,9 @@ function ProposalsTemplate() {
   }, 0);
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#f8f9fa' }}>
-      {/* Side Navigation */}
-      <SideNav
+    <TemplateLayout
+      sideNav={
+        <SideNav
         logo={<IgnitionLogo variant="positive" type="full" />}
         showSearch={true}
         showNotification={true}
@@ -346,20 +348,14 @@ function ProposalsTemplate() {
           name: 'Demo User',
           company: 'Demo Company'
         }}
-      />
-
-      {/* Main Content Area */}
-      <div style={{ flex: 1, padding: '32px 40px' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          {/* Page Header */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: '24px'
-          }}>
-            <h2 style={{ margin: 0, fontSize: '28px', fontWeight: 600, color: '#1e1e20' }}>Proposals</h2>
-            <div style={{ display: 'flex', gap: '8px' }}>
+        />
+      }
+    >
+      {/* Page Header */}
+      <TemplateLayout.PageHeader
+        title="Proposals"
+        actions={
+          <>
               <Button
                 hierarchy="tertiary"
                 size="medium"
@@ -381,127 +377,106 @@ function ProposalsTemplate() {
               >
                 New proposal
               </Button>
-            </div>
-          </div>
+          </>
+        }
+      />
 
-          {/* Status Filter Tabs */}
-          <div style={{ marginBottom: '20px', borderBottom: '1px solid #e4e7f5' }}>
-            <Tabs
-              tabs={statusFilterTabs}
-              activeTab={selectedTab}
-              onTabChange={setSelectedTab}
-            />
-          </div>
+      {/* Status Filter Tabs */}
+      <div className={styles.tabsContainer}>
+        <Tabs
+          tabs={statusFilterTabs}
+          activeTab={selectedTab}
+          onTabChange={setSelectedTab}
+        />
+      </div>
 
-          {/* Search, Filters, and Statistics Row */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            marginBottom: '16px',
-            padding: '12px 0',
-            borderTop: '1px solid #e4e7f5',
-            borderBottom: '1px solid #e4e7f5'
-          }}>
-            {/* Search */}
-            <div style={{ flex: 1 }}>
-              <Search
-                placeholder="Search proposals..."
-                value={searchQuery}
-                onChange={setSearchQuery}
-                onSearch={() => console.log('Search:', searchQuery)}
-              />
-            </div>
-
-            {/* Filters Button */}
-            <Button
-              hierarchy="secondary"
-              size="medium"
-              iconLeft={<FontAwesomeIcon icon={faFilter} />}
-            >
-              Filters
-            </Button>
-          </div>
-
-          {/* Results Summary and Bulk Actions Row */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: '16px'
-          }}>
-            <div style={{ fontSize: '14px', color: '#7b7d85' }}>
-              {mockProposals.length} results • ${totalValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-            </div>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <Button
-                hierarchy="secondary"
-                size="small"
-                disabled={selectedRows.length === 0}
-                iconLeft={<FontAwesomeIcon icon={faPaperPlane} />}
-              >
-                Send
-              </Button>
-              <Button
-                hierarchy="secondary"
-                size="small"
-                disabled={selectedRows.length === 0}
-                iconLeft={<FontAwesomeIcon icon={faArrowsRotate} />}
-              >
-                Renew
-              </Button>
-              <Button
-                hierarchy="secondary"
-                size="small"
-                disabled={selectedRows.length === 0}
-                iconLeft={<FontAwesomeIcon icon={faDollarSign} />}
-              >
-                Adjust pricing
-              </Button>
-              <Button
-                hierarchy="secondary"
-                size="small"
-                disabled={selectedRows.length === 0}
-                iconLeft={<FontAwesomeIcon icon={faEllipsis} />}
-              >
-                More actions
-              </Button>
-            </div>
-          </div>
-
-          {/* Table */}
-          <Table
-            columns={columns}
-            data={mockProposals}
-            selectable={true}
-            selectedRows={selectedRows}
-            onSelectionChange={setSelectedRows}
-            getRowKey={(row) => row.id}
-            showActions={true}
-            getActionMenuOptions={(row) => [
-              { id: 'view', label: 'View details' },
-              { id: 'edit', label: 'Edit proposal' },
-              { id: 'duplicate', label: 'Duplicate' },
-              { id: 'divider-1', type: 'divider' },
-              { id: 'delete', label: 'Delete', destructive: true }
-            ]}
+      {/* Search and Filters Row */}
+      <div className={styles.searchRow}>
+        <div className={styles.searchWrapper}>
+          <Search
+            placeholder="Search proposals..."
+            value={searchQuery}
+            onChange={setSearchQuery}
+            onSearch={() => console.log('Search:', searchQuery)}
           />
+        </div>
+        <Button
+          hierarchy="secondary"
+          size="medium"
+          iconLeft={<FontAwesomeIcon icon={faFilter} />}
+        >
+          Filters
+        </Button>
+      </div>
 
-          {/* Pagination */}
-          <div style={{
-            marginTop: '20px',
-            display: 'flex',
-            justifyContent: 'center'
-          }}>
-            <Pagination
-              currentPage={currentPage}
-              totalPages={28}
-              onPageChange={setCurrentPage}
-            />
-          </div>
+      {/* Results Summary and Bulk Actions Row */}
+      <div className={styles.statsActionsRow}>
+        <div className={styles.statsText}>
+          {mockProposals.length} results • ${totalValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        </div>
+        <div className={styles.bulkActions}>
+          <Button
+            hierarchy="secondary"
+            size="small"
+            disabled={selectedRows.length === 0}
+            iconLeft={<FontAwesomeIcon icon={faPaperPlane} />}
+          >
+            Send
+          </Button>
+          <Button
+            hierarchy="secondary"
+            size="small"
+            disabled={selectedRows.length === 0}
+            iconLeft={<FontAwesomeIcon icon={faArrowsRotate} />}
+          >
+            Renew
+          </Button>
+          <Button
+            hierarchy="secondary"
+            size="small"
+            disabled={selectedRows.length === 0}
+            iconLeft={<FontAwesomeIcon icon={faDollarSign} />}
+          >
+            Adjust pricing
+          </Button>
+          <Button
+            hierarchy="secondary"
+            size="small"
+            disabled={selectedRows.length === 0}
+            iconLeft={<FontAwesomeIcon icon={faEllipsis} />}
+          >
+            More actions
+          </Button>
         </div>
       </div>
-    </div>
+
+      {/* Table */}
+      <Table
+        columns={columns}
+        data={mockProposals}
+        selectable={true}
+        selectedRows={selectedRows}
+        onSelectionChange={setSelectedRows}
+        getRowKey={(row) => row.id}
+        showActions={true}
+        getActionMenuOptions={(row) => [
+          { id: 'view', label: 'View details' },
+          { id: 'edit', label: 'Edit proposal' },
+          { id: 'duplicate', label: 'Duplicate' },
+          { id: 'divider-1', type: 'divider' },
+          { id: 'delete', label: 'Delete', destructive: true }
+        ]}
+      />
+
+      {/* Pagination */}
+      <div className={styles.paginationContainer}>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={28}
+          onPageChange={setCurrentPage}
+        />
+      </div>
+    </TemplateLayout>
   );
 }
 

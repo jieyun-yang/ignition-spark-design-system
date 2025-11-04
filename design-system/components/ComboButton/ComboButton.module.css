@@ -56,102 +56,102 @@
 
 /* Primary hierarchy */
 .hierarchy-primary .mainButton {
-  background-color: #5a51e7;
-  color: #ffffff;
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
 }
 
 .hierarchy-primary .mainButton:hover {
-  background-color: #4a41d7;
+  background-color: var(--color-primary-450);
 }
 
 .hierarchy-primary .mainButton:focus {
-  background-color: #5a51e7;
+  background-color: var(--color-primary-500);
   outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
 }
 
 .hierarchy-primary .mainButton:active {
-  background-color: #3a31c7;
+  background-color: var(--color-primary-650);
 }
 
 .hierarchy-primary .mainButton.mainDisabled {
-  background-color: #e4e7f5;
-  color: #9b9da8;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-500);
   cursor: not-allowed;
 }
 
 .hierarchy-primary .menuButton {
-  background-color: #5a51e7;
-  color: #ffffff;
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
 }
 
 .hierarchy-primary .menuButton:hover {
-  background-color: #4a41d7;
+  background-color: var(--color-primary-450);
 }
 
 .hierarchy-primary .menuButton:focus {
-  background-color: #5a51e7;
+  background-color: var(--color-primary-500);
   outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
 }
 
 .hierarchy-primary .menuButton:active {
-  background-color: #3a31c7;
+  background-color: var(--color-primary-650);
 }
 
 .hierarchy-primary .menuButton.menuDisabled {
-  background-color: #e4e7f5;
-  color: #9b9da8;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-500);
   cursor: not-allowed;
 }
 
 /* Secondary hierarchy */
 .hierarchy-secondary .mainButton {
-  background-color: #e4e7f5;
-  color: #3c3d40;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
 }
 
 .hierarchy-secondary .mainButton:hover {
-  background-color: #d5d9ed;
+  background-color: var(--color-gray-200);
 }
 
 .hierarchy-secondary .mainButton:focus {
-  background-color: #e4e7f5;
+  background-color: var(--color-gray-200);
   outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
 }
 
 .hierarchy-secondary .mainButton:active {
-  background-color: #c6cbe5;
+  background-color: var(--color-gray-300);
 }
 
 .hierarchy-secondary .mainButton.mainDisabled {
-  background-color: #f3f4f8;
-  color: #c6c9d4;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-400);
   cursor: not-allowed;
 }
 
 .hierarchy-secondary .menuButton {
-  background-color: #e4e7f5;
-  color: #3c3d40;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
 }
 
 .hierarchy-secondary .menuButton:hover {
-  background-color: #d5d9ed;
+  background-color: var(--color-gray-200);
 }
 
 .hierarchy-secondary .menuButton:focus {
-  background-color: #e4e7f5;
+  background-color: var(--color-gray-200);
   outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
 }
 
 .hierarchy-secondary .menuButton:active {
-  background-color: #c6cbe5;
+  background-color: var(--color-gray-300);
 }
 
 .hierarchy-secondary .menuButton.menuDisabled {
-  background-color: #f3f4f8;
-  color: #c6c9d4;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-400);
   cursor: not-allowed;
 }

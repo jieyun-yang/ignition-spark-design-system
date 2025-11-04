@@ -1,15 +1,16 @@
 declare const styles: {
-  readonly checkbox: string;
-  readonly disabled: string;
-  readonly hiddenInput: string;
-  readonly checkboxInput: string;
-  readonly checked: string;
-  readonly checkIcon: string;
-  readonly label: string;
-  readonly 'size-sm': string;
-  readonly 'size-md': string;
-  readonly 'size-lg': string;
-  readonly invalid: string;
+  readonly "checkIcon": string;
+  readonly "checkbox": string;
+  readonly "checkboxInput": string;
+  readonly "checked": string;
+  readonly "disabled": string;
+  readonly "hiddenInput": string;
+  readonly "indeterminateIcon": string;
+  readonly "invalid": string;
+  readonly "label": string;
+  readonly "size-lg": string;
+  readonly "size-md": string;
+  readonly "size-sm": string;
 };
+export = styles;
 
-export default styles;

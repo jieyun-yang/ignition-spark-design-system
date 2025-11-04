@@ -1,0 +1,323 @@
+/**
+ * Email Template Styles
+ * Uses design system tokens exclusively
+ */
+
+/* Variant Selector */
+.variantSelector {
+  padding: 20px;
+  background-color: var(--color-gray-50);
+  border-radius: 8px;
+  margin: 0 auto var(--spacing-6);
+  max-width: 683px;
+}
+
+.variantSelectorTitle {
+  margin: 0 0 var(--spacing-2-5) 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.variantButtons {
+  display: flex;
+  gap: var(--spacing-1-5);
+  flex-wrap: wrap;
+}
+
+.variantButton {
+  padding: var(--spacing-1-5) var(--spacing-4);
+  background-color: var(--color-white);
+  color: var(--color-gray-800);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
+}
+
+.variantButtonActive {
+  composes: variantButton;
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+}
+
+/* Email Container */
+.emailOuter {
+  max-width: 683px;
+  margin: 0 auto;
+  background-color: var(--color-gray-100);
+  padding: 30px 0 0 0;
+}
+
+.emailContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Email Header */
+.emailHeader {
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-gray-200);
+  padding: 30px 40px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.emailHeaderBranded {
+  composes: emailHeader;
+  border-bottom: 2px solid var(--color-gray-190);
+}
+
+/* Logo Containers */
+.ignitionLogo {
+  position: relative;
+  height: 50px;
+  width: 151.429px;
+  display: flex;
+  align-items: center;
+}
+
+.ignitionLogoText {
+  position: absolute;
+  left: 0;
+  bottom: 7.09%;
+  width: 88.52%;
+  height: 78.24%;
+}
+
+.ignitionStar {
+  position: absolute;
+  left: 85.49%;
+  top: 0;
+  width: 14.56%;
+  height: 41.73%;
+}
+
+.brandedLogo {
+  font-size: 24px;
+  font-weight: var(--font-weight-regular);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--color-gray-900);
+  font-style: italic;
+}
+
+.brandedLogoEmoji {
+  font-size: 32px;
+  color: var(--color-brand-teal-600);
+  margin-right: 4px;
+}
+
+.brandedTextHeader {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  font-family: Matter, Helvetica, Arial, sans-serif;
+  color: var(--color-black);
+}
+
+.brandedTextHeaderBold {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--color-black);
+}
+
+/* Email Body */
+.emailBody {
+  background-color: var(--color-white);
+  padding: 30px 40px 0 40px;
+}
+
+.emailContent {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.contentText {
+  font-size: var(--font-size-lg);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--color-gray-800);
+  line-height: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contentTextLeft {
+  composes: contentText;
+  line-height: var(--line-height-normal);
+  text-align: left;
+}
+
+/* CTA Buttons */
+.ctaButton {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: var(--font-size-xl);
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: -0.15px;
+  line-height: 22px;
+}
+
+.ctaButtonPrimary {
+  composes: ctaButton;
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+}
+
+.ctaButtonBrandedTeal {
+  composes: ctaButton;
+  background-color: var(--color-brand-teal-50);
+  color: var(--color-black);
+}
+
+.ctaButtonTeal {
+  composes: ctaButton;
+  background-color: var(--color-brand-teal-400);
+  color: var(--color-black);
+}
+
+.ctaButtonOrange {
+  composes: ctaButton;
+  background-color: var(--color-brand-orange-500);
+  color: var(--color-black);
+}
+
+/* Decorative Graphics */
+.decorativeGraphics {
+  height: 98px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.decorativeCircle {
+  position: absolute;
+  bottom: -140px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+
+.decorativeCircleLeft {
+  composes: decorativeCircle;
+  left: -80px;
+  background: linear-gradient(135deg, var(--color-brand-teal-600) 0%, var(--color-brand-teal-600) 100%);
+  opacity: 0.4;
+}
+
+.decorativeCircleCenter {
+  composes: decorativeCircle;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--color-brand-teal-400) 0%, var(--color-brand-teal-400) 100%);
+  opacity: 0.3;
+}
+
+.decorativeCircleRight {
+  composes: decorativeCircle;
+  right: -80px;
+  background: linear-gradient(135deg, var(--color-brand-teal-600) 0%, var(--color-brand-teal-600) 100%);
+  opacity: 0.4;
+}
+
+.decorativeLine {
+  height: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.decorativeLineOrange {
+  composes: decorativeLine;
+  background-color: var(--color-brand-orange-500);
+}
+
+.decorativeLineTeal {
+  composes: decorativeLine;
+  background-color: var(--color-brand-teal-400);
+}
+
+/* Unsubscribe Section */
+.unsubscribeSection {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.unsubscribeText {
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  font-family: Arial, sans-serif;
+  color: var(--color-gray-600);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.unsubscribeLink {
+  color: var(--color-orange-600);
+  text-decoration: underline;
+}
+
+/* Footer */
+.emailFooter {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: 40px 40px 30px 40px;
+}
+
+.footerLogo {
+  composes: ignitionLogo;
+  margin-bottom: 30px;
+}
+
+.footerTextLogo {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--color-black);
+  margin-bottom: 30px;
+}
+
+.footerDescription {
+  font-size: var(--font-size-base);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--color-brand-teal-900);
+  line-height: 16px;
+  letter-spacing: 0.014px;
+  margin: 0 0 30px 0;
+}
+
+/* Star Rating */
+.starRating {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.star {
+  color: var(--color-brand-gold-500);
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.starRatingPlaceholder {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+.ratingText {
+  font-size: var(--font-size-base);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--color-brand-teal-900);
+  line-height: 16px;
+  margin: 0;
+}

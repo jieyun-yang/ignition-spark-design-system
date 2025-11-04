@@ -23,6 +23,8 @@ export const typography = {
     lg: '16px',
     /** XLarge buttons */
     xl: '18px',
+    /** Page heading - Figma: Heading/H2 */
+    '1.5xl': '28px',
     /** Large headings - Figma: component-heading-large/2xl */
     '2xl': '48px',
   },

@@ -11,26 +11,26 @@
   align-items: stretch;
   width: 100%;
   max-width: 320px;
-  border: 1px solid #ced2e0;
+  border: 1px solid var(--color-gray-200);
   border-radius: 3px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   overflow: hidden;
   transition: border-color 0.2s ease;
 }
 
 .container:hover:not(.disabled) {
-  border-color: #b7bac7;
+  border-color: var(--color-gray-400);
 }
 
 .container:focus-within:not(.disabled) {
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
   outline: 2px solid rgba(90, 81, 231, 0.1);
   outline-offset: 0;
 }
 
 .container.disabled {
-  background-color: #f5f6f8;
-  border-color: #e4e7f5;
+  background-color: var(--color-gray-175);
+  border-color: var(--color-gray-200);
   cursor: not-allowed;
 }
 
@@ -42,9 +42,9 @@
   gap: 6px;
   padding: 0 12px;
   border: none;
-  border-right: 1px solid #ced2e0;
-  background-color: #e4e7f5;
-  color: #3c3d40;
+  border-right: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -55,26 +55,26 @@
 }
 
 .copyButton:hover:not(:disabled) {
-  background-color: #d4d7e5;
+  background-color: var(--color-gray-200);
 }
 
 .copyButton:active:not(:disabled) {
-  background-color: #c4c7d5;
+  background-color: var(--color-gray-250);
 }
 
 .copyButton:disabled {
-  color: #9b9da8;
+  color: var(--color-gray-500);
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .copyButton.copied {
-  background-color: #e4e7f5;
-  color: #3c3d40;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
 }
 
 .copyButton.copied:hover:not(:disabled) {
-  background-color: #d4d7e5;
+  background-color: var(--color-gray-200);
 }
 
 /* Icon */
@@ -95,7 +95,7 @@
   padding: 8px 12px;
   border: none;
   background-color: transparent;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -104,11 +104,11 @@
 }
 
 .input::placeholder {
-  color: #9b9da8;
+  color: var(--color-gray-500);
 }
 
 .input:disabled {
-  color: #9b9da8;
+  color: var(--color-gray-500);
   cursor: not-allowed;
 }
 

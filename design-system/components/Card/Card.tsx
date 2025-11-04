@@ -196,8 +196,9 @@ export const Card: React.FC<CardProps> = ({
                 <div className={styles.menuDropdown}>
                   <Menu
                     options={menuOptions}
-                    onSelect={(option) => {
-                      option.onClick?.();
+                    onSelect={(value) => {
+                      const selectedOption = menuOptions.find(opt => opt.value === value);
+                      selectedOption?.onClick?.();
                       handleMenuClose();
                     }}
                   />

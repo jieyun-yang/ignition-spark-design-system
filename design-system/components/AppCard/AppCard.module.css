@@ -9,8 +9,8 @@
   flex-direction: column;
   width: 218px;
   height: 218px;
-  background-color: #ffffff;
-  border: 1px solid #ced2e0; /* Figma: Gray border */
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200); /* Figma: Gray border */
   border-radius: 4px;
   overflow: hidden;
   transition: all 0.2s ease;
@@ -28,20 +28,20 @@
 
 /* Hover state - Add subtle shadow for better UX feedback */
 .appCard.clickable:hover {
-  background-color: #ffffff;
-  border-color: #ced2e0;
+  background-color: var(--color-white);
+  border-color: var(--color-gray-200);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Selected State */
 .appCard.selected {
-  background-color: #f4f3ff; /* Figma: Primary/Purple/25 */
-  border-color: #7169ea; /* Figma: Primary purple border */
+  background-color: var(--color-primary-25); /* Figma: Primary/Purple/25 */
+  border-color: var(--color-primary-400); /* Figma: Primary purple border */
 }
 
 .appCard.selected:hover {
-  background-color: #f4f3ff;
-  border-color: #7169ea;
+  background-color: var(--color-primary-25);
+  border-color: var(--color-primary-400);
 }
 
 /* Disabled State */
@@ -57,7 +57,7 @@
   justify-content: center;
   width: 100%;
   padding: 4px 0;
-  background-color: #5a51e7; /* Figma: Primary/Purple/500 */
+  background-color: var(--color-primary-500); /* Figma: Primary/Purple/500 */
   flex-shrink: 0;
 }
 
@@ -66,7 +66,7 @@
   font-size: 11px;
   font-weight: 400;
   line-height: 1.5;
-  color: #ffffff;
+  color: var(--color-white);
   text-align: center;
   letter-spacing: 0.5px;
 }
@@ -106,7 +106,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  color: #1e1e20; /* Figma: Gray/900 Primary text */
+  color: var(--color-gray-900); /* Figma: Gray/900 Primary text */
   margin: 0;
   text-align: center;
   overflow: hidden;
@@ -121,7 +121,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  color: #3c3d40; /* Figma: Gray/800 Secondary text */
+  color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   margin: 0;
   text-align: center;
   overflow: hidden;
@@ -155,6 +155,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: #807d7a; /* Figma: Neutral/600 Graphics */
+  color: var(--color-marketing-gray-650); /* Figma: Neutral/600 Graphics */
   font-size: 18px; /* Figma: 18px icon size */
 }

@@ -1,0 +1,148 @@
+/**
+ * Design Tokens as CSS Custom Properties
+ *
+ * Auto-generated from TypeScript tokens
+ * All color, spacing, and typography values
+ */
+
+:root {
+  /* Primary Colors - Purple */
+  --color-primary-25: #F4F3FF;
+  --color-primary-50: #E8E7FF;
+  --color-primary-75: #E2E0FB;
+  --color-primary-100: #D5D2F9;
+  --color-primary-150: #B8B4F5;
+  --color-primary-200: #EEEDFC;
+  --color-primary-250: #EDEDFC;
+  --color-primary-275: #E3E3F9;
+  --color-primary-300: #9C96F0;
+  --color-primary-400: #7169EA;
+  --color-primary-450: #4A41D7;
+  --color-primary-475: #4940D0;
+  --color-primary-500: #5A51E7;
+  --color-primary-550: #4940C7;
+  --color-primary-600: #4940CE;
+  --color-primary-650: #3A31C7;
+  --color-primary-700: #3931B1;
+  --color-primary-750: #3830A7;
+  --color-primary-bg-light: #F0EFFF;
+
+  /* Orange Accent */
+  --color-orange-600: #DF320C;
+  --color-orange-hover: #FF6934;
+
+  /* Secondary Colors - Blue */
+  --color-secondary-blue-50: #E6F0FE;
+  --color-secondary-blue-100: #CFE0FC;
+  --color-secondary-blue-500: #0F65F0;
+  --color-secondary-blue-700: #103E89;
+
+  /* Secondary Colors - Green */
+  --color-secondary-green-50: #E8FDF6;
+  --color-secondary-green-100: #C5F6E6;
+  --color-secondary-green-400: #4EA298;
+  --color-secondary-green-500: #08A674;
+  --color-secondary-green-700: #056647;
+
+  /* Secondary Colors - Yellow */
+  --color-secondary-yellow-50: #FFF8DB;
+  --color-secondary-yellow-100: #FDEDAA;
+  --color-secondary-yellow-400: #F5A623;
+  --color-secondary-yellow-500: #D97706;
+  --color-secondary-yellow-700: #92400E;
+
+  /* Secondary Colors - Red */
+  --color-secondary-red-50: #FDE7E7;
+  --color-secondary-red-100: #FECDCD;
+  --color-secondary-red-400: #EC4B4B;
+  --color-secondary-red-450: #FF6B6B;
+  --color-secondary-red-500: #DD2222;
+  --color-secondary-red-600: #E74C3C;
+  --color-secondary-red-650: #CD1212;
+  --color-secondary-red-700: #940505;
+  --color-secondary-red-750: #BD0202;
+
+  /* Gray Scale */
+  --color-gray-50: #F8F8FC;
+  --color-gray-100: #F0F2FA;
+  --color-gray-150: #F5F6FA;
+  --color-gray-175: #F5F6F8;
+  --color-gray-185: #EFF0F5;
+  --color-gray-190: #ECEBEA;
+  --color-gray-195: #E9EAEB;
+  --color-gray-200: #E4E7F5;
+  --color-gray-220: #DBDBDC;
+  --color-gray-240: #D5D8EA;
+  --color-gray-245: #D5D4D2;
+  --color-gray-250: #C4C7D5;
+  --color-gray-300: #EBEBF0;
+  --color-gray-400: #B7BAC7;
+  --color-gray-450: #A0A1A6;
+  --color-gray-500: #9B9DA8;
+  --color-gray-600: #7B7D85;
+  --color-gray-700: #5A5B60;
+  --color-gray-800: #3C3D40;
+  --color-gray-900: #1E1E20;
+
+  /* Neutral Colors */
+  --color-neutral-beige-800: #403E3D;
+  --color-neutral-beige-900: #201F1E;
+
+  /* Marketing/Neutral Grays */
+  --color-marketing-gray-600: #605E5B;
+  --color-marketing-gray-650: #807D7A;
+  --color-marketing-gray-700: #BDBAB7;
+
+  /* Base Colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Brand Colors - Email/Marketing */
+  --color-brand-teal-900: #15514d;  /* Dark teal for headings */
+  --color-brand-teal-600: #4d9f96;  /* Mid teal for gradients */
+  --color-brand-teal-400: #6dd8df;  /* Light teal for CTAs */
+  --color-brand-teal-50: #d5fdff;   /* Very light teal for CTA backgrounds */
+
+  /* Brand Colors - Accents */
+  --color-brand-orange-500: #ff9d28;  /* Email CTA orange */
+  --color-brand-orange-600: #f4502a;  /* Spinner orange */
+  --color-brand-gold-500: #f4a52a;    /* Star rating gold */
+
+  /* Semantic Colors - Status */
+  --color-success-500: #16a34a;       /* Success green for tables */
+
+  /* Spacing */
+  --spacing-0-5: 4px;
+  --spacing-1: 6px;
+  --spacing-1-5: 8px;
+  --spacing-2: 10px;
+  --spacing-2-5: 12px;
+  --spacing-3: 13px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+
+  /* Typography - Font Family */
+  --font-family-primary: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Typography - Font Size */
+  --font-size-xs: 13px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-1-5xl: 28px;
+  --font-size-2xl: 48px;
+
+  /* Typography - Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Typography - Line Height */
+  --line-height-none: 1;
+  --line-height-normal: 1.5;
+}

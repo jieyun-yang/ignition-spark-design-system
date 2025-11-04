@@ -5,8 +5,8 @@
   top: calc(100% + 4px);
   left: 0;
   right: 0;
-  background-color: #ffffff;
-  border: 1px solid #b7bac7;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-400);
   border-radius: 4px;
   padding: 8px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
@@ -27,15 +27,15 @@
 }
 
 .option:hover:not(.disabled) {
-  background-color: #f5f6f8;
+  background-color: var(--color-gray-175);
 }
 
 .option.selected {
-  background-color: #eeedfc;
+  background-color: var(--color-primary-200);
 }
 
 .option.selected:hover:not(.disabled) {
-  background-color: #e2e0fb;
+  background-color: var(--color-primary-75);
 }
 
 .option.disabled {
@@ -44,24 +44,24 @@
 }
 
 .option.destructive .label {
-  color: #ec4b4b;
+  color: var(--color-secondary-red-400);
 }
 
 .option.destructive .icon {
-  color: #ec4b4b;
+  color: var(--color-secondary-red-400);
 }
 
 .option.destructive .simpleIcon {
-  color: #ec4b4b;
+  color: var(--color-secondary-red-400);
 }
 
 .option:focus {
   outline: none;
-  background-color: #f5f6f8;
+  background-color: var(--color-gray-175);
 }
 
 .option.selected:focus {
-  background-color: #e2e0fb;
+  background-color: var(--color-primary-75);
 }
 
 /* Prominent variant styles */
@@ -76,13 +76,13 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background-color: #f5f6f8;
+  background-color: var(--color-gray-175);
   border-radius: 4px;
 }
 
 .icon {
   font-size: 16px;
-  color: #3c3d40;
+  color: var(--color-gray-800);
 }
 
 .simpleIcon {
@@ -93,7 +93,7 @@
   width: 16px;
   height: 16px;
   font-size: 14px;
-  color: #5a5b60;
+  color: var(--color-gray-700);
 }
 
 .content {
@@ -109,7 +109,7 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 1.5;
-  color: #403e3d;
+  color: var(--color-neutral-beige-800);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -120,7 +120,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  color: #807d7a;
+  color: var(--color-marketing-gray-650);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -136,10 +136,10 @@
 }
 
 .menu::-webkit-scrollbar-thumb {
-  background-color: #ced2e0;
+  background-color: var(--color-gray-200);
   border-radius: 4px;
 }
 
 .menu::-webkit-scrollbar-thumb:hover {
-  background-color: #b7bac7;
+  background-color: var(--color-gray-400);
 }

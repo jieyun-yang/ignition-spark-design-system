@@ -5,7 +5,7 @@
  * Matches Figma Signature design
  */
 
-import React from 'react';
+// React import not needed with new JSX transform
 import clsx from 'clsx';
 import styles from './Signature.module.css';
 

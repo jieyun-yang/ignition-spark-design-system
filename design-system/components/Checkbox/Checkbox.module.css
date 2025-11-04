@@ -39,24 +39,24 @@
   flex-shrink: 0;
   width: 16px;
   height: 16px;
-  border: 1.5px solid #ced2e0;
+  border: 1.5px solid var(--color-gray-200);
   border-radius: 3px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   transition: all 0.2s ease;
   position: relative;
 }
 
 /* Checked state */
 .checkboxInput.checked {
-  background-color: #5a51e7;
-  border-color: #5a51e7;
+  background-color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
 }
 
 /* Check icon */
 .checkIcon {
   width: 10px;
   height: 10px;
-  color: #ffffff;
+  color: var(--color-white);
   position: absolute;
 }
 
@@ -67,7 +67,7 @@
   justify-content: center;
   width: 10px;
   height: 10px;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -77,7 +77,7 @@
 /* Label text */
 .label {
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
 }
 
 /* Size variants */
@@ -98,44 +98,44 @@
 
 /* Hover state */
 .checkbox:hover:not(.disabled) .checkboxInput:not(.checked) {
-  border-color: #9b9da8;
+  border-color: var(--color-gray-500);
 }
 
 .checkbox:hover:not(.disabled) .checkboxInput.checked {
-  background-color: #4a41d7;
-  border-color: #4a41d7;
+  background-color: var(--color-primary-450);
+  border-color: var(--color-primary-450);
 }
 
 /* Focus state (when input is focused) */
 .hiddenInput:focus-visible + .checkboxInput {
   outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5a51e7;
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
 }
 
 /* Invalid state */
 .checkbox.invalid .checkboxInput:not(.checked) {
-  border-color: #dd2222;
+  border-color: var(--color-secondary-red-500);
 }
 
 .checkbox.invalid .label {
-  color: #dd2222;
+  color: var(--color-secondary-red-500);
 }
 
 /* Disabled state */
 .checkbox.disabled .checkboxInput {
-  background-color: #f3f4f8;
-  border-color: #e4e7f5;
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-200);
 }
 
 .checkbox.disabled .checkboxInput.checked {
-  background-color: #e4e7f5;
-  border-color: #e4e7f5;
+  background-color: var(--color-gray-200);
+  border-color: var(--color-gray-200);
 }
 
 .checkbox.disabled .checkIcon {
-  color: #c6c9d4;
+  color: var(--color-gray-400);
 }
 
 .checkbox.disabled .label {
-  color: #9b9da8;
+  color: var(--color-gray-500);
 }

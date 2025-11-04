@@ -5,8 +5,8 @@
  */
 
 .calendar {
-  background-color: #ffffff;
-  border: 1px solid #ecebea;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-190);
   border-radius: 4px;
   padding: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   width: 172px;
 }
 
@@ -45,13 +45,13 @@
   border: none;
   background: transparent;
   border-radius: 3px;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .navButton:hover {
-  background-color: #f0f2fa;
+  background-color: var(--color-gray-100);
 }
 
 .navButton svg {
@@ -74,7 +74,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   text-align: center;
 }
 
@@ -98,35 +98,35 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .day:hover {
-  background-color: #f0f2fa;
+  background-color: var(--color-gray-100);
 }
 
 /* Other month days (grayed out) */
 .day.otherMonth {
-  color: #9b9da8;
+  color: var(--color-gray-500);
 }
 
 /* Today */
 .day.today {
-  color: #5a51e7;
+  color: var(--color-primary-500);
   font-weight: 700;
   font-size: 13px;
 }
 
 /* Selected day */
 .day.selected {
-  background-color: #5a51e7;
-  color: #ffffff;
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
   font-weight: 500;
   font-size: 13px;
 }
 
 .day.selected:hover {
-  background-color: #4a41d7;
+  background-color: var(--color-primary-450);
 }

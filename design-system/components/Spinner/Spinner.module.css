@@ -63,13 +63,13 @@
 
 /* Colors */
 .color-primary .circle {
-  stroke: #5a51e7;
+  stroke: var(--color-primary-500);
 }
 
 .color-secondary .circle {
-  stroke: #3c3d40;
+  stroke: var(--color-gray-800);
 }
 
 .color-white .circle {
-  stroke: #ffffff;
+  stroke: var(--color-white);
 }

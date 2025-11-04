@@ -10,7 +10,7 @@
  * <Overlayer visible={isOpen} onClick={handleClose} />
  */
 
-import React from 'react';
+// React import not needed with new JSX transform
 import clsx from 'clsx';
 import styles from './Overlayer.module.css';
 

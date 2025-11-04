@@ -1,0 +1,35 @@
+declare const styles: {
+  readonly "action-primary": string;
+  readonly "action-secondary": string;
+  readonly "action-tertiary": string;
+  readonly "actionButton": string;
+  readonly "actionIcon": string;
+  readonly "actions": string;
+  readonly "body": string;
+  readonly "caption": string;
+  readonly "closeButton": string;
+  readonly "divider": string;
+  readonly "footer": string;
+  readonly "hasIllustration": string;
+  readonly "header": string;
+  readonly "headerIcon": string;
+  readonly "illustration": string;
+  readonly "modal": string;
+  readonly "overflow": string;
+  readonly "overlay": string;
+  readonly "size-large": string;
+  readonly "size-medium": string;
+  readonly "size-small": string;
+  readonly "size-xlarge": string;
+  readonly "size-xsmall": string;
+  readonly "size-xxlarge": string;
+  readonly "size-xxsmall": string;
+  readonly "stickyFooter": string;
+  readonly "stickyHeader": string;
+  readonly "title": string;
+  readonly "titleRow": string;
+  readonly "titleWithIcon": string;
+  readonly "titleWrapper": string;
+};
+export = styles;
+

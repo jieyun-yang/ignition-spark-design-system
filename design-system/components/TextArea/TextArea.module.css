@@ -7,40 +7,40 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #3c3d40;
-  background-color: #ffffff;
-  border: 1px solid #ced2e0;
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
   border-radius: 4px;
   resize: vertical;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .textarea::placeholder {
-  color: #9b9da8;
+  color: var(--color-gray-500);
 }
 
 .textarea:hover:not(:disabled) {
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
 }
 
 .textarea:focus {
   outline: none;
-  border-color: #5a51e7;
+  border-color: var(--color-primary-500);
   box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1);
 }
 
 .textarea.disabled {
-  background-color: #f3f4f8;
-  color: #9b9da8;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-500);
   cursor: not-allowed;
 }
 
 .textarea.invalid {
-  border-color: #dd2222;
+  border-color: var(--color-secondary-red-500);
 }
 
 .textarea.invalid:focus {
-  border-color: #dd2222;
+  border-color: var(--color-secondary-red-500);
   box-shadow: 0 0 0 3px rgba(221, 34, 34, 0.1);
 }
 

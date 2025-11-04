@@ -10,7 +10,7 @@
  * </Tooltip>
  */
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import styles from './Tooltip.module.css';
 

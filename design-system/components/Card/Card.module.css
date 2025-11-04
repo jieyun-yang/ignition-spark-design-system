@@ -6,8 +6,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  border: 1px solid #ced2e0; /* Figma: Gray border */
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200); /* Figma: Gray border */
   border-radius: 4px; /* Figma: 4px not 8px */
   overflow: hidden;
   transition: all 0.2s ease;
@@ -19,24 +19,24 @@
 
 /* Hover state - NO background or border color change per Figma */
 .card.clickable:hover {
-  background-color: #ffffff;
-  border-color: #ced2e0;
+  background-color: var(--color-white);
+  border-color: var(--color-gray-200);
 }
 
 /* Hover state - Icon color changes to orange */
 .card.clickable:hover .icon-default {
-  color: #ff6934; /* Figma: Orange hover color */
+  color: var(--color-orange-hover); /* Figma: Orange hover color */
 }
 
 /* Selected State */
 .card.selected {
-  background-color: #f4f3ff; /* Figma: Primary/Purple/25 */
-  border-color: #7169ea; /* Figma: Primary purple border */
+  background-color: var(--color-primary-25); /* Figma: Primary/Purple/25 */
+  border-color: var(--color-primary-400); /* Figma: Primary purple border */
 }
 
 .card.selected:hover {
-  background-color: #f4f3ff; /* No change on hover */
-  border-color: #7169ea;
+  background-color: var(--color-primary-25); /* No change on hover */
+  border-color: var(--color-primary-400);
 }
 
 /* Disabled State */
@@ -48,7 +48,7 @@
 
 /* Disabled state - opacity is applied to entire card, don't change individual colors */
 .card.disabled .description {
-  color: #3c3d40; /* Figma: Gray/800 for description in disabled state */
+  color: var(--color-gray-800); /* Figma: Gray/800 for description in disabled state */
 }
 
 /* Size Variants */
@@ -70,7 +70,7 @@
 /* Preview Section */
 .preview {
   width: 100%;
-  background-color: #f5f6fa;
+  background-color: var(--color-gray-150);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,24 +154,24 @@
   width: 52px;
   height: 52px;
   font-size: 32px;
-  background-color: #e8e7ff;
+  background-color: var(--color-primary-50);
   border-radius: 100px;
 }
 
 .icon-default {
-  color: #7b7d85; /* Figma: Gray/600 Graphics */
+  color: var(--color-gray-600); /* Figma: Gray/600 Graphics */
 }
 
 .icon-primary {
-  color: #ff6b6b;
+  color: var(--color-secondary-red-450);
 }
 
 .icon-secondary {
-  color: #5a51e7;
+  color: var(--color-primary-500);
 }
 
 .icon-logo {
-  color: #7B7D85; /* Gray/600 Graphics from Figma */
+  color: var(--color-gray-600); /* Gray/600 Graphics from Figma */
 }
 
 /* Title Container */
@@ -187,7 +187,7 @@
 .title {
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 500; /* Figma: Medium = 500 not 600 */
-  color: #1e1e20; /* Figma: Gray/900 Primary text */
+  color: var(--color-gray-900); /* Figma: Gray/900 Primary text */
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -214,7 +214,7 @@
 .description {
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 400;
-  color: #5a5b60;
+  color: var(--color-gray-700);
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -252,20 +252,20 @@
   padding: 0;
   border: none;
   background: transparent;
-  color: #5a5b60;
+  color: var(--color-gray-700);
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .menuButton:hover {
-  background-color: #e4e7f5;
-  color: #3c3d40;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
 }
 
 .menuButton:active,
 .menuButton[aria-expanded="true"] {
-  background-color: #d4d7e5;
+  background-color: var(--color-gray-200);
 }
 
 /* Menu Dropdown */

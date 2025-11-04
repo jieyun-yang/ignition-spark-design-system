@@ -6,9 +6,9 @@
 .tableContainer {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #e4e7f5;
+  border: 1px solid var(--color-gray-200);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--color-white);
 }
 
 .table {
@@ -20,7 +20,7 @@
 
 /* Header */
 .thead {
-  background-color: #f5f6fa;
+  background-color: var(--color-gray-150);
 }
 
 .th {
@@ -28,11 +28,11 @@
   text-align: left;
   font-size: 12px;
   font-weight: 600;
-  color: #5a5b60;
+  color: var(--color-gray-700);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   white-space: nowrap;
-  border-bottom: 1px solid #e4e7f5;
+  border-bottom: 1px solid var(--color-gray-200);
   box-sizing: border-box;
   height: 44px;
   vertical-align: middle;
@@ -45,7 +45,7 @@
 }
 
 .th.sortable:hover {
-  background-color: #eff0f5;
+  background-color: var(--color-gray-185);
 }
 
 .headerContent {
@@ -60,13 +60,13 @@
   justify-content: center;
   width: 16px;
   height: 16px;
-  color: #5a51e7;
+  color: var(--color-primary-500);
   font-size: 12px;
 }
 
 /* Body */
 .tbody {
-  background: #ffffff;
+  background: var(--color-white);
 }
 
 .tr {
@@ -78,15 +78,15 @@
 }
 
 .tr:hover {
-  background-color: #f8f8ff;
+  background-color: var(--color-gray-50);
 }
 
 .tr.selected {
-  background-color: #ededfc;
+  background-color: var(--color-primary-250);
 }
 
 .tr.selected:hover {
-  background-color: #e3e3f9;
+  background-color: var(--color-primary-275);
 }
 
 .tr.clickable {
@@ -97,9 +97,9 @@
   padding: 16px;
   font-size: 14px;
   font-weight: 400;
-  color: #3c3d40;
+  color: var(--color-gray-800);
   vertical-align: middle;
-  border-bottom: 1px solid #e4e7f5;
+  border-bottom: 1px solid var(--color-gray-200);
   box-sizing: border-box;
   height: 56px;
   line-height: 1.5;
@@ -126,20 +126,20 @@
   padding: 0;
   border: none;
   background: transparent;
-  color: #5a5b60;
+  color: var(--color-gray-700);
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .actionButton:hover {
-  background-color: #e4e7f5;
-  color: #3c3d40;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
 }
 
 .actionButton:active,
 .actionButton[aria-expanded="true"] {
-  background-color: #d4d7e5;
+  background-color: var(--color-gray-200);
 }
 
 /* Menu Portal */
@@ -161,5 +161,5 @@
   padding: 48px 16px;
   text-align: center;
   font-size: 14px;
-  color: #5a5b60;
+  color: var(--color-gray-700);
 }

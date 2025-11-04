@@ -12,8 +12,16 @@ export const colors = {
     50: '#E8E7FF',
     /** Figma: Primary/Purple/100 */
     100: '#D5D2F9',
+    /** Figma: Primary/Purple/400 Brand Purple */
+    400: '#7169EA',
     /** Figma: Primary/Purple/500 Buttons */
     500: '#5A51E7',
+  },
+
+  /** Orange accent colors */
+  orange: {
+    /** Figma: Primary/Orange/600 */
+    600: '#DF320C',
   },
 
   /** Secondary brand colors */
@@ -54,14 +62,26 @@ export const colors = {
 
   /** Gray scale for text, dividers, backgrounds */
   gray: {
+    /** Figma: Gray/50 Background */
+    50: '#F8F8FC',
+    /** Figma: Gray/100 */
+    100: '#F0F2FA',
     /** Figma: Gray/200 Dividers */
     200: '#E4E7F5',
+    /** Figma: Gray/300 Borders */
+    300: '#EBEBF0',
+    /** Figma: Gray/400 Actionable UI */
+    400: '#B7BAC7',
     /** Figma: Gray/500 Muted text */
     500: '#9B9DA8',
     /** Figma: Gray/600 Graphics */
     600: '#7B7D85',
+    /** Figma: Gray/700 Tertiary text */
+    700: '#5A5B60',
     /** Figma: Gray/800 Secondary text */
     800: '#3C3D40',
+    /** Figma: Gray/900 Primary text */
+    900: '#1E1E20',
   },
 
   /** Neutral colors */

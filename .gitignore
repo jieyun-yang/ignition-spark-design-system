@@ -5,6 +5,15 @@ node_modules
 
 # Testing
 coverage
+test-results/
+playwright-report/
+.playwright-mcp/
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.tmp
 
 # Production
 dist

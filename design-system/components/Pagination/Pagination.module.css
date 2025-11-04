@@ -20,20 +20,20 @@
   background: none;
   border: none;
   border-radius: 3px;
-  color: #5a51e7; /* Primary/Purple/500 */
+  color: var(--color-primary-500); /* Primary/Purple/500 */
   font-size: 12px;
   cursor: pointer;
   transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
 .navButton:hover:not(.disabled) {
-  background-color: #e8e7ff; /* Primary/Purple/50 */
+  background-color: var(--color-primary-50); /* Primary/Purple/50 */
 }
 
 .navButton.disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  color: #7169ea; /* Primary/Purple/400 */
+  color: var(--color-primary-400); /* Primary/Purple/400 */
 }
 
 /* Page number buttons */
@@ -51,20 +51,20 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  color: #5a51e7; /* Primary/Purple/500 */
+  color: var(--color-primary-500); /* Primary/Purple/500 */
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .pageButton:hover:not(.active) {
-  background-color: #e8e7ff; /* Primary/Purple/50 */
+  background-color: var(--color-primary-50); /* Primary/Purple/50 */
 }
 
 .pageButton.active {
-  background-color: #5a51e7; /* Primary/Purple/500 */
-  color: #ffffff; /* White */
+  background-color: var(--color-primary-500); /* Primary/Purple/500 */
+  color: var(--color-white); /* White */
 }
 
 .pageButton.active:hover {
-  background-color: #4940ce; /* Primary/Purple/600 */
+  background-color: var(--color-primary-600); /* Primary/Purple/600 */
 }

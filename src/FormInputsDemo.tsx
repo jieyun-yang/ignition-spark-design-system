@@ -49,7 +49,7 @@ function FormInputsDemo() {
         {/* Checkbox */}
         <section className="section">
           <h2>Checkbox</h2>
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginBottom: '12px' }}>Small</h3>
+          <h3>Small</h3>
           <div className="button-grid">
             <div className="button-row">
               <Checkbox
@@ -87,7 +87,7 @@ function FormInputsDemo() {
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Medium (Default)</h3>
+          <h3>Medium (Default)</h3>
           <div className="button-grid">
             <div className="button-row">
               <Checkbox
@@ -145,7 +145,7 @@ function FormInputsDemo() {
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Large</h3>
+          <h3>Large</h3>
           <div className="button-grid">
             <div className="button-row">
               <Checkbox
@@ -183,9 +183,9 @@ function FormInputsDemo() {
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Checkbox Cards</h3>
+          <h3>Checkbox Cards</h3>
           <div className="button-grid">
-            <div className="button-row" style={{ gap: '16px' }}>
+            <div className="button-row">
               <CheckboxCard
                 icon={faStar as any}
                 title="Premium Plan"
@@ -210,9 +210,9 @@ function FormInputsDemo() {
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Checkbox Cards - States</h3>
+          <h3>Checkbox Cards - States</h3>
           <div className="button-grid">
-            <div className="button-row" style={{ gap: '16px' }}>
+            <div className="button-row">
               <Tooltip content="This plan is not available in your region">
                 <CheckboxCard
                   icon={faStar as any}
@@ -244,7 +244,7 @@ function FormInputsDemo() {
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Interactive</h3>
+          <h3>Interactive</h3>
           <div className="button-grid">
             <div className="button-row">
               <Checkbox
@@ -258,15 +258,15 @@ function FormInputsDemo() {
               </Checkbox>
             </div>
             <div className="button-row">
-              <p style={{ marginTop: '8px', color: '#3c3d40' }}>
+              <p>
                 Status: {checkbox4 ? 'Accepted' : 'Not accepted'}
               </p>
             </div>
           </div>
 
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
-              <div style={{ display: 'flex', gap: '16px' }}>
+            <div className="button-column">
+              <div style={{ display: "flex", gap: "16px" }}>
                 <CheckboxCard
                   icon={faPalette as any}
                   title="Design"
@@ -289,7 +289,7 @@ function FormInputsDemo() {
                   onChange={setCard3}
                 />
               </div>
-              <p style={{ marginTop: '8px', color: '#3c3d40' }}>
+              <p>
                 Selected: {[card1 && 'Design', card2 && 'Development', card3 && 'Analytics'].filter(Boolean).join(', ') || 'None'}
               </p>
             </div>
@@ -300,9 +300,9 @@ function FormInputsDemo() {
         <section className="section">
           <h2>Date Picker</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
+            <div className="button-column">
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Select Date
                 </label>
                 <DatePicker
@@ -312,7 +312,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Empty Date
                 </label>
                 <DatePicker
@@ -322,7 +322,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Disabled Date
                 </label>
                 <Tooltip content="Date cannot be changed after submission">
@@ -333,7 +333,7 @@ function FormInputsDemo() {
                 </Tooltip>
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Interactive Date Picker
                 </label>
                 <DatePicker
@@ -344,7 +344,7 @@ function FormInputsDemo() {
                   }}
                   placeholder="Enter date (DD/MM/YYYY)"
                 />
-                <p style={{ marginTop: '8px', color: '#3c3d40' }}>
+                <p>
                   Selected date: {date2 || 'None'}
                 </p>
               </div>
@@ -356,9 +356,9 @@ function FormInputsDemo() {
         <section className="section">
           <h2>TextArea</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px', width: '100%', maxWidth: '600px' }}>
-              <div style={{ width: '100%' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+            <div className="button-column">
+              <div className="form-group">
+                <label>
                   Default TextArea
                 </label>
                 <TextArea
@@ -368,8 +368,8 @@ function FormInputsDemo() {
                   rows={4}
                 />
               </div>
-              <div style={{ width: '100%' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+              <div className="form-group">
+                <label>
                   Pre-filled TextArea
                 </label>
                 <TextArea
@@ -378,8 +378,8 @@ function FormInputsDemo() {
                   rows={3}
                 />
               </div>
-              <div style={{ width: '100%' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+              <div className="form-group">
+                <label>
                   Disabled TextArea
                 </label>
                 <Tooltip content="This field is read-only after approval">
@@ -390,8 +390,8 @@ function FormInputsDemo() {
                   />
                 </Tooltip>
               </div>
-              <div style={{ width: '100%' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+              <div className="form-group">
+                <label>
                   Invalid TextArea
                 </label>
                 <TextArea
@@ -401,8 +401,8 @@ function FormInputsDemo() {
                   rows={2}
                 />
               </div>
-              <div style={{ width: '100%' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+              <div className="form-group">
+                <label>
                   Non-resizable TextArea
                 </label>
                 <TextArea
@@ -421,7 +421,7 @@ function FormInputsDemo() {
         <section className="section">
           <h2>Switch</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
+            <div className="button-column">
               <Switch
                 checked={toggle1}
                 onChange={setToggle1}
@@ -453,8 +453,8 @@ function FormInputsDemo() {
                   disabled
                 />
               </Tooltip>
-              <div style={{ marginTop: '8px' }}>
-                <p style={{ color: '#3c3d40', fontSize: '14px' }}>
+              <div style={{ marginTop: "8px" }}>
+                <p className="helper-text">
                   Email: {toggle1 ? 'Enabled' : 'Disabled'} | SMS: {toggle2 ? 'Enabled' : 'Disabled'}
                 </p>
               </div>
@@ -466,12 +466,12 @@ function FormInputsDemo() {
         <section className="section">
           <h2>Radio Button</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
+            <div className="button-column">
               <div>
-                <p style={{ marginBottom: '12px', fontSize: '14px', fontWeight: 500, color: '#3c3d40' }}>
+                <p style={{ marginBottom: "12px", fontSize: "14px", fontWeight: 500, color: "#3c3d40" }}>
                   Select a plan:
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                   <RadioButton
                     name="plan"
                     value="basic"
@@ -508,7 +508,7 @@ function FormInputsDemo() {
                     </RadioButton>
                   </Tooltip>
                 </div>
-                <p style={{ marginTop: '12px', color: '#3c3d40', fontSize: '14px' }}>
+                <p className="helper-text">
                   Selected: {radio1.charAt(0).toUpperCase() + radio1.slice(1)} Plan
                 </p>
               </div>
@@ -520,7 +520,7 @@ function FormInputsDemo() {
         <section className="section">
           <h2>Search</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
+            <div className="button-column">
               <Search
                 value={search1}
                 onChange={setSearch1}
@@ -539,8 +539,8 @@ function FormInputsDemo() {
                   disabled
                 />
               </Tooltip>
-              <div style={{ marginTop: '8px' }}>
-                <p style={{ color: '#3c3d40', fontSize: '14px' }}>
+              <div style={{ marginTop: "8px" }}>
+                <p className="helper-text">
                   Search query: "{search1}" {search1 ? `(${search1.length} characters)` : '(empty)'}
                 </p>
               </div>
@@ -552,7 +552,7 @@ function FormInputsDemo() {
         <section className="section">
           <h2>Password Input</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px', maxWidth: '400px', width: '100%' }}>
+            <div className="button-column form-group-narrow">
               <PasswordInput
                 value={password1}
                 onChange={setPassword1}
@@ -580,7 +580,7 @@ function FormInputsDemo() {
         <section className="section">
           <h2>Text Input</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px', maxWidth: '400px', width: '100%' }}>
+            <div className="button-column form-group-narrow">
               <TextInput
                 value={textInput1}
                 onChange={setTextInput1}
@@ -621,7 +621,7 @@ function FormInputsDemo() {
         <section className="section">
           <h2>Copy Field</h2>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px', maxWidth: '400px', width: '100%' }}>
+            <div className="button-column form-group-narrow">
               <CopyField
                 value="demo.grab@example.com"
                 onCopy={() => console.log('Email copied to clipboard')}
@@ -647,11 +647,11 @@ function FormInputsDemo() {
         {/* Select Component */}
         <section className="section">
           <h2>Select</h2>
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginBottom: '12px' }}>Simple Variant</h3>
+          <h3>Simple Variant</h3>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px' }}>
+            <div className="button-column">
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Choose an option
                 </label>
                 <Select
@@ -667,7 +667,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Pre-selected option
                 </label>
                 <Select
@@ -682,7 +682,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   With error message
                 </label>
                 <Select
@@ -697,7 +697,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Disabled select
                 </label>
                 <Tooltip content="Selection is locked until you complete the previous step">
@@ -714,7 +714,7 @@ function FormInputsDemo() {
                 </Tooltip>
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Clearable select
                 </label>
                 <Select
@@ -730,7 +730,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Loading state
                 </label>
                 <Select
@@ -747,11 +747,11 @@ function FormInputsDemo() {
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Simple Variant (with Captions)</h3>
+          <h3>Simple Variant (with Captions)</h3>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px' }}>
+            <div className="button-column">
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Select a payment method
                 </label>
                 <Select
@@ -767,19 +767,19 @@ function FormInputsDemo() {
                   menuVariant="simple"
                 />
               </div>
-              <div style={{ marginTop: '8px' }}>
-                <p style={{ color: '#3c3d40', fontSize: '14px' }}>
+              <div style={{ marginTop: "8px" }}>
+                <p className="helper-text">
                   Selected: {select3 ? select3.charAt(0).toUpperCase() + select3.slice(1) : 'None'}
                 </p>
               </div>
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Prominent Variant (with Icons)</h3>
+          <h3>Prominent Variant (with Icons)</h3>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px' }}>
+            <div className="button-column">
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Select a plan
                 </label>
                 <Select
@@ -794,19 +794,19 @@ function FormInputsDemo() {
                   menuVariant="prominent"
                 />
               </div>
-              <div style={{ marginTop: '8px' }}>
-                <p style={{ color: '#3c3d40', fontSize: '14px' }}>
+              <div style={{ marginTop: "8px" }}>
+                <p className="helper-text">
                   Selected plan: {select4 ? select4.charAt(0).toUpperCase() + select4.slice(1) : 'None'}
                 </p>
               </div>
             </div>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Multi-Select Variant</h3>
+          <h3>Multi-Select Variant</h3>
           <div className="button-grid">
-            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '20px' }}>
+            <div className="button-column">
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Choose multiple options
                 </label>
                 <Select
@@ -823,7 +823,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Pre-selected items
                 </label>
                 <Select
@@ -840,7 +840,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Multi-select with clearable
                 </label>
                 <Select
@@ -857,7 +857,7 @@ function FormInputsDemo() {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                <label>
                   Multi-select with icons (prominent)
                 </label>
                 <Select
@@ -874,8 +874,8 @@ function FormInputsDemo() {
                   menuVariant="prominent"
                 />
               </div>
-              <div style={{ marginTop: '8px' }}>
-                <p style={{ color: '#3c3d40', fontSize: '14px' }}>
+              <div style={{ marginTop: "8px" }}>
+                <p className="helper-text">
                   Selected items: {multiSelect1.length > 0 ? multiSelect1.join(', ') : 'None'}
                 </p>
               </div>
@@ -886,17 +886,17 @@ function FormInputsDemo() {
         {/* FieldSet Component */}
         <section className="section">
           <h2>FieldSet</h2>
-          <p style={{ marginBottom: '24px', color: '#7b7d85', fontSize: '14px' }}>
+          <p className="description-text">
             Container component for grouping related form fields with a header.
           </p>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginBottom: '12px' }}>Personal Information</h3>
-          <div style={{ marginBottom: '32px' }}>
+          <h3>Personal Information</h3>
+          <div style={{ marginBottom: "32px" }}>
             <FieldSet
               title="Personal Information"
               icon={<FontAwesomeIcon icon={faUser} />}
             >
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div className="button-column">
                 <TextInput
                   value=""
                   onChange={() => {}}
@@ -921,15 +921,15 @@ function FormInputsDemo() {
             </FieldSet>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginBottom: '12px' }}>Account Settings</h3>
-          <div style={{ marginBottom: '32px' }}>
+          <h3>Account Settings</h3>
+          <div style={{ marginBottom: "32px" }}>
             <FieldSet
               title="Account Settings"
               icon={<FontAwesomeIcon icon={faCog} />}
             >
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div className="button-column">
                 <div>
-                  <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: '#3c3d40' }}>
+                  <label>
                     Account Type
                   </label>
                   <Select
@@ -944,7 +944,7 @@ function FormInputsDemo() {
                     menuVariant="prominent"
                   />
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                   <Switch
                     checked={true}
                     onChange={() => {}}
@@ -965,13 +965,13 @@ function FormInputsDemo() {
             </FieldSet>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginBottom: '12px' }}>Security</h3>
-          <div style={{ marginBottom: '32px' }}>
+          <h3>Security</h3>
+          <div style={{ marginBottom: "32px" }}>
             <FieldSet
               title="Security"
               icon={<FontAwesomeIcon icon={faShieldAlt} />}
             >
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div className="button-column">
                 <PasswordInput
                   value=""
                   onChange={() => {}}
@@ -987,7 +987,7 @@ function FormInputsDemo() {
                   onChange={() => {}}
                   placeholder="Confirm new password"
                 />
-                <div style={{ marginTop: '8px' }}>
+                <div style={{ marginTop: "8px" }}>
                   <Checkbox
                     checked={false}
                     onChange={() => {}}

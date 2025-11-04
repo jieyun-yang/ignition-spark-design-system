@@ -12,8 +12,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  background-color: #e8e7ff; /* Primary/Purple/50 */
-  color: #5a51e7; /* Primary/Purple/500 */
+  background-color: var(--color-primary-50); /* Primary/Purple/50 */
+  color: var(--color-primary-500); /* Primary/Purple/500 */
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 500;
   overflow: hidden;
@@ -71,7 +71,7 @@
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #1e1e20; /* Gray/900 Primary text */
+  color: var(--color-gray-900); /* Gray/900 Primary text */
   line-height: 1.5;
 }
 
@@ -79,6 +79,6 @@
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: #5a5b60; /* Gray/700 Tertiary text */
+  color: var(--color-gray-700); /* Gray/700 Tertiary text */
   line-height: 1.5;
 }

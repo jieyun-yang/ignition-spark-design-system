@@ -17,7 +17,7 @@
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #000000;
+  color: var(--color-black);
   line-height: 1.5;
   margin-bottom: 16px;
 }
@@ -27,7 +27,7 @@
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #000000;
+  color: var(--color-black);
   line-height: 1.5;
   margin-bottom: 16px;
 }
@@ -53,7 +53,7 @@
 /* Separator line */
 .separator {
   height: 1px;
-  background-color: #e4e7f5;
+  background-color: var(--color-gray-200);
   width: 100%;
 }
 
@@ -101,7 +101,7 @@
 .label {
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
-  color: #5a5b60; /* Gray/700 Tertiary text */
+  color: var(--color-gray-700); /* Gray/700 Tertiary text */
   line-height: 1.5;
   width: 145px;
   flex-shrink: 0;
@@ -120,7 +120,7 @@
 .value {
   font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
-  color: #1e1e20; /* Gray/900 Primary text */
+  color: var(--color-gray-900); /* Gray/900 Primary text */
   line-height: 1.5;
   flex: 1;
   min-width: 0;
