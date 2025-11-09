@@ -2,21 +2,20 @@
 
 **Quick plug-and-play prompts for building prototypes with AI assistants like Claude Code, Cursor, or GitHub Copilot.**
 
-Use the 3-phase workflow below to build production-ready prototypes 10x faster. The AI will analyze your design, use existing components, and verify everything works correctly.
+Use the 3-phase workflow below to build production-ready prototypes 10x faster. The AI will analyze your design, use existing components, and autonomously verify everything works correctly.
 
 ---
 
 ## Table of Contents
 
-- [⚡ 3-Phase Workflow](#-3-phase-workflow) - **Start here for new projects**
-- [🤖 What is Autonomous Testing?](#-what-is-autonomous-testing) - **How AI tests without explicit requirements**
-- [🚀 Quick Build Mode](#-quick-build-mode) - Skip to building if you know what you need
-- [📖 Complete Workflow Example](#-complete-workflow-example) - See it in action
-- [📋 Example Prompts by Use Case](#-example-prompts-by-use-case) - Dashboard, Forms, Settings, etc.
+- [⚡ 3-Phase Workflow](#-3-phase-workflow) - **Start here - copy-paste prompts**
+- [🤖 What is Autonomous Testing?](#-what-is-autonomous-testing) - How AI tests without explicit requirements
+- [🚀 Quick Build Mode](#-quick-build-mode) - Skip analysis if you know what you need
 - [🎨 Component Reference](#-component-reference) - Quick lookup
 - [✅ Best Practices](#-best-practices) - Checklist for AI
 - [🚫 Common Mistakes](#-common-mistakes) - What to avoid
 - [💡 Pro Tips](#-pro-tips) - Iteration & refinement
+- [📖 Learning & Examples](./AI-PROMPT-EXAMPLES.md) - **Detailed examples and use cases**
 
 ---
 
@@ -26,7 +25,7 @@ Use the 3-phase workflow below to build production-ready prototypes 10x faster. 
 
 ### 🔍 Phase 1: Design Analysis (Start Here)
 
-**Copy and paste this prompt, then add your Figma link/screenshots/description:**
+**📋 COPY THIS PROMPT** - Add your Figma link/screenshots/description:
 
 ```
 I need you to help me build a prototype using the Ignition Spark Design System.
@@ -84,7 +83,7 @@ ADDITIONAL CONTEXT:
 
 ### 🎯 Phase 2: Build (After Phase 1 Approval)
 
-**After approving the AI's analysis, copy this prompt:**
+**📋 COPY THIS PROMPT** - After approving the AI's analysis:
 
 ```
 Build approved! Please implement using:
@@ -113,7 +112,7 @@ After implementation, run verification (Phase 3).
 
 ### ✅ Phase 3: Verify & Test (After Build)
 
-**After the AI builds the prototype, copy this prompt:**
+**📋 COPY THIS PROMPT** - After the AI builds the prototype:
 
 ```
 Now that the prototype is built, please verify and test it AUTONOMOUSLY:
@@ -263,6 +262,8 @@ Provide a complete verification report with:
 
 **Use this if you already know what components you need and want to skip Phase 1 analysis:**
 
+**📋 COPY THIS PROMPT** - Fill in your requirements:
+
 ```
 I need you to build a [DESCRIBE WHAT YOU NEED] using the Ignition Spark Design System.
 
@@ -288,341 +289,6 @@ REQUIREMENTS:
 [DESCRIBE YOUR SPECIFIC NEEDS HERE]
 
 Please review ./COMPONENTS.md and ./src/templates/ before starting.
-```
-
----
-
-## 📖 Complete Workflow Example
-
-Here's a real example of the full 3-phase workflow:
-
-### Phase 1: User Provides Design
-
-**User:**
-```
-I need to build a Settings page. Here's the Figma link:
-https://figma.com/design/xxx/Settings-Page?node-id=123-456
-
-PHASE 1 - DESIGN ANALYSIS (DO THIS FIRST):
-[Paste the Phase 1 prompt from above]
-```
-
-**AI Response (Example):**
-```
-I've analyzed the Figma design. Here's my component mapping:
-
-DESIGN ANALYSIS:
-
-Header Section:
-✅ PageHeader component
-  - title: "Settings"
-  - No breadcrumbs needed
-  - Props: { title: "Settings" }
-
-Profile Section:
-✅ Card component with FieldSet
-  - Avatar upload → Avatar component (size="large")
-  - Name field → TextInput (label="Full Name")
-  - Email field → TextInput (label="Email", type="email")
-  - Bio → TextArea (label="Bio", rows={4})
-  - Tokens: spacing[6] for card padding
-
-Notifications Section:
-✅ Card with Switch components
-  - Email notifications → Switch
-  - Push notifications → Switch
-  - Tokens: spacing[4] between switches
-
-⚠️ CLARIFYING QUESTIONS:
-1. Should avatar upload be functional or just display?
-2. Do you want validation on the email field?
-3. Should changes auto-save or require a "Save" button?
-
-⚠️ NEW TOKENS NEEDED:
-None - all colors and spacing exist in design system
-
-IMPLEMENTATION PLAN:
-- File: src/pages/SettingsPage.tsx
-- File: src/pages/SettingsPage.module.css (minimal, layout only)
-- Components: PageHeader, Card, Avatar, TextInput, TextArea, Switch, Button, ActionBar
-- Estimated complexity: Medium (2-3 hours)
-
-Do you approve this plan?
-```
-
-### Phase 2: User Approves and Requests Implementation
-
-**User:**
-```
-Approved! Avatar should be display-only for now, add email validation,
-and use an ActionBar with Save/Cancel buttons.
-
-[Paste Phase 2 prompt with approved mapping]
-```
-
-**AI builds the implementation**
-
-### Phase 3: User Requests Verification
-
-**User:**
-```
-[Paste Phase 3 verification prompt]
-```
-
-**AI Response (Example):**
-```
-VERIFICATION COMPLETE:
-
-1. TOKEN USAGE AUDIT:
-   ✅ No hardcoded colors found
-   ✅ No hardcoded spacing found
-   ✅ All using design tokens:
-      - colors.grayscale[100] for card backgrounds
-      - spacing[6] for card padding
-      - spacing[4] for form field gaps
-
-2. COMPONENT USAGE AUDIT:
-   ✅ All components from ./design-system:
-      - PageHeader ✓
-      - Card ✓ (3 instances)
-      - Avatar ✓
-      - TextInput ✓ (2 instances)
-      - TextArea ✓
-      - Switch ✓ (2 instances)
-      - Button ✓ (2 instances)
-      - ActionBar ✓
-
-3. TYPESCRIPT CHECK:
-   ✅ npm run typecheck - PASSED
-   ✅ All props properly typed
-
-4. VISUAL REGRESSION TEST:
-   ✅ Created: tests/settings-page.spec.ts
-   ✅ Screenshots captured:
-      - Default state
-      - Form filled state
-      - Mobile view (375px)
-      - Tablet view (768px)
-   ✅ npm run test:e2e - PASSED
-
-5. ACCESSIBILITY CHECK:
-   ✅ All form fields have labels
-   ✅ Keyboard navigation works
-   ✅ ARIA labels on all buttons
-   ✅ Color contrast > 4.5:1
-
-6. FIGMA COMPARISON:
-   ✅ Visual match confirmed
-   Minor differences:
-   - Font appears slightly smaller (browser rendering)
-   - Otherwise pixel-perfect match
-
-7. CODE QUALITY:
-   ✅ No console.log statements
-   ✅ Clean, readable code
-   ✅ Proper TypeScript types
-
-SUMMARY: All checks passed! Prototype is production-ready.
-```
-
----
-
-## 📋 Example Prompts by Use Case
-
-### Example 1: Dashboard with Data Tables
-
-```
-I need you to build a User Management Dashboard using the Ignition Spark Design System.
-
-CONTEXT:
-- Complete design system with 53 components in ./design-system
-- Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
-
-WHAT I NEED:
-A user management dashboard with:
-- Page header with title "User Management" and "Add User" button
-- Search bar to filter users
-- Data table showing: Name, Email, Role, Status, Last Login
-- Each row should have action menu (Edit, Disable, Delete)
-- Status badges (Active = green, Inactive = gray, Suspended = red)
-- Pagination at the bottom
-- Side navigation matching the Proposals template style
-
-RULES:
-1. ✅ USE existing components from ./design-system
-2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
-4. ❌ DO NOT create new UI components
-5. ❌ DO NOT hardcode colors/spacing
-6. ❌ DO NOT use inline styles
-
-REQUIREMENTS:
-1. Use PageHeader, Table, TableHeader, Badge, Menu, Pagination, and SideNav components
-2. Reference colors from design-system/tokens/colors.ts
-3. Use TypeScript interfaces for user data
-4. Make the table responsive
-5. Follow the layout structure from ./src/templates/ProposalsTemplate.tsx
-
-Please review the Table and Badge components in ./design-system/components before starting.
-```
-
----
-
-### Example 2: Multi-Step Form
-
-```
-I need you to build a Client Onboarding Form using the Ignition Spark Design System.
-
-CONTEXT:
-- Complete design system with 53 components in ./design-system
-- Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
-
-WHAT I NEED:
-A multi-step onboarding form with:
-- Step 1: Basic Information (Company name, Industry, Company size)
-- Step 2: Contact Details (Name, Email, Phone, Address)
-- Step 3: Preferences (Newsletter opt-in, Communication preferences)
-- Progress indicator showing current step
-- "Next" and "Back" buttons
-- Form validation with error messages
-- Success state when complete
-
-RULES:
-1. ✅ USE existing components from ./design-system
-2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
-4. ❌ DO NOT create new UI components
-5. ❌ DO NOT hardcode colors/spacing
-6. ❌ DO NOT use inline styles
-
-REQUIREMENTS:
-1. Use ProgressStatus, TextInput, Select, Checkbox, Button, and Alert components
-2. Reference spacing tokens for consistent layout
-3. Validate all required fields before allowing "Next"
-4. Show success Alert when form is submitted
-5. Follow the wizard pattern from ./src/templates/WizardTemplate.tsx
-
-Please review the form components (TextInput, Select, Checkbox) in ./design-system/components before starting.
-```
-
----
-
-### Example 3: Settings Page
-
-```
-I need you to build a User Settings Page using the Ignition Spark Design System.
-
-CONTEXT:
-- Complete design system with 53 components in ./design-system
-- Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
-
-WHAT I NEED:
-A settings page with sections for:
-- Profile: Avatar upload, Name, Email (TextInput), Bio (TextArea)
-- Notifications: Email notifications (Switch), Push notifications (Switch)
-- Security: Change password (PasswordInput), Two-factor auth (Switch)
-- Danger Zone: Delete account button (destructive)
-- Sticky action bar at bottom with "Cancel" and "Save Changes" buttons
-
-RULES:
-1. ✅ USE existing components from ./design-system
-2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
-4. ❌ DO NOT create new UI components
-5. ❌ DO NOT hardcode colors/spacing
-6. ❌ DO NOT use inline styles
-
-REQUIREMENTS:
-1. Use Card, TextInput, TextArea, Switch, PasswordInput, Avatar, Button, and ActionBar
-2. Group related settings in Card components
-3. Use FieldSet for semantic grouping
-4. Show Toast notification on save
-5. Use destructive Button variant for "Delete Account"
-6. Reference the EmailTemplate.tsx for layout inspiration
-
-Please review the Card, Switch, and ActionBar components before starting.
-```
-
----
-
-### Example 4: Modal-Based Workflow
-
-```
-I need you to build a Project Creation Workflow using the Ignition Spark Design System.
-
-CONTEXT:
-- Complete design system with 53 components in ./design-system
-- Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
-
-WHAT I NEED:
-A project listing page with:
-- Grid of project cards (title, description, status badge, last updated)
-- "Create Project" button that opens a modal
-- Modal with form: Project name, Description (TextArea), Template selection (CheckboxCard)
-- Empty state when no projects exist
-- Loading skeleton while projects load
-
-RULES:
-1. ✅ USE existing components from ./design-system
-2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
-4. ❌ DO NOT create new UI components
-5. ❌ DO NOT hardcode colors/spacing
-6. ❌ DO NOT use inline styles
-
-REQUIREMENTS:
-1. Use Card, CardContainer, Modal, TextInput, TextArea, CheckboxCard, Badge, EmptyState, Skeleton
-2. Show EmptyState with illustration when no projects
-3. Modal should have "Cancel" and "Create" buttons
-4. Show Spinner while creating project
-5. Close modal and show success Toast after creation
-6. Use grid layout with CardContainer
-
-Please review the Modal, EmptyState, and Skeleton components before starting.
-```
-
----
-
-### Example 5: Analytics Dashboard
-
-```
-I need you to build a Sales Analytics Dashboard using the Ignition Spark Design System.
-
-CONTEXT:
-- Complete design system with 53 components in ./design-system
-- Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
-
-WHAT I NEED:
-An analytics dashboard with:
-- 4 stat cards at top (Total Revenue, New Customers, Conversion Rate, Avg Order Value)
-- Date range filter (DatePicker)
-- Filter by region (Select dropdown)
-- Recent transactions table
-- Charts placeholder (we'll integrate later - just show Card with title for now)
-- Export button to download report
-
-RULES:
-1. ✅ USE existing components from ./design-system
-2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
-4. ❌ DO NOT create new UI components
-5. ❌ DO NOT hardcode colors/spacing
-6. ❌ DO NOT use inline styles
-
-REQUIREMENTS:
-1. Use Card, DataList, Table, DatePicker, Select, Button, Badge components
-2. Use CardContainer for stat cards grid
-3. Show ProgressBar for conversion rate
-4. Use Menu component for "Export" options (CSV, PDF, Excel)
-5. Make filters sticky when scrolling
-6. Follow ProposalsTemplate.tsx structure
-
-Please review the DataList, ProgressBar, and Filter components before starting.
 ```
 
 ---
@@ -786,6 +452,16 @@ Please review ./COMPONENTS.md for the full list of available components and thei
 
 ---
 
+## 📖 Want More Examples?
+
+See **[AI-PROMPT-EXAMPLES.md](./AI-PROMPT-EXAMPLES.md)** for:
+- Complete workflow walkthrough (Settings page example)
+- 5 detailed use case examples (Dashboard, Forms, Settings, Modals, Analytics)
+- When to use which approach
+- Advanced scenarios and customization
+
+---
+
 **Last Updated:** 2025-11-04
-**Version:** 1.0.0
+**Version:** 2.0.0
 **Compatible with:** Claude Code, GitHub Copilot, Cursor, and other AI coding assistants

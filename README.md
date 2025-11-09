@@ -163,7 +163,8 @@ For detailed API documentation, see [COMPONENTS.md](./COMPONENTS.md)
 ## 📚 Documentation
 
 - [README.md](./README.md) - This file, project overview
-- [AI-PROMPT-GUIDE.md](./AI-PROMPT-GUIDE.md) - **Complete guide for AI-powered prototyping** ⭐
+- [AI-PROMPT-GUIDE.md](./AI-PROMPT-GUIDE.md) - **Quick copy-paste prompts for AI prototyping** ⭐
+- [AI-PROMPT-EXAMPLES.md](./AI-PROMPT-EXAMPLES.md) - Detailed examples and use cases for learning
 - [COMPONENTS.md](./COMPONENTS.md) - Complete component API documentation
 - [INSTALLATION.md](./INSTALLATION.md) - Installation and usage guide
 - [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md) - Design tokens and principles
