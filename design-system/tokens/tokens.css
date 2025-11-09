@@ -5,6 +5,13 @@
  * All color, spacing, and typography values
  */
 
+/* CSS Reset - Box Sizing Normalization */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   /* Primary Colors - Purple */
   --color-primary-25: #F4F3FF;

@@ -11,8 +11,9 @@
   align-items: flex-start;
   position: relative;
   width: 196px;
-  height: 100%;
+  height: 100vh;
   background-color: var(--color-white);
+  overflow: hidden;
 }
 
 /* Nav Content Wrapper */
@@ -21,10 +22,10 @@
   flex-direction: column;
   gap: 12px;
   width: 196px;
-  height: 100%;
   background-color: var(--color-gray-50); /* Figma: Gray/50 Background */
   align-items: center;
   flex-shrink: 0;
+  height: 100%;
 }
 
 .navContent {
@@ -32,8 +33,8 @@
   flex-direction: column;
   gap: 12px;
   width: 196px;
-  height: 100%;
   align-items: center;
+  height: 100%;
 }
 
 /* Top Group - Header + Create Button */
@@ -158,7 +159,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
   width: 100%;
 }
