@@ -6,7 +6,7 @@
 .signature {
   font-family: 'Brush Script MT', 'Bradley Hand', 'Apple Chancery', cursive;
   font-style: normal;
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   color: var(--color-black);
   white-space: nowrap;
 }

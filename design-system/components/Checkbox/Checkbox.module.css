@@ -11,9 +11,9 @@
 .checkbox {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
   cursor: pointer;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-family-primary);
   user-select: none;
   width: fit-content;
 }
@@ -37,12 +37,12 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  border: 1.5px solid var(--color-gray-200);
-  border-radius: 3px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
+  border: var(--border-width-thick) solid var(--color-gray-200);
+  border-radius: var(--border-radius-sm);
   background-color: var(--color-white);
-  transition: all 0.2s ease;
+  transition: all var(--duration-normal) var(--easing-ease);
   position: relative;
 }
 
@@ -54,8 +54,8 @@
 
 /* Check icon */
 .checkIcon {
-  width: 10px;
-  height: 10px;
+  width: var(--spacing-2-5);
+  height: var(--spacing-2-5);
   color: var(--color-white);
   position: absolute;
 }
@@ -65,35 +65,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10px;
-  height: 10px;
+  width: var(--spacing-2-5);
+  height: var(--spacing-2-5);
   color: var(--color-white);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-none);
   position: absolute;
 }
 
 /* Label text */
 .label {
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
 }
 
 /* Size variants */
 .size-sm .label {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
 }
 
 .size-md .label {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
 }
 
 .size-lg .label {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
 }
 
 /* Hover state */
@@ -109,7 +109,7 @@
 /* Focus state (when input is focused) */
 .hiddenInput:focus-visible + .checkboxInput {
   outline: none;
-  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
+  box-shadow: 0 0 0 var(--spacing-0-5) var(--color-white), 0 0 0 var(--spacing-1) var(--color-primary-500);
 }
 
 /* Invalid state */

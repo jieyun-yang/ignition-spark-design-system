@@ -20,9 +20,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--spacing-4);
   background-color: var(--color-white);
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
   box-shadow: 0px 0px 1px 0px rgba(23, 30, 37, 0.31), 0px 8px 12px 0px rgba(23, 30, 37, 0.15);
   max-height: 90vh;
   overflow: hidden;
@@ -77,7 +77,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--spacing-4);
   width: 100%;
   border-bottom: 1.5px solid var(--color-gray-200);
 }
@@ -94,7 +94,7 @@
 .titleWithIcon {
   flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .headerIcon {
@@ -109,10 +109,10 @@
 
 .title {
   flex: 1;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-family-primary);
   font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-900);
   margin: 0;
   min-width: 0;
@@ -133,7 +133,7 @@
   background: transparent;
   color: var(--color-marketing-gray-650);
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color var(--duration-normal) var(--easing-ease);
 }
 
 .closeButton:hover {
@@ -149,10 +149,10 @@
 }
 
 .caption {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-700);
   margin: 0;
 }
@@ -175,10 +175,10 @@
 }
 
 .body > * {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
 }
 
@@ -192,7 +192,7 @@
 
 .actions {
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-3);
   align-items: center;
 }
 
@@ -201,17 +201,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: var(--spacing-1-5);
   height: 32px;
   padding: 0 13px;
   border: none;
-  border-radius: 3px;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease), color var(--duration-normal) var(--easing-ease);
   white-space: nowrap;
 }
 
@@ -312,20 +312,20 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--spacing-4);
 }
 
 .hasIllustration .body > * {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
 }
 
 .hasIllustration .body > h1,
 .hasIllustration .body > h2,
 .hasIllustration .body > h3 {
   font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   text-align: center;
   color: var(--color-gray-900);
   margin-bottom: 0 !important;

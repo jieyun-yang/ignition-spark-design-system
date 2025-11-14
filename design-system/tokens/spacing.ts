@@ -1,23 +1,31 @@
 /**
  * Spacing Design Tokens
  *
- * Extracted from Figma button component spacing
+ * Extracted from Figma design system
  * Used for padding, margins, gaps, etc.
+ *
+ * Scale: 0px, 1px, 2px, 4px, 6px, 8px, 10px, 12px, 13px, 16px, 24px, 32px, 40px
  */
 
 export const spacing = {
-  /** 4px - Minimal spacing */
-  0.5: '4px',
+  /** 0px - No spacing */
+  0: '0',
+  /** 1px - Minimal spacing */
+  px: '1px',
+  /** 2px - Tiny spacing (badge padding, small gaps) */
+  0.5: '2px',
+  /** 4px - Extra small spacing */
+  1: '4px',
   /** 6px - Internal gap between icon and text */
-  1: '6px',
+  1.5: '6px',
   /** 8px - Small gaps */
-  1.5: '8px',
+  2: '8px',
   /** 10px - Padding for icon-only buttons (medium) */
-  2: '10px',
+  2.5: '10px',
   /** 12px - Medium gaps */
-  2.5: '12px',
+  3: '12px',
   /** 13px - Horizontal padding for buttons with text (small/medium) */
-  3: '13px',
+  3.5: '13px',
   /** 16px - Standard spacing */
   4: '16px',
   /** 24px - Horizontal padding for XLarge buttons, medium spacing */

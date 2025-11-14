@@ -4,8 +4,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  width: 240px;
+  gap: var(--spacing-1);
+  width: 240px; /* Figma spec */
 }
 
 .container {
@@ -13,14 +13,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 32px;
-  padding: 6px 12px;
+  min-height: 32px; /* Figma spec */
+  padding: var(--spacing-1-5) var(--spacing-3);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-400);
-  border-radius: 4px;
+  border: var(--border-width-default) solid var(--color-gray-400);
+  border-radius: var(--border-radius-md);
   cursor: pointer;
   user-select: none;
-  transition: border-color 0.2s ease;
+  transition: border-color var(--duration-normal) var(--easing-ease);
 }
 
 .container:hover:not(.disabled) {
@@ -29,7 +29,7 @@
 
 .container.focused {
   border-color: var(--color-primary-500);
-  border-width: 1px;
+  border-width: var(--border-width-default);
 }
 
 .container.open {
@@ -56,10 +56,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
 }
 
@@ -72,7 +72,7 @@
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: var(--spacing-1);
   min-width: 0;
 }
 
@@ -80,18 +80,18 @@
 .tag {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 3px 4px 3px 6px;
+  gap: var(--spacing-1);
+  padding: 3px var(--spacing-1) 3px var(--spacing-1-5); /* Figma spec - asymmetric */
   background-color: var(--color-primary-100);
-  border-radius: 2px;
+  border-radius: var(--border-radius-xs);
   max-width: 100%;
 }
 
 .tagLabel {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-primary-600);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -107,7 +107,7 @@
   background: transparent;
   cursor: pointer;
   color: var(--color-primary-600);
-  transition: opacity 0.2s ease;
+  transition: opacity var(--duration-normal) var(--easing-ease);
   flex-shrink: 0;
 }
 
@@ -116,14 +116,14 @@
 }
 
 .tagRemoveIcon {
-  font-size: 10px;
+  font-size: var(--spacing-2-5);
 }
 
 /* Icons container */
 .icons {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--spacing-1-5);
   flex-shrink: 0;
 }
 
@@ -137,7 +137,7 @@
   background: transparent;
   cursor: pointer;
   color: var(--color-gray-600);
-  transition: color 0.2s ease;
+  transition: color var(--duration-normal) var(--easing-ease);
 }
 
 .clearButton:hover {
@@ -145,21 +145,21 @@
 }
 
 .clearIcon {
-  font-size: 12px;
+  font-size: var(--font-size-sm);
 }
 
 /* Loading spinner */
 .spinner {
-  font-size: 12px;
+  font-size: var(--font-size-sm);
   color: var(--color-primary-500);
 }
 
 /* Chevron */
 .chevron {
   flex-shrink: 0;
-  font-size: 12px;
+  font-size: var(--font-size-sm);
   color: var(--color-gray-600);
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-normal) var(--easing-ease);
 }
 
 .chevronOpen {
@@ -167,10 +167,10 @@
 }
 
 .errorMessage {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: 11px; /* Figma spec */
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-orange-600);
-  padding-left: 2px;
+  padding-left: var(--spacing-0-5);
 }

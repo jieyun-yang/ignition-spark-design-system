@@ -9,7 +9,7 @@
   align-items: stretch;
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-200);
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
   overflow: hidden;
   width: 100%;
 }
@@ -38,17 +38,17 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--spacing-3);
   padding: 16px 32px;
   width: 100%;
 }
 
 /* Title */
 .title {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-neutral-beige-900);
   margin: 0;
 }
@@ -56,12 +56,12 @@
 /* Body */
 .body {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-2);
   max-width: 760px;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-neutral-beige-900);
 }
 
@@ -72,7 +72,7 @@
 /* Actions */
 .actions {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-2);
   align-items: center;
 }
 
@@ -83,13 +83,13 @@
   height: 32px;
   padding: 0 13px;
   border: none;
-  border-radius: 3px;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
   white-space: nowrap;
 }
 
@@ -133,9 +133,9 @@
   border: none;
   background: transparent;
   color: var(--color-gray-600);
-  border-radius: 3px;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease), color var(--duration-normal) var(--easing-ease);
 }
 
 .closeButton:hover {

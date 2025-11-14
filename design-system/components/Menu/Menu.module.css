@@ -7,7 +7,7 @@
   right: 0;
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-400);
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
   padding: 8px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -18,11 +18,11 @@
 .option {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
   user-select: none;
 }
 
@@ -77,11 +77,11 @@
   width: 32px;
   height: 32px;
   background-color: var(--color-gray-175);
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
 }
 
 .icon {
-  font-size: 16px;
+  font-size: var(--font-size-lg);
   color: var(--color-gray-800);
 }
 
@@ -92,7 +92,7 @@
   justify-content: center;
   width: 16px;
   height: 16px;
-  font-size: 14px;
+  font-size: var(--font-size-base);
   color: var(--color-gray-700);
 }
 
@@ -105,10 +105,10 @@
 }
 
 .label {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-neutral-beige-800);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -116,10 +116,10 @@
 }
 
 .caption {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-marketing-gray-650);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -137,7 +137,7 @@
 
 .menu::-webkit-scrollbar-thumb {
   background-color: var(--color-gray-200);
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
 }
 
 .menu::-webkit-scrollbar-thumb:hover {

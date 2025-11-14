@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 24px;
+  gap: var(--spacing-6);
 }
 
 /* Size Variants */
@@ -44,7 +44,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-2);
   text-align: center;
 }
 
@@ -61,69 +61,69 @@
 }
 
 .heading {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
   color: var(--color-gray-900);
   margin: 0;
 }
 
 .size-large .heading {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
 }
 
 .size-medium .heading {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
 }
 
 .size-small .heading {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
 }
 
 .description {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
   margin: 0;
 }
 
 .size-large .description {
-  font-size: 13px;
+  font-size: var(--font-size-xs);
 }
 
 .size-medium .description {
-  font-size: 13px;
+  font-size: var(--font-size-xs);
 }
 
 .size-small .description {
-  font-size: 12px;
+  font-size: var(--font-size-sm);
 }
 
 /* Actions */
 .actions {
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-3);
   align-items: center;
 }
 
 .button {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   height: 32px;
   padding: 0 13px;
-  border-radius: 3px;
+  border-radius: var(--border-radius-sm);
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: var(--spacing-1-5);
 }
 
 .primaryButton {

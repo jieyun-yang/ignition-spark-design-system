@@ -18,7 +18,7 @@
 /* Actions container */
 .actions {
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-3);
   align-items: center;
 }
 
@@ -39,15 +39,15 @@
 
 /* Workflow: Primary button with secondary actions and cancel */
 .variant-workflow .actions {
-  gap: 12px;
+  gap: var(--spacing-3);
 }
 
 /* Equal weight: All buttons have equal visual prominence */
 .variant-equal-weight .actions {
-  gap: 12px;
+  gap: var(--spacing-3);
 }
 
 /* Primary action: One emphasized primary button, others secondary */
 .variant-primary-action .actions {
-  gap: 12px;
+  gap: var(--spacing-3);
 }

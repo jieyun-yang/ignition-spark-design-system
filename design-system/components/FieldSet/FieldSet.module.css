@@ -25,22 +25,22 @@
 .headerContent {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--spacing-4);
 }
 
 .icon {
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: 48px;
-  line-height: 1;
+  line-height: var(--line-height-none);
   color: var(--color-neutral-beige-800);
 }
 
 .title {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-family-primary);
   font-size: 48px;
-  font-weight: 400;
-  line-height: 1;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-none);
   color: var(--color-gray-800);
 }
 

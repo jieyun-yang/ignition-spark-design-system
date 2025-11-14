@@ -20,7 +20,7 @@
 .navContentWrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--spacing-3);
   width: 196px;
   background-color: var(--color-gray-50); /* Figma: Gray/50 Background */
   align-items: center;
@@ -31,7 +31,7 @@
 .navContent {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--spacing-3);
   width: 196px;
   align-items: center;
   height: 100%;
@@ -51,7 +51,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-2);
   align-items: center;
   justify-content: flex-end;
   width: 100%;
@@ -80,7 +80,7 @@
   justify-content: flex-end;
   width: 58px;
   flex-shrink: 0;
-  font-size: 16px;
+  font-size: var(--font-size-lg);
   color: var(--color-gray-800); /* Figma: Saturated gray/800 */
 }
 
@@ -98,7 +98,7 @@
   border-top: 1px solid var(--color-gray-300); /* Figma: Gray/200 Dividers */
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-2);
   align-items: center;
   width: 100%;
   padding: 4px 12px;
@@ -107,18 +107,18 @@
 
 .createButton {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-2);
   height: 32px;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding: 0 13px;
   border: 1px solid var(--color-orange-600); /* Figma: Primary/Orange/600 */
-  border-radius: 3px;
+  border-radius: var(--border-radius-sm);
   background: none;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
 .createButton:hover {
@@ -138,10 +138,10 @@
 }
 
 .createLabel {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
   color: var(--color-orange-600); /* Figma: Primary/Orange/600 */
   white-space: nowrap;
   flex-shrink: 0;
@@ -183,7 +183,7 @@
 
 .navButton {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-2);
   align-items: flex-start;
   width: 100%;
   padding: 10px 12px;
@@ -195,7 +195,7 @@
 
 .navItemContent {
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-3);
   align-items: center;
   width: 172px;
   flex-shrink: 0;
@@ -205,7 +205,7 @@
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-  font-size: 18px;
+  font-size: var(--font-size-xl);
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   text-align: center;
   display: flex;
@@ -220,9 +220,9 @@
 .navLabel {
   flex: 1;
   min-width: 0;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
   line-height: 21px;
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   overflow: hidden;
@@ -254,20 +254,20 @@
 
 .subItem {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-2);
   align-items: flex-start;
   width: 100%;
   padding: 10px 12px 10px 48px; /* Indent 48px for sub-items */
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
   line-height: 21px;
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   background: none;
   border: none;
   cursor: pointer;
   text-align: left;
-  transition: color 0.2s ease;
+  transition: color var(--duration-normal) var(--easing-ease);
 }
 
 .subItem:hover {
@@ -282,7 +282,7 @@
 .divider {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--spacing-2-5);
   align-items: center;
   justify-content: center;
   width: 172px;
@@ -310,7 +310,7 @@
 .referSection {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--spacing-2-5);
   align-items: center;
   width: 196px;
   padding: 8px 12px;
@@ -318,18 +318,18 @@
 
 .referButton {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-2);
   height: 32px;
   align-items: center;
   justify-content: center;
   width: 172px;
   padding: 0 13px;
   border: 1px solid var(--color-primary-500); /* Figma: Primary/Purple/500 Buttons */
-  border-radius: 3px;
+  border-radius: var(--border-radius-sm);
   background: none;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
 .referButton:hover {
@@ -348,10 +348,10 @@
 }
 
 .referLabel {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
   color: var(--color-primary-400); /* Figma: Primary/Purple/400 Brand Purple */
   white-space: nowrap;
   flex-shrink: 0;
@@ -361,7 +361,7 @@
 .userAccount {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-2);
   align-items: flex-start;
   width: 100%;
   padding: 10px 12px;
@@ -381,7 +381,7 @@
 
 .userContent {
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-3);
   align-items: center;
   width: 172px;
   flex-shrink: 0;
@@ -391,7 +391,7 @@
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-  font-size: 18px;
+  font-size: var(--font-size-xl);
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   display: flex;
   align-items: center;
@@ -410,9 +410,9 @@
 }
 
 .userName {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   width: 100%;
   overflow: hidden;
@@ -422,12 +422,12 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: -4px;
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
 }
 
 .userCompany {
   font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   font-size: 11px;
   color: var(--color-gray-700); /* Figma: Gray/700 Tertiary text */
   width: 100%;
@@ -438,7 +438,7 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: -4px;
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
 }
 
 .userCaret {
@@ -455,7 +455,7 @@
 /* Curved Edge Background */
 .curvedEdge {
   display: flex;
-  gap: 10px;
+  gap: var(--spacing-2-5);
   height: 100%;
   align-items: center;
   background-color: var(--color-gray-50);

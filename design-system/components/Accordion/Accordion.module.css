@@ -8,7 +8,7 @@
   flex-direction: column;
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-200);
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
   overflow: hidden;
   width: 100%;
 }
@@ -22,14 +22,14 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--spacing-4);
   padding: 16px;
   width: 100%;
   border: none;
   background: transparent;
   cursor: pointer;
   text-align: left;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
 .header:hover:not(:disabled) {
@@ -50,10 +50,10 @@
   height: 24px;
   background-color: var(--color-gray-200);
   border-radius: 100px;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-500);
 }
 
@@ -63,39 +63,39 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--spacing-1);
 }
 
 .titleRow {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 /* Heading */
 .heading {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
   color: var(--color-gray-800);
   margin: 0;
 }
 
 .size-small .heading {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
 }
 
 .size-large .heading {
   font-size: 20px;
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
 }
 
 /* Subheading */
 .subheading {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-700);
   margin: 0;
 }
@@ -107,9 +107,9 @@
   justify-content: center;
   padding: 1px 10px;
   border-radius: 100px;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-family-primary);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   line-height: 17px;
   white-space: nowrap;
 }
@@ -145,7 +145,7 @@
 
 /* Chevron */
 .chevron {
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-normal) var(--easing-ease);
 }
 
 .chevron.expanded {
@@ -171,5 +171,5 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--spacing-6);
 }

@@ -12,7 +12,7 @@
   z-index: 1000;
   display: flex;
   justify-content: flex-end;
-  animation: fadeIn 0.2s ease;
+  animation: fadeIn var(--duration-normal) var(--easing-ease);
 }
 
 @keyframes fadeIn {
@@ -66,7 +66,7 @@
 .titleSection {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-2);
   flex: 1;
   min-width: 0;
 }
@@ -74,23 +74,23 @@
 .titleRow {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .title {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
   font-size: 20px;
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   color: var(--color-gray-900); /* Figma: Gray/900 Primary text */
   margin: 0;
 }
 
 .subtitle {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-700); /* Figma: Gray/700 Tertiary text */
   margin: 0;
 }
@@ -99,7 +99,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
   flex-shrink: 0;
 }
 
@@ -110,19 +110,19 @@
 .moreActionsButton {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--spacing-1-5);
   height: 32px;
   padding: 0 13px;
   background-color: var(--color-gray-200);
   border: none;
   border-radius: var(--border-radius-sm);
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
 .moreActionsButton:hover {
@@ -150,18 +150,18 @@
 .moreActionItem {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--spacing-2-5);
   width: 100%;
   padding: 8px 16px;
   background: none;
   border: none;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   color: var(--color-gray-800);
   text-align: left;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
 .moreActionItem:hover {
@@ -169,26 +169,26 @@
 }
 
 .actionIcon {
-  font-size: 14px;
+  font-size: var(--font-size-base);
   color: var(--color-gray-700);
 }
 
 .primaryButton {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--spacing-1-5);
   height: 32px;
   padding: 0 13px;
   background-color: var(--color-primary-500); /* Figma: Primary/Purple/500 Buttons */
   border: none;
   border-radius: var(--border-radius-sm);
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
   color: var(--color-white);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
 .primaryButton:hover {
@@ -214,10 +214,10 @@
   background: none;
   border: none;
   color: var(--color-gray-700);
-  font-size: 16px;
+  font-size: var(--font-size-lg);
   cursor: pointer;
   border-radius: var(--border-radius-sm);
-  transition: background-color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
 .closeButton:hover {

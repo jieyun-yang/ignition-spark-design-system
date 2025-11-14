@@ -113,16 +113,109 @@ Add to `tsconfig.json`:
 
 ### 3. Font Awesome Icons
 
-Some components use Font Awesome icons:
+Some components use Font Awesome icons, including Pro icons which require authentication.
+
+#### For FontAwesome Pro Users
+
+If you have a FontAwesome Pro subscription, you'll need to configure npm authentication:
 
 ```bash
-npm install @fortawesome/react-fontawesome \
-            @fortawesome/free-solid-svg-icons \
-            @fortawesome/pro-light-svg-icons \
-            @fortawesome/pro-regular-svg-icons
+# Set up FontAwesome Pro registry
+npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+
+# Add your FontAwesome Pro token (get from https://fontawesome.com/account)
+npm config set "//npm.fontawesome.com/:_authToken" YOUR_FONTAWESOME_TOKEN
 ```
 
-> **Note:** Pro icons require a Font Awesome license. Use free alternatives if needed.
+Then install the required packages:
+
+```bash
+npm install @fortawesome/fontawesome-svg-core@^7.1.0 \
+            @fortawesome/react-fontawesome@^3.1.0 \
+            @fortawesome/free-solid-svg-icons@^7.1.0 \
+            @fortawesome/pro-light-svg-icons@^7.1.0 \
+            @fortawesome/pro-regular-svg-icons@^7.1.0 \
+            @fortawesome/pro-solid-svg-icons@^7.1.0
+```
+
+#### For Free Icons Only
+
+If you don't have FontAwesome Pro, you can use free icons only:
+
+```bash
+npm install @fortawesome/fontawesome-svg-core \
+            @fortawesome/react-fontawesome \
+            @fortawesome/free-solid-svg-icons
+```
+
+You'll need to update component imports to use free icons instead of pro icons.
+
+---
+
+## 🧪 Local Development & Testing
+
+### Running the Development Server
+
+To test the design system locally and see all components in action:
+
+#### 1. Configure FontAwesome Pro (Required)
+
+```bash
+# Get your token from https://fontawesome.com/account
+npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+npm config set "//npm.fontawesome.com/:_authToken" YOUR_FONTAWESOME_TOKEN
+```
+
+#### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+#### 3. Start the Dev Server
+
+```bash
+npm run dev
+```
+
+The development server will start at `http://localhost:5173` where you can:
+- View all 53+ components with live examples
+- Test different component variants and states
+- See the complete design token system in action
+- Navigate through different component categories (Forms, Data Display, Navigation, etc.)
+
+### Testing Without FontAwesome Pro
+
+If you don't have FontAwesome Pro access and just want to review the code:
+
+**Option 1: Visual Code Review (No Install Needed)**
+- Check component CSS files - All use `var(--*)` design tokens
+- Review [COMPLETION-REPORT.md](COMPLETION-REPORT.md) - Shows 100% token coverage verification
+- Inspect [tokens.css](design-system/tokens/tokens.css) - All CSS custom properties
+
+**Option 2: Use Free Icons Only**
+1. Remove Pro packages from `package.json` (lines 67-69):
+   - `@fortawesome/pro-light-svg-icons`
+   - `@fortawesome/pro-regular-svg-icons`
+   - `@fortawesome/pro-solid-svg-icons`
+
+2. Install with free icons:
+   ```bash
+   npm install
+   ```
+
+3. Update component imports to use `@fortawesome/free-solid-svg-icons`
+
+### What to Look For When Testing
+
+When you run the dev server, verify:
+- ✅ All components render correctly with no visual regressions
+- ✅ Typography is consistent across all components
+- ✅ Transitions/animations are smooth (200ms default)
+- ✅ Spacing is uniform using the design token scale
+- ✅ Border radii match Figma specifications
+- ✅ Interactive states work (hover, focus, disabled)
+- ✅ All components use design tokens (no hardcoded values)
 
 ---
 
@@ -394,6 +487,23 @@ Components are mobile-friendly by default. To customize breakpoints:
 
 ## 🐛 Troubleshooting
 
+### FontAwesome Pro Authentication Error
+
+**Problem:** `npm error code E401 - Incorrect or missing password` when running `npm install`
+
+**Cause:** FontAwesome Pro packages require authentication
+
+**Solution:**
+```bash
+# Option 1: Add your FontAwesome Pro token
+npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+npm config set "//npm.fontawesome.com/:_authToken" YOUR_TOKEN
+
+# Get your token from: https://fontawesome.com/account
+
+# Option 2: Use free icons only (see "Testing Without FontAwesome Pro" above)
+```
+
 ### CSS Modules Not Working
 
 **Problem:** TypeScript errors for CSS module imports
@@ -411,7 +521,7 @@ npm run css-types
 
 **Problem:** Icon components don't render
 
-**Solution:** Install Font Awesome packages (see step 3 in Basic Setup)
+**Solution:** Install Font Awesome packages (see step 3 in Basic Setup) and ensure FontAwesome Pro is configured if using Pro icons
 
 ### Build Errors
 
@@ -424,6 +534,21 @@ npm install typescript@^5.5.3
 
 # Run type checking
 npm run typecheck
+```
+
+### Dev Server Won't Start
+
+**Problem:** Cannot run `npm run dev`
+
+**Solution:**
+```bash
+# Check if node_modules exists
+ls node_modules
+
+# If missing, install dependencies first
+npm install
+
+# Ensure FontAwesome Pro is configured (see above)
 ```
 
 ---

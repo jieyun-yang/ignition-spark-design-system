@@ -12,10 +12,10 @@
   width: 100%;
   max-width: 320px;
   border: 1px solid var(--color-gray-200);
-  border-radius: 3px;
+  border-radius: var(--border-radius-sm);
   background-color: var(--color-white);
   overflow: hidden;
-  transition: border-color 0.2s ease;
+  transition: border-color var(--duration-normal) var(--easing-ease);
 }
 
 .container:hover:not(.disabled) {
@@ -39,18 +39,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: var(--spacing-1-5);
   padding: 0 12px;
   border: none;
   border-right: 1px solid var(--color-gray-200);
   background-color: var(--color-gray-200);
   color: var(--color-gray-800);
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease), color var(--duration-normal) var(--easing-ease);
   white-space: nowrap;
 }
 
@@ -81,7 +81,7 @@
 .icon {
   width: 12px;
   height: 12px;
-  font-size: 12px;
+  font-size: var(--font-size-sm);
 }
 
 /* Button Text */
@@ -96,10 +96,10 @@
   border: none;
   background-color: transparent;
   color: var(--color-gray-800);
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   outline: none;
 }
 

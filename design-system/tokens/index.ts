@@ -10,6 +10,7 @@ import { typography } from './typography';
 import { borders } from './borders';
 import { shadows } from './shadows';
 import { illustrations } from './illustrations';
+import { animations } from './animations';
 
 export { colors, type Colors } from './colors';
 export { spacing, type Spacing } from './spacing';
@@ -17,6 +18,7 @@ export { typography, type Typography } from './typography';
 export { borders, type Borders } from './borders';
 export { shadows, type Shadows } from './shadows';
 export { illustrations, type Illustrations } from './illustrations';
+export { animations, type Animations } from './animations';
 
 export const tokens = {
   colors,
@@ -25,4 +27,5 @@ export const tokens = {
   borders,
   shadows,
   illustrations,
+  animations,
 } as const;

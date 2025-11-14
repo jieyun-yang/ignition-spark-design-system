@@ -8,9 +8,9 @@
   align-items: center;
   color: var(--color-primary-500); /* Primary purple */
   text-decoration: none;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-family-primary);
   cursor: pointer;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: color var(--duration-normal) var(--easing-ease), opacity var(--duration-normal) var(--easing-ease);
 }
 
 .link:hover {
@@ -24,9 +24,9 @@
 
 /* Text Variant */
 .type-text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
 }
 
 .text {
@@ -43,9 +43,9 @@
 }
 
 .icon {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-none);
   display: inline-flex;
   align-items: center;
   justify-content: center;

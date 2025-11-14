@@ -8,9 +8,9 @@
   flex-direction: column;
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-200); /* Figma: Gray border */
-  border-radius: 4px; /* Figma: 4px not 8px */
+  border-radius: var(--border-radius-md); /* Figma: 4px not 8px */
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all var(--duration-normal) var(--easing-ease);
 }
 
 .card.clickable {
@@ -99,7 +99,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .size-small .content {
@@ -119,13 +119,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .titleRow {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: var(--spacing-3);
   flex: 1;
   min-width: 0;
 }
@@ -137,7 +137,7 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  line-height: 1;
+  line-height: var(--line-height-none);
 }
 
 .size-small .icon {
@@ -185,8 +185,8 @@
 
 /* Title */
 .title {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 500; /* Figma: Medium = 500 not 600 */
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium); /* Figma: Medium = 500 not 600 */
   color: var(--color-gray-900); /* Figma: Gray/900 Primary text */
   margin: 0;
   overflow: hidden;
@@ -195,25 +195,25 @@
 }
 
 .size-small .title {
-  font-size: 14px;
-  line-height: 1.5; /* Figma: Body/SF Pro Text/Body medium */
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal); /* Figma: Body/SF Pro Text/Body medium */
 }
 
 .size-large .title {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
 }
 
 .size-xlarge .title {
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 500;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
 }
 
 /* Description */
 .description {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
   color: var(--color-gray-700);
   margin: 0;
   overflow: hidden;
@@ -222,18 +222,18 @@
 }
 
 .size-small .description {
-  font-size: 12px; /* Figma: Small = 12px not 13px */
-  line-height: 1.5; /* Figma: 1.5 not 1.4 */
+  font-size: var(--font-size-sm); /* Figma: Small = 12px not 13px */
+  line-height: var(--line-height-normal); /* Figma: 1.5 not 1.4 */
 }
 
 .size-large .description {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
 }
 
 .size-xlarge .description {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
 }
 
 /* Menu Wrapper */
@@ -254,8 +254,8 @@
   background: transparent;
   color: var(--color-gray-700);
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: var(--border-radius-md);
+  transition: background-color var(--duration-normal) var(--easing-ease), color var(--duration-normal) var(--easing-ease);
 }
 
 .menuButton:hover {

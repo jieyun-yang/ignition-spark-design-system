@@ -1,0 +1,18 @@
+/**
+ * MainApp Navigation Styles
+ * Uses design tokens from the design system
+ */
+
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-white);
+  border-bottom: var(--border-width-thick) solid var(--color-gray-200);
+  padding: var(--spacing-4) var(--spacing-8);
+  display: flex;
+  gap: var(--spacing-4);
+  z-index: 1000;
+  box-shadow: 0 var(--spacing-0-5) var(--spacing-1) rgba(0, 0, 0, 0.05);
+}

@@ -14,21 +14,21 @@
 
 /* Header styling - Large */
 .dataListContainer.large .header {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
   color: var(--color-black);
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   margin-bottom: 16px;
 }
 
 /* Header styling - Small */
 .dataListContainer.small .header {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
   color: var(--color-black);
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   margin-bottom: 16px;
 }
 
@@ -73,11 +73,11 @@
 
 /* Large size spacing */
 .large .dataPointWrapper {
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .large .itemWrapper {
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .large .itemWrapper:not(:last-child) {
@@ -86,11 +86,11 @@
 
 /* Small size spacing */
 .small .dataPointWrapper {
-  gap: 4px;
+  gap: var(--spacing-1);
 }
 
 .small .itemWrapper {
-  gap: 4px;
+  gap: var(--spacing-1);
 }
 
 .small .itemWrapper:not(:last-child) {
@@ -99,38 +99,38 @@
 
 /* Label styling - fixed width */
 .label {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 400;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
   color: var(--color-gray-700); /* Gray/700 Tertiary text */
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   width: 145px;
   flex-shrink: 0;
 }
 
 /* Label size variants */
 .large .label {
-  font-size: 14px;
+  font-size: var(--font-size-base);
 }
 
 .small .label {
-  font-size: 12px;
+  font-size: var(--font-size-sm);
 }
 
 /* Value styling - flexible width */
 .value {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 400;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
   color: var(--color-gray-900); /* Gray/900 Primary text */
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
   flex: 1;
   min-width: 0;
 }
 
 /* Value size variants */
 .large .value {
-  font-size: 14px;
+  font-size: var(--font-size-base);
 }
 
 .small .value {
-  font-size: 12px;
+  font-size: var(--font-size-sm);
 }

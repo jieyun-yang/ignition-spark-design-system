@@ -3,7 +3,7 @@
 .container {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
   cursor: pointer;
 }
 
@@ -24,12 +24,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--color-gray-200);
-  border-radius: 50%;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
+  border: var(--border-width-default) solid var(--color-gray-200);
+  border-radius: var(--border-radius-full);
   background-color: var(--color-white);
-  transition: all 0.2s ease;
+  transition: all var(--duration-normal) var(--easing-ease);
 }
 
 .radio:hover:not(.disabled) {
@@ -38,7 +38,7 @@
 
 .radio:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1);
+  box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1); /* Figma spec - focus ring */
 }
 
 .radio.checked {
@@ -51,15 +51,15 @@
 }
 
 .container.invalid .radio:focus {
-  box-shadow: 0 0 0 3px rgba(221, 34, 34, 0.1);
+  box-shadow: 0 0 0 3px rgba(221, 34, 34, 0.1); /* Figma spec - error focus ring */
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  width: var(--spacing-2);
+  height: var(--spacing-2);
+  border-radius: var(--border-radius-full);
   background-color: var(--color-primary-500);
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-normal) var(--easing-ease);
 }
 
 .container.invalid .dot {
@@ -67,10 +67,10 @@
 }
 
 .label {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
   user-select: none;
 }

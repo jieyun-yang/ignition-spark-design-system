@@ -3,36 +3,37 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-2);
   width: 100%;
 }
 
 .label {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
 }
 
 .required {
   color: var(--color-secondary-red-500);
-  margin-left: 2px;
+  margin-left: var(--spacing-0-5);
 }
 
 .input {
   width: 100%;
-  height: 40px;
-  padding: 8px 16px;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
+  height: 40px; /* Figma spec */
+  padding: var(--spacing-2) var(--spacing-4);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-800);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-400);
-  border-radius: 4px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border: var(--border-width-default) solid var(--color-gray-400);
+  border-radius: var(--border-radius-md);
+  transition: border-color var(--duration-normal) var(--easing-ease),
+              box-shadow var(--duration-normal) var(--easing-ease);
 }
 
 .input::placeholder {
@@ -45,8 +46,9 @@
 
 .input.focused {
   outline: none;
-  border: 2px solid var(--color-primary-500);
-  padding: 7px 15px; /* Adjust padding to account for thicker border */
+  border: var(--border-width-thick) solid var(--color-primary-500);
+  /* Adjust padding to account for thicker border (8px - 1px = 7px, 16px - 1px = 15px) */
+  padding: 7px 15px;
 }
 
 .input.error {
@@ -54,7 +56,8 @@
 }
 
 .input.error.focused {
-  border: 2px solid var(--color-secondary-red-500);
+  border: var(--border-width-thick) solid var(--color-secondary-red-500);
+  /* Adjust padding to account for thicker border */
   padding: 7px 15px;
 }
 
@@ -65,19 +68,19 @@
 }
 
 .errorMessage {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: 11px; /* Figma spec - smaller than base */
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-orange-600);
-  padding-left: 2px;
+  padding-left: var(--spacing-0-5);
 }
 
 .helperText {
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  font-size: 11px; /* Figma spec - smaller than base */
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-gray-600);
-  padding-left: 2px;
+  padding-left: var(--spacing-0-5);
 }

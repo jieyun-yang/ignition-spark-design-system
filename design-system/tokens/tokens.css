@@ -119,12 +119,15 @@
   --color-success-500: #16a34a;       /* Success green for tables */
 
   /* Spacing */
-  --spacing-0-5: 4px;
-  --spacing-1: 6px;
-  --spacing-1-5: 8px;
-  --spacing-2: 10px;
-  --spacing-2-5: 12px;
-  --spacing-3: 13px;
+  --spacing-0: 0;
+  --spacing-px: 1px;
+  --spacing-0-5: 2px;
+  --spacing-1: 4px;
+  --spacing-1-5: 6px;
+  --spacing-2: 8px;
+  --spacing-2-5: 10px;
+  --spacing-3: 12px;
+  --spacing-3-5: 13px;
   --spacing-4: 16px;
   --spacing-6: 24px;
   --spacing-8: 32px;
@@ -152,4 +155,32 @@
   /* Typography - Line Height */
   --line-height-none: 1;
   --line-height-normal: 1.5;
+
+  /* Border Radius */
+  --border-radius-none: 0;
+  --border-radius-xs: 2px;
+  --border-radius-sm: 3px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 20px;
+  --border-radius-pill: 100px;
+  --border-radius-full: 50%;
+
+  /* Border Width */
+  --border-width-default: 1px;
+  --border-width-thick: 2px;
+
+  /* Animation Durations */
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+
+  /* Animation Easing */
+  --easing-linear: linear;
+  --easing-ease: ease;
+  --easing-ease-in: ease-in;
+  --easing-ease-out: ease-out;
+  --easing-ease-in-out: ease-in-out;
 }

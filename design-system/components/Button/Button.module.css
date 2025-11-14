@@ -15,16 +15,18 @@
   justify-content: center;
   box-sizing: border-box;
   border: none;
-  border-radius: 3px;
-  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 600;
-  line-height: 1.5;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  transition: background-color var(--duration-normal) var(--easing-ease),
+              color var(--duration-normal) var(--easing-ease),
+              opacity var(--duration-normal) var(--easing-ease);
   user-select: none;
-  gap: 6px;
+  gap: var(--spacing-1-5);
 }
 
 .button:focus {
@@ -32,8 +34,8 @@
 }
 
 .button:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline: var(--border-width-thick) solid currentColor;
+  outline-offset: var(--spacing-0-5);
 }
 
 /* Icon and label containers */
@@ -52,71 +54,71 @@
 
 /* Size variants */
 .size-small {
-  padding: 0 13px;
-  height: 26px;
-  font-size: 12px;
+  padding: 0 var(--spacing-3-5);
+  height: 26px; /* Figma spec */
+  font-size: var(--font-size-sm);
 }
 
 .size-small .icon {
-  width: 10px;
-  height: 10px;
-  font-size: 8px;
+  width: var(--spacing-2-5);
+  height: var(--spacing-2-5);
+  font-size: var(--spacing-2);
 }
 
 .size-small.icon-only {
-  width: 26px;
-  padding: 0 10px;
+  width: 26px; /* Figma spec */
+  padding: 0 var(--spacing-2-5);
 }
 
 .size-medium {
-  padding: 0 13px;
-  height: 32px;
-  font-size: 14px;
+  padding: 0 var(--spacing-3-5);
+  height: 32px; /* Figma spec */
+  font-size: var(--font-size-base);
 }
 
 .size-medium .icon {
-  width: 12px;
-  height: 12px;
-  font-size: 10px;
+  width: var(--spacing-3);
+  height: var(--spacing-3);
+  font-size: var(--spacing-2-5);
 }
 
 .size-medium.icon-only {
-  width: 32px;
-  padding: 0 10px;
+  width: 32px; /* Figma spec */
+  padding: 0 var(--spacing-2-5);
 }
 
 .size-large {
-  padding: 0 13px;
-  height: 40px;
-  font-size: 16px;
+  padding: 0 var(--spacing-3-5);
+  height: 40px; /* Figma spec */
+  font-size: var(--font-size-lg);
 }
 
 .size-large .icon {
-  width: 14px;
+  width: 14px; /* Figma spec - between 12px and 16px */
   height: 14px;
-  font-size: 12px;
+  font-size: var(--spacing-3);
 }
 
 .size-large.icon-only {
-  width: 40px;
-  padding: 0 10px;
+  width: 40px; /* Figma spec */
+  padding: 0 var(--spacing-2-5);
 }
 
 .size-xlarge {
-  padding: 0 24px;
-  height: 48px;
-  font-size: 18px;
+  padding: 0 var(--spacing-6);
+  height: 48px; /* Figma spec */
+  font-size: var(--font-size-xl);
 }
 
 .size-xlarge .icon {
-  width: 16px;
-  height: 16px;
-  font-size: 14px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
+  font-size: var(--font-size-base); /* Figma spec */
 }
 
 .size-xlarge.icon-only {
-  width: 48px;
-  padding: 0 10px;
+  width: 48px; /* Figma spec */
+  padding: 0 var(--spacing-2-5);
 }
 
 /* Primary Hierarchy + Solid Variant */
