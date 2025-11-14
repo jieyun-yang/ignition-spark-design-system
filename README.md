@@ -13,21 +13,21 @@ A comprehensive React + TypeScript design system with **53 production-ready comp
 
 ## 🚀 Getting Started
 
-> **⚠️ Permission Issues?** If you encounter permission errors with `node_modules`, see [SETUP.md](./SETUP.md) for fix instructions.
+### Quick Setup (2 Steps)
 
-### Installation
+1. **Add your FontAwesome Pro token:**
+   - Copy `.npmrc.example` to `.npmrc`
+   - Replace `YOUR_FONTAWESOME_TOKEN` with your token from https://fontawesome.com/account
 
-```bash
-npm install
-```
+2. **Install and run:**
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-### Development
+This will start the dev server at [http://localhost:5173](http://localhost:5173)
 
-```bash
-npm run dev
-```
-
-This will start the Vite dev server and open the component showcase at [http://localhost:5173](http://localhost:5173)
+> **📖 Need help?** See [INSTALLATION.md](./INSTALLATION.md) for detailed instructions, troubleshooting, and alternatives.
 
 ### 🤖 AI-Powered Prototyping (Recommended)
 
@@ -163,14 +163,12 @@ For detailed API documentation, see [COMPONENTS.md](./COMPONENTS.md)
 ## 📚 Documentation
 
 - [README.md](./README.md) - This file, project overview
+- [INSTALLATION.md](./INSTALLATION.md) - Installation, setup, and troubleshooting
+- [COMPONENTS.md](./COMPONENTS.md) - Complete component API documentation
+- [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md) - Design tokens and principles
 - [AI-PROMPT-GUIDE.md](./AI-PROMPT-GUIDE.md) - **Quick copy-paste prompts for AI prototyping** ⭐
 - [AI-PROMPT-EXAMPLES.md](./AI-PROMPT-EXAMPLES.md) - Detailed examples and use cases for learning
-- [COMPONENTS.md](./COMPONENTS.md) - Complete component API documentation
-- [INSTALLATION.md](./INSTALLATION.md) - Installation and usage guide
-- [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md) - Design tokens and principles
-- [SETUP.md](./SETUP.md) - Setup instructions and troubleshooting
-- [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) - Common issues and solutions
-- [CLAUDE.md](./CLAUDE.md) - Design system development rules
+- [CLAUDE.md](./CLAUDE.md) - Design system development rules for AI assistants
 
 ## 🎯 Component Status
 

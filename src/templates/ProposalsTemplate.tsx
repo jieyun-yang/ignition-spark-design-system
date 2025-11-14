@@ -34,7 +34,11 @@ import {
   faPaperPlane,
   faArrowsRotate,
   faDollarSign,
-  faEllipsis
+  faEllipsis,
+  faEye,
+  faPenToSquare,
+  faCopy,
+  faTrash
 } from '@fortawesome/pro-light-svg-icons';
 import { faClipboard } from '@fortawesome/pro-regular-svg-icons';
 import '../App.css';
@@ -460,11 +464,10 @@ function ProposalsTemplate() {
         getRowKey={(row) => row.id}
         showActions={true}
         getActionMenuOptions={(row) => [
-          { id: 'view', label: 'View details' },
-          { id: 'edit', label: 'Edit proposal' },
-          { id: 'duplicate', label: 'Duplicate' },
-          { id: 'divider-1', type: 'divider' },
-          { id: 'delete', label: 'Delete', destructive: true }
+          { value: 'view', label: 'View details', icon: faEye },
+          { value: 'edit', label: 'Edit proposal', icon: faPenToSquare },
+          { value: 'duplicate', label: 'Duplicate', icon: faCopy },
+          { value: 'delete', label: 'Delete', icon: faTrash, destructive: true }
         ]}
       />
 

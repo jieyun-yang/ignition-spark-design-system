@@ -1,572 +1,278 @@
-# Installation Guide
+# Getting Started with Ignition Spark Design System
 
-This guide explains how to install and use the Ignition Spark Design System in your project.
-
-## 📦 Installation Options
-
-### Option 1: Direct File Import (Recommended for Now)
-
-Since this design system is not yet published to npm, you can use it by importing directly from the source:
-
-#### 1. Clone or Copy the Repository
-
-```bash
-# Clone the repository
-git clone <repository-url>
-
-# Or copy the design-system folder to your project
-cp -r /path/to/ignition-spark-design-system/design-system ./src/
-```
-
-#### 2. Install Dependencies
-
-```bash
-npm install clsx react react-dom
-npm install --save-dev typescript @types/react @types/react-dom
-```
-
-#### 3. Import Components
-
-```tsx
-// Import from the design system folder
-import { Button, Alert, Card } from './design-system';
-
-// Or with full path
-import { Button } from './design-system/components/Button';
-```
-
-#### 4. Import Design Tokens CSS
-
-Add this to your main entry file (`main.tsx` or `App.tsx`):
-
-```tsx
-import './design-system/tokens/tokens.css';
-```
-
-This loads all CSS custom properties for colors, spacing, typography, etc.
+A simple guide to get the design system running on your computer.
 
 ---
 
-### Option 2: Git Submodule
+## 🚀 Quick Start (2 Steps)
 
-If you want to track updates to the design system:
+### Step 1: Add Your FontAwesome Token
 
-```bash
-# Add as submodule
-git submodule add <repository-url> src/design-system
+This project uses FontAwesome Pro icons.
 
-# Update submodule
-git submodule update --remote
+1. Copy the file `.npmrc.example` and rename it to `.npmrc`
+2. Go to https://fontawesome.com/account and copy your "Package Token"
+3. Open the `.npmrc` file and replace `YOUR_FONTAWESOME_TOKEN` with your actual token:
+
 ```
+@fortawesome:registry=https://npm.fontawesome.com/
+//npm.fontawesome.com/:_authToken=A1B2C3D4-E5F6-7890-ABCD-EF1234567890
+```
+
+> **Don't have FontAwesome Pro?** See [Alternative: Use Free Icons](#alternative-use-free-icons-instead) below.
 
 ---
 
-### Option 3: NPM Package (Coming Soon)
+### Step 2: Install and Run
 
-Once published to npm:
+In your project folder, run these commands one at a time:
 
 ```bash
-npm install @ignition/spark-design-system
+npm install
+npm run dev
 ```
 
-```tsx
-import { Button, Alert } from '@ignition/spark-design-system';
-import '@ignition/spark-design-system/tokens.css';
-```
+**That's it!** Your browser will open to http://localhost:5173 showing all components.
 
 ---
 
-## 🎨 Basic Setup
+## ✅ What You Should See
 
-### 1. TypeScript Configuration
-
-Ensure your `tsconfig.json` includes:
-
-```json
-{
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "moduleResolution": "bundler",
-    "types": ["vite/client"]
-  },
-  "include": ["src", "design-system"]
-}
-```
-
-### 2. CSS Modules Support
-
-If using Vite (recommended):
-
-```bash
-npm install -D typescript-plugin-css-modules
-```
-
-Add to `tsconfig.json`:
-
-```json
-{
-  "compilerOptions": {
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
-  }
-}
-```
-
-### 3. Font Awesome Icons
-
-Some components use Font Awesome icons, including Pro icons which require authentication.
-
-#### For FontAwesome Pro Users
-
-If you have a FontAwesome Pro subscription, you'll need to configure npm authentication:
-
-```bash
-# Set up FontAwesome Pro registry
-npm config set "@fortawesome:registry" https://npm.fontawesome.com/
-
-# Add your FontAwesome Pro token (get from https://fontawesome.com/account)
-npm config set "//npm.fontawesome.com/:_authToken" YOUR_FONTAWESOME_TOKEN
-```
-
-Then install the required packages:
-
-```bash
-npm install @fortawesome/fontawesome-svg-core@^7.1.0 \
-            @fortawesome/react-fontawesome@^3.1.0 \
-            @fortawesome/free-solid-svg-icons@^7.1.0 \
-            @fortawesome/pro-light-svg-icons@^7.1.0 \
-            @fortawesome/pro-regular-svg-icons@^7.1.0 \
-            @fortawesome/pro-solid-svg-icons@^7.1.0
-```
-
-#### For Free Icons Only
-
-If you don't have FontAwesome Pro, you can use free icons only:
-
-```bash
-npm install @fortawesome/fontawesome-svg-core \
-            @fortawesome/react-fontawesome \
-            @fortawesome/free-solid-svg-icons
-```
-
-You'll need to update component imports to use free icons instead of pro icons.
+When everything works, you'll see:
+- ✅ A webpage with 53+ design system components
+- ✅ Buttons, forms, cards, and other UI elements
+- ✅ Navigation to browse different component categories
 
 ---
 
-## 🧪 Local Development & Testing
+## 🆘 Something Went Wrong?
 
-### Running the Development Server
+### Error: "E401 - Incorrect or missing password"
 
-To test the design system locally and see all components in action:
+**This means:** Your FontAwesome token isn't set up correctly.
 
-#### 1. Configure FontAwesome Pro (Required)
+**Fix it:**
+1. Make sure you created a `.npmrc` file (not `.npmrc.example`)
+2. Double-check you copied the full token from https://fontawesome.com/account
+3. Make sure you replaced `YOUR_FONTAWESOME_TOKEN` with your actual token
+4. Make sure there are NO spaces around the `=` sign
+5. The line should look like: `//npm.fontawesome.com/:_authToken=A1B2C3D4-1234-5678-ABCD-1234567890AB`
 
+---
+
+### Error: "Port 5173 already in use"
+
+**This means:** Something else is using that port.
+
+**Fix it:**
 ```bash
-# Get your token from https://fontawesome.com/account
-npm config set "@fortawesome:registry" https://npm.fontawesome.com/
-npm config set "//npm.fontawesome.com/:_authToken" YOUR_FONTAWESOME_TOKEN
+npm run dev -- --port 3000
 ```
 
-#### 2. Install Dependencies
+Now open http://localhost:3000 instead.
 
+---
+
+### Error: "Cannot find module" or "File not found"
+
+**This means:** Dependencies didn't install properly.
+
+**Fix it:**
 ```bash
 npm install
 ```
 
-#### 3. Start the Dev Server
-
-```bash
-npm run dev
-```
-
-The development server will start at `http://localhost:5173` where you can:
-- View all 53+ components with live examples
-- Test different component variants and states
-- See the complete design token system in action
-- Navigate through different component categories (Forms, Data Display, Navigation, etc.)
-
-### Testing Without FontAwesome Pro
-
-If you don't have FontAwesome Pro access and just want to review the code:
-
-**Option 1: Visual Code Review (No Install Needed)**
-- Check component CSS files - All use `var(--*)` design tokens
-- Review [COMPLETION-REPORT.md](COMPLETION-REPORT.md) - Shows 100% token coverage verification
-- Inspect [tokens.css](design-system/tokens/tokens.css) - All CSS custom properties
-
-**Option 2: Use Free Icons Only**
-1. Remove Pro packages from `package.json` (lines 67-69):
-   - `@fortawesome/pro-light-svg-icons`
-   - `@fortawesome/pro-regular-svg-icons`
-   - `@fortawesome/pro-solid-svg-icons`
-
-2. Install with free icons:
-   ```bash
-   npm install
-   ```
-
-3. Update component imports to use `@fortawesome/free-solid-svg-icons`
-
-### What to Look For When Testing
-
-When you run the dev server, verify:
-- ✅ All components render correctly with no visual regressions
-- ✅ Typography is consistent across all components
-- ✅ Transitions/animations are smooth (200ms default)
-- ✅ Spacing is uniform using the design token scale
-- ✅ Border radii match Figma specifications
-- ✅ Interactive states work (hover, focus, disabled)
-- ✅ All components use design tokens (no hardcoded values)
+Then try `npm run dev` again.
 
 ---
 
-## 🚀 Quick Start
+### The page is blank or looks broken
 
-### Create Your First Component
+**Fix it:**
+
+1. **Hard refresh your browser:**
+   - **Mac:** Press `Cmd + Shift + R`
+   - **Windows:** Press `Ctrl + Shift + R`
+
+2. **Still broken?** Restart the dev server:
+   - Press `Ctrl + C` in Terminal to stop it
+   - Run `npm run dev` again
+
+---
+
+## 🎨 Using Components in Your Project
+
+Once the dev server is running, you can start building with components:
+
+### Basic Example
 
 ```tsx
-// src/App.tsx
 import { Button, Alert, Card } from './design-system';
-import './design-system/tokens/tokens.css';
 
-function App() {
+function MyApp() {
   return (
     <div>
-      <Alert status="success" closeable>
+      <Alert status="success">
         Welcome to Ignition Spark Design System!
       </Alert>
 
-      <Card
-        title="Getting Started"
-        description="Build beautiful prototypes with our component library"
-      >
-        <Button hierarchy="primary" size="large">
-          Start Building
-        </Button>
+      <Button hierarchy="primary" size="large">
+        Click Me
+      </Button>
+
+      <Card title="My Card" description="This is a card component">
+        Card content goes here
       </Card>
     </div>
   );
 }
 ```
 
----
+### Available Components
 
-## 📚 Using Design Tokens
+**53 components including:**
+- **Forms:** Button, TextInput, Select, Checkbox, RadioButton, Switch
+- **Feedback:** Alert, Toast, Modal, Notification, Banner
+- **Data Display:** Table, Card, Badge, Avatar, Tabs
+- **Navigation:** SideNav, Menu, Pagination, Breadcrumb
 
-### In TypeScript/JavaScript
-
-```tsx
-import { colors, spacing, typography } from './design-system/tokens';
-
-const customStyles = {
-  backgroundColor: colors.primary[500],
-  padding: spacing[4],
-  fontSize: typography.fontSize.lg,
-};
-```
-
-### In CSS
-
-```css
-.my-component {
-  /* Use CSS custom properties */
-  background-color: var(--color-primary-500);
-  padding: var(--spacing-4);
-  font-size: var(--font-size-lg);
-  border-radius: var(--border-radius-md);
-}
-```
-
-### Available Token Categories
-
-- **Colors:** Primary, secondary, grayscale, status colors
-- **Spacing:** 0.5 to 10 (4px to 40px scale)
-- **Typography:** Font sizes, weights, line heights
-- **Borders:** Border radius values
-- **Shadows:** Elevation system
-
-See [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md) for complete token reference.
+See [COMPONENTS.md](./COMPONENTS.md) for the full list and API documentation.
 
 ---
 
-## 🎯 Component Examples
+## 📚 Important Files to Know
 
-### Forms
-
-```tsx
-import { TextInput, Checkbox, Select, Button } from './design-system';
-
-<form>
-  <TextInput
-    label="Email"
-    placeholder="Enter your email"
-    required
-  />
-
-  <Checkbox
-    label="Subscribe to newsletter"
-    checked={subscribed}
-    onChange={setSubscribed}
-  />
-
-  <Select
-    label="Country"
-    options={countries}
-    value={country}
-    onChange={setCountry}
-  />
-
-  <Button hierarchy="primary" type="submit">
-    Submit
-  </Button>
-</form>
-```
-
-### Data Display
-
-```tsx
-import { Table, Badge, Avatar, Card } from './design-system';
-
-<Table
-  columns={[
-    { key: 'name', label: 'Name' },
-    { key: 'status', label: 'Status',
-      render: (row) => <Badge variant={row.status}>{row.status}</Badge>
-    }
-  ]}
-  data={users}
-/>
-```
-
-### Navigation
-
-```tsx
-import { Tabs, SideNav, Pagination } from './design-system';
-
-<Tabs
-  tabs={[
-    { id: 'overview', label: 'Overview', onClick: () => {} },
-    { id: 'settings', label: 'Settings', onClick: () => {} }
-  ]}
-  activeTab="overview"
-/>
-```
-
-### Overlays
-
-```tsx
-import { Modal, Drawer, Tooltip } from './design-system';
-
-<Modal
-  isOpen={isOpen}
-  onClose={() => setIsOpen(false)}
-  title="Confirm Action"
->
-  <p>Are you sure you want to proceed?</p>
-  <Button onClick={handleConfirm}>Confirm</Button>
-</Modal>
-```
+- **[COMPONENTS.md](./COMPONENTS.md)** - Complete list of all components and how to use them
+- **[DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)** - Colors, spacing, fonts (design tokens)
+- **[AI-PROMPT-GUIDE.md](./AI-PROMPT-GUIDE.md)** - Build prototypes faster with AI
 
 ---
 
-## 🔧 Build Configuration
+## 🔄 Alternative: Use Free Icons Instead
 
-### Vite Configuration
+If you don't have FontAwesome Pro, you can use free icons:
 
-```ts
-// vite.config.ts
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+### Step 1: Edit package.json
 
-export default defineConfig({
-  plugins: [react()],
-  css: {
-    modules: {
-      localsConvention: 'camelCase',
-    },
-  },
-});
+Open `package.json` and **delete these 3 lines** (around line 67-69):
+
+```json
+"@fortawesome/pro-light-svg-icons": "^7.1.0",
+"@fortawesome/pro-regular-svg-icons": "^7.1.0",
+"@fortawesome/pro-solid-svg-icons": "^7.1.0",
 ```
 
-### Webpack Configuration
+### Step 2: Install
 
-```js
-// webpack.config.js
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.module\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
-};
+```bash
+npm install
+npm run dev
 ```
+
+> **Note:** Some icons may look different or be missing with free icons only.
 
 ---
 
-## 🎨 Customizing Tokens
+## 💡 Tips for Non-Technical Users
 
-### Override CSS Custom Properties
+### What is a .npmrc file?
 
-Create a custom CSS file:
+A `.npmrc` file tells npm (the package manager) where to download FontAwesome Pro icons from and what token to use. It's just a text file with settings.
+
+**How to create it:**
+1. Find the file `.npmrc.example` in this folder
+2. Right-click it and choose "Duplicate" or "Copy"
+3. Rename the copy to `.npmrc` (remove the `.example` part)
+4. Open it in any text editor and replace `YOUR_FONTAWESOME_TOKEN` with your actual token
+
+### What is Terminal/Command Prompt?
+
+**Mac:**
+- Press `Cmd + Space`, type "Terminal", press Enter
+- You'll see a window with text and a cursor
+
+**Windows:**
+- Press `Windows Key`, type "Command Prompt", press Enter
+- You'll see a black window with text
+
+### What is npm?
+
+npm is a tool that downloads and manages code libraries. It runs from Terminal/Command Prompt.
+
+### What does "npm install" do?
+
+It downloads all the code this project needs to run (called "dependencies").
+
+### What does "npm run dev" do?
+
+It starts a local web server on your computer so you can see the design system in your browser.
+
+---
+
+## 🎯 Next Steps
+
+Once you're up and running:
+
+1. **Browse components** - Click around in the dev server to see all 53 components
+2. **Read component docs** - Open [COMPONENTS.md](./COMPONENTS.md) to learn how to use each component
+3. **Try AI prototyping** - Check [AI-PROMPT-GUIDE.md](./AI-PROMPT-GUIDE.md) to build UIs 10x faster
+4. **Build something!** - Start using components in your project
+
+---
+
+## 🆘 Still Need Help?
+
+1. **Check if the dev server is running** - Look for "Local: http://localhost:5173" in Terminal
+2. **Look for red error messages** - Share them with your developer or team
+3. **Try restarting everything** - Close Terminal, reopen it, and run the commands again
+
+---
+
+## 🔧 Advanced Options (Optional)
+
+<details>
+<summary>Click to expand advanced installation options</summary>
+
+### Using in a Different Project
+
+To use this design system in another project:
+
+1. **Copy the design-system folder:**
+   ```bash
+   cp -r /path/to/ignition-spark-design-system/design-system ./src/
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install clsx react react-dom
+   npm install --save-dev typescript @types/react @types/react-dom
+   ```
+
+3. **Import the CSS tokens in your main file:**
+   ```tsx
+   import './design-system/tokens/tokens.css';
+   ```
+
+### Custom Colors and Styles
+
+You can override design tokens by creating a custom CSS file:
 
 ```css
 /* custom-tokens.css */
 :root {
-  /* Override primary color */
   --color-primary-500: #your-brand-color;
-
-  /* Override spacing */
-  --spacing-4: 20px; /* instead of 16px */
-
-  /* Override typography */
-  --font-size-base: 16px; /* instead of 14px */
+  --spacing-4: 20px;
+  --font-size-base: 16px;
 }
 ```
 
-Import after the design system tokens:
-
+Import it after the design system tokens:
 ```tsx
 import './design-system/tokens/tokens.css';
-import './custom-tokens.css'; // Your overrides
+import './custom-tokens.css';
 ```
 
----
-
-## ♿ Accessibility Setup
-
-### Screen Reader Testing
-
-```bash
-# macOS
-VoiceOver: Cmd + F5
-
-# Windows
-NVDA: Download from nvaccess.org
-```
-
-### Keyboard Navigation
-
-All components support keyboard navigation:
-- **Tab/Shift+Tab:** Navigate between focusable elements
-- **Enter/Space:** Activate buttons and controls
-- **Escape:** Close modals, dropdowns, tooltips
-- **Arrow keys:** Navigate menus, tabs, pagination
-
----
-
-## 📱 Responsive Design
-
-Components are mobile-friendly by default. To customize breakpoints:
-
-```css
-/* Your custom responsive styles */
-@media (max-width: 768px) {
-  .your-component {
-    /* Mobile styles */
-  }
-}
-
-@media (min-width: 769px) {
-  .your-component {
-    /* Desktop styles */
-  }
-}
-```
-
----
-
-## 🐛 Troubleshooting
-
-### FontAwesome Pro Authentication Error
-
-**Problem:** `npm error code E401 - Incorrect or missing password` when running `npm install`
-
-**Cause:** FontAwesome Pro packages require authentication
-
-**Solution:**
-```bash
-# Option 1: Add your FontAwesome Pro token
-npm config set "@fortawesome:registry" https://npm.fontawesome.com/
-npm config set "//npm.fontawesome.com/:_authToken" YOUR_TOKEN
-
-# Get your token from: https://fontawesome.com/account
-
-# Option 2: Use free icons only (see "Testing Without FontAwesome Pro" above)
-```
-
-### CSS Modules Not Working
-
-**Problem:** TypeScript errors for CSS module imports
-
-**Solution:**
-```bash
-# Generate CSS module types
-npm run css-types
-
-# Or add to package.json scripts
-"css-types": "tcm design-system src"
-```
-
-### Font Awesome Icons Missing
-
-**Problem:** Icon components don't render
-
-**Solution:** Install Font Awesome packages (see step 3 in Basic Setup) and ensure FontAwesome Pro is configured if using Pro icons
-
-### Build Errors
-
-**Problem:** TypeScript compilation fails
-
-**Solution:**
-```bash
-# Check TypeScript version
-npm install typescript@^5.5.3
-
-# Run type checking
-npm run typecheck
-```
-
-### Dev Server Won't Start
-
-**Problem:** Cannot run `npm run dev`
-
-**Solution:**
-```bash
-# Check if node_modules exists
-ls node_modules
-
-# If missing, install dependencies first
-npm install
-
-# Ensure FontAwesome Pro is configured (see above)
-```
-
----
-
-## 📖 Next Steps
-
-1. **Explore Components:** Run `npm run dev` to see all components in action
-2. **Read Documentation:** Check [COMPONENTS.md](./COMPONENTS.md) for API details
-3. **View Examples:** See [src/](./src/) for template examples
-4. **Design Guidelines:** Read [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)
-
----
-
-## 🤝 Need Help?
-
-- **Documentation:** [COMPONENTS.md](./COMPONENTS.md), [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)
-- **Issues:** Check [QA-REVIEW.md](./QA-REVIEW.md) for known issues
-- **Troubleshooting:** See [SETUP.md](./SETUP.md)
+</details>
 
 ---
 
