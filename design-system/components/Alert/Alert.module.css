@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 8px 16px;
+  padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--border-radius-sm);
   gap: var(--spacing-2);
   font-family: var(--font-family-primary);
@@ -22,7 +22,7 @@
   flex: 1;
   gap: var(--spacing-3);
   align-items: flex-start;
-  padding: 4px 0;
+  padding: var(--spacing-1) var(--spacing-0);
 }
 
 /* Body-only variant: center align icon and text vertically */
@@ -36,14 +36,14 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  border-radius: 100px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
+  border-radius: var(--border-radius-pill);
 }
 
 .iconSvg {
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
 }
 
 /* Content container */
@@ -78,8 +78,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
-  padding: 0 13px;
+  height: var(--spacing-8);
+  padding: 0 var(--spacing-3-25);
   border: none;
   border-radius: var(--border-radius-sm);
   background-color: var(--color-primary-500);
@@ -107,9 +107,9 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  padding: 8px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
+  padding: var(--spacing-2);
   border: none;
   border-radius: var(--border-radius-sm);
   background: transparent;
@@ -122,8 +122,8 @@
 }
 
 .closeIcon {
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
   color: var(--color-gray-600);
 }
 

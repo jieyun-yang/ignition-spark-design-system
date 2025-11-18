@@ -6,8 +6,27 @@ This document contains comprehensive examples to help you understand how to use 
 
 ---
 
+## 🔧 Testing Tools - Quick Reference for AI
+
+**IMPORTANT: Use the right tool for the right job!**
+
+| Task | Tool to Use | DO NOT Use |
+|------|-------------|------------|
+| **Inspect production app (demo.ignitionapp.com)** | ✅ Chrome DevTools MCP | ❌ Playwright MCP |
+| **Compare design system vs production** | ✅ Chrome DevTools MCP → Playwright MCP | ❌ Native Playwright alone |
+| **Quick visual check of prototype** | ✅ Playwright MCP | ❌ Chrome DevTools MCP |
+| **Debug component behavior** | ✅ Playwright MCP | ❌ Chrome DevTools MCP |
+| **Write automated tests** | ✅ Native Playwright | ❌ Playwright MCP |
+| **Run test suite** | ✅ Native Playwright (npm run test:e2e) | ❌ Playwright MCP |
+| **CI/CD integration** | ✅ Native Playwright | ❌ Any MCP tool |
+
+**See [AI-PROMPT-GUIDE.md - Testing Tools Guide](./AI-PROMPT-GUIDE.md#-testing-tools-guide) for detailed explanations.**
+
+---
+
 ## Table of Contents
 
+- [🔧 Testing Tools](#-testing-tools---quick-reference-for-ai) - Which tool to use when
 - [📖 Complete Workflow Example](#-complete-workflow-example) - Full 3-phase walkthrough
 - [📋 Use Case Examples](#-use-case-examples) - 5 detailed scenarios
   - [Dashboard with Data Tables](#1-dashboard-with-data-tables)
@@ -108,6 +127,11 @@ and use an ActionBar with Save/Cancel buttons.
 **Expected AI Response:**
 ```
 VERIFICATION COMPLETE:
+
+TESTING TOOLS USED:
+- ✅ Playwright MCP: Interactive testing and screenshots
+- ✅ Native Playwright: Automated test suite (npm run test:e2e)
+- ❌ Chrome DevTools MCP: NOT used (only for production analysis)
 
 1. TOKEN USAGE AUDIT:
    ✅ No hardcoded colors found

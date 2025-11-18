@@ -10,8 +10,8 @@
   display: inline-flex;
   align-items: stretch;
   width: 100%;
-  max-width: 320px;
-  border: 1px solid var(--color-gray-200);
+  max-width: var(--width-copyfield);
+  border: var(--border-width-default) solid var(--color-gray-200);
   border-radius: var(--border-radius-sm);
   background-color: var(--color-white);
   overflow: hidden;
@@ -24,7 +24,7 @@
 
 .container:focus-within:not(.disabled) {
   border-color: var(--color-primary-500);
-  outline: 2px solid rgba(90, 81, 231, 0.1);
+  outline: var(--border-width-thick) solid rgba(90, 81, 231, 0.1);
   outline-offset: 0;
 }
 
@@ -40,9 +40,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-1-5);
-  padding: 0 12px;
+  padding: 0 var(--spacing-3);
   border: none;
-  border-right: 1px solid var(--color-gray-200);
+  border-right: var(--border-width-default) solid var(--color-gray-200);
   background-color: var(--color-gray-200);
   color: var(--color-gray-800);
   font-family: var(--font-family-primary);
@@ -79,8 +79,8 @@
 
 /* Icon */
 .icon {
-  width: 12px;
-  height: 12px;
+  width: var(--spacing-3);
+  height: var(--spacing-3);
   font-size: var(--font-size-sm);
 }
 
@@ -92,7 +92,7 @@
 /* Input Field */
 .input {
   flex: 1;
-  padding: 8px 12px;
+  padding: var(--spacing-2) var(--spacing-3);
   border: none;
   background-color: transparent;
   color: var(--color-gray-800);

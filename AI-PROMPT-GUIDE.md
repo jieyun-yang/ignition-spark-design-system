@@ -117,6 +117,23 @@ After implementation, run verification (Phase 3).
 ```
 Now that the prototype is built, please verify and test it AUTONOMOUSLY:
 
+TESTING TOOLS GUIDANCE:
+Use the RIGHT tool for each task:
+
+📊 Chrome DevTools MCP - For Production Analysis ONLY
+   ✅ USE for: Analyzing demo.ignitionapp.com (production app)
+   ❌ DON'T use for: Testing your design system prototypes
+
+🎭 Playwright MCP - For Interactive Testing
+   ✅ USE for: Quick visual checks, debugging, exploring component behavior
+   ✅ USE for: Taking screenshots during development
+   ❌ DON'T use for: Automated regression tests (use Native Playwright)
+
+🤖 Native Playwright - For Automated Tests
+   ✅ USE for: Writing and running automated test suites (npm run test:e2e)
+   ✅ USE for: Visual regression testing with baselines
+   ✅ USE for: CI/CD integration
+
 AUTOMATED VERIFICATION CHECKLIST:
 
 1. TOKEN USAGE AUDIT:
@@ -255,6 +272,86 @@ Provide a complete verification report with:
    - Fix broken interactions
 
 **Result**: You get a production-ready prototype with comprehensive test coverage, requiring minimal manual testing or intervention.
+
+---
+
+## 🔧 Testing Tools Guide
+
+**The design system uses THREE different tools for testing. Each has a specific purpose:**
+
+### Chrome DevTools MCP - Production Analysis Tool
+
+**Purpose:** Inspect and analyze the PRODUCTION app at demo.ignitionapp.com
+
+**When AI should use it:**
+- ✅ Comparing design system components against live production
+- ✅ Extracting exact CSS values from production app
+- ✅ Understanding how components are implemented in production
+- ✅ Debugging issues that only appear in production
+- ✅ Analyzing performance of production app
+
+**When AI should NOT use it:**
+- ❌ Testing locally built prototypes or design system components
+- ❌ Running automated tests
+- ❌ Verifying new prototype implementations
+
+**Example use case:** "Inspect the SideNav component in demo.ignitionapp.com and tell me what the exact width, colors, and font sizes are."
+
+---
+
+### Playwright MCP - Interactive Testing Tool
+
+**Purpose:** Manually test and debug design system components on localhost:5173
+
+**When AI should use it:**
+- ✅ Quick visual verification after building a component
+- ✅ Debugging specific component behavior interactively
+- ✅ Taking screenshots for documentation or comparison
+- ✅ Exploring edge cases and unusual interactions
+- ✅ One-off testing during development
+
+**When AI should NOT use it:**
+- ❌ Building comprehensive automated test suites
+- ❌ CI/CD testing (use Native Playwright)
+- ❌ Analyzing production apps (use Chrome DevTools MCP)
+
+**Example use case:** "Use Playwright to load my new Settings page at localhost:5173/settings and take a screenshot showing all the form fields."
+
+---
+
+### Native Playwright - Automated Testing Framework
+
+**Purpose:** Write and run automated test suites (npm commands, not MCP tool)
+
+**When AI should use it:**
+- ✅ Creating automated test files in ./tests/
+- ✅ Writing visual regression tests with baseline screenshots
+- ✅ Running full test suites: `npm run test:e2e`
+- ✅ Setting up CI/CD integration
+- ✅ Systematic testing of all component variants
+
+**When AI should NOT use it:**
+- ❌ Quick one-off visual checks (use Playwright MCP)
+- ❌ Production app analysis (use Chrome DevTools MCP)
+
+**Example use case:** "Create a Playwright test file that tests all button variants (primary, secondary, ghost) and verifies they match the baseline screenshots."
+
+---
+
+### Decision Tree for AI
+
+```
+Need to inspect PRODUCTION app (demo.ignitionapp.com)?
+  └─→ Use Chrome DevTools MCP
+
+Building/debugging a NEW prototype on localhost?
+  ├─→ Quick check? → Use Playwright MCP
+  └─→ Comprehensive testing? → Use Native Playwright (write test files)
+
+Comparing design system vs production?
+  ├─→ Step 1: Use Chrome DevTools MCP (get production data)
+  └─→ Step 2: Use Playwright MCP (verify design system matches)
+```
 
 ---
 

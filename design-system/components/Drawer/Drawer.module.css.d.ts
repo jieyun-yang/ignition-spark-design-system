@@ -11,6 +11,7 @@ declare const styles: {
   readonly "header": string;
   readonly "headerContent": string;
   readonly "headerContentNoTabs": string;
+  readonly "headerCustomContent": string;
   readonly "moreActionItem": string;
   readonly "moreActionsButton": string;
   readonly "moreActionsDropdown": string;
@@ -19,6 +20,7 @@ declare const styles: {
   readonly "primaryButton": string;
   readonly "slideIn": string;
   readonly "subtitle": string;
+  readonly "tabsSegmentInBody": string;
   readonly "tabsWrapper": string;
   readonly "title": string;
   readonly "titleRow": string;

@@ -1,13 +1,15 @@
-/* CheckboxCard Component Styles */
+/* CheckboxCard Component Styles
+ * All values reference design tokens
+ */
 
 .card {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
-  width: 200px;
-  padding: 16px;
+  width: var(--spacing-50);
+  padding: var(--spacing-4);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-200);
+  border: var(--border-width-default) solid var(--color-gray-200);
   border-radius: var(--border-radius-md);
   cursor: pointer;
   transition: border-color var(--duration-normal) var(--easing-ease);
@@ -20,7 +22,7 @@
 .card:focus {
   outline: none;
   border-color: var(--color-primary-500);
-  box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1);
+  box-shadow: 0 0 0 var(--spacing-0-75) rgba(90, 81, 231, 0.1);
 }
 
 .card.checked {
@@ -48,8 +50,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
 }
 
 .icon {
@@ -68,10 +70,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--color-gray-200);
-  border-radius: 2px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
+  border: var(--border-width-default) solid var(--color-gray-200);
+  border-radius: var(--border-radius-xs);
   background-color: var(--color-white);
   transition: all var(--duration-normal) var(--easing-ease);
 }
@@ -86,7 +88,7 @@
 }
 
 .checkIcon {
-  font-size: 10px;
+  font-size: var(--font-size-xxxs);
   color: var(--color-white);
 }
 
@@ -94,7 +96,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-0-5);
   width: 100%;
 }
 

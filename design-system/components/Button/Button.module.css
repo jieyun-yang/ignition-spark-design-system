@@ -54,8 +54,8 @@
 
 /* Size variants */
 .size-small {
-  padding: 0 var(--spacing-3-5);
-  height: 26px; /* Figma spec */
+  padding: 0 var(--spacing-3-25);
+  height: var(--spacing-6-5); /* Figma spec: 26px */
   font-size: var(--font-size-sm);
 }
 
@@ -66,13 +66,13 @@
 }
 
 .size-small.icon-only {
-  width: 26px; /* Figma spec */
+  width: var(--spacing-6-5); /* Figma spec: 26px */
   padding: 0 var(--spacing-2-5);
 }
 
 .size-medium {
-  padding: 0 var(--spacing-3-5);
-  height: 32px; /* Figma spec */
+  padding: 0 var(--spacing-3-25);
+  height: var(--spacing-8); /* Figma spec: 32px */
   font-size: var(--font-size-base);
 }
 
@@ -83,30 +83,30 @@
 }
 
 .size-medium.icon-only {
-  width: 32px; /* Figma spec */
+  width: var(--spacing-8); /* Figma spec: 32px */
   padding: 0 var(--spacing-2-5);
 }
 
 .size-large {
   padding: 0 var(--spacing-3-5);
-  height: 40px; /* Figma spec */
+  height: var(--spacing-10); /* Figma spec: 40px */
   font-size: var(--font-size-lg);
 }
 
 .size-large .icon {
-  width: 14px; /* Figma spec - between 12px and 16px */
-  height: 14px;
+  width: var(--spacing-3-5); /* Figma spec: 14px - between 12px and 16px */
+  height: var(--spacing-3-5);
   font-size: var(--spacing-3);
 }
 
 .size-large.icon-only {
-  width: 40px; /* Figma spec */
+  width: var(--spacing-10); /* Figma spec: 40px */
   padding: 0 var(--spacing-2-5);
 }
 
 .size-xlarge {
   padding: 0 var(--spacing-6);
-  height: 48px; /* Figma spec */
+  height: var(--spacing-12); /* Figma spec: 48px */
   font-size: var(--font-size-xl);
 }
 
@@ -117,7 +117,7 @@
 }
 
 .size-xlarge.icon-only {
-  width: 48px; /* Figma spec */
+  width: var(--spacing-12); /* Figma spec: 48px */
   padding: 0 var(--spacing-2-5);
 }
 

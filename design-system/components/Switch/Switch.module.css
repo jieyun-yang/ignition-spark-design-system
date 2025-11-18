@@ -21,10 +21,10 @@
 
 .switch {
   position: relative;
-  width: 40px;
-  height: 24px;
+  width: var(--spacing-10);
+  height: var(--spacing-6);
   background-color: var(--color-gray-200);
-  border-radius: 24px;
+  border-radius: var(--spacing-6);
   transition: background-color var(--duration-normal) var(--easing-ease);
 }
 
@@ -34,7 +34,7 @@
 
 .switch:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1);
+  box-shadow: 0 0 0 var(--spacing-0-75) rgba(90, 81, 231, 0.1);
 }
 
 .switch.checked {
@@ -47,18 +47,18 @@
 
 .slider {
   position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 20px;
-  height: 20px;
+  top: var(--spacing-0-5);
+  left: var(--spacing-0-5);
+  width: var(--spacing-5);
+  height: var(--spacing-5);
   background-color: var(--color-white);
   border-radius: 50%;
   transition: transform var(--duration-normal) var(--easing-ease);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 var(--spacing-0-5) var(--spacing-1) rgba(0, 0, 0, 0.1);
 }
 
 .checked .slider {
-  transform: translateX(16px);
+  transform: translateX(var(--spacing-4));
 }
 
 .label {

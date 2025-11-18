@@ -1,16 +1,16 @@
 /**
  * AppCard Component Styles
  * Matches Figma App card design
- * Fixed size: 218x218px
+ * All values reference design tokens
  */
 
 .appCard {
   display: flex;
   flex-direction: column;
-  width: 218px;
-  height: 218px;
+  width: var(--size-appcard);
+  height: var(--size-appcard);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-200); /* Figma: Gray border */
+  border: var(--border-width-default) solid var(--color-gray-200); /* Figma: Gray border */
   border-radius: var(--border-radius-md);
   overflow: hidden;
   transition: all var(--duration-normal) var(--easing-ease);
@@ -18,7 +18,7 @@
 
 /* Locked state - Different layout with gap and padding */
 .appCard.locked {
-  padding: 12px 8px;
+  padding: var(--spacing-3) var(--spacing-2);
   justify-content: center;
 }
 
@@ -56,19 +56,19 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 4px 0;
+  padding: var(--spacing-1) var(--spacing-0);
   background-color: var(--color-primary-500); /* Figma: Primary/Purple/500 */
   flex-shrink: 0;
 }
 
 .premiumText {
   font-family: var(--font-family-primary);
-  font-size: 11px;
+  font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
   color: var(--color-white);
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 /* Content Section */
@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-3);
-  padding: 12px 0;
+  padding: var(--spacing-3) var(--spacing-0);
   flex: 1;
 }
 
@@ -97,7 +97,7 @@
   align-items: center;
   gap: var(--spacing-1);
   width: 100%;
-  padding: 0 12px;
+  padding: var(--spacing-0) var(--spacing-3);
 }
 
 /* App Name */
@@ -149,8 +149,8 @@
 
 /* Locked Icon */
 .lockedIcon {
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
   display: flex;
   align-items: center;
   justify-content: center;

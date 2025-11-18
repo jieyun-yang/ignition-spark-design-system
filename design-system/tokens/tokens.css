@@ -122,29 +122,64 @@
   --spacing-0: 0;
   --spacing-px: 1px;
   --spacing-0-5: 2px;
+  --spacing-0-75: 3px; /* CardContainer action button padding */
   --spacing-1: 4px;
+  --spacing-1-25: 5px; /* Popover box-shadow, arrow sizes */
   --spacing-1-5: 6px;
+  --spacing-1-875: 7.5px; /* ComboButton main button padding vertical */
   --spacing-2: 8px;
   --spacing-2-5: 10px;
   --spacing-3: 12px;
-  --spacing-3-5: 13px;
+  --spacing-3-25: 13px; /* Create button padding */
+  --spacing-3-5: 14px; /* Button large icon size */
+  --spacing-3-75: 15px;
   --spacing-4: 16px;
+  --spacing-4-5: 18px; /* Email button padding horizontal */
+  --spacing-5: 20px;
+  --spacing-5-25: 21px; /* Line height for nav labels */
+  --spacing-5-5: 22px; /* Email button line height */
   --spacing-6: 24px;
+  --spacing-6-5: 26px; /* Button small height */
   --spacing-8: 32px;
+  --spacing-8-25: 33px; /* Logo height */
+  --spacing-9: 36px; /* Card large badge margin */
   --spacing-10: 40px;
+  --spacing-11: 44px; /* Nav item height, table header height */
+  --spacing-12: 48px; /* Button xlarge height, table empty state padding */
+  --spacing-12-75: 51px; /* Notification gap */
+  --spacing-13: 52px; /* Card xlarge icon size */
+  --spacing-14: 56px; /* Table row height */
+  --spacing-14-5: 58px; /* Icon area width */
+  --spacing-15: 60px; /* Wizard loading spinner size */
+  --spacing-16: 64px; /* Card xlarge badge margin */
+  --spacing-17-75: 71px; /* Banner image padding horizontal */
+  --spacing-20: 80px; /* FieldSet horizontal padding */
+  --spacing-30: 120px; /* Wizard icon box size */
+  --spacing-35: 140px; /* Card small preview height */
+  --spacing-36: 144px; /* Calendar day cell min size */
+  --spacing-50: 200px; /* Card large/xlarge preview height */
+  --spacing-55: 220px; /* EmptyState medium min-height */
+  --spacing-60: 240px; /* Modal with illustration footer horizontal padding */
+  --spacing-80: 320px; /* EmptyState large min-height */
 
   /* Typography - Font Family */
   --font-family-primary: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-family-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Typography - Font Size */
+  --font-size-xxxs: 10px; /* For small icons */
+  --font-size-xxs: 11px; /* For error/helper text */
   --font-size-xs: 13px;
   --font-size-sm: 12px;
   --font-size-base: 14px;
   --font-size-lg: 16px;
   --font-size-xl: 18px;
-  --font-size-1-5xl: 28px;
+  --font-size-md: 20px; /* Accordion large heading */
+  --font-size-xl-plus: 24px; /* Link h1, larger headings */
+  --font-size-1-5xl: 28px; /* Signature small */
+  --font-size-signature-medium: 46px; /* Signature medium size */
   --font-size-2xl: 48px;
+  --font-size-signature-large: 64px; /* Signature large size */
 
   /* Typography - Font Weight */
   --font-weight-regular: 400;
@@ -154,13 +189,18 @@
 
   /* Typography - Line Height */
   --line-height-none: 1;
+  --line-height-tight: 17px; /* Badge large size */
   --line-height-normal: 1.5;
+
+  /* Typography - Letter Spacing */
+  --letter-spacing-tight: 0.5px; /* Table headers */
 
   /* Border Radius */
   --border-radius-none: 0;
   --border-radius-xs: 2px;
   --border-radius-sm: 3px;
   --border-radius-md: 4px;
+  --border-radius-md-lg: 6px; /* FieldSet border radius */
   --border-radius-lg: 8px;
   --border-radius-xl: 20px;
   --border-radius-pill: 100px;
@@ -169,6 +209,68 @@
   /* Border Width */
   --border-width-default: 1px;
   --border-width-thick: 2px;
+  --border-width-active: 3px; /* Active indicator border */
+
+  /* Component Widths */
+  --width-sidenav: 220px; /* SideNav total width */
+  --width-sidenav-content: 196px; /* SideNav internal content width (220px - 24px padding) */
+  --width-logo: 97px; /* Ignition logo width */
+  --size-appcard: 218px; /* AppCard fixed width and height */
+  --width-banner-image-min: 240px; /* Banner image section minimum width */
+  --width-banner-image-max: 320px; /* Banner image section max/default width */
+  --width-banner-body-max: 760px; /* Banner body text maximum width */
+  --width-card-small: 280px; /* Card small max-width */
+  --width-card-large: 420px; /* Card large max-width */
+  --width-card-xlarge: 300px; /* Card xlarge max-width */
+  --width-copyfield: 320px; /* CopyField max-width */
+  --width-datalist-label: 145px; /* DataList label fixed width */
+  --width-datepicker: 240px; /* DatePicker input width */
+  --width-calendar-month: 172px; /* Calendar month display width */
+  --width-dropdown-min: 180px; /* Dropdown minimum width */
+  --width-emptystate-small: 280px; /* EmptyState small content max-width */
+  --width-emptystate-medium: 400px; /* EmptyState medium content max-width */
+  --width-emptystate-large: 600px; /* EmptyState large content max-width */
+  --width-filter-min: 220px; /* Filter popover minimum width */
+  --height-filter-options: 240px; /* Filter options list max height */
+  --height-menu-max: 300px; /* Menu max height before scrolling */
+  --height-modal-illustration: 324px; /* Modal illustration height */
+  --width-modal-xxsmall: 364px; /* Modal xxsmall size */
+  --width-modal-xsmall: 416px; /* Modal xsmall size */
+  --width-modal-small: 468px; /* Modal small size */
+  --width-modal-medium: 546px; /* Modal medium size */
+  --width-modal-large: 624px; /* Modal large size */
+  --width-modal-xlarge: 728px; /* Modal xlarge size */
+  --width-modal-xxlarge: 768px; /* Modal xxlarge size */
+  --width-notification: 450px; /* Notification component width */
+  --width-table-search: 224px; /* TableHeader search input width */
+
+  /* Email Template Widths */
+  --width-email-outer: 683px; /* Email template outer container */
+  --width-email-inner: 600px; /* Email template inner content */
+  --width-email-logo: 151.429px; /* Ignition email logo width */
+
+  /* Wizard Template Widths */
+  --width-wizard-max: 1168px; /* Wizard template max width */
+  --width-wizard-sidebar: 538px; /* Wizard sidebar max width */
+  --width-wizard-content: 528px; /* Wizard content max width */
+  --width-wizard-bottom: 864px; /* Wizard bottom section max width */
+  --width-wizard-form-inner: 544px; /* Wizard form inner max width */
+
+  /* Template Heights */
+  --height-email-header: 110px; /* Email header height */
+  --height-email-logo: 50px; /* Email logo height */
+  --height-email-decorative: 98px; /* Email decorative graphics height */
+  --spacing-wizard-top: 66px; /* Wizard header top spacing */
+  --spacing-wizard-content-top: 82px; /* Wizard content top spacing */
+  --spacing-wizard-section-top: 112px; /* Wizard section top spacing */
+
+  /* Template Specific Spacing */
+  --spacing-7-5: 30px; /* Email padding */
+  --spacing-11-25: 11px; /* Email button padding */
+  --font-size-email-cta: 18px; /* Email CTA button font size - already exists as xl */
+  --font-size-wizard-hero: 48px; /* Wizard hero text - already exists as 2xl */
+  --border-radius-email-button: 12px; /* Email button border radius */
+  --spacing-wizard-gap: 64px; /* Wizard section gap */
 
   /* Animation Durations */
   --duration-instant: 0ms;

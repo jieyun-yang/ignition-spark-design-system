@@ -6,36 +6,42 @@
 /* Tabs container */
 .tabsContainer {
   margin-bottom: var(--spacing-4);
-  border-bottom: 1px solid var(--color-gray-200);
+  border-bottom: var(--border-width-default) solid var(--color-gray-200);
 }
 
-/* Search and Filters Row */
+/* Search, Filters, and Results Summary Row */
 .searchRow {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2-5);
+  justify-content: space-between;
   margin-bottom: var(--spacing-4);
   padding: var(--spacing-2-5) 0;
-  border-top: 1px solid var(--color-gray-200);
-  border-bottom: 1px solid var(--color-gray-200);
 }
 
-.searchWrapper {
+.searchGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2-5);
   flex: 1;
 }
 
-/* Statistics and Actions Row */
-.statsActionsRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--spacing-4);
+.searchWrapper {
+  /* Removed flex: 1 to allow search input to size naturally */
 }
 
 .statsText {
   font-size: var(--font-size-base);
   color: var(--color-gray-600);
   font-family: var(--font-family-primary);
+  white-space: nowrap;
+  margin-left: var(--spacing-2-5);
+}
+
+/* Bulk Actions Row */
+.bulkActionsRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-4);
 }
 
 .bulkActions {

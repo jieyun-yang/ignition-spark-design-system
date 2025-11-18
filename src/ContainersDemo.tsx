@@ -477,6 +477,7 @@ function ContainersDemo() {
           <Modal
             isOpen={featureGatingModalOpen}
             onClose={() => setFeatureGatingModalOpen(false)}
+            title="Upgrade Required"
             size="large"
             variant="feature-gating"
             illustration={

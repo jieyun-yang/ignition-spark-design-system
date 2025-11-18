@@ -11,7 +11,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100px;
+  border-radius: var(--border-radius-pill);
   background-color: var(--color-primary-50); /* Primary/Purple/50 */
   color: var(--color-primary-500); /* Primary/Purple/500 */
   font-family: var(--font-family-primary);
@@ -22,20 +22,20 @@
 
 /* Size variants */
 .size-small {
-  width: 24px;
-  height: 24px;
-  font-size: 11px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
+  font-size: var(--font-size-xxs);
 }
 
 .size-medium {
-  width: 32px;
-  height: 32px;
+  width: var(--spacing-8);
+  height: var(--spacing-8);
   font-size: var(--font-size-sm);
 }
 
 .size-large {
-  width: 40px;
-  height: 40px;
+  width: var(--spacing-10);
+  height: var(--spacing-10);
   font-size: var(--font-size-base);
 }
 
@@ -64,7 +64,7 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-0-5);
 }
 
 .name {

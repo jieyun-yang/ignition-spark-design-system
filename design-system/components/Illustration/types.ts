@@ -86,7 +86,6 @@ export type ProductIllustrationName =
   | 'product-icon-calculator'
   | 'product-icon-clock'
   | 'product-icon-mail'
-  | 'product-icon-bar-graph-decrease'
   | 'product-icon-bar-graph-increase'
   | 'product-icon-bar-graph-increase-plane'
   | 'product-icon-pricing-low'

@@ -50,20 +50,20 @@
 }
 
 .variant-extra-small {
-  font-size: 11px;
+  font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
 }
 
 /* Heading variants */
 .variant-h1 {
-  font-size: 24px;
+  font-size: var(--font-size-xl-plus);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
 }
 
 .variant-h2 {
-  font-size: 20px;
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
 }

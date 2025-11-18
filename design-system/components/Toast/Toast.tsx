@@ -103,8 +103,8 @@ export const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
 
     const toastClasses = clsx(
       styles.toast,
-      styles[`status-${status}`],
-      styles[`content-${contentType}`],
+      styles[`status-${status}` as keyof typeof styles],
+      styles[`content-${contentType}` as keyof typeof styles],
       className
     );
 

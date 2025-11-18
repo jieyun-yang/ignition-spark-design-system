@@ -35,8 +35,8 @@
 
 /* Icon Variant */
 .type-icon {
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
   display: inline-flex;
   align-items: center;
   justify-content: center;

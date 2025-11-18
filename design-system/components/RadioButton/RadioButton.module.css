@@ -38,7 +38,7 @@
 
 .radio:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(90, 81, 231, 0.1); /* Figma spec - focus ring */
+  box-shadow: 0 0 0 var(--spacing-0-75) rgba(90, 81, 231, 0.1); /* Figma spec - focus ring */
 }
 
 .radio.checked {
@@ -51,7 +51,7 @@
 }
 
 .container.invalid .radio:focus {
-  box-shadow: 0 0 0 3px rgba(221, 34, 34, 0.1); /* Figma spec - error focus ring */
+  box-shadow: 0 0 0 var(--spacing-0-75) rgba(221, 34, 34, 0.1); /* Figma spec - error focus ring */
 }
 
 .dot {

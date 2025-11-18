@@ -21,13 +21,13 @@
 .size-tiny {
   padding: var(--spacing-0-5) var(--spacing-2);
   border-radius: var(--border-radius-xl);
-  font-size: 10px; /* Figma spec */
+  font-size: var(--font-size-xxxs); /* Figma spec: 10px */
 }
 
 .size-small {
   padding: var(--spacing-0-5) var(--spacing-2);
   border-radius: var(--border-radius-pill);
-  font-size: 11px; /* Figma spec */
+  font-size: var(--font-size-xxs); /* Figma spec: 11px */
 }
 
 .size-large {
@@ -35,7 +35,7 @@
   height: var(--spacing-6);
   border-radius: var(--border-radius-pill);
   font-size: var(--font-size-xs);
-  line-height: 17px; /* Figma spec */
+  line-height: var(--line-height-tight); /* Figma spec: 17px */
 }
 
 /* Green variant */

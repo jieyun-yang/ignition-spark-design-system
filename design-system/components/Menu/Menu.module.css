@@ -2,16 +2,16 @@
 
 .menu {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + var(--spacing-1));
   left: 0;
   right: 0;
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-400);
+  border: var(--border-width-default) solid var(--color-gray-400);
   border-radius: var(--border-radius-md);
-  padding: 8px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-2);
+  box-shadow: 0 var(--border-width-thick) var(--spacing-2) rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  max-height: 300px;
+  max-height: var(--height-menu-max);
   overflow-y: auto;
 }
 
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
-  padding: 8px 16px;
+  padding: var(--spacing-2) var(--spacing-4);
   border-radius: var(--border-radius-md);
   cursor: pointer;
   transition: background-color var(--duration-normal) var(--easing-ease);
@@ -66,7 +66,7 @@
 
 /* Prominent variant styles */
 .prominent .option {
-  padding: 12px;
+  padding: var(--spacing-3);
 }
 
 .iconContainer {
@@ -74,8 +74,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: var(--spacing-8);
+  height: var(--spacing-8);
   background-color: var(--color-gray-175);
   border-radius: var(--border-radius-md);
 }
@@ -90,8 +90,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
   font-size: var(--font-size-base);
   color: var(--color-gray-700);
 }
@@ -101,7 +101,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-0-5);
 }
 
 .label {
@@ -128,7 +128,7 @@
 
 /* Scrollbar styling */
 .menu::-webkit-scrollbar {
-  width: 8px;
+  width: var(--spacing-2);
 }
 
 .menu::-webkit-scrollbar-track {

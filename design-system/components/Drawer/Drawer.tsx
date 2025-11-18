@@ -56,6 +56,12 @@ export interface DrawerProps {
   /** Optional badge text (e.g., "NEW") */
   badge?: string;
 
+  /** Optional badge variant */
+  badgeVariant?: 'green' | 'red' | 'grey' | 'yellow' | 'blue';
+
+  /** Optional custom header content (rendered below title/subtitle, before tabs) */
+  headerContent?: React.ReactNode;
+
   /** Primary action button */
   primaryAction?: DrawerAction;
 
@@ -70,6 +76,9 @@ export interface DrawerProps {
 
   /** Tab change callback */
   onTabChange?: (tabId: string) => void;
+
+  /** Tab style variant - 'underline' (default) or 'segment' (button-style) */
+  tabVariant?: 'underline' | 'segment';
 
   /** Drawer content */
   children: React.ReactNode;
@@ -90,11 +99,14 @@ export const Drawer: React.FC<DrawerProps> = ({
   title,
   subtitle,
   badge,
+  badgeVariant = 'green',
+  headerContent,
   primaryAction,
   moreActions = [],
   tabs,
   activeTab,
   onTabChange,
+  tabVariant = 'underline',
   children,
   className,
   disableOverlayClick = false,
@@ -169,7 +181,7 @@ export const Drawer: React.FC<DrawerProps> = ({
               <div className={styles.titleRow}>
                 <h2 id="drawer-title" className={styles.title}>{title}</h2>
                 {badge && (
-                  <Badge variant="green" size="small">{badge}</Badge>
+                  <Badge variant={badgeVariant} size="small">{badge}</Badge>
                 )}
               </div>
               {subtitle && (
@@ -233,12 +245,20 @@ export const Drawer: React.FC<DrawerProps> = ({
             </div>
           </div>
 
-          {/* Tabs */}
-          {tabs && tabs.length > 0 && activeTab && onTabChange && (
+          {/* Custom Header Content */}
+          {headerContent && (
+            <div className={styles.headerCustomContent}>
+              {headerContent}
+            </div>
+          )}
+
+          {/* Tabs - only render in header for underline variant */}
+          {tabs && tabs.length > 0 && activeTab && onTabChange && tabVariant === 'underline' && (
             <Tabs
               tabs={tabs}
               activeTab={activeTab}
               onTabChange={onTabChange}
+              variant={tabVariant}
               className={styles.tabsWrapper}
             />
           )}
@@ -248,6 +268,16 @@ export const Drawer: React.FC<DrawerProps> = ({
 
         {/* Body */}
         <div className={styles.body}>
+          {/* Tabs - render in body for segment variant */}
+          {tabs && tabs.length > 0 && activeTab && onTabChange && tabVariant === 'segment' && (
+            <Tabs
+              tabs={tabs}
+              activeTab={activeTab}
+              onTabChange={onTabChange}
+              variant={tabVariant}
+              className={styles.tabsSegmentInBody}
+            />
+          )}
           {children}
         </div>
       </div>

@@ -7,14 +7,21 @@
   display: flex;
   gap: var(--spacing-6);
   align-items: flex-end;
-  padding-bottom: 2px;
+  padding-bottom: var(--spacing-0-5);
+}
+
+/* Segment Control Variant */
+.tabsSegment {
+  display: flex;
+  gap: 0;
+  align-items: center;
 }
 
 .tab {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
-  min-height: 28px;
+  min-height: var(--font-size-1-5xl);
   align-items: flex-start;
   background: none;
   border: none;
@@ -51,9 +58,9 @@
 .highlight {
   display: block;
   width: 100%;
-  height: 2px;
+  height: var(--spacing-0-5);
   background-color: var(--color-primary-500); /* Primary/Purple/500 */
-  border-radius: 1px;
+  border-radius: var(--border-width-default);
   flex-shrink: 0;
 }
 
@@ -62,6 +69,55 @@
   content: '';
   display: block;
   width: 100%;
-  height: 2px;
+  height: var(--spacing-0-5);
   flex-shrink: 0;
+}
+
+/* Segment Control Tab Style */
+.tabSegment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2) var(--spacing-4);
+  background: none;
+  border: var(--border-width-default) solid var(--color-gray-300);
+  border-right: none;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--easing-ease);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-700);
+  white-space: nowrap;
+  min-height: var(--spacing-9);
+}
+
+.tabSegment:first-child {
+  border-top-left-radius: var(--border-radius-sm);
+  border-bottom-left-radius: var(--border-radius-sm);
+}
+
+.tabSegment:last-child {
+  border-right: var(--border-width-default) solid var(--color-gray-300);
+  border-top-right-radius: var(--border-radius-sm);
+  border-bottom-right-radius: var(--border-radius-sm);
+}
+
+.tabSegment:hover:not(.disabled):not(.active) {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.tabSegment.active {
+  background-color: var(--color-white);
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-medium);
+  z-index: 1;
+}
+
+.tabSegment.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }

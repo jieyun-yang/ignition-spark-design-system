@@ -5,11 +5,11 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-1);
-  width: 240px;
-  height: 32px;
-  padding: 6px 12px;
+  width: var(--width-datepicker);
+  height: var(--spacing-8);
+  padding: var(--spacing-1-5) var(--spacing-3);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-400);
+  border: var(--border-width-default) solid var(--color-gray-400);
   border-radius: var(--border-radius-md);
   transition: border-color var(--duration-normal) var(--easing-ease);
 }
@@ -20,7 +20,7 @@
 
 .container.focused {
   border-color: var(--color-primary-500);
-  border-width: 1px;
+  border-width: var(--border-width-default);
 }
 
 .container.disabled {
@@ -61,8 +61,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
   padding: 0;
   border: none;
   background: transparent;

@@ -17,7 +17,7 @@
 
 .label {
   font-family: var(--font-family-primary);
-  font-size: 11px;
+  font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
   color: var(--color-gray-800);
@@ -34,15 +34,15 @@
 }
 
 .track.size-small {
-  height: 4px;
+  height: var(--spacing-1);
 }
 
 .track.size-medium {
-  height: 6px;
+  height: var(--spacing-1-5);
 }
 
 .track.size-large {
-  height: 8px;
+  height: var(--spacing-2);
 }
 
 /* Fill */

@@ -19,7 +19,7 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-black);
   line-height: var(--line-height-normal);
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-4);
 }
 
 /* Header styling - Small */
@@ -29,7 +29,7 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-black);
   line-height: var(--line-height-normal);
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-4);
 }
 
 /* Data list container */
@@ -52,7 +52,7 @@
 
 /* Separator line */
 .separator {
-  height: 1px;
+  height: var(--spacing-px);
   background-color: var(--color-gray-200);
   width: 100%;
 }
@@ -81,7 +81,7 @@
 }
 
 .large .itemWrapper:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: var(--spacing-2);
 }
 
 /* Small size spacing */
@@ -94,7 +94,7 @@
 }
 
 .small .itemWrapper:not(:last-child) {
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-1);
 }
 
 /* Label styling - fixed width */
@@ -103,7 +103,7 @@
   font-weight: var(--font-weight-regular);
   color: var(--color-gray-700); /* Gray/700 Tertiary text */
   line-height: var(--line-height-normal);
-  width: 145px;
+  width: var(--width-datalist-label);
   flex-shrink: 0;
 }
 

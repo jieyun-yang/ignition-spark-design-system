@@ -16,6 +16,9 @@ import { Checkbox } from '../../design-system/components/Checkbox';
 import { SideNav } from '../../design-system/components/SideNav';
 import { TemplateLayout } from '../../design-system/components/TemplateLayout';
 import { IgnitionLogo } from '../../design-system/components/Card/assets';
+import { Drawer } from '../../design-system/components/Drawer';
+import { Alert } from '../../design-system/components/Alert';
+import { CardContainer } from '../../design-system/components/CardContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faFilter } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -38,11 +41,15 @@ import {
   faEye,
   faPenToSquare,
   faCopy,
-  faTrash
+  faTrash,
+  faCheck,
+  faEnvelope,
+  faCircleExclamation
 } from '@fortawesome/pro-light-svg-icons';
 import { faClipboard } from '@fortawesome/pro-regular-svg-icons';
 import '../App.css';
 import styles from './ProposalsTemplate.module.css';
+import drawerStyles from './ProposalDrawer.module.css';
 
 interface Proposal {
   id: string;
@@ -153,6 +160,9 @@ function ProposalsTemplate() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedProposal, setSelectedProposal] = useState<Proposal | null>(null);
+  const [drawerTab, setDrawerTab] = useState('details');
 
   const getBadgeVariant = (status: Proposal['status']): 'green' | 'red' | 'grey' | 'yellow' | 'blue' => {
     switch (status) {
@@ -272,6 +282,12 @@ function ProposalsTemplate() {
     const value = parseFloat(proposal.value.replace(/[^0-9.-]+/g, ''));
     return sum + value;
   }, 0);
+
+  const handleRowClick = (proposal: Proposal) => {
+    setSelectedProposal(proposal);
+    setDrawerOpen(true);
+    setDrawerTab('details');
+  };
 
   return (
     <TemplateLayout
@@ -394,34 +410,31 @@ function ProposalsTemplate() {
         />
       </div>
 
-      {/* Search and Filters Row */}
+      {/* Search, Filters, Results Summary, and Bulk Actions Row */}
       <div className={styles.searchRow}>
-        <div className={styles.searchWrapper}>
-          <Search
-            placeholder="Search proposals..."
-            value={searchQuery}
-            onChange={setSearchQuery}
-            onSearch={() => console.log('Search:', searchQuery)}
-          />
-        </div>
-        <Button
-          hierarchy="secondary"
-          size="medium"
-          iconLeft={<FontAwesomeIcon icon={faFilter} />}
-        >
-          Filters
-        </Button>
-      </div>
-
-      {/* Results Summary and Bulk Actions Row */}
-      <div className={styles.statsActionsRow}>
-        <div className={styles.statsText}>
-          {mockProposals.length} results • ${totalValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        <div className={styles.searchGroup}>
+          <div className={styles.searchWrapper}>
+            <Search
+              placeholder="Search proposals..."
+              value={searchQuery}
+              onChange={setSearchQuery}
+            />
+          </div>
+          <Button
+            hierarchy="secondary"
+            size="medium"
+            iconLeft={<FontAwesomeIcon icon={faFilter} />}
+          >
+            Filters
+          </Button>
+          <div className={styles.statsText}>
+            {mockProposals.length} results • ${totalValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </div>
         </div>
         <div className={styles.bulkActions}>
           <Button
             hierarchy="secondary"
-            size="small"
+            size="medium"
             disabled={selectedRows.length === 0}
             iconLeft={<FontAwesomeIcon icon={faPaperPlane} />}
           >
@@ -429,7 +442,7 @@ function ProposalsTemplate() {
           </Button>
           <Button
             hierarchy="secondary"
-            size="small"
+            size="medium"
             disabled={selectedRows.length === 0}
             iconLeft={<FontAwesomeIcon icon={faArrowsRotate} />}
           >
@@ -437,7 +450,7 @@ function ProposalsTemplate() {
           </Button>
           <Button
             hierarchy="secondary"
-            size="small"
+            size="medium"
             disabled={selectedRows.length === 0}
             iconLeft={<FontAwesomeIcon icon={faDollarSign} />}
           >
@@ -445,7 +458,7 @@ function ProposalsTemplate() {
           </Button>
           <Button
             hierarchy="secondary"
-            size="small"
+            size="medium"
             disabled={selectedRows.length === 0}
             iconLeft={<FontAwesomeIcon icon={faEllipsis} />}
           >
@@ -463,6 +476,7 @@ function ProposalsTemplate() {
         onSelectionChange={setSelectedRows}
         getRowKey={(row) => row.id}
         showActions={true}
+        onRowClick={handleRowClick}
         getActionMenuOptions={(row) => [
           { value: 'view', label: 'View details', icon: faEye },
           { value: 'edit', label: 'Edit proposal', icon: faPenToSquare },
@@ -479,6 +493,161 @@ function ProposalsTemplate() {
           onPageChange={setCurrentPage}
         />
       </div>
+
+      {/* Proposal Drawer */}
+      {selectedProposal && (
+        <Drawer
+          isOpen={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+          title={selectedProposal.proposalName}
+          subtitle={selectedProposal.client}
+          badge={getStatusLabel(selectedProposal.status)}
+          badgeVariant={getBadgeVariant(selectedProposal.status)}
+          headerContent={
+            <div className={drawerStyles.drawerHeader}>
+              {/* Warning Banner for Lost/Expired Proposals */}
+              {selectedProposal.status === 'lost' && (
+                <Alert
+                  status="warning"
+                  icon={<FontAwesomeIcon icon={faCircleExclamation} />}
+                  className={drawerStyles.warningAlert}
+                >
+                  Proposal expired on 24 September 2025 12:00 AM
+                </Alert>
+              )}
+
+              {/* Client Name and Email */}
+              <div>
+                <a
+                  href="#"
+                  className={drawerStyles.clientLink}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert(`Navigate to ${selectedProposal.client} client page`);
+                  }}
+                >
+                  {selectedProposal.client}
+                </a>
+                <div className={drawerStyles.emailText}>
+                  test@example.com
+                </div>
+              </div>
+            </div>
+          }
+          primaryAction={{
+            label: selectedProposal.status === 'lost' ? 'Resend' : selectedProposal.status === 'draft' ? 'Send' : selectedProposal.status === 'awaiting' ? 'Resend' : 'Accept on behalf',
+            icon: faEnvelope,
+            onClick: () => alert(`${selectedProposal.status === 'lost' || selectedProposal.status === 'draft' || selectedProposal.status === 'awaiting' ? 'Resend' : 'Accept on behalf'} clicked`),
+          }}
+          moreActions={[
+            { label: 'Edit', icon: faPenToSquare, onClick: () => alert('Edit clicked') },
+            { label: 'Duplicate', icon: faCopy, onClick: () => alert('Duplicate clicked') },
+            { label: 'Delete', icon: faTrash, onClick: () => alert('Delete clicked') },
+          ]}
+          tabs={[
+            { id: 'details', label: 'Details' },
+            { id: 'introduction', label: 'Introduction' },
+            { id: 'services', label: 'Services' },
+            { id: 'pricing', label: 'Pricing' },
+            { id: 'terms', label: 'Terms' }
+          ]}
+          activeTab={drawerTab}
+          onTabChange={setDrawerTab}
+          tabVariant="segment"
+        >
+          {drawerTab === 'details' && (
+            <div className={drawerStyles.tabContent}>
+              {/* Two-column Details Grid */}
+              <div className={drawerStyles.detailsGrid}>
+                <div className={drawerStyles.detailLabel}>Client</div>
+                <div className={drawerStyles.detailValueMedium}>{selectedProposal.client}</div>
+
+                <div className={drawerStyles.detailLabel}>Start</div>
+                <div className={drawerStyles.detailValue}>{selectedProposal.start === 'On Accept' ? 'On Acceptance' : selectedProposal.start}</div>
+
+                <div className={drawerStyles.detailLabel}>Contract length</div>
+                <div className={drawerStyles.detailValue}>12 months</div>
+
+                <div className={drawerStyles.detailLabel}>Minimum value</div>
+                <div className={drawerStyles.detailValueBold}>{selectedProposal.value}</div>
+
+                <div className={drawerStyles.detailLabel}>Created</div>
+                <div className={drawerStyles.detailValue}>Wednesday, 10 September 2025 12:11 PM</div>
+
+                <div className={drawerStyles.detailLabel}>Modified</div>
+                <div className={drawerStyles.detailValue}>Wednesday, 10 September 2025 12:12 PM</div>
+              </div>
+
+              {/* Payments Section */}
+              <CardContainer heading="Payments">
+                <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-gray-700)', margin: 0 }}>
+                  Payments are not enabled for your account. <a href="#" className={drawerStyles.setupLink}>Set up payments</a>
+                </p>
+              </CardContainer>
+
+              {/* Activity Section */}
+              <CardContainer heading="Activity">
+                <div className={drawerStyles.activityList}>
+                  {[
+                    { text: 'Proposal marked as lost as it has expired', date: '24 Sep 2025 12:00 AM' },
+                    { text: `Proposal reminder sent to ${selectedProposal.client} - test@example.com`, date: '19 Sep 2025 11:00 AM' },
+                    { text: `Proposal reminder sent to ${selectedProposal.client} - test@example.com`, date: '16 Sep 2025 11:00 AM' },
+                    { text: `Proposal reminder sent to ${selectedProposal.client} - test@example.com`, date: '13 Sep 2025 11:00 AM' },
+                    { text: `Proposal sent to primary signatory: ${selectedProposal.client} (test@example.com) by Jieyun Yang`, date: '10 Sep 2025 12:12 PM' },
+                    { text: 'Proposal moved to awaiting acceptance by Jieyun Yang', date: '10 Sep 2025 12:12 PM' },
+                    { text: 'Proposal created by Jieyun Yang using the advanced editor', date: '10 Sep 2025 12:11 PM' }
+                  ].map((activity, index) => (
+                    <div key={index} className={drawerStyles.activityItem}>
+                      <div className={drawerStyles.activityText}>{activity.text}</div>
+                      <div className={drawerStyles.activityDate}>{activity.date}</div>
+                    </div>
+                  ))}
+                </div>
+              </CardContainer>
+            </div>
+          )}
+          {drawerTab === 'introduction' && (
+            <div>
+              <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-3)' }}>
+                Introduction
+              </h3>
+              <p style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-gray-700)', lineHeight: 'var(--line-height-normal)' }}>
+                Introduction content for the proposal would appear here.
+              </p>
+            </div>
+          )}
+          {drawerTab === 'services' && (
+            <div>
+              <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-3)' }}>
+                Services
+              </h3>
+              <p style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-gray-700)', lineHeight: 'var(--line-height-normal)' }}>
+                Services included in this proposal would be listed here.
+              </p>
+            </div>
+          )}
+          {drawerTab === 'pricing' && (
+            <div>
+              <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-3)' }}>
+                Pricing
+              </h3>
+              <p style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-gray-700)', lineHeight: 'var(--line-height-normal)' }}>
+                Pricing breakdown would be displayed here.
+              </p>
+            </div>
+          )}
+          {drawerTab === 'terms' && (
+            <div>
+              <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-3)' }}>
+                Terms
+              </h3>
+              <p style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-gray-700)', lineHeight: 'var(--line-height-normal)' }}>
+                Terms and conditions would be displayed here.
+              </p>
+            </div>
+          )}
+        </Drawer>
+      )}
     </TemplateLayout>
   );
 }

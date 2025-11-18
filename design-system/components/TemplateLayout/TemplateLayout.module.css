@@ -19,7 +19,7 @@
 }
 
 .contentWrapper {
-  max-width: 1400px;
+  max-width: calc(var(--spacing-80) * 4 + var(--spacing-60));
   margin: 0 auto;
 }
 

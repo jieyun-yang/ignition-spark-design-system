@@ -16,12 +16,12 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  width: 240px;
-  height: 32px;
+  width: var(--width-datepicker);
+  height: var(--spacing-8);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-400);
+  border: var(--border-width-default) solid var(--color-gray-400);
   border-radius: var(--border-radius-md);
-  padding: 6px 12px;
+  padding: var(--spacing-1-5) var(--spacing-3);
   font-family: var(--font-family-primary);
   transition: border-color var(--duration-normal) var(--easing-ease), box-shadow var(--duration-normal) var(--easing-ease);
 }
@@ -51,9 +51,9 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  margin-left: 4px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
+  margin-left: var(--spacing-1);
   padding: 0;
   border: none;
   background: transparent;
@@ -67,8 +67,8 @@
 
 /* Calendar icon */
 .icon {
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
   color: var(--color-gray-600);
 }
 
@@ -81,7 +81,7 @@
 .datePicker.open,
 .datePicker:focus-within:not(.disabled) {
   border-color: var(--color-primary-500);
-  box-shadow: 0 0 0 2px rgba(90, 81, 231, 0.2);
+  box-shadow: 0 0 0 var(--border-width-thick) rgba(90, 81, 231, 0.2);
 }
 
 /* Disabled state */
@@ -108,7 +108,7 @@
 /* Calendar popover */
 .popover {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + var(--spacing-2));
   left: 0;
   z-index: 1000;
   animation: fadeIn 0.15s ease-out;
@@ -117,7 +117,7 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-4px);
+    transform: translateY(calc(-1 * var(--spacing-1)));
   }
   to {
     opacity: 1;

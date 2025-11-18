@@ -36,8 +36,8 @@
 
 /* Text variant */
 .variant-text {
-  height: 16px;
-  border-radius: 20px;
+  height: var(--spacing-4);
+  border-radius: var(--border-radius-xl);
 }
 
 /* Circular variant */

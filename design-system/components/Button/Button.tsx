@@ -97,10 +97,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const buttonClasses = clsx(
       styles.button,
-      styles[`hierarchy-${hierarchy}`],
-      styles[`variant-${variant}`],
-      styles[`icon-${actualIcon}`],
-      styles[`size-${size}`],
+      styles[`hierarchy-${hierarchy}` as keyof typeof styles],
+      styles[`variant-${variant}` as keyof typeof styles],
+      styles[`icon-${actualIcon}` as keyof typeof styles],
+      styles[`size-${size}` as keyof typeof styles],
       disabled && styles.disabled,
       className
     );

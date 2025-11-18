@@ -7,10 +7,10 @@
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-200);
+  border: var(--border-width-default) solid var(--color-gray-200);
   border-radius: var(--border-radius-md);
   width: 100%;
-  max-width: 600px;
+  max-width: var(--width-emptystate-large);
   overflow: hidden;
 }
 
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
-  padding: 16px 24px;
+  padding: var(--spacing-4) var(--spacing-6);
 }
 
 .headerContent {
@@ -59,8 +59,8 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-1);
-  height: 24px;
-  padding: 3px 10px;
+  height: var(--spacing-6);
+  padding: var(--spacing-0-75) var(--spacing-2-5);
   border: none;
   background: transparent;
   color: var(--color-primary-500);
@@ -86,9 +86,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12px;
-  height: 12px;
-  font-size: 10px;
+  width: var(--spacing-3);
+  height: var(--spacing-3);
+  font-size: var(--font-size-xxxs);
 }
 
 .actionLabel {
@@ -100,8 +100,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
   padding: 0;
   border: none;
   background: transparent;
@@ -120,21 +120,21 @@
 
 /* Divider */
 .dividerWrapper {
-  padding: 0 16px;
+  padding: 0 var(--spacing-4);
 }
 
 .divider {
-  height: 1px;
+  height: var(--spacing-px);
   background-color: var(--color-gray-200);
   width: 100%;
 }
 
 /* Body */
 .body {
-  padding: 24px;
+  padding: var(--spacing-6);
 }
 
 /* Footer */
 .footer {
-  padding: 24px;
+  padding: var(--spacing-6);
 }

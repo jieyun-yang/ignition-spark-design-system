@@ -1,7 +1,7 @@
 /**
  * SideNav Component Styles
- * Matches Figma Side Nav design exactly
- * Width: 196px
+ * Matches production implementation
+ * Width: var(--width-sidenav) (220px - updated to match production)
  * Background: var(--color-gray-50) (Gray/50)
  */
 
@@ -10,7 +10,7 @@
   display: flex;
   align-items: flex-start;
   position: relative;
-  width: 196px;
+  width: var(--width-sidenav);
   height: 100vh;
   background-color: var(--color-white);
   overflow: hidden;
@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3);
-  width: 196px;
+  width: var(--width-sidenav);
   background-color: var(--color-gray-50); /* Figma: Gray/50 Background */
   align-items: center;
   flex-shrink: 0;
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3);
-  width: 196px;
+  width: var(--width-sidenav);
   align-items: center;
   height: 100%;
 }
@@ -42,8 +42,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 196px;
-  padding: 8px 0 0;
+  width: var(--width-sidenav);
+  padding: var(--spacing-2) var(--spacing-0) var(--spacing-0);
   flex-shrink: 0;
 }
 
@@ -55,7 +55,7 @@
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  padding: 4px 12px;
+  padding: var(--spacing-1) var(--spacing-3);
   flex-shrink: 0;
 }
 
@@ -63,22 +63,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 196px;
-  padding: 0 12px;
+  width: var(--width-sidenav);
+  padding: var(--spacing-0) var(--spacing-3);
 }
 
 .logo {
-  height: 33px;
-  width: 97px;
+  height: var(--spacing-8-25);
+  width: var(--width-logo);
   flex-shrink: 0;
 }
 
 .headerIcons {
   display: flex;
-  gap: 15px;
+  gap: var(--spacing-3-75);
   align-items: center;
   justify-content: flex-end;
-  width: 58px;
+  width: var(--spacing-14-5);
   flex-shrink: 0;
   font-size: var(--font-size-lg);
   color: var(--color-gray-800); /* Figma: Saturated gray/800 */
@@ -88,32 +88,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
   flex-shrink: 0;
 }
 
 /* GAB - Create Button */
 .gab {
-  border-top: 1px solid var(--color-gray-300); /* Figma: Gray/200 Dividers */
+  border-top: var(--border-width-default) solid var(--color-gray-300); /* Figma: Gray/200 Dividers */
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
   align-items: center;
   width: 100%;
-  padding: 4px 12px;
+  padding: var(--spacing-1) var(--spacing-3);
   flex-shrink: 0;
 }
 
 .createButton {
   display: flex;
   gap: var(--spacing-2);
-  height: 32px;
+  height: var(--spacing-8);
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0 13px;
-  border: 1px solid var(--color-orange-600); /* Figma: Primary/Orange/600 */
+  padding: var(--spacing-0) var(--spacing-3-25);
+  border: var(--border-width-default) solid var(--color-orange-600); /* Figma: Primary/Orange/600 */
   border-radius: var(--border-radius-sm);
   background: none;
   cursor: pointer;
@@ -127,10 +127,10 @@
 
 .createIcon,
 .createChevron {
-  width: 12px;
-  height: 12px;
+  width: var(--spacing-3);
+  height: var(--spacing-3);
   flex-shrink: 0;
-  font-size: 10px;
+  font-size: var(--font-size-xxxs);
   color: var(--color-orange-600); /* Figma: Primary/Orange/600 */
   display: flex;
   align-items: center;
@@ -171,14 +171,14 @@
 /* Nav Item */
 .navItem {
   width: 100%;
-  height: 44px;
+  height: var(--spacing-11);
   position: relative;
   flex-shrink: 0;
 }
 
 .navItemActive {
   background-color: var(--color-primary-50); /* Figma: Purple/50 - corrected hex value */
-  border-right: 3px solid var(--color-primary-400); /* Figma: Primary/Purple/400 Brand Purple - moved to right */
+  border-right: var(--border-width-active) solid var(--color-primary-400); /* Figma: Primary/Purple/400 Brand Purple - moved to right */
 }
 
 .navButton {
@@ -186,7 +186,7 @@
   gap: var(--spacing-2);
   align-items: flex-start;
   width: 100%;
-  padding: 10px 12px;
+  padding: var(--spacing-2-5) var(--spacing-3);
   background: none;
   border: none;
   cursor: pointer;
@@ -197,13 +197,13 @@
   display: flex;
   gap: var(--spacing-3);
   align-items: center;
-  width: 172px;
+  width: var(--width-sidenav-content);
   flex-shrink: 0;
 }
 
 .navIcon {
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
   flex-shrink: 0;
   font-size: var(--font-size-xl);
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
@@ -222,8 +222,8 @@
   min-width: 0;
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-base);
-  line-height: 21px;
+  font-size: var(--font-size-lg); /* Updated to 16px to match production */
+  line-height: var(--spacing-5-25);
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   overflow: hidden;
   text-overflow: ellipsis;
@@ -235,10 +235,10 @@
 }
 
 .navCaret {
-  width: 12px;
-  height: 12px;
+  width: var(--spacing-3);
+  height: var(--spacing-3);
   flex-shrink: 0;
-  font-size: 10px;
+  font-size: var(--font-size-xxxs);
   color: var(--color-gray-400); /* Figma: Gray/400 Actionable UI */
   text-align: center;
   display: flex;
@@ -257,11 +257,11 @@
   gap: var(--spacing-2);
   align-items: flex-start;
   width: 100%;
-  padding: 10px 12px 10px 48px; /* Indent 48px for sub-items */
+  padding: var(--spacing-2-5) var(--spacing-3) var(--spacing-2-5) calc(var(--spacing-6) + var(--spacing-6)); /* Indent 48px for sub-items */
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-base);
-  line-height: 21px;
+  font-size: var(--font-size-lg); /* Updated to 16px to match production */
+  line-height: var(--spacing-5-25);
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
   background: none;
   border: none;
@@ -285,13 +285,13 @@
   gap: var(--spacing-2-5);
   align-items: center;
   justify-content: center;
-  width: 172px;
+  width: var(--width-sidenav-content);
   flex-shrink: 0;
 }
 
 .dividerLine {
   background-color: var(--color-gray-200); /* Figma: Gray/200 Dividers */
-  height: 1px;
+  height: var(--border-width-default);
   width: 100%;
   flex-shrink: 0;
 }
@@ -301,7 +301,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 196px;
+  width: var(--width-sidenav);
   background-color: var(--color-gray-50);
   flex-shrink: 0;
 }
@@ -312,19 +312,19 @@
   flex-direction: column;
   gap: var(--spacing-2-5);
   align-items: center;
-  width: 196px;
-  padding: 8px 12px;
+  width: var(--width-sidenav);
+  padding: var(--spacing-2) var(--spacing-3);
 }
 
 .referButton {
   display: flex;
   gap: var(--spacing-2);
-  height: 32px;
+  height: var(--spacing-8);
   align-items: center;
   justify-content: center;
-  width: 172px;
-  padding: 0 13px;
-  border: 1px solid var(--color-primary-500); /* Figma: Primary/Purple/500 Buttons */
+  width: var(--width-sidenav-content);
+  padding: var(--spacing-0) var(--spacing-3-25);
+  border: var(--border-width-default) solid var(--color-primary-500); /* Figma: Primary/Purple/500 Buttons */
   border-radius: var(--border-radius-sm);
   background: none;
   cursor: pointer;
@@ -337,10 +337,10 @@
 }
 
 .referIcon {
-  width: 12px;
-  height: 12px;
+  width: var(--spacing-3);
+  height: var(--spacing-3);
   flex-shrink: 0;
-  font-size: 10px;
+  font-size: var(--font-size-xxxs);
   color: var(--color-primary-500); /* Figma: Primary/Purple/500 */
   display: flex;
   align-items: center;
@@ -364,9 +364,9 @@
   gap: var(--spacing-2);
   align-items: flex-start;
   width: 100%;
-  padding: 10px 12px;
+  padding: var(--spacing-2-5) var(--spacing-3);
   background-color: var(--color-gray-50);
-  border-top: 1px solid var(--color-gray-200); /* Figma: Gray/200 Dividers */
+  border-top: var(--border-width-default) solid var(--color-gray-200); /* Figma: Gray/200 Dividers */
   flex-shrink: 0;
 }
 
@@ -374,7 +374,7 @@
   width: 100%;
   background: none;
   border: none;
-  padding: 0;
+  padding: var(--spacing-0);
   cursor: pointer;
   text-align: left;
 }
@@ -383,13 +383,13 @@
   display: flex;
   gap: var(--spacing-3);
   align-items: center;
-  width: 172px;
+  width: var(--width-sidenav-content);
   flex-shrink: 0;
 }
 
 .userIcon {
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
   flex-shrink: 0;
   font-size: var(--font-size-xl);
   color: var(--color-gray-800); /* Figma: Gray/800 Secondary text */
@@ -406,7 +406,7 @@
   align-items: flex-start;
   justify-content: center;
   line-height: 0;
-  padding: 0 0 4px;
+  padding: var(--spacing-0) var(--spacing-0) var(--spacing-1);
 }
 
 .userName {
@@ -421,14 +421,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: -4px;
+  margin-bottom: calc(-1 * var(--spacing-1));
   line-height: var(--line-height-normal);
 }
 
 .userCompany {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: var(--font-weight-regular);
-  font-size: 11px;
+  font-size: var(--font-size-xxs);
   color: var(--color-gray-700); /* Figma: Gray/700 Tertiary text */
   width: 100%;
   overflow: hidden;
@@ -437,15 +437,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: -4px;
+  margin-bottom: calc(-1 * var(--spacing-1));
   line-height: var(--line-height-normal);
 }
 
 .userCaret {
-  width: 12px;
-  height: 12px;
+  width: var(--spacing-3);
+  height: var(--spacing-3);
   flex-shrink: 0;
-  font-size: 10px;
+  font-size: var(--font-size-xxxs);
   color: var(--color-gray-400); /* Figma: Gray/400 Actionable UI */
   display: flex;
   align-items: center;
@@ -464,11 +464,11 @@
 
 .curvedShape {
   background-color: var(--color-white);
-  border-left: 1px solid var(--color-gray-300);
-  border-top: 1px solid var(--color-gray-300);
+  border-left: var(--border-width-default) solid var(--color-gray-300);
+  border-top: var(--border-width-default) solid var(--color-gray-300);
   height: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  width: 13px;
+  border-top-left-radius: var(--spacing-2-5);
+  border-bottom-left-radius: var(--spacing-2-5);
+  width: var(--spacing-3-5);
   flex-shrink: 0;
 }

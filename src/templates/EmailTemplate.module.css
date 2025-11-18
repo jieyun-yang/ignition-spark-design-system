@@ -5,11 +5,11 @@
 
 /* Variant Selector */
 .variantSelector {
-  padding: 20px;
+  padding: var(--spacing-5);
   background-color: var(--color-gray-50);
-  border-radius: 8px;
+  border-radius: var(--border-radius-lg);
   margin: 0 auto var(--spacing-6);
-  max-width: 683px;
+  max-width: var(--width-email-outer);
 }
 
 .variantSelectorTitle {
@@ -28,8 +28,8 @@
   padding: var(--spacing-1-5) var(--spacing-4);
   background-color: var(--color-white);
   color: var(--color-gray-800);
-  border: 1px solid var(--color-gray-200);
-  border-radius: 3px;
+  border: var(--border-width-default) solid var(--color-gray-200);
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
@@ -44,40 +44,40 @@
 
 /* Email Container */
 .emailOuter {
-  max-width: 683px;
+  max-width: var(--width-email-outer);
   margin: 0 auto;
   background-color: var(--color-gray-100);
-  padding: 30px 0 0 0;
+  padding: var(--spacing-7-5) 0 0 0;
 }
 
 .emailContainer {
-  max-width: 600px;
+  max-width: var(--width-email-inner);
   margin: 0 auto;
   background-color: var(--color-white);
-  border-radius: 8px;
+  border-radius: var(--border-radius-lg);
   overflow: hidden;
 }
 
 /* Email Header */
 .emailHeader {
   background-color: var(--color-white);
-  border-bottom: 2px solid var(--color-gray-200);
-  padding: 30px 40px;
-  height: 110px;
+  border-bottom: var(--border-width-thick) solid var(--color-gray-200);
+  padding: var(--spacing-7-5) var(--spacing-10);
+  height: var(--height-email-header);
   display: flex;
   align-items: center;
 }
 
 .emailHeaderBranded {
   composes: emailHeader;
-  border-bottom: 2px solid var(--color-gray-190);
+  border-bottom: var(--border-width-thick) solid var(--color-gray-190);
 }
 
 /* Logo Containers */
 .ignitionLogo {
   position: relative;
-  height: 50px;
-  width: 151.429px;
+  height: var(--height-email-logo);
+  width: var(--width-email-logo);
   display: flex;
   align-items: center;
 }
@@ -99,7 +99,7 @@
 }
 
 .brandedLogo {
-  font-size: 24px;
+  font-size: var(--font-size-xl-plus);
   font-weight: var(--font-weight-regular);
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-gray-900);
@@ -107,9 +107,9 @@
 }
 
 .brandedLogoEmoji {
-  font-size: 32px;
+  font-size: var(--font-size-2xl);
   color: var(--color-brand-teal-600);
-  margin-right: 4px;
+  margin-right: var(--spacing-1);
 }
 
 .brandedTextHeader {
@@ -120,7 +120,7 @@
 }
 
 .brandedTextHeaderBold {
-  font-size: 24px;
+  font-size: var(--font-size-xl-plus);
   font-weight: var(--font-weight-bold);
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-black);
@@ -129,20 +129,20 @@
 /* Email Body */
 .emailBody {
   background-color: var(--color-white);
-  padding: 30px 40px 0 40px;
+  padding: var(--spacing-7-5) var(--spacing-10) 0 var(--spacing-10);
 }
 
 .emailContent {
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--color-gray-200);
+  padding-bottom: var(--spacing-5);
+  border-bottom: var(--border-width-default) solid var(--color-gray-200);
 }
 
 .contentText {
   font-size: var(--font-size-lg);
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-gray-800);
-  line-height: 20px;
-  margin-bottom: 20px;
+  line-height: var(--spacing-5);
+  margin-bottom: var(--spacing-5);
   text-align: center;
 }
 
@@ -155,13 +155,13 @@
 /* CTA Buttons */
 .ctaButton {
   display: inline-block;
-  padding: 11px 18px;
-  border-radius: 12px;
+  padding: var(--spacing-11-25) var(--spacing-4-5);
+  border-radius: var(--border-radius-email-button);
   text-decoration: none;
   font-size: var(--font-size-xl);
   font-family: Helvetica, Arial, sans-serif;
   letter-spacing: -0.15px;
-  line-height: 22px;
+  line-height: var(--spacing-5-5);
 }
 
 .ctaButtonPrimary {
@@ -190,7 +190,7 @@
 
 /* Decorative Graphics */
 .decorativeGraphics {
-  height: 98px;
+  height: var(--height-email-decorative);
   position: relative;
   overflow: hidden;
   margin-top: 0;
@@ -227,9 +227,9 @@
 }
 
 .decorativeLine {
-  height: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  height: var(--spacing-2);
+  border-bottom-left-radius: var(--border-radius-lg);
+  border-bottom-right-radius: var(--border-radius-lg);
 }
 
 .decorativeLineOrange {
@@ -244,8 +244,8 @@
 
 /* Unsubscribe Section */
 .unsubscribeSection {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: var(--width-email-inner);
+  margin: var(--spacing-7-5) auto;
   text-align: center;
 }
 
@@ -265,15 +265,15 @@
 
 /* Footer */
 .emailFooter {
-  max-width: 600px;
+  max-width: var(--width-email-inner);
   margin: 0 auto;
   background-color: var(--color-white);
-  padding: 40px 40px 30px 40px;
+  padding: var(--spacing-10) var(--spacing-10) var(--spacing-7-5) var(--spacing-10);
 }
 
 .footerLogo {
   composes: ignitionLogo;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing-7-5);
 }
 
 .footerTextLogo {
@@ -281,29 +281,29 @@
   font-weight: var(--font-weight-regular);
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-black);
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing-7-5);
 }
 
 .footerDescription {
   font-size: var(--font-size-base);
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-brand-teal-900);
-  line-height: 16px;
+  line-height: var(--spacing-4);
   letter-spacing: 0.014px;
-  margin: 0 0 30px 0;
+  margin: 0 0 var(--spacing-7-5) 0;
 }
 
 /* Star Rating */
 .starRating {
   display: flex;
-  gap: 2px;
-  margin-bottom: 10px;
+  gap: var(--spacing-0-5);
+  margin-bottom: var(--spacing-2-5);
 }
 
 .star {
   color: var(--color-brand-gold-500);
-  font-size: 20px;
-  line-height: 20px;
+  font-size: var(--spacing-5);
+  line-height: var(--spacing-5);
 }
 
 .starRatingPlaceholder {
@@ -311,13 +311,13 @@
   font-weight: var(--font-weight-regular);
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-black);
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-2-5);
 }
 
 .ratingText {
   font-size: var(--font-size-base);
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-brand-teal-900);
-  line-height: 16px;
+  line-height: var(--spacing-4);
   margin: 0;
 }

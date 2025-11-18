@@ -43,6 +43,9 @@ export interface TabsProps {
   /** Callback when tab is clicked */
   onTabChange: (tabId: string) => void;
 
+  /** Visual style variant - 'underline' (default) or 'segment' (button-style) */
+  variant?: 'underline' | 'segment';
+
   /** Optional CSS class name */
   className?: string;
 }
@@ -51,16 +54,20 @@ export const Tabs: React.FC<TabsProps> = ({
   tabs,
   activeTab,
   onTabChange,
+  variant = 'underline',
   className,
 }) => {
   return (
-    <div className={clsx(styles.tabs, className)}>
+    <div className={clsx(
+      variant === 'underline' ? styles.tabs : styles.tabsSegment,
+      className
+    )}>
       {tabs.map((tab) => (
         <button
           key={tab.id}
           type="button"
           className={clsx(
-            styles.tab,
+            variant === 'underline' ? styles.tab : styles.tabSegment,
             activeTab === tab.id && styles.active,
             tab.disabled && styles.disabled
           )}
@@ -70,7 +77,7 @@ export const Tabs: React.FC<TabsProps> = ({
           role="tab"
         >
           <span className={styles.label}>{tab.label}</span>
-          {activeTab === tab.id && <span className={styles.highlight} />}
+          {variant === 'underline' && activeTab === tab.id && <span className={styles.highlight} />}
         </button>
       ))}
     </div>

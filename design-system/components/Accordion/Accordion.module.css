@@ -1,13 +1,14 @@
 /**
  * Accordion Component Styles
  * Matches Figma Accordion design
+ * All values reference design tokens
  */
 
 .accordion {
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-200);
+  border: var(--border-width-default) solid var(--color-gray-200);
   border-radius: var(--border-radius-md);
   overflow: hidden;
   width: 100%;
@@ -23,7 +24,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
-  padding: 16px;
+  padding: var(--spacing-4);
   width: 100%;
   border: none;
   background: transparent;
@@ -46,10 +47,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
   background-color: var(--color-gray-200);
-  border-radius: 100px;
+  border-radius: var(--border-radius-pill);
   font-family: var(--font-family-primary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
@@ -86,7 +87,7 @@
 }
 
 .size-large .heading {
-  font-size: 20px;
+  font-size: var(--font-size-md); /* 20px */
   line-height: var(--line-height-normal);
 }
 
@@ -105,12 +106,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1px 10px;
-  border-radius: 100px;
+  padding: var(--spacing-px) var(--spacing-2-5);
+  border-radius: var(--border-radius-pill);
   font-family: var(--font-family-primary);
-  font-size: 11px;
+  font-size: var(--font-size-xxs); /* 11px */
   font-weight: var(--font-weight-semibold);
-  line-height: 17px;
+  line-height: var(--line-height-tight); /* 17px */
   white-space: nowrap;
 }
 
@@ -134,13 +135,13 @@
 }
 
 .size-small .iconWrapper {
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
 }
 
 .size-large .iconWrapper {
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
 }
 
 /* Chevron */
@@ -154,18 +155,18 @@
 
 /* Divider */
 .dividerWrapper {
-  padding: 0 16px;
+  padding: 0 var(--spacing-4);
 }
 
 .divider {
-  height: 1px;
+  height: var(--spacing-px);
   background-color: var(--color-gray-200);
   width: 100%;
 }
 
 /* Body */
 .body {
-  padding: 16px 24px 24px;
+  padding: var(--spacing-4) var(--spacing-6) var(--spacing-6);
 }
 
 .content {

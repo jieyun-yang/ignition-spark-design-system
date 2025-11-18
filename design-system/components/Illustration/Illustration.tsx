@@ -64,7 +64,7 @@ export const Illustration: React.FC<IllustrationProps> = ({
     : SIZES[size];
 
   // Get the SVG component
-  const IllustrationSVG = illustrations[name];
+  const IllustrationSVG = illustrations[name as keyof typeof illustrations];
 
   // Generate title from name for accessibility
   const title = alt || name.split('-').map(word =>

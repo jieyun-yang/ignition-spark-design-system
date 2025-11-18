@@ -1,2 +1,3 @@
 export { Illustration } from './Illustration';
-export type { IllustrationProps, IllustrationName, EmotiveIllustrationName, ProductIllustrationName, IllustrationCategory, IllustrationMeta } from './types';
+export type { IllustrationProps } from './Illustration';
+export type { IllustrationName, EmotiveIllustrationName, ProductIllustrationName, IllustrationCategory, IllustrationMeta } from './types';

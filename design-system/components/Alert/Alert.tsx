@@ -104,9 +104,9 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
 
     const alertClasses = clsx(
       styles.alert,
-      styles[`status-${status}`],
-      styles[`content-${contentType}`],
-      closeable && styles.closeable,
+      styles[`status-${status}` as keyof typeof styles],
+      styles[`content-${contentType}` as keyof typeof styles],
+      closeable && styles['closeable' as keyof typeof styles],
       className
     );
 

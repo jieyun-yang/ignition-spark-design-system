@@ -132,8 +132,7 @@ export function SideNav({
         <div
           className={clsx(
             styles.navItem,
-            item.active && styles.navItemActive,
-            hasSubItems && styles.navItemWithSub
+            item.active && styles.navItemActive
           )}
         >
           <button

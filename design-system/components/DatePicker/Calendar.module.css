@@ -6,10 +6,10 @@
 
 .calendar {
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-190);
+  border: var(--border-width-default) solid var(--color-gray-190);
   border-radius: var(--border-radius-md);
-  padding: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-2);
+  box-shadow: 0 var(--border-width-thick) var(--spacing-2) rgba(0, 0, 0, 0.1);
   font-family: var(--font-family-primary);
 }
 
@@ -18,16 +18,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8px;
-  margin-bottom: 8px;
+  padding: 0 var(--spacing-2);
+  margin-bottom: var(--spacing-2);
 }
 
 .monthYear {
-  font-size: 20px;
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
   color: var(--color-gray-800);
-  width: 172px;
+  width: var(--width-calendar-month);
 }
 
 .navigation {
@@ -39,9 +39,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  padding: 8px;
+  width: var(--spacing-8);
+  height: var(--spacing-8);
+  padding: var(--spacing-2);
   border: none;
   background: transparent;
   border-radius: var(--border-radius-sm);
@@ -55,22 +55,22 @@
 }
 
 .navButton svg {
-  width: 16px;
-  height: 16px;
+  width: var(--spacing-4);
+  height: var(--spacing-4);
 }
 
 /* Weekdays row */
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-1);
 }
 
 .weekday {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: var(--spacing-2);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
@@ -89,12 +89,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
-  min-width: 36px;
-  min-height: 36px;
+  padding: var(--spacing-2);
+  min-width: var(--spacing-36);
+  min-height: var(--spacing-36);
   border: none;
   background: transparent;
-  border-radius: 100px;
+  border-radius: var(--border-radius-pill);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);

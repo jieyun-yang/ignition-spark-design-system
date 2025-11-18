@@ -1,13 +1,14 @@
 /**
  * Card Component Styles
  * Matches Figma Card component design
+ * All values reference design tokens
  */
 
 .card {
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-200); /* Figma: Gray border */
+  border: var(--border-width-default) solid var(--color-gray-200); /* Figma: Gray border */
   border-radius: var(--border-radius-md); /* Figma: 4px not 8px */
   overflow: hidden;
   transition: all var(--duration-normal) var(--easing-ease);
@@ -54,17 +55,17 @@
 /* Size Variants */
 .size-small {
   width: 100%;
-  max-width: 280px;
+  max-width: var(--width-card-small);
 }
 
 .size-large {
   width: 100%;
-  max-width: 420px;
+  max-width: var(--width-card-large);
 }
 
 .size-xlarge {
   width: 100%;
-  max-width: 300px;
+  max-width: var(--width-card-xlarge);
 }
 
 /* Preview Section */
@@ -78,15 +79,15 @@
 }
 
 .size-small .preview {
-  height: 140px;
+  height: var(--spacing-35);
 }
 
 .size-large .preview {
-  height: 200px;
+  height: var(--spacing-50);
 }
 
 .size-xlarge .preview {
-  height: 200px;
+  height: var(--spacing-50);
 }
 
 .preview img {
@@ -103,15 +104,15 @@
 }
 
 .size-small .content {
-  padding: 12px;
+  padding: var(--spacing-3);
 }
 
 .size-large .content {
-  padding: 16px;
+  padding: var(--spacing-4);
 }
 
 .size-xlarge .content {
-  padding: 16px;
+  padding: var(--spacing-4);
 }
 
 /* Header (Icon + Title + Menu) */
@@ -136,26 +137,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: var(--font-size-md);
   line-height: var(--line-height-none);
 }
 
 .size-small .icon {
-  width: 20px;
-  height: 20px;
+  width: var(--spacing-5);
+  height: var(--spacing-5);
 }
 
 .size-large .icon {
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
 }
 
 .size-xlarge .icon {
-  width: 52px;
-  height: 52px;
-  font-size: 32px;
+  width: var(--spacing-13);
+  height: var(--spacing-13);
+  font-size: var(--spacing-8);
   background-color: var(--color-primary-50);
-  border-radius: 100px;
+  border-radius: var(--border-radius-pill);
 }
 
 .icon-default {
@@ -180,7 +181,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-0-5);
 }
 
 /* Title */
@@ -247,8 +248,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
   padding: 0;
   border: none;
   background: transparent;
@@ -273,7 +274,7 @@
   position: absolute;
   top: 100%;
   right: 0;
-  margin-top: 4px;
+  margin-top: var(--spacing-1);
   z-index: 1000;
 }
 
@@ -285,15 +286,15 @@
 
 /* When there's an icon, indent the badge to align with title/description */
 .size-small .badgeWrapper {
-  margin-left: 32px; /* 20px icon + 12px gap */
+  margin-left: var(--spacing-8); /* 20px icon + 12px gap */
 }
 
 .size-large .badgeWrapper {
-  margin-left: 36px; /* 24px icon + 12px gap */
+  margin-left: var(--spacing-9); /* 24px icon + 12px gap */
 }
 
 .size-xlarge .badgeWrapper {
-  margin-left: 64px; /* 52px icon + 12px gap */
+  margin-left: var(--spacing-16); /* 52px icon + 12px gap */
 }
 
 /* If there's no icon, don't add margin */
