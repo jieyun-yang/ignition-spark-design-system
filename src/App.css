@@ -79,7 +79,8 @@ body {
   margin-top: var(--spacing-1-5);
 }
 
-.section label {
+.section > label,
+.section .button-row > div > label {
   display: block;
   margin-bottom: var(--spacing-1-5);
   font-size: var(--font-size-base);

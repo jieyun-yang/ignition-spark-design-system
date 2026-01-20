@@ -11,6 +11,7 @@
 .checkbox {
   display: inline-flex;
   align-items: center;
+  flex-wrap: nowrap;
   gap: var(--spacing-2);
   cursor: pointer;
   font-family: var(--font-family-primary);
@@ -78,6 +79,7 @@
 .label {
   line-height: var(--line-height-normal);
   color: var(--color-gray-800);
+  white-space: nowrap;
 }
 
 /* Size variants */

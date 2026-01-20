@@ -167,7 +167,7 @@ Codex automatically reads `AGENTS.md` for project rules.
 | `.cursorrules` | Cursor | Yes |
 | `CLAUDE.md` | Claude Code | Yes |
 | `AGENTS.md` | Codex | Yes |
-| `AI-PROTOTYPING.md` | All tools | Manual (copy prompts) |
+| `design-system/AI-PROTOTYPING.md` | All tools | Manual (copy prompts) |
 
 ---
 
@@ -304,13 +304,13 @@ Then try `npm run dev` again.
 
 | File | Purpose |
 |------|---------|
-| [COMPONENTS.md](./COMPONENTS.md) | Component API docs |
-| [TOKENS.md](./TOKENS.md) | Design tokens |
-| [AI-PROTOTYPING.md](./AI-PROTOTYPING.md) | AI prompts & examples |
+| [COMPONENTS.md](./design-system/COMPONENTS.md) | Component API docs |
+| [TOKENS.md](./design-system/TOKENS.md) | Design tokens |
+| [AI-PROTOTYPING.md](./design-system/AI-PROTOTYPING.md) | AI prompts & examples |
 
 ### AI Prototyping Workflow
 
-1. Open [AI-PROTOTYPING.md](./AI-PROTOTYPING.md)
+1. Open [AI-PROTOTYPING.md](./design-system/AI-PROTOTYPING.md)
 2. Copy the Phase 1 prompt
 3. Add your Figma link or description
 4. Paste into Cursor AI chat (`Cmd + K`)

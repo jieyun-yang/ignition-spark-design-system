@@ -11,7 +11,7 @@ You are helping build prototypes using the Ignition Spark Design System.
 ## Before Building
 
 Always read these files first:
-- `./COMPONENTS.md` - All 51 components and their APIs
+- `./design-system/COMPONENTS.md` - All 51 components and their APIs
 - `./design-system/tokens/index.ts` - Available design tokens
 - `./src/templates/` - Reference implementations
 
@@ -75,6 +75,6 @@ src/
 
 ## Key Documentation
 
-- [COMPONENTS.md](./COMPONENTS.md) - Component APIs
-- [TOKENS.md](./TOKENS.md) - Tokens reference
-- [AI-PROTOTYPING.md](./AI-PROTOTYPING.md) - Detailed prompts and examples
+- [COMPONENTS.md](./design-system/COMPONENTS.md) - Component APIs
+- [TOKENS.md](./design-system/TOKENS.md) - Tokens reference
+- [AI-PROTOTYPING.md](./design-system/AI-PROTOTYPING.md) - Detailed prompts and examples
