@@ -12,12 +12,16 @@ This project uses FontAwesome Pro icons.
 
 1. Copy the file `.npmrc.example` and rename it to `.npmrc`
 2. Go to https://fontawesome.com/account and copy your "Package Token"
-3. Open the `.npmrc` file and replace `YOUR_FONTAWESOME_TOKEN` with your actual token:
+3. Open the `.npmrc` file and replace `YOUR_FONTAWESOME_TOKEN` with your actual token.
+
+It should look like this (but with YOUR token):
 
 ```
 @fortawesome:registry=https://npm.fontawesome.com/
-//npm.fontawesome.com/:_authToken=A1B2C3D4-E5F6-7890-ABCD-EF1234567890
+//npm.fontawesome.com/:_authToken=YOUR_FONTAWESOME_TOKEN
 ```
+
+> **Important:** The token `YOUR_FONTAWESOME_TOKEN` is a placeholder. You must replace it with your real token.
 
 > **Don't have FontAwesome Pro?** See [Alternative: Use Free Icons](#alternative-use-free-icons-instead) below.
 
