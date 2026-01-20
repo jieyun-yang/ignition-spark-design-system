@@ -14,7 +14,7 @@ Complete documentation for all design system components.
 - [Overlays](#modal--drawer--tooltip) - Modal, Drawer, Tooltip
 - [Data Display](#card--table--badge) - Card, Table, Badge
 - [Navigation](#navigation-tabs--sidenav--pagination--menu) - Tabs, SideNav, Pagination, Menu
-- [Additional Components](#additional-components) - Full list of 53 components
+- [Additional Components](#additional-components) - Full list of 51 components
 
 ---
 

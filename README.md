@@ -1,10 +1,10 @@
 # Ignition Spark Design System
 
-A comprehensive React + TypeScript design system with **53 production-ready components**. Built with 100% token-based architecture for consistency, reusability, and accessibility.
+A comprehensive React + TypeScript design system with **51 production-ready components**. Built with 100% token-based architecture for consistency, reusability, and accessibility.
 
 ## ✨ Features
 
-- 🎨 **53 Components** - Complete component library covering forms, navigation, data display, and feedback
+- 🎨 **51 Components** - Complete component library covering forms, navigation, data display, and feedback
 - 🎯 **100% Token-Based** - No hardcoded values, all styles reference design tokens
 - ♿ **Accessible** - Built with WCAG compliance and keyboard navigation
 - 📱 **Responsive** - Mobile-friendly components
@@ -27,26 +27,25 @@ A comprehensive React + TypeScript design system with **53 production-ready comp
 
 This will start the dev server at [http://localhost:5173](http://localhost:5173)
 
-> **📖 Need help?** See [INSTALLATION.md](./INSTALLATION.md) for detailed instructions, troubleshooting, and alternatives.
+> **📖 New to this?** See [SETUP-GUIDE.md](./SETUP-GUIDE.md) for complete setup instructions (includes Homebrew, Node.js, Cursor, and AI tools).
 
 ### 🤖 AI-Powered Prototyping (Recommended)
 
 Build prototypes 10x faster using AI assistants! This design system is optimized for AI-powered development.
 
 **Quick Start:**
-1. Open [AI-PROMPT-GUIDE.md](./AI-PROMPT-GUIDE.md)
+1. Open [AI-PROTOTYPING.md](./AI-PROTOTYPING.md)
 2. Copy the Phase 1 prompt (Design Analysis)
 3. Add your Figma link or requirements
-4. Paste into Claude Code, Cursor, or GitHub Copilot
+4. Paste into Cursor, Claude Code, or Codex
 5. Approve the plan, then use Phase 2 to build
-6. Use Phase 3 to verify and test
-7. Get a production-ready prototype in minutes!
+6. Get a production-ready prototype in minutes!
 
 **Example prompt:**
 ```
 I need you to build a user dashboard with a data table
 using the Ignition Spark Design System.
-[See AI-PROMPT-GUIDE.md for complete 3-phase workflow]
+[See AI-PROTOTYPING.md for complete 3-phase workflow]
 ```
 
 The guide includes ready-to-use prompts for dashboards, forms, settings pages, and more.
@@ -68,7 +67,7 @@ npm run typecheck
 ```
 /design-system
   /tokens          # Design tokens (colors, spacing, typography, shadows)
-  /components      # 53 React components
+  /components      # 51 React components
   /illustrations   # 82 illustration assets
   /types           # TypeScript type definitions
   index.ts         # Central export point
@@ -105,7 +104,7 @@ See [design-system/tokens/](design-system/tokens/) for complete token definition
 
 ## 📦 Components
 
-### 53 Components Available
+### 51 Components Available
 
 **Forms & Inputs (14)**
 - Button, ComboButton, MenuButton
@@ -162,17 +161,17 @@ For detailed API documentation, see [COMPONENTS.md](./COMPONENTS.md)
 
 ## 📚 Documentation
 
-- [README.md](./README.md) - This file, project overview
-- [INSTALLATION.md](./INSTALLATION.md) - Installation, setup, and troubleshooting
-- [COMPONENTS.md](./COMPONENTS.md) - Complete component API documentation
-- [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md) - Design tokens and principles
-- [AI-PROMPT-GUIDE.md](./AI-PROMPT-GUIDE.md) - **Quick copy-paste prompts for AI prototyping** ⭐
-- [AI-PROMPT-EXAMPLES.md](./AI-PROMPT-EXAMPLES.md) - Detailed examples and use cases for learning
-- [CLAUDE.md](./CLAUDE.md) - Design system development rules for AI assistants
+| Document | Description |
+|----------|-------------|
+| [SETUP-GUIDE.md](./SETUP-GUIDE.md) | **Complete setup for new team members** ⭐ |
+| [AI-PROTOTYPING.md](./AI-PROTOTYPING.md) | AI prompts and examples for building prototypes |
+| [COMPONENTS.md](./COMPONENTS.md) | Component API documentation |
+| [TOKENS.md](./TOKENS.md) | Design tokens (colors, spacing, typography) |
+| [ILLUSTRATIONS_GUIDE.md](./ILLUSTRATIONS_GUIDE.md) | Illustration system usage |
 
 ## 🎯 Component Status
 
-All 53 components are production-ready with:
+All 51 components are production-ready with:
 - ✅ Complete Figma alignment
 - ✅ Full TypeScript typing
 - ✅ 100% token-based styling
