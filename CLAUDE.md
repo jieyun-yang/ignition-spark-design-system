@@ -276,6 +276,46 @@ A well-implemented component:
 ✅ Is reusable across different contexts
 ✅ Maintains consistent API with other components
 
+## Design Guidelines
+
+When making design decisions, consult the embedded guidelines:
+
+### Component-Specific Guidelines
+Each component folder has a `GUIDELINES.md` file with:
+- When and why to use the component
+- Best practices and accessibility requirements
+- Do's and don'ts
+
+```
+./design-system/components/Button/GUIDELINES.md
+./design-system/components/Modal/GUIDELINES.md
+./design-system/components/[Component]/GUIDELINES.md
+```
+
+### General Guidelines
+For broader design decisions, see `./design-system/guidelines/`:
+
+| Category | Path | Use For |
+|----------|------|---------|
+| Foundations | `guidelines/foundations/` | Colours, typography, spacing, shadows, icons |
+| Content | `guidelines/content/` | Voice, grammar, product vocabulary |
+| Patterns | `guidelines/patterns/` | Error handling, feature gating, wizards |
+| Layouts | `guidelines/layouts/` | Page layouts, content width |
+
+### Decision Workflow
+
+1. **Check component GUIDELINES.md** for component-specific rules
+2. **Check foundations** for colors, typography, spacing decisions
+3. **Check content guidelines** for proper terminology and voice
+4. **Check patterns** for complex interactions (wizards, errors, etc.)
+
+### Key Rules from Guidelines
+
+- **One primary button per screen** (Button guidelines)
+- **Use sentence case** for all headings and labels (Grammar guidelines)
+- **Use design tokens** - never hardcode values (Colours/Spacing guidelines)
+- **Provide tooltips for icon-only buttons** (Button/Icons guidelines)
+
 ## Notes
 - When in doubt, check Figma first
 - Consistency > cleverness

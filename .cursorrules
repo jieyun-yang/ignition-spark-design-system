@@ -15,6 +15,30 @@ Always read these files first:
 - `./design-system/tokens/index.ts` - Available design tokens
 - `./src/templates/` - Reference implementations
 
+## Design Guidelines
+
+When making design decisions, consult the guidelines:
+
+### Component-Specific Guidelines
+Each component folder has a `GUIDELINES.md` file:
+```
+./design-system/components/Button/GUIDELINES.md
+./design-system/components/Modal/GUIDELINES.md
+```
+
+### General Guidelines
+See `./design-system/guidelines/`:
+- `foundations/` - Colours, typography, spacing, shadows, icons
+- `content/` - Voice, grammar, product vocabulary
+- `patterns/` - Error handling, feature gating, wizards
+- `layouts/` - Page layouts, content width
+
+### Key Rules
+- **One primary button per screen**
+- **Use sentence case** for headings/labels
+- **Use design tokens** - never hardcode
+- **Tooltips for icon-only buttons**
+
 ## Component Import Pattern
 
 ```tsx
