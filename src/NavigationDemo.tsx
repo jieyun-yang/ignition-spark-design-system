@@ -17,6 +17,7 @@ function NavigationDemo() {
   const [activeTab, setActiveTab] = useState('tab1');
   const [disabledTab, setDisabledTab] = useState('home');
   const [manyTabs, setManyTabs] = useState('all');
+  const [segmentTab, setSegmentTab] = useState('monthly');
   const [currentPage, setCurrentPage] = useState(2);
   const [pageHeaderTab, setPageHeaderTab] = useState('page1');
   const [reportTab, setReportTab] = useState('overview');
@@ -81,6 +82,25 @@ function NavigationDemo() {
                 activeTab={manyTabs}
                 onTabChange={setManyTabs}
               />
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Segment Control</h3>
+          <div className="button-grid">
+            <div className="button-row" style={{ flexDirection: 'column', gap: '24px', alignItems: 'flex-start' }}>
+              <Tabs
+                variant="segment"
+                tabs={[
+                  { id: 'monthly', label: 'Monthly' },
+                  { id: 'quarterly', label: 'Quarterly' },
+                  { id: 'yearly', label: 'Yearly' }
+                ]}
+                activeTab={segmentTab}
+                onTabChange={setSegmentTab}
+              />
+              <div style={{ fontSize: '14px', color: '#5a5b60' }}>
+                Selected: <strong>{segmentTab}</strong>
+              </div>
             </div>
           </div>
         </section>

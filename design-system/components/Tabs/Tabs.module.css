@@ -79,16 +79,19 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-2) var(--spacing-4);
-  background: none;
-  border: var(--border-width-default) solid var(--color-gray-300);
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-gray-400);
   border-right: none;
   cursor: pointer;
-  transition: all var(--duration-normal) var(--easing-ease);
+  /* Only transition background and color, not borders to prevent flash */
+  transition: background-color var(--duration-normal) var(--easing-ease),
+              color var(--duration-normal) var(--easing-ease),
+              box-shadow var(--duration-normal) var(--easing-ease);
   font-family: var(--font-family-primary);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
-  color: var(--color-gray-700);
+  color: var(--color-gray-800);
   white-space: nowrap;
   min-height: var(--spacing-9);
 }
@@ -99,7 +102,7 @@
 }
 
 .tabSegment:last-child {
-  border-right: var(--border-width-default) solid var(--color-gray-300);
+  border-right: var(--border-width-default) solid var(--color-gray-400);
   border-top-right-radius: var(--border-radius-sm);
   border-bottom-right-radius: var(--border-radius-sm);
 }
@@ -110,11 +113,29 @@
 }
 
 .tabSegment.active {
-  background-color: var(--color-white);
-  border-color: var(--color-primary-500);
+  background-color: var(--color-primary-50);
+  border: var(--border-width-default) solid var(--color-primary-500);
   color: var(--color-primary-500);
   font-weight: var(--font-weight-medium);
   z-index: 1;
+}
+
+.tabSegment.active .label {
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Remove left border from tab after active to prevent overlap */
+.tabSegment.active + .tabSegment {
+  border-left: none;
+}
+
+/* Focus state for segment tabs */
+.tabSegment:focus-visible {
+  outline: none;
+  box-shadow: 0px 0px 1px 2px var(--color-primary-400), 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-primary-50);
+  z-index: 2;
 }
 
 .tabSegment.disabled {

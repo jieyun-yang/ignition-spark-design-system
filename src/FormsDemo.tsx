@@ -5,7 +5,7 @@
  */
 
 import { useState, useRef, useEffect } from 'react';
-import { Button, ComboButton, MenuButton, Menu, Checkbox, DatePicker, CheckboxCard, TextArea, Switch, RadioButton, Search, PasswordInput, TextInput, Select, Tooltip, CopyField, ActionBar, FieldSet } from '../design-system';
+import { Button, ComboButton, MenuButton, Menu, Checkbox, DatePicker, CheckboxCard, TextArea, Switch, RadioButton, RadioButtonGroup, Search, PasswordInput, TextInput, Select, Tooltip, CopyField, ActionBar, FieldSet } from '../design-system';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faPlus, faArrowRight, faTrash, faStar, faRocket, faHeart, faPalette, faCode, faChartLine, faUser, faCog, faShieldAlt, faFileAlt } from '@fortawesome/pro-regular-svg-icons';
 import './App.css';
@@ -33,6 +33,7 @@ function FormsDemo() {
   const [toggle1, setToggle1] = useState(false);
   const [toggle2, setToggle2] = useState(true);
   const [radio1, setRadio1] = useState('basic');
+  const [radioGroup1, setRadioGroup1] = useState('monthly');
   const [search1, setSearch1] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('123');
@@ -1083,6 +1084,58 @@ function FormsDemo() {
                   Selected: {radio1.charAt(0).toUpperCase() + radio1.slice(1)} Plan
                 </p>
               </div>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Radio Button Group (Segment Control)</h3>
+          <div className="button-grid">
+            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
+              <RadioButtonGroup
+                name="billing"
+                options={[
+                  { value: 'monthly', label: 'Monthly' },
+                  { value: 'quarterly', label: 'Quarterly' },
+                  { value: 'yearly', label: 'Yearly' }
+                ]}
+                value={radioGroup1}
+                onChange={setRadioGroup1}
+              />
+              <p style={{ color: '#3c3d40', fontSize: '14px' }}>
+                Selected: <strong>{radioGroup1}</strong>
+              </p>
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Radio Button Group - Disabled Option</h3>
+          <div className="button-grid">
+            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
+              <RadioButtonGroup
+                name="status"
+                options={[
+                  { value: 'active', label: 'Active' },
+                  { value: 'pending', label: 'Pending', disabled: true },
+                  { value: 'archived', label: 'Archived' }
+                ]}
+                value="active"
+                onChange={() => {}}
+              />
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>Radio Button Group - All Disabled</h3>
+          <div className="button-grid">
+            <div className="button-row" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
+              <RadioButtonGroup
+                name="disabled-group"
+                options={[
+                  { value: 'option1', label: 'Option 1' },
+                  { value: 'option2', label: 'Option 2' },
+                  { value: 'option3', label: 'Option 3' }
+                ]}
+                value="option1"
+                onChange={() => {}}
+                disabled
+              />
             </div>
           </div>
         </section>
