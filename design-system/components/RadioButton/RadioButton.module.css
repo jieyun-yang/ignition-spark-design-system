@@ -84,3 +84,83 @@
 .container.invalid .label {
   color: var(--color-secondary-red-500);
 }
+
+/* ========================================
+   RadioButtonGroup (Segment Control Style)
+   Figma: Radio button group
+   ======================================== */
+
+.group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.groupOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-1) var(--spacing-4);
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-gray-400);
+  border-right: none;
+  cursor: pointer;
+  /* Only transition background and color, not borders to prevent flash */
+  transition: background-color var(--duration-normal) var(--easing-ease),
+              color var(--duration-normal) var(--easing-ease),
+              box-shadow var(--duration-normal) var(--easing-ease);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-800);
+  white-space: nowrap;
+  min-height: var(--spacing-8);
+  user-select: none;
+}
+
+.groupOption:first-child {
+  border-top-left-radius: var(--border-radius-sm);
+  border-bottom-left-radius: var(--border-radius-sm);
+}
+
+.groupOption:last-child {
+  border-right: var(--border-width-default) solid var(--color-gray-400);
+  border-top-right-radius: var(--border-radius-sm);
+  border-bottom-right-radius: var(--border-radius-sm);
+}
+
+.groupOption:hover:not(.groupOptionDisabled):not(.groupOptionActive) {
+  background-color: var(--color-gray-50);
+}
+
+.groupOptionActive {
+  background-color: var(--color-primary-50);
+  border: var(--border-width-default) solid var(--color-primary-500);
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-medium);
+  z-index: 1;
+}
+
+/* Remove left border from option after active to prevent overlap */
+.groupOptionActive + .groupOption {
+  border-left: none;
+}
+
+.groupOption:focus-visible {
+  outline: none;
+  box-shadow: 0px 0px 1px 2px var(--color-primary-400), 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-primary-50);
+  z-index: 2;
+}
+
+.groupOptionDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.groupInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}

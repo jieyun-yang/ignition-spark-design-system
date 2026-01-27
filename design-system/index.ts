@@ -36,8 +36,8 @@ export type { TextAreaProps } from './components/TextArea';
 export { Switch } from './components/Switch';
 export type { SwitchProps } from './components/Switch';
 
-export { RadioButton } from './components/RadioButton';
-export type { RadioButtonProps } from './components/RadioButton';
+export { RadioButton, RadioButtonGroup } from './components/RadioButton';
+export type { RadioButtonProps, RadioButtonGroupProps, RadioButtonGroupOption } from './components/RadioButton';
 
 export { Search } from './components/Search';
 export type { SearchProps } from './components/Search';
