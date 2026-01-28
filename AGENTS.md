@@ -12,10 +12,58 @@ You are helping build prototypes using the Ignition Spark Design System.
 
 Always read these files first:
 - `./design-system/COMPONENTS.md` - All 51 components and their APIs
-- `./design-system/tokens/index.ts` - Available design tokens
+- `./design-system/tokens/tokens.css` - Available design tokens
 - `./src/templates/` - Reference implementations
 
-## Design Guidelines (NEW)
+### Quick Token Reference
+
+**Colors:**
+| Purpose | Token | Value |
+|---------|-------|-------|
+| Primary purple | `--color-primary-500` | #5A51E7 |
+| Primary hover | `--color-primary-600` | #4940CE |
+| Text dark | `--color-gray-900` | #1E1E20 |
+| Text secondary | `--color-gray-600` | #7B7D85 |
+| Text muted | `--color-gray-500` | #9B9DA8 |
+| Background light | `--color-gray-50` | #F8F8FC |
+| Background alt | `--color-gray-100` | #F0F2FA |
+| Border | `--color-gray-200` | #E4E7F5 |
+| White | `--color-white` | #FFFFFF |
+| Success | `--color-secondary-green-500` | #08A674 |
+| Error | `--color-secondary-red-500` | #DD2222 |
+| Warning | `--color-secondary-yellow-500` | #D97706 |
+
+**Typography:**
+| Purpose | Token |
+|---------|-------|
+| Font family | `--font-family-primary` (SF Pro Text) |
+| Body text | `--font-size-base` (14px) |
+| Small text | `--font-size-sm` (12px) |
+| Large text | `--font-size-lg` (16px) |
+| Heading | `--font-size-xl` (18px) |
+| Weight normal | `--font-weight-regular` (400) |
+| Weight medium | `--font-weight-medium` (500) |
+| Weight bold | `--font-weight-semibold` (600) |
+
+**Spacing:**
+| Size | Token | Value |
+|------|-------|-------|
+| XS | `--spacing-1` | 4px |
+| SM | `--spacing-2` | 8px |
+| MD | `--spacing-3` | 12px |
+| Base | `--spacing-4` | 16px |
+| LG | `--spacing-6` | 24px |
+| XL | `--spacing-8` | 32px |
+
+**Border Radius:**
+| Size | Token | Value |
+|------|-------|-------|
+| Small | `--border-radius-sm` | 3px |
+| Medium | `--border-radius-md` | 4px |
+| Large | `--border-radius-lg` | 8px |
+| Pill | `--border-radius-pill` | 100px |
+
+## Design Guidelines
 
 When making design decisions, consult the guidelines:
 
