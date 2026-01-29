@@ -18,8 +18,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import styles from './Filter.module.css';
 
 export interface FilterOption {
@@ -134,7 +133,7 @@ export function Filter({
           </div>
 
           <span className={styles.dropdownIcon}>
-            <FontAwesomeIcon icon={faChevronDown} />
+            <Icon name="chevron-down" variant="solid" />
           </span>
         </button>
 
@@ -144,7 +143,7 @@ export function Filter({
             onClick={handleRemove}
             aria-label="Remove filter"
           >
-            <FontAwesomeIcon icon={faXmark} />
+            <Icon name="xmark" variant="solid" />
           </button>
         )}
       </div>

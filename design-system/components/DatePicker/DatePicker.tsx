@@ -20,8 +20,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import { Calendar } from './Calendar';
 import styles from './DatePicker.module.css';
 
@@ -171,7 +170,7 @@ export const DatePicker = React.forwardRef<HTMLDivElement, DatePickerProps>(
             aria-label="Toggle calendar"
             tabIndex={-1}
           >
-            <FontAwesomeIcon icon={faCalendar} className={styles.icon} />
+            <Icon name="calendar" variant="solid" className={styles.icon} />
           </button>
         </div>
 

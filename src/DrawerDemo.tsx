@@ -6,8 +6,6 @@
 
 import { useState } from 'react';
 import { Drawer } from '../design-system';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faEdit, faTrash, faDownload } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 function DrawerDemo() {
@@ -176,23 +174,19 @@ function DrawerDemo() {
             badge="NEW"
             primaryAction={{
               label: 'Primary',
-              icon: faCheck,
               onClick: () => alert('Primary action clicked!'),
             }}
             moreActions={[
               {
                 label: 'Edit',
-                icon: faEdit,
                 onClick: () => alert('Edit clicked!'),
               },
               {
                 label: 'Download',
-                icon: faDownload,
                 onClick: () => alert('Download clicked!'),
               },
               {
                 label: 'Delete',
-                icon: faTrash,
                 onClick: () => alert('Delete clicked!'),
               },
             ]}

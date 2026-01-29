@@ -5,10 +5,8 @@
  */
 
 import { useState } from 'react';
-import { Badge, Avatar, DataList, Divider, Link, Card, AppCard, Table, TableHeader, Pagination, EmptyState, Notification, Signature, ProgressStatus, Filter, SupportArticleLink } from '../design-system';
+import { Badge, Avatar, DataList, Divider, Link, Card, AppCard, Table, TableHeader, Pagination, EmptyState, Notification, Signature, ProgressStatus, Filter, SupportArticleLink, Icon } from '../design-system';
 import { IgnitionLogo, AppLogo, PaymentMethodLogo } from '../design-system/components/Card/assets';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInbox, faPencil, faPaperPlane, faRetweet, faStar, faFile, faClipboard } from '@fortawesome/pro-regular-svg-icons';
 import './App.css';
 
 interface ProposalData {
@@ -384,7 +382,7 @@ function DataDisplayDemo() {
             <div className="button-row" style={{ gap: '16px', flexWrap: 'wrap' }}>
               <Card
                 size="small"
-                icon={<FontAwesomeIcon icon={faStar} />}
+                icon={<Icon name="gift" variant="solid" />}
                 iconVariant="default"
                 title="Title"
                 description="Description"
@@ -408,7 +406,7 @@ function DataDisplayDemo() {
               />
               <Card
                 size="small"
-                icon={<FontAwesomeIcon icon={faStar} />}
+                icon={<Icon name="gift" variant="solid" />}
                 iconVariant="default"
                 title="Title"
                 description="Description"
@@ -428,7 +426,7 @@ function DataDisplayDemo() {
                     justifyContent: 'center',
                     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
                   }}>
-                    <FontAwesomeIcon icon={faFile} style={{ fontSize: '48px', color: 'white' }} />
+                    <Icon name="copy" size="xl" />
                   </div>
                 }
                 title="Title"
@@ -444,7 +442,7 @@ function DataDisplayDemo() {
             <div className="button-row" style={{ gap: '16px', flexWrap: 'wrap' }}>
               <Card
                 size="small"
-                icon={<FontAwesomeIcon icon={faStar} />}
+                icon={<Icon name="gift" variant="solid" />}
                 iconVariant="default"
                 title="Title"
                 description="Description"
@@ -465,7 +463,7 @@ function DataDisplayDemo() {
             <div className="button-row" style={{ gap: '16px', flexWrap: 'wrap' }}>
               <Card
                 size="large"
-                icon={<FontAwesomeIcon icon={faStar} />}
+                icon={<Icon name="gift" variant="solid" />}
                 iconVariant="default"
                 title="Title"
                 description="Description"
@@ -489,7 +487,7 @@ function DataDisplayDemo() {
               />
               <Card
                 size="large"
-                icon={<FontAwesomeIcon icon={faStar} />}
+                icon={<Icon name="gift" variant="solid" />}
                 iconVariant="default"
                 title="Title"
                 description="Description"
@@ -509,7 +507,7 @@ function DataDisplayDemo() {
                     justifyContent: 'center',
                     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
                   }}>
-                    <FontAwesomeIcon icon={faFile} style={{ fontSize: '64px', color: 'white' }} />
+                    <Icon name="copy" size="xl" />
                   </div>
                 }
                 title="Title"
@@ -525,7 +523,7 @@ function DataDisplayDemo() {
             <div className="button-row" style={{ gap: '16px', flexWrap: 'wrap' }}>
               <Card
                 size="large"
-                icon={<FontAwesomeIcon icon={faStar} />}
+                icon={<Icon name="gift" variant="solid" />}
                 iconVariant="default"
                 title="Title"
                 description="Description"
@@ -663,7 +661,7 @@ function DataDisplayDemo() {
               {
                 label: 'Edit',
                 value: 'edit',
-                icon: <FontAwesomeIcon icon={faPencil} />,
+                icon: <Icon name="copy" />,
                 onClick: () => alert(`Edit: ${row.client}`),
               },
               {
@@ -704,19 +702,19 @@ function DataDisplayDemo() {
               bulkActions={[
                 {
                   label: 'Send',
-                  icon: faPaperPlane,
+                  icon: undefined,
                   onClick: () => alert(`Send ${selectedRows.length} proposals`),
                   disabled: selectedRows.length === 0
                 },
                 {
                   label: 'Renew',
-                  icon: faRetweet,
+                  icon: undefined,
                   onClick: () => alert(`Renew ${selectedRows.length} proposals`),
                   disabled: selectedRows.length === 0
                 },
                 {
                   label: 'Adjust pricing',
-                  icon: faPencil,
+                  icon: undefined,
                   onClick: () => alert(`Adjust pricing for ${selectedRows.length} proposals`),
                   disabled: selectedRows.length === 0
                 },
@@ -762,7 +760,7 @@ function DataDisplayDemo() {
                 {
                   label: 'Edit',
                   value: 'edit',
-                  icon: <FontAwesomeIcon icon={faPencil} />,
+                  icon: <Icon name="copy" />,
                   onClick: () => alert(`Edit: ${row.client}`),
                 },
                 {
@@ -799,14 +797,14 @@ function DataDisplayDemo() {
 
           <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginBottom: '12px' }}>Basic Empty State</h3>
           <EmptyState
-            illustration={<FontAwesomeIcon icon={faInbox} size="4x" />}
+            illustration={<Icon name="search" size="xl" />}
             heading="No proposals yet"
             description="When you create proposals, they'll appear here"
           />
 
           <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>With Primary Action</h3>
           <EmptyState
-            illustration={<FontAwesomeIcon icon={faInbox} size="4x" />}
+            illustration={<Icon name="search" size="xl" />}
             heading="No proposals yet"
             description="Get started by creating your first proposal"
             primaryAction={{
@@ -817,7 +815,7 @@ function DataDisplayDemo() {
 
           <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#3c3d40', marginTop: '24px', marginBottom: '12px' }}>With Both Actions</h3>
           <EmptyState
-            illustration={<FontAwesomeIcon icon={faInbox} size="4x" />}
+            illustration={<Icon name="search" size="xl" />}
             heading="No proposals yet"
             description="Create a new proposal or import existing ones"
             primaryAction={{

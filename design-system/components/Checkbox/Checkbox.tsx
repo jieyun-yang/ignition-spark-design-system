@@ -21,8 +21,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import styles from './Checkbox.module.css';
 
 export interface CheckboxProps {
@@ -124,7 +123,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         />
         <span className={checkboxClasses}>
           {checked && !indeterminate && (
-            <FontAwesomeIcon icon={faCheck} className={styles.checkIcon} />
+            <Icon name="check" variant="solid" className={styles.checkIcon} />
           )}
           {indeterminate && (
             <span className={styles.indeterminateIcon}>−</span>

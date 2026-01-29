@@ -16,8 +16,7 @@
  */
 
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import clsx from 'clsx';
 import styles from './PasswordInput.module.css';
 
@@ -92,8 +91,9 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
           <span className={styles.toggleText}>
             {showPassword ? 'Hide' : 'Show'}
           </span>
-          <FontAwesomeIcon
-            icon={showPassword ? faEyeSlash : faEye}
+          <Icon
+            name={showPassword ? 'eye-slash' : 'eye'}
+            variant="solid"
             className={styles.toggleIcon}
           />
         </button>

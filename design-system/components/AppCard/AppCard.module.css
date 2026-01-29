@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-3);
-  padding: var(--spacing-3) var(--spacing-0);
+  padding: var(--spacing-3);
   flex: 1;
 }
 

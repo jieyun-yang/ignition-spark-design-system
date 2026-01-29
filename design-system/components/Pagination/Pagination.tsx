@@ -14,13 +14,7 @@
  */
 
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChevronLeft,
-  faChevronRight,
-  faAnglesLeft,
-  faAnglesRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import clsx from 'clsx';
 import styles from './Pagination.module.css';
 
@@ -80,7 +74,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         disabled={isFirstPage}
         aria-label="First page"
       >
-        <FontAwesomeIcon icon={faAnglesLeft} />
+        <Icon name="angles-left" variant="solid" />
       </button>
 
       {/* Previous page button */}
@@ -91,7 +85,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         disabled={isFirstPage}
         aria-label="Previous page"
       >
-        <FontAwesomeIcon icon={faChevronLeft} />
+        <Icon name="chevron-left" variant="solid" />
       </button>
 
       {/* Page number buttons */}
@@ -119,7 +113,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         disabled={isLastPage}
         aria-label="Next page"
       >
-        <FontAwesomeIcon icon={faChevronRight} />
+        <Icon name="chevron-right" variant="solid" />
       </button>
 
       {/* Last page button */}
@@ -130,7 +124,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         disabled={isLastPage}
         aria-label="Last page"
       >
-        <FontAwesomeIcon icon={faAnglesRight} />
+        <Icon name="angles-right" variant="solid" />
       </button>
     </div>
   );

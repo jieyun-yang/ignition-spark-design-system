@@ -28,7 +28,7 @@
  */
 
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon } from '../Icon';
 import clsx from 'clsx';
 import styles from './Menu.module.css';
 
@@ -39,8 +39,8 @@ export interface MenuOption {
   /** Display label */
   label: string;
 
-  /** Optional icon (for prominent variant) */
-  icon?: any;
+  /** Optional icon name or React element (for prominent variant) */
+  icon?: string | React.ReactNode;
 
   /** Optional caption (for prominent variant) */
   caption?: string;
@@ -136,11 +136,11 @@ export const Menu: React.FC<MenuProps> = ({
             {option.icon && (
               variant === 'prominent' ? (
                 <div className={styles.iconContainer}>
-                  {React.isValidElement(option.icon) ? option.icon : <FontAwesomeIcon icon={option.icon} className={styles.icon} />}
+                  {React.isValidElement(option.icon) ? option.icon : <Icon name={option.icon as string} className={styles.icon} />}
                 </div>
               ) : (
                 <div className={styles.simpleIcon}>
-                  {React.isValidElement(option.icon) ? option.icon : <FontAwesomeIcon icon={option.icon} />}
+                  {React.isValidElement(option.icon) ? option.icon : <Icon name={option.icon as string} />}
                 </div>
               )
             )}

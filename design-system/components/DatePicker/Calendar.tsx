@@ -5,8 +5,7 @@
  */
 
 import React, { useState, useMemo } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import styles from './Calendar.module.css';
 
 interface CalendarProps {
@@ -104,7 +103,7 @@ export const Calendar: React.FC<CalendarProps> = ({ selectedDate, onSelectDate, 
             onClick={handlePrevMonth}
             aria-label="Previous month"
           >
-            <FontAwesomeIcon icon={faAngleLeft} />
+            <Icon name="angle-left" variant="solid" />
           </button>
           <button
             type="button"
@@ -112,7 +111,7 @@ export const Calendar: React.FC<CalendarProps> = ({ selectedDate, onSelectDate, 
             onClick={handleNextMonth}
             aria-label="Next month"
           >
-            <FontAwesomeIcon icon={faAngleRight} />
+            <Icon name="angle-right" variant="solid" />
           </button>
         </div>
       </div>

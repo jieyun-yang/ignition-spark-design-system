@@ -21,8 +21,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import styles from './MenuButton.module.css';
 
 export interface MenuButtonProps {
@@ -74,7 +73,7 @@ export const MenuButton = React.forwardRef<HTMLButtonElement, MenuButtonProps>(
         aria-haspopup="true"
       >
         <span className={styles.label}>{children}</span>
-        <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />
+        <Icon name="chevron-down" variant="solid" className={styles.icon} />
       </button>
     );
   }

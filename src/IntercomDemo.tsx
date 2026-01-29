@@ -5,8 +5,7 @@
  */
 
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faRocket } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../design-system';
 import './App.css';
 
 function TooltipExample({ position }: { position: string }) {
@@ -167,7 +166,7 @@ function IntercomDemo() {
               boxShadow: '0px 0px 1px 0px rgba(23, 30, 37, 0.31), 0px 18px 28px 0px rgba(23, 30, 37, 0.15)'
             }}>
               <div style={{ flex: 1 }}>
-                <p style={{ fontSize: '14px', margin: '0 0 4px 0' }}>
+                <p style={{ fontSize: '14px', margin: '0 0 4px 0', color: 'white' }}>
                   🎉 New feature available! Check out our latest updates.
                 </p>
                 <button
@@ -198,7 +197,7 @@ function IntercomDemo() {
                 }}
                 aria-label="Close banner"
               >
-                <FontAwesomeIcon icon={faTimes} />
+                <Icon name="xmark" variant="solid" />
               </button>
             </div>
           )}
@@ -265,7 +264,7 @@ function IntercomDemo() {
                 }}
                 aria-label="Close tour"
               >
-                <FontAwesomeIcon icon={faTimes} />
+                <Icon name="xmark" variant="solid" />
               </button>
 
               <div style={{ marginBottom: '16px' }}>
@@ -421,7 +420,7 @@ function IntercomDemo() {
                   color: '#000000',
                   lineHeight: '1.5'
                 }}>
-                  {post.heading} <FontAwesomeIcon icon={faRocket} style={{ fontSize: '14px' }} />
+                  {post.heading}
                 </h3>
 
                 <h4 style={{

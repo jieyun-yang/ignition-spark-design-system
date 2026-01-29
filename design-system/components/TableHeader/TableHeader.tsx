@@ -21,9 +21,7 @@
  */
 
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { faSliders, faCircleQuestion } from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../Icon';
 import clsx from 'clsx';
 import styles from './TableHeader.module.css';
 
@@ -31,8 +29,8 @@ export interface BulkAction {
   /** Action label */
   label: string;
 
-  /** Optional icon */
-  icon?: any;
+  /** Optional icon name */
+  icon?: string;
 
   /** Click handler */
   onClick: () => void;
@@ -97,7 +95,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
       <div className={styles.leftSection}>
         {/* Search input */}
         <div className={styles.searchWrapper}>
-          <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
+          <Icon name="search" className={styles.searchIcon} />
           <input
             type="text"
             placeholder={searchPlaceholder}
@@ -110,7 +108,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         {/* Filters button */}
         {onFiltersClick && (
           <button onClick={onFiltersClick} className={styles.filtersButton}>
-            <FontAwesomeIcon icon={faSliders} className={styles.filterIcon} />
+            <Icon name="sliders" className={styles.filterIcon} />
             <span className={styles.filtersLabel}>Filters</span>
           </button>
         )}
@@ -131,10 +129,10 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
               <div className={styles.amountWrapper}>
                 <span className={styles.amount}>{totalAmount}</span>
                 {amountTooltip && (
-                  <FontAwesomeIcon
-                    icon={faCircleQuestion}
+                  <Icon
+                    name="circle-question"
                     className={styles.amountIcon}
-                    title={amountTooltip}
+                    aria-label={amountTooltip}
                   />
                 )}
               </div>
@@ -157,7 +155,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
               )}
             >
               {action.icon && (
-                <FontAwesomeIcon icon={action.icon} className={styles.bulkActionIcon} />
+                <Icon name={action.icon} className={styles.bulkActionIcon} />
               )}
               <span className={styles.bulkActionLabel}>{action.label}</span>
             </button>

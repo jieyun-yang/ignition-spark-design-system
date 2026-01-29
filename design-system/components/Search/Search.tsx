@@ -15,8 +15,7 @@
  */
 
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import clsx from 'clsx';
 import styles from './Search.module.css';
 
@@ -74,7 +73,7 @@ export const Search: React.FC<SearchProps> = ({
         className
       )}
     >
-      <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
+      <Icon name="search" className={styles.searchIcon} />
       <input
         type="text"
         className={styles.input}
@@ -92,7 +91,7 @@ export const Search: React.FC<SearchProps> = ({
           onClick={handleClear}
           aria-label="Clear search"
         >
-          <FontAwesomeIcon icon={faXmark} />
+          <Icon name="xmark" />
         </button>
       )}
     </div>

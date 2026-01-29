@@ -126,7 +126,7 @@ color: '#5A51E7'        // Don't do this
 padding: '16px'         // Don't do this
 ```
 
-## Available Components (51 total)
+## Available Components (52 total)
 
 **Forms:** Button, ComboButton, MenuButton, TextInput, TextArea, PasswordInput, Checkbox, CheckboxCard, RadioButton, Select, DatePicker, Search, Switch, FieldSet
 
@@ -139,6 +139,32 @@ padding: '16px'         // Don't do this
 **Overlays:** Modal, Drawer, Popover, Banner, Overlayer, Filter
 
 **Content:** Accordion, CopyField, Signature, ActionBar, SupportArticleLink, Illustration, TemplateLayout
+
+**Icons:** Icon
+
+## Icon Usage
+
+Use the `Icon` component for all icons. Icons are locally bundled SVGs (no external dependencies).
+
+```tsx
+import { Icon } from './design-system';
+
+// Regular variant (default) - use for most UI elements
+<Icon name="circle-info" />
+<Icon name="search" />
+
+// Solid variant - use for emphasis
+<Icon name="check" variant="solid" />
+<Icon name="chevron-down" variant="solid" />
+
+// With size and spin
+<Icon name="spinner" size="lg" spin />
+```
+
+### Icon Guidelines
+- **Regular by default** - Only use `variant="solid"` when specified by design
+- **Common icons:** `search`, `xmark`, `check`, `chevron-down`, `circle-info`, `circle-check`, `circle-xmark`, `spinner`
+- See `./design-system/components/Icon/GUIDELINES.md` for full list and usage rules
 
 ## File Structure
 

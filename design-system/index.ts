@@ -159,6 +159,9 @@ export type { DrawerProps, DrawerAction } from './components/Drawer';
 export { Illustration } from './components/Illustration';
 export type { IllustrationProps, IllustrationName, EmotiveIllustrationName, ProductIllustrationName } from './components/Illustration';
 
+export { Icon } from './components/Icon';
+export type { IconProps, IconName, IconVariant, IconSize } from './components/Icon';
+
 // Types
 export type {
   ComponentSize,

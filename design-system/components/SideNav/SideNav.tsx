@@ -25,17 +25,7 @@
 
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faPlus,
-  faChevronDown,
-  faGift,
-  faCircleUser
-} from '@fortawesome/free-solid-svg-icons';
-import {
-  faSearch,
-  faBell
-} from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../Icon';
 import styles from './SideNav.module.css';
 
 export interface SideNavSubItem {
@@ -150,7 +140,7 @@ export function SideNav({
               <div className={styles.navLabel}>{item.label}</div>
               {hasSubItems && (
                 <div className={styles.navCaret}>
-                  <FontAwesomeIcon icon={faChevronDown} />
+                  <Icon name="chevron-down" variant="solid" />
                 </div>
               )}
             </div>
@@ -190,12 +180,12 @@ export function SideNav({
                 <div className={styles.headerIcons}>
                   {showSearch && (
                     <div className={styles.headerIcon}>
-                      <FontAwesomeIcon icon={faSearch} />
+                      <Icon name="search" variant="regular" />
                     </div>
                   )}
                   {showNotification && (
                     <div className={styles.headerIcon}>
-                      <FontAwesomeIcon icon={faBell} />
+                      <Icon name="bell" variant="regular" />
                     </div>
                   )}
                 </div>
@@ -207,11 +197,11 @@ export function SideNav({
               <div className={styles.gab}>
                 <button className={styles.createButton} onClick={createButton.onClick}>
                   <div className={styles.createIcon}>
-                    <FontAwesomeIcon icon={faPlus} />
+                    <Icon name="plus" variant="regular" />
                   </div>
                   <div className={styles.createLabel}>{createButton.label}</div>
                   <div className={styles.createChevron}>
-                    <FontAwesomeIcon icon={faChevronDown} />
+                    <Icon name="chevron-down" variant="solid" />
                   </div>
                 </button>
               </div>
@@ -260,7 +250,7 @@ export function SideNav({
               <div className={styles.referSection}>
                 <button className={styles.referButton} onClick={onReferClick}>
                   <div className={styles.referIcon}>
-                    <FontAwesomeIcon icon={faGift} />
+                    <Icon name="gift" variant="light" />
                   </div>
                   <div className={styles.referLabel}>Refer & earn</div>
                 </button>
@@ -273,14 +263,14 @@ export function SideNav({
                 <button className={styles.userButton}>
                   <div className={styles.userContent}>
                     <div className={styles.userIcon}>
-                      {user.avatar || <FontAwesomeIcon icon={faCircleUser} />}
+                      {user.avatar || <Icon name="circle-user" variant="light" />}
                     </div>
                     <div className={styles.userText}>
                       <div className={styles.userName}>{user.name}</div>
                       {user.company && <div className={styles.userCompany}>{user.company}</div>}
                     </div>
                     <div className={styles.userCaret}>
-                      <FontAwesomeIcon icon={faChevronDown} />
+                      <Icon name="chevron-down" variant="solid" />
                     </div>
                   </div>
                 </button>

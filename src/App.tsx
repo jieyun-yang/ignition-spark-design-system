@@ -5,16 +5,16 @@
  */
 
 import { useState, useRef, useEffect } from 'react';
-import { Button, ComboButton, MenuButton, Menu, Tooltip } from '../design-system';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faPlus, faArrowRight, faTrash, faUser, faCog, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { Button, ComboButton, MenuButton, Menu, Tooltip, Icon } from '../design-system';
 import './App.css';
 
-// Font Awesome icon components for demo
-const CheckIcon = () => <FontAwesomeIcon icon={faCheck} />;
-const PlusIcon = () => <FontAwesomeIcon icon={faPlus} />;
-const ArrowIcon = () => <FontAwesomeIcon icon={faArrowRight} />;
-const TrashIcon = () => <FontAwesomeIcon icon={faTrash} />;
+// Icon components for demo using design system Icon
+const CheckIcon = () => <Icon name="check" variant="solid" />;
+const PlusIcon = () => <Icon name="plus" variant="solid" />;
+// Note: arrow-right icon not available in design system, using chevron-right
+const ArrowIcon = () => <Icon name="chevron-right" variant="solid" />;
+// Note: trash icon not available in design system, using xmark
+const TrashIcon = () => <Icon name="xmark" variant="solid" />;
 
 function App() {
   const [menuOpen, setMenuOpen] = useState<string | null>(null);
@@ -378,9 +378,9 @@ function App() {
                   <Menu
                     variant="prominent"
                     options={[
-                      { value: 'profile', label: 'Profile', icon: faUser, caption: 'View your profile' },
-                      { value: 'settings', label: 'Settings', icon: faCog, caption: 'Configure app' },
-                      { value: 'docs', label: 'Documentation', icon: faFileAlt, caption: 'Read the docs' },
+                      { value: 'profile', label: 'Profile', caption: 'View your profile' },
+                      { value: 'settings', label: 'Settings', caption: 'Configure app' },
+                      { value: 'docs', label: 'Documentation', caption: 'Read the docs' },
                     ]}
                     onSelect={(value) => {
                       alert(`Selected: ${value}`);

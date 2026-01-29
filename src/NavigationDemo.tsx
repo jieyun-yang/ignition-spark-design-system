@@ -5,12 +5,8 @@
  */
 
 import { useState } from 'react';
-import { Spinner, Tabs, Pagination, ProgressBar, Skeleton, PageHeader, SideNav, SupportArticleLink } from '../design-system';
+import { Spinner, Tabs, Pagination, ProgressBar, Skeleton, PageHeader, SideNav, SupportArticleLink, Icon } from '../design-system';
 import { IgnitionLogo } from '../design-system/components/Card/assets';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faFileInvoice, faCog, faQuestionCircle, faChartLine, faFolder, faCreditCard, faLayerGroup, faGear, faLifeRing, faList, faGripVertical } from '@fortawesome/pro-light-svg-icons';
-import { faClipboard } from '@fortawesome/pro-regular-svg-icons';
-import { faPlus, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 function NavigationDemo() {
@@ -345,7 +341,7 @@ function NavigationDemo() {
                   onClick={() => alert('More actions')}
                 >
                   More actions
-                  <FontAwesomeIcon icon={faChevronDown} style={{ fontSize: '10px' }} />
+                  <Icon name="chevron-down" variant="solid" size="xs" />
                 </button>
                 <button
                   style={{
@@ -392,7 +388,7 @@ function NavigationDemo() {
             title="Dashboard"
             primaryAction={{
               label: 'Create',
-              icon: <FontAwesomeIcon icon={faPlus} />,
+              icon: <Icon name="plus" variant="solid" />,
               onClick: () => alert('Create'),
             }}
           />
@@ -445,26 +441,26 @@ function NavigationDemo() {
                 {
                   id: 'home',
                   label: 'Home',
-                  icon: <FontAwesomeIcon icon={faHome} />,
+                  icon: <Icon name="house" variant="light" />,
                   active: true,
                   onClick: () => console.log('Home clicked')
                 },
                 {
                   id: 'deals',
                   label: 'Deals',
-                  icon: <FontAwesomeIcon icon={faChartLine} />,
+                  icon: <Icon name="briefcase" variant="light" />,
                   onClick: () => console.log('Deals clicked')
                 },
                 {
                   id: 'proposals',
                   label: 'Proposals',
-                  icon: <FontAwesomeIcon icon={faFileInvoice} />,
+                  icon: <Icon name="file-lines" variant="light" />,
                   onClick: () => console.log('Proposals clicked')
                 },
                 {
                   id: 'payments',
                   label: 'Payments',
-                  icon: <FontAwesomeIcon icon={faCreditCard} />,
+                  icon: <Icon name="credit-card" variant="light" />,
                   onClick: () => console.log('Payments clicked'),
                   subItems: [
                     { id: 'all-payments', label: 'All payments', onClick: () => console.log('All payments') },
@@ -477,25 +473,25 @@ function NavigationDemo() {
                 {
                   id: 'clients',
                   label: 'Clients',
-                  icon: <FontAwesomeIcon icon={faUsers} />,
+                  icon: <Icon name="users" variant="light" />,
                   onClick: () => console.log('Clients clicked')
                 },
                 {
                   id: 'services',
                   label: 'Services',
-                  icon: <FontAwesomeIcon icon={faList} />,
+                  icon: <Icon name="gear" variant="light" />,
                   onClick: () => console.log('Services clicked')
                 },
                 {
                   id: 'forms',
                   label: 'Forms',
-                  icon: <FontAwesomeIcon icon={faClipboard} />,
+                  icon: <Icon name="file-lines" variant="light" />,
                   onClick: () => console.log('Forms clicked')
                 },
                 {
                   id: 'templates',
                   label: 'Templates',
-                  icon: <FontAwesomeIcon icon={faFolder} />,
+                  icon: <Icon name="folder" variant="light" />,
                   onClick: () => console.log('Templates clicked'),
                   subItems: [
                     { id: 'proposals', label: 'Proposals', active: true, onClick: () => console.log('Proposals') },
@@ -509,13 +505,13 @@ function NavigationDemo() {
                 {
                   id: 'apps',
                   label: 'Apps',
-                  icon: <FontAwesomeIcon icon={faGripVertical} />,
+                  icon: <Icon name="grid-2" variant="light" />,
                   onClick: () => console.log('Apps clicked')
                 },
                 {
                   id: 'settings',
                   label: 'Settings',
-                  icon: <FontAwesomeIcon icon={faGear} />,
+                  icon: <Icon name="gear" variant="light" />,
                   onClick: () => console.log('Settings clicked'),
                   subItems: [
                     { id: 'general', label: 'General', active: true, onClick: () => console.log('General') },
@@ -529,7 +525,7 @@ function NavigationDemo() {
                 {
                   id: 'help',
                   label: 'Help',
-                  icon: <FontAwesomeIcon icon={faQuestionCircle} />,
+                  icon: <Icon name="circle-question" variant="light" />,
                   onClick: () => console.log('Help clicked'),
                   subItems: [
                     { id: 'support-portal', label: 'Support portal', active: true, onClick: () => console.log('Support portal') },
@@ -562,14 +558,14 @@ function NavigationDemo() {
                 {
                   id: 'home',
                   label: 'Home',
-                  icon: <FontAwesomeIcon icon={faHome} />,
+                  icon: <Icon name="house" variant="light" />,
                   active: true,
                   onClick: () => console.log('Home clicked')
                 },
                 {
                   id: 'clients',
                   label: 'Clients',
-                  icon: <FontAwesomeIcon icon={faUsers} />,
+                  icon: <Icon name="users" variant="light" />,
                   onClick: () => console.log('Clients clicked')
                 }
               ]}
@@ -588,14 +584,14 @@ function NavigationDemo() {
                 {
                   id: 'dashboard',
                   label: 'Dashboard',
-                  icon: <FontAwesomeIcon icon={faHome} />,
+                  icon: <Icon name="house" variant="light" />,
                   active: true,
                   onClick: () => console.log('Dashboard')
                 },
                 {
                   id: 'settings',
                   label: 'Settings',
-                  icon: <FontAwesomeIcon icon={faGear} />,
+                  icon: <Icon name="gear" variant="light" />,
                   onClick: () => console.log('Settings')
                 }
               ]}

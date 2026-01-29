@@ -15,8 +15,7 @@
 
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCopy, faCheck } from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../Icon';
 import styles from './CopyField.module.css';
 
 export interface CopyFieldProps {
@@ -71,8 +70,8 @@ export const CopyField: React.FC<CopyFieldProps> = ({
         disabled={disabled}
         aria-label={copied ? 'Copied' : 'Copy to clipboard'}
       >
-        <FontAwesomeIcon
-          icon={copied ? faCheck : faCopy}
+        <Icon
+          name={copied ? 'check' : 'copy'}
           className={styles.icon}
         />
         <span className={styles.buttonText}>

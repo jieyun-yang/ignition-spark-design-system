@@ -8,8 +8,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown, faEllipsisVertical } from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../Icon';
 import { Checkbox } from '../Checkbox';
 import { Menu, MenuOption } from '../Menu';
 import styles from './Table.module.css';
@@ -214,10 +213,10 @@ export function Table<T = any>(props: TableProps<T>) {
                   {column.sortable && (
                     <span className={styles.sortIcon}>
                       {currentSortKey === column.key && currentSortDirection === 'asc' && (
-                        <FontAwesomeIcon icon={faChevronUp} />
+                        <Icon name="chevron-up" />
                       )}
                       {currentSortKey === column.key && currentSortDirection === 'desc' && (
-                        <FontAwesomeIcon icon={faChevronDown} />
+                        <Icon name="chevron-down" />
                       )}
                     </span>
                   )}
@@ -285,7 +284,7 @@ export function Table<T = any>(props: TableProps<T>) {
                         aria-label="Row actions"
                         aria-expanded={openMenuRowKey === rowKey}
                       >
-                        <FontAwesomeIcon icon={faEllipsisVertical} />
+                        <Icon name="ellipsis-vertical" />
                       </button>
                     </td>
                   )}

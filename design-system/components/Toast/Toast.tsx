@@ -28,16 +28,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCircleInfo,
-  faCircleCheck,
-  faTriangleExclamation,
-  faCircleXmark,
-  faSpinner,
-  faLock,
-  faXmark,
-} from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../Icon';
 import styles from './Toast.module.css';
 
 export interface ToastProps {
@@ -67,13 +58,13 @@ export interface ToastProps {
 }
 
 const iconMap = {
-  info: faCircleInfo,
-  success: faCircleCheck,
-  warning: faTriangleExclamation,
-  error: faCircleXmark,
-  waiting: faSpinner,
-  premium: faLock,
-};
+  info: 'circle-info',
+  success: 'circle-check',
+  warning: 'triangle-exclamation',
+  error: 'circle-xmark',
+  waiting: 'spinner',
+  premium: 'lock',
+} as const;
 
 export const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
   (
@@ -113,8 +104,8 @@ export const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
         <div className={styles.container}>
           <div className={styles.icon}>
             {icon || (
-              <FontAwesomeIcon
-                icon={iconMap[status]}
+              <Icon
+                name={iconMap[status]}
                 className={styles.iconSvg}
                 spin={status === 'waiting'}
               />
@@ -147,7 +138,7 @@ export const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
               onClick={onClose}
               aria-label="Close notification"
             >
-              <FontAwesomeIcon icon={faXmark} className={styles.closeIcon} />
+              <Icon name="xmark" className={styles.closeIcon} />
             </button>
           )}
         </div>

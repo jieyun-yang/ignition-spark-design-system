@@ -13,8 +13,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleQuestion } from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../Icon';
 import styles from './SupportArticleLink.module.css';
 
 export interface SupportArticleLinkProps {
@@ -54,7 +53,7 @@ export function SupportArticleLink({
       onClick={onClick}
     >
       {type === 'icon' ? (
-        <FontAwesomeIcon icon={faCircleQuestion} className={styles.icon} />
+        <Icon name="circle-question" className={styles.icon} />
       ) : (
         <span className={styles.text}>{children || 'Learn more'}</span>
       )}

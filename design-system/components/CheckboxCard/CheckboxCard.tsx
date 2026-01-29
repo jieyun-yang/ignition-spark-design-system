@@ -17,15 +17,13 @@
  */
 
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconName } from '@fortawesome/fontawesome-svg-core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import styles from './CheckboxCard.module.css';
 import clsx from 'clsx';
 
 export interface CheckboxCardProps {
-  /** Icon name from Font Awesome - maps to Figma "Icon" layer */
-  icon: IconName;
+  /** Icon name - maps to Figma "Icon" layer */
+  icon: string;
 
   /** Card title - maps to Figma "Title" */
   title: string;
@@ -85,13 +83,13 @@ export const CheckboxCard: React.FC<CheckboxCardProps> = ({
     >
       <div className={styles.header}>
         <div className={styles.iconWrapper}>
-          <FontAwesomeIcon icon={icon as any} className={styles.icon} />
+          <Icon name={icon} className={styles.icon} />
         </div>
 
         <div className={styles.checkboxWrapper}>
           <div className={clsx(styles.checkbox, checked && styles.checkboxChecked)}>
             {checked && (
-              <FontAwesomeIcon icon={faCheck} className={styles.checkIcon} />
+              <Icon name="check" variant="solid" className={styles.checkIcon} />
             )}
           </div>
         </div>

@@ -79,8 +79,9 @@ body {
   margin-top: var(--spacing-1-5);
 }
 
-.section > label,
-.section .button-row > div > label {
+/* Form field labels - exclude checkbox labels which use inline-flex */
+.section > label:not([class*="checkbox"]),
+.section .button-row > div > label:not([class*="checkbox"]) {
   display: block;
   margin-bottom: var(--spacing-1-5);
   font-size: var(--font-size-base);

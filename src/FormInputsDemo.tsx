@@ -5,9 +5,7 @@
  */
 
 import { useState } from 'react';
-import { Checkbox, DatePicker, CheckboxCard, TextArea, Switch, RadioButton, Search, PasswordInput, TextInput, Select, Tooltip, CopyField, FieldSet } from '../design-system';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faRocket, faHeart, faPalette, faCode, faChartLine, faUser, faCog, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
+import { Checkbox, DatePicker, CheckboxCard, TextArea, Switch, RadioButton, Search, PasswordInput, TextInput, Select, Tooltip, CopyField, FieldSet, Icon } from '../design-system';
 import './App.css';
 
 function FormInputsDemo() {
@@ -187,21 +185,21 @@ function FormInputsDemo() {
           <div className="button-grid">
             <div className="button-row">
               <CheckboxCard
-                icon={faStar as any}
+                icon="gift"
                 title="Premium Plan"
                 description="Get access to premium features"
                 checked={card1}
                 onChange={setCard1}
               />
               <CheckboxCard
-                icon={faRocket as any}
+                icon="gift"
                 title="Pro Plan"
                 description="Perfect for professionals"
                 checked={card2}
                 onChange={setCard2}
               />
               <CheckboxCard
-                icon={faHeart as any}
+                icon="gift"
                 title="Basic Plan"
                 description="Essential features only"
                 checked={card3}
@@ -215,8 +213,8 @@ function FormInputsDemo() {
             <div className="button-row">
               <Tooltip content="This plan is not available in your region">
                 <CheckboxCard
-                  icon={faStar as any}
-                  title="Disabled"
+                    icon="gift"
+                    title="Disabled"
                   description="This card is disabled"
                   checked={false}
                   onChange={() => {}}
@@ -225,8 +223,8 @@ function FormInputsDemo() {
               </Tooltip>
               <Tooltip content="Plan selection is locked during billing cycle">
                 <CheckboxCard
-                  icon={faStar as any}
-                  title="Disabled Checked"
+                    icon="gift"
+                    title="Disabled Checked"
                   description="This card is disabled"
                   checked={true}
                   onChange={() => {}}
@@ -234,7 +232,7 @@ function FormInputsDemo() {
                 />
               </Tooltip>
               <CheckboxCard
-                icon={faStar as any}
+                icon="gift"
                 title="Invalid"
                 description="This card has an error"
                 checked={false}
@@ -268,22 +266,22 @@ function FormInputsDemo() {
             <div className="button-column">
               <div style={{ display: "flex", gap: "16px" }}>
                 <CheckboxCard
-                  icon={faPalette as any}
-                  title="Design"
+                    icon="gift"
+                    title="Design"
                   description="UI/UX Design services"
                   checked={card1}
                   onChange={setCard1}
                 />
                 <CheckboxCard
-                  icon={faCode as any}
-                  title="Development"
+                    icon="gift"
+                    title="Development"
                   description="Full-stack development"
                   checked={card2}
                   onChange={setCard2}
                 />
                 <CheckboxCard
-                  icon={faChartLine as any}
-                  title="Analytics"
+                    icon="gift"
+                    title="Analytics"
                   description="Data insights & reporting"
                   checked={card3}
                   onChange={setCard3}
@@ -786,9 +784,9 @@ function FormInputsDemo() {
                   value={select4}
                   onChange={(val) => setSelect4(val as string)}
                   options={[
-                    { value: 'basic', label: 'Basic Plan', icon: faUser, caption: '$9/month - Essential features' },
-                    { value: 'pro', label: 'Pro Plan', icon: faCog, caption: '$29/month - Advanced features' },
-                    { value: 'enterprise', label: 'Enterprise', icon: faShieldAlt, caption: '$99/month - Full access' },
+                    { value: 'basic', label: 'Basic Plan', caption: '$9/month - Essential features' },
+                    { value: 'pro', label: 'Pro Plan', caption: '$29/month - Advanced features' },
+                    { value: 'enterprise', label: 'Enterprise', caption: '$99/month - Full access' },
                   ]}
                   placeholder="Select a plan..."
                   menuVariant="prominent"
@@ -864,10 +862,10 @@ function FormInputsDemo() {
                   value={multiSelect1}
                   onChange={(val) => setMultiSelect1(val as string[])}
                   options={[
-                    { value: 'star', label: 'Starred Items', icon: faStar, caption: 'Your favorite items' },
-                    { value: 'rocket', label: 'In Progress', icon: faRocket, caption: 'Currently active' },
-                    { value: 'heart', label: 'Liked', icon: faHeart, caption: 'Items you liked' },
-                    { value: 'palette', label: 'Creative', icon: faPalette, caption: 'Design projects' },
+                    { value: 'star', label: 'Starred Items', caption: 'Your favorite items' },
+                    { value: 'rocket', label: 'In Progress', caption: 'Currently active' },
+                    { value: 'heart', label: 'Liked', caption: 'Items you liked' },
+                    { value: 'palette', label: 'Creative', caption: 'Design projects' },
                   ]}
                   placeholder="Select categories..."
                   multiple
@@ -894,7 +892,7 @@ function FormInputsDemo() {
           <div style={{ marginBottom: "32px" }}>
             <FieldSet
               title="Personal Information"
-              icon={<FontAwesomeIcon icon={faUser} />}
+              icon={<Icon name="circle-user" variant="solid" />}
             >
               <div className="button-column">
                 <TextInput
@@ -925,7 +923,7 @@ function FormInputsDemo() {
           <div style={{ marginBottom: "32px" }}>
             <FieldSet
               title="Account Settings"
-              icon={<FontAwesomeIcon icon={faCog} />}
+              icon={<Icon name="sliders" />}
             >
               <div className="button-column">
                 <div>
@@ -936,9 +934,9 @@ function FormInputsDemo() {
                     value="pro"
                     onChange={() => {}}
                     options={[
-                      { value: 'basic', label: 'Basic Plan', icon: faUser, caption: '$9/month - Essential features' },
-                      { value: 'pro', label: 'Pro Plan', icon: faCog, caption: '$29/month - Advanced features' },
-                      { value: 'enterprise', label: 'Enterprise', icon: faShieldAlt, caption: '$99/month - Full access' },
+                      { value: 'basic', label: 'Basic Plan', caption: '$9/month - Essential features' },
+                      { value: 'pro', label: 'Pro Plan', caption: '$29/month - Advanced features' },
+                      { value: 'enterprise', label: 'Enterprise', caption: '$99/month - Full access' },
                     ]}
                     placeholder="Select a plan..."
                     menuVariant="prominent"
@@ -969,7 +967,7 @@ function FormInputsDemo() {
           <div style={{ marginBottom: "32px" }}>
             <FieldSet
               title="Security"
-              icon={<FontAwesomeIcon icon={faShieldAlt} />}
+              icon={<Icon name="lock" />}
             >
               <div className="button-column">
                 <PasswordInput

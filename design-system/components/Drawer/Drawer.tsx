@@ -28,15 +28,14 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import { Badge } from '../Badge';
 import { Tabs, Tab } from '../Tabs';
 import styles from './Drawer.module.css';
 
 export interface DrawerAction {
   label: string;
-  icon?: any;
+  icon?: string;
   onClick: () => void;
 }
 
@@ -199,7 +198,7 @@ export const Drawer: React.FC<DrawerProps> = ({
                     aria-expanded={isMoreActionsOpen}
                   >
                     <span>More actions</span>
-                    <FontAwesomeIcon icon={faChevronDown} className={styles.chevronIcon} />
+                    <Icon name="chevron-down" variant="solid" className={styles.chevronIcon} />
                   </button>
 
                   {isMoreActionsOpen && (
@@ -211,7 +210,7 @@ export const Drawer: React.FC<DrawerProps> = ({
                           onClick={() => handleMoreActionClick(action)}
                         >
                           {action.icon && (
-                            <FontAwesomeIcon icon={action.icon} className={styles.actionIcon} />
+                            <Icon name={action.icon} className={styles.actionIcon} />
                           )}
                           <span>{action.label}</span>
                         </button>
@@ -228,7 +227,7 @@ export const Drawer: React.FC<DrawerProps> = ({
                   onClick={primaryAction.onClick}
                 >
                   {primaryAction.icon && (
-                    <FontAwesomeIcon icon={primaryAction.icon} className={styles.buttonIcon} />
+                    <Icon name={primaryAction.icon} className={styles.buttonIcon} />
                   )}
                   <span>{primaryAction.label}</span>
                 </button>
@@ -240,7 +239,7 @@ export const Drawer: React.FC<DrawerProps> = ({
                 onClick={onClose}
                 aria-label="Close drawer"
               >
-                <FontAwesomeIcon icon={faXmark} />
+                <Icon name="xmark" variant="solid" />
               </button>
             </div>
           </div>

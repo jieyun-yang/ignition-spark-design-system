@@ -18,8 +18,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './AppCard.module.css';
 import { Badge } from '../Badge';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBan } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 
 export interface AppCardProps {
   /** App logo component */
@@ -123,7 +122,7 @@ export const AppCard: React.FC<AppCardProps> = ({
       {locked && (
         <div className={styles.lockedIconWrapper}>
           <div className={styles.lockedIcon}>
-            <FontAwesomeIcon icon={faBan} />
+            <Icon name="ban" variant="solid" />
           </div>
         </div>
       )}

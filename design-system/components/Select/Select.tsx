@@ -19,8 +19,7 @@
  */
 
 import React, { useState, useRef, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import clsx from 'clsx';
 import styles from './Select.module.css';
 import { Menu } from '../Menu/Menu';
@@ -214,7 +213,7 @@ export const Select: React.FC<SelectProps> = ({
                     onClick={(e) => handleRemoveTag(opt.value, e)}
                     aria-label={`Remove ${opt.label}`}
                   >
-                    <FontAwesomeIcon icon={faXmark} className={styles.tagRemoveIcon} />
+                    <Icon name="xmark" className={styles.tagRemoveIcon} />
                   </button>
                 </div>
               ))
@@ -233,19 +232,20 @@ export const Select: React.FC<SelectProps> = ({
               onClick={handleClear}
               aria-label="Clear selection"
             >
-              <FontAwesomeIcon icon={faXmark} className={styles.clearIcon} />
+              <Icon name="xmark" className={styles.clearIcon} />
             </button>
           )}
           {loading && (
-            <FontAwesomeIcon
-              icon={faSpinner}
+            <Icon
+              name="spinner"
               className={styles.spinner}
               spin
             />
           )}
           {showChevron && (
-            <FontAwesomeIcon
-              icon={faChevronDown}
+            <Icon
+              name="chevron-down"
+              variant="solid"
               className={clsx(styles.chevron, isOpen && styles.chevronOpen)}
             />
           )}

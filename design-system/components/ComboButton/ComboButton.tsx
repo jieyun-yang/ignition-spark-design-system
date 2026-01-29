@@ -29,8 +29,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../Icon';
 import styles from './ComboButton.module.css';
 
 export interface ComboButtonProps {
@@ -123,7 +122,7 @@ export const ComboButton = React.forwardRef<HTMLDivElement, ComboButtonProps>(
           aria-label={ariaLabelMenu || 'Open menu'}
           aria-haspopup="true"
         >
-          <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />
+          <Icon name="chevron-down" variant="solid" className={styles.icon} />
         </button>
       </div>
     );

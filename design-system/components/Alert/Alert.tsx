@@ -26,15 +26,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCircleInfo,
-  faCircleCheck,
-  faTriangleExclamation,
-  faCircleXmark,
-  faLock,
-  faXmark,
-} from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../Icon';
 import styles from './Alert.module.css';
 
 export interface AlertProps {
@@ -67,12 +59,12 @@ export interface AlertProps {
 }
 
 const iconMap = {
-  info: faCircleInfo,
-  success: faCircleCheck,
-  warning: faTriangleExclamation,
-  error: faCircleXmark,
-  premium: faLock,
-};
+  info: 'circle-info',
+  success: 'circle-check',
+  warning: 'triangle-exclamation',
+  error: 'circle-xmark',
+  premium: 'lock',
+} as const;
 
 export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   (
@@ -115,7 +107,7 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
         <div className={styles.container}>
           <div className={styles.icon}>
             {icon || (
-              <FontAwesomeIcon icon={iconMap[status]} className={styles.iconSvg} />
+              <Icon name={iconMap[status]} className={styles.iconSvg} />
             )}
           </div>
 
@@ -140,7 +132,7 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
               onClick={onClose}
               aria-label="Close alert"
             >
-              <FontAwesomeIcon icon={faXmark} className={styles.closeIcon} />
+              <Icon name="xmark" className={styles.closeIcon} />
             </button>
           )}
         </div>

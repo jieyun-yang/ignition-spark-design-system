@@ -5,8 +5,7 @@
  */
 
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faSpinner, faChevronLeft, faChevronRight, faImage, faExclamationTriangle, faTimesCircle, faCheckCircle, faRedo } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '../../design-system';
 import { IgnitionLogo } from '../../design-system/components/Card/assets';
 import '../App.css';
 import styles from './WizardTemplate.module.css';
@@ -111,7 +110,7 @@ function WizardTemplate() {
             </div>
             {/* Right Purple Area */}
             <div className={styles.imageArea}>
-              <FontAwesomeIcon icon={faImage} className={styles.imageIcon} aria-hidden="true" />
+              <Icon name="copy" size="xl" />
             </div>
           </div>
         </div>
@@ -145,7 +144,7 @@ function WizardTemplate() {
           </div>
           {/* Right Purple Area */}
           <div className={styles.imageArea}>
-            <FontAwesomeIcon icon={faImage} className={styles.imageIcon} />
+            <Icon name="copy" size="xl" />
           </div>
         </div>
       </div>
@@ -218,7 +217,7 @@ function WizardTemplate() {
               className={styles.backButton}
               aria-label="Previous step"
             >
-              <FontAwesomeIcon icon={faChevronLeft} style={{ fontSize: '12px' }} aria-hidden="true" />
+              <Icon name="chevron-left" variant="solid" size="sm" />
             </button>
             <div className={styles.progressDots}>
               <div className={styles.dotActive} />
@@ -230,14 +229,14 @@ function WizardTemplate() {
               className={styles.nextButton}
             >
               Next
-              <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '12px' }} aria-hidden="true" />
+              <Icon name="chevron-right" variant="solid" size="sm" />
             </button>
             </div>
           </div>
         </div>
         {/* Right Image Area */}
         <div className={styles.imageAreaGray}>
-          <FontAwesomeIcon icon={faImage} className={styles.imageIcon} />
+          <Icon name="copy" size="xl" />
         </div>
       </div>
     </div>
@@ -322,7 +321,7 @@ function WizardTemplate() {
               className={styles.backButton}
               aria-label="Previous step"
             >
-              <FontAwesomeIcon icon={faChevronLeft} style={{ fontSize: '12px' }} aria-hidden="true" />
+              <Icon name="chevron-left" variant="solid" size="sm" />
             </button>
             <div className={styles.progressDots}>
               <div className={styles.dot} />
@@ -337,7 +336,7 @@ function WizardTemplate() {
               className={styles.nextButton}
             >
               Next
-              <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: '12px' }} aria-hidden="true" />
+              <Icon name="chevron-right" variant="solid" size="sm" />
             </button>
       </div>
     </div>
@@ -497,7 +496,7 @@ function WizardTemplate() {
           {/* Decorative paper plane background */}
           <div className={styles.decorativeBackground}>
             <div className={styles.decorativePlane}>
-              <FontAwesomeIcon icon={faImage} className={styles.decorativePlaneIcon} aria-hidden="true" />
+              <Icon name="copy" size="xl" />
             </div>
           </div>
 
@@ -530,7 +529,7 @@ function WizardTemplate() {
                 {/* Icon container */}
                 <div className={styles.iconContainer}>
                   <div className={styles.iconBox}>
-                    <FontAwesomeIcon icon={faImage} className={styles.iconBoxIcon} aria-hidden="true" />
+                    <Icon name="copy" size="xl" />
                   </div>
                 </div>
 
@@ -560,7 +559,7 @@ function WizardTemplate() {
         {/* Decorative paper plane background */}
         <div className={styles.decorativeBackground}>
           <div className={styles.decorativePlane}>
-            <FontAwesomeIcon icon={faImage} className={styles.decorativePlaneIcon} />
+            <Icon name="copy" size="xl" />
           </div>
         </div>
 
