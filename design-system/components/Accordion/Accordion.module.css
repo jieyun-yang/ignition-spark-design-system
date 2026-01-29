@@ -22,7 +22,7 @@
 /* Header Button */
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-4);
   padding: var(--spacing-4);
   width: 100%;
@@ -58,6 +58,15 @@
   color: var(--color-gray-500);
 }
 
+/* Size-specific stepper alignment */
+.size-small .stepper {
+  margin-top: calc((var(--font-size-base) * 1.5 - var(--spacing-6)) / 2); /* Center with 14px/21px text */
+}
+
+.size-large .stepper {
+  margin-top: calc((var(--font-size-md) * 1.5 - var(--spacing-6)) / 2); /* Center with 20px/30px text */
+}
+
 /* Title Wrapper */
 .titleWrapper {
   flex: 1;
@@ -69,7 +78,7 @@
 
 .titleRow {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: var(--spacing-2);
 }
 
@@ -137,11 +146,13 @@
 .size-small .iconWrapper {
   width: var(--spacing-4);
   height: var(--spacing-4);
+  margin-top: calc((var(--font-size-base) * 1.5 - var(--spacing-4)) / 2); /* Center with 14px/21px text */
 }
 
 .size-large .iconWrapper {
   width: var(--spacing-6);
   height: var(--spacing-6);
+  margin-top: calc((var(--font-size-md) * 1.5 - var(--spacing-6)) / 2); /* Center with 20px/30px text */
 }
 
 /* Chevron */

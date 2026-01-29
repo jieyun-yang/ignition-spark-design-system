@@ -5,23 +5,7 @@
  */
 
 import { useState } from 'react';
-import { Card, CardContainer, Accordion, Modal, Banner, Overlayer, Popover, Drawer } from '../design-system';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faClipboard,
-  faFile,
-  faPencil,
-  faClock,
-  faCheck,
-  faTriangleExclamation,
-  faPaperPlane,
-  faSignature,
-  faVideo,
-  faEdit,
-  faTrash,
-  faDownload,
-} from '@fortawesome/pro-regular-svg-icons';
+import { Card, CardContainer, Accordion, Modal, Banner, Overlayer, Popover, Drawer, Icon, Illustration } from '../design-system';
 import './App.css';
 
 function ContainersDemo() {
@@ -85,7 +69,7 @@ function ContainersDemo() {
                 heading="Heading"
                 action={{
                   label: 'Action',
-                  icon: <FontAwesomeIcon icon={faPencil} />,
+                  icon: <Icon name="copy" />,
                   onClick: () => console.log('Action clicked')
                 }}
               >
@@ -247,12 +231,7 @@ function ContainersDemo() {
                 }}
                 onClose={() => console.log('Closed')}
                 image={
-                  <div style={{
-                    fontSize: '64px',
-                    textAlign: 'center'
-                  }}>
-                    <FontAwesomeIcon icon={faClock} />
-                  </div>
+                  <Illustration name="product-icon-clock" width={200} height={100} />
                 }
               >
                 Content goes here....
@@ -375,7 +354,7 @@ function ContainersDemo() {
             size="medium"
             primaryAction={{
               label: 'Create',
-              icon: <FontAwesomeIcon icon={faCheck} />,
+              icon: <Icon name="check" variant="solid" />,
               onClick: () => {
                 console.log('Created!');
                 setModalOpen(false);
@@ -397,10 +376,10 @@ function ContainersDemo() {
             title="Verb noun?"
             size="xsmall"
             variant="confirmation"
-            headerIcon={<FontAwesomeIcon icon={faTriangleExclamation} style={{ color: '#d97706' }} />}
+            headerIcon={<Icon name="triangle-exclamation" />}
             primaryAction={{
               label: 'Verb',
-              icon: <FontAwesomeIcon icon={faCheck} />,
+              icon: <Icon name="check" variant="solid" />,
               onClick: () => {
                 console.log('Confirmed!');
                 setConfirmModalOpen(false);
@@ -425,7 +404,7 @@ function ContainersDemo() {
             variant="context"
             primaryAction={{
               label: 'Verb',
-              icon: <FontAwesomeIcon icon={faCheck} />,
+              icon: <Icon name="check" variant="solid" />,
               onClick: () => {
                 console.log('Context action completed!');
                 setContextModalOpen(false);
@@ -490,7 +469,7 @@ function ContainersDemo() {
                 fontSize: '48px',
                 color: '#5a51e7'
               }}>
-                <FontAwesomeIcon icon={faStar} />
+                <Icon name="gift" variant="solid" size="xl" />
               </div>
             }
             primaryAction={{
@@ -513,19 +492,19 @@ function ContainersDemo() {
               <p style={{ fontWeight: 700, marginBottom: '8px' }}>Upgrade and get more features like:</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                  <FontAwesomeIcon icon={faPaperPlane} style={{ marginTop: '2px', fontSize: '12px' }} />
+                  <Icon name="check" variant="solid" size="sm" />
                   <p><strong>Branded emails</strong> that look professional and build trust.</p>
                 </div>
                 <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                  <FontAwesomeIcon icon={faClock} style={{ marginTop: '2px', fontSize: '12px' }} />
+                  <Icon name="check" variant="solid" size="sm" />
                   <p><strong>Bulk proposal renewals</strong> that save you time.</p>
                 </div>
                 <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                  <FontAwesomeIcon icon={faSignature} style={{ marginTop: '2px', fontSize: '12px' }} />
+                  <Icon name="check" variant="solid" size="sm" />
                   <p><strong>Multiple e-signatures</strong> making it easy to stay compliant.</p>
                 </div>
                 <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                  <FontAwesomeIcon icon={faVideo} style={{ marginTop: '2px', fontSize: '12px' }} />
+                  <Icon name="check" variant="solid" size="sm" />
                   <p><strong>Videos in proposals</strong> for a personalized touch.</p>
                 </div>
               </div>
@@ -702,23 +681,19 @@ function ContainersDemo() {
             badge="NEW"
             primaryAction={{
               label: 'Primary',
-              icon: faCheck,
               onClick: () => alert('Primary action clicked!'),
             }}
             moreActions={[
               {
                 label: 'Edit',
-                icon: faEdit,
                 onClick: () => alert('Edit clicked!'),
               },
               {
                 label: 'Download',
-                icon: faDownload,
                 onClick: () => alert('Download clicked!'),
               },
               {
                 label: 'Delete',
-                icon: faTrash,
                 onClick: () => alert('Delete clicked!'),
               },
             ]}

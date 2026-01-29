@@ -19,34 +19,7 @@ import { IgnitionLogo } from '../../design-system/components/Card/assets';
 import { Drawer } from '../../design-system/components/Drawer';
 import { Alert } from '../../design-system/components/Alert';
 import { CardContainer } from '../../design-system/components/CardContainer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faFilter } from '@fortawesome/free-solid-svg-icons';
-import {
-  faHome,
-  faChartLine,
-  faFileInvoice,
-  faCreditCard,
-  faUsers,
-  faList,
-  faFolder,
-  faGripVertical,
-  faGear,
-  faQuestionCircle,
-  faArrowUpFromBracket,
-  faArrowDownToBracket,
-  faPaperPlane,
-  faArrowsRotate,
-  faDollarSign,
-  faEllipsis,
-  faEye,
-  faPenToSquare,
-  faCopy,
-  faTrash,
-  faCheck,
-  faEnvelope,
-  faCircleExclamation
-} from '@fortawesome/pro-light-svg-icons';
-import { faClipboard } from '@fortawesome/pro-regular-svg-icons';
+import { Icon } from '../../design-system';
 import '../App.css';
 import styles from './ProposalsTemplate.module.css';
 import drawerStyles from './ProposalDrawer.module.css';
@@ -301,13 +274,13 @@ function ProposalsTemplate() {
           onClick: () => console.log('Create clicked')
         }}
         group1Items={[
-          { id: 'home', label: 'Home', icon: <FontAwesomeIcon icon={faHome} />, onClick: () => console.log('Home clicked') },
-          { id: 'deals', label: 'Deals', icon: <FontAwesomeIcon icon={faChartLine} />, onClick: () => console.log('Deals clicked') },
-          { id: 'proposals', label: 'Proposals', icon: <FontAwesomeIcon icon={faFileInvoice} />, active: true, onClick: () => console.log('Proposals clicked') },
+          { id: 'home', label: 'Home', icon: <Icon name="house" variant="light" />, onClick: () => console.log('Home clicked') },
+          { id: 'deals', label: 'Deals', icon: <Icon name="briefcase" variant="light" />, onClick: () => console.log('Deals clicked') },
+          { id: 'proposals', label: 'Proposals', icon: <Icon name="file-lines" variant="light" />, active: true, onClick: () => console.log('Proposals clicked') },
           {
             id: 'payments',
             label: 'Payments',
-            icon: <FontAwesomeIcon icon={faCreditCard} />,
+            icon: <Icon name="credit-card" variant="light" />,
             onClick: () => console.log('Payments clicked'),
             subItems: [
               { id: 'all-payments', label: 'All payments', onClick: () => console.log('All payments') },
@@ -317,13 +290,13 @@ function ProposalsTemplate() {
           }
         ]}
         group2Items={[
-          { id: 'clients', label: 'Clients', icon: <FontAwesomeIcon icon={faUsers} />, onClick: () => console.log('Clients clicked') },
-          { id: 'services', label: 'Services', icon: <FontAwesomeIcon icon={faList} />, onClick: () => console.log('Services clicked') },
-          { id: 'forms', label: 'Forms', icon: <FontAwesomeIcon icon={faClipboard} />, onClick: () => console.log('Forms clicked') },
+          { id: 'clients', label: 'Clients', icon: <Icon name="users" variant="light" />, onClick: () => console.log('Clients clicked') },
+          { id: 'services', label: 'Services', icon: <Icon name="gear" variant="light" />, onClick: () => console.log('Services clicked') },
+          { id: 'forms', label: 'Forms', icon: <Icon name="file-lines" variant="light" />, onClick: () => console.log('Forms clicked') },
           {
             id: 'templates',
             label: 'Templates',
-            icon: <FontAwesomeIcon icon={faFolder} />,
+            icon: <Icon name="folder" variant="light" />,
             onClick: () => console.log('Templates clicked'),
             subItems: [
               { id: 'proposals', label: 'Proposals', onClick: () => console.log('Proposals') },
@@ -334,11 +307,11 @@ function ProposalsTemplate() {
           }
         ]}
         group3Items={[
-          { id: 'apps', label: 'Apps', icon: <FontAwesomeIcon icon={faGripVertical} />, onClick: () => console.log('Apps clicked') },
+          { id: 'apps', label: 'Apps', icon: <Icon name="grid-2" variant="light" />, onClick: () => console.log('Apps clicked') },
           {
             id: 'settings',
             label: 'Settings',
-            icon: <FontAwesomeIcon icon={faGear} />,
+            icon: <Icon name="gear" variant="light" />,
             onClick: () => console.log('Settings clicked'),
             subItems: [
               { id: 'general', label: 'General', onClick: () => console.log('General') },
@@ -352,7 +325,7 @@ function ProposalsTemplate() {
           {
             id: 'help',
             label: 'Help',
-            icon: <FontAwesomeIcon icon={faQuestionCircle} />,
+            icon: <Icon name="circle-question" variant="light" />,
             onClick: () => console.log('Help clicked'),
             subItems: [
               { id: 'support-portal', label: 'Support portal', onClick: () => console.log('Support portal') },
@@ -379,21 +352,19 @@ function ProposalsTemplate() {
               <Button
                 hierarchy="tertiary"
                 size="medium"
-                iconLeft={<FontAwesomeIcon icon={faArrowUpFromBracket} />}
               >
                 Export
               </Button>
               <Button
                 hierarchy="tertiary"
                 size="medium"
-                iconLeft={<FontAwesomeIcon icon={faArrowDownToBracket} />}
               >
                 Import
               </Button>
               <Button
                 hierarchy="primary"
                 size="medium"
-                iconLeft={<FontAwesomeIcon icon={faPlus} />}
+                iconLeft={<Icon name="plus" variant="solid" />}
               >
                 New proposal
               </Button>
@@ -423,7 +394,7 @@ function ProposalsTemplate() {
           <Button
             hierarchy="secondary"
             size="medium"
-            iconLeft={<FontAwesomeIcon icon={faFilter} />}
+            iconLeft={<Icon name="sliders" />}
           >
             Filters
           </Button>
@@ -436,7 +407,6 @@ function ProposalsTemplate() {
             hierarchy="secondary"
             size="medium"
             disabled={selectedRows.length === 0}
-            iconLeft={<FontAwesomeIcon icon={faPaperPlane} />}
           >
             Send
           </Button>
@@ -444,7 +414,6 @@ function ProposalsTemplate() {
             hierarchy="secondary"
             size="medium"
             disabled={selectedRows.length === 0}
-            iconLeft={<FontAwesomeIcon icon={faArrowsRotate} />}
           >
             Renew
           </Button>
@@ -452,7 +421,6 @@ function ProposalsTemplate() {
             hierarchy="secondary"
             size="medium"
             disabled={selectedRows.length === 0}
-            iconLeft={<FontAwesomeIcon icon={faDollarSign} />}
           >
             Adjust pricing
           </Button>
@@ -460,7 +428,7 @@ function ProposalsTemplate() {
             hierarchy="secondary"
             size="medium"
             disabled={selectedRows.length === 0}
-            iconLeft={<FontAwesomeIcon icon={faEllipsis} />}
+            iconLeft={<Icon name="ellipsis-vertical" />}
           >
             More actions
           </Button>
@@ -478,10 +446,10 @@ function ProposalsTemplate() {
         showActions={true}
         onRowClick={handleRowClick}
         getActionMenuOptions={(row) => [
-          { value: 'view', label: 'View details', icon: faEye },
-          { value: 'edit', label: 'Edit proposal', icon: faPenToSquare },
-          { value: 'duplicate', label: 'Duplicate', icon: faCopy },
-          { value: 'delete', label: 'Delete', icon: faTrash, destructive: true }
+          { value: 'view', label: 'View details' },
+          { value: 'edit', label: 'Edit proposal' },
+          { value: 'duplicate', label: 'Duplicate' },
+          { value: 'delete', label: 'Delete', destructive: true }
         ]}
       />
 
@@ -509,7 +477,7 @@ function ProposalsTemplate() {
               {selectedProposal.status === 'lost' && (
                 <Alert
                   status="warning"
-                  icon={<FontAwesomeIcon icon={faCircleExclamation} />}
+                  icon={<Icon name="triangle-exclamation" />}
                   className={drawerStyles.warningAlert}
                 >
                   Proposal expired on 24 September 2025 12:00 AM
@@ -536,13 +504,12 @@ function ProposalsTemplate() {
           }
           primaryAction={{
             label: selectedProposal.status === 'lost' ? 'Resend' : selectedProposal.status === 'draft' ? 'Send' : selectedProposal.status === 'awaiting' ? 'Resend' : 'Accept on behalf',
-            icon: faEnvelope,
             onClick: () => alert(`${selectedProposal.status === 'lost' || selectedProposal.status === 'draft' || selectedProposal.status === 'awaiting' ? 'Resend' : 'Accept on behalf'} clicked`),
           }}
           moreActions={[
-            { label: 'Edit', icon: faPenToSquare, onClick: () => alert('Edit clicked') },
-            { label: 'Duplicate', icon: faCopy, onClick: () => alert('Duplicate clicked') },
-            { label: 'Delete', icon: faTrash, onClick: () => alert('Delete clicked') },
+            { label: 'Edit', onClick: () => alert('Edit clicked') },
+            { label: 'Duplicate', onClick: () => alert('Duplicate clicked') },
+            { label: 'Delete', onClick: () => alert('Delete clicked') },
           ]}
           tabs={[
             { id: 'details', label: 'Details' },

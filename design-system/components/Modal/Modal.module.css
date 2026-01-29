@@ -110,10 +110,10 @@
 .title {
   flex: 1;
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
-  color: var(--color-gray-900);
+  font-size: var(--font-size-md) !important; /* 20px - Figma spec, !important to override global h2 styles */
+  font-weight: var(--font-weight-medium) !important;
+  line-height: var(--line-height-normal) !important;
+  color: var(--color-gray-900) !important;
   margin: 0;
   min-width: 0;
   border-bottom: none !important;
@@ -150,7 +150,7 @@
 
 .caption {
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base); /* 14px - Figma: subtitle text */
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
   color: var(--color-gray-700);
