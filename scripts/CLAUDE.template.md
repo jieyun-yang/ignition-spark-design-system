@@ -4,7 +4,7 @@ You are helping build prototypes using the Ignition Spark Design System.
 
 ## Critical Rules
 
-1. **USE EXISTING COMPONENTS** - Import from `@ignition/spark-design-system`, never create new UI components
+1. **USE EXISTING COMPONENTS** - Import from `ignition-spark-design-system`, never create new UI components
 2. **USE DESIGN TOKENS** - Never hardcode colors (#hex), spacing (px), or typography values
 3. **NEVER MODIFY node_modules** - All prototype code goes in `src/` folder
 
@@ -13,15 +13,15 @@ You are helping build prototypes using the Ignition Spark Design System.
 Ensure these are in place:
 ```tsx
 // In your main entry file (main.tsx or App.tsx)
-import '@ignition/spark-design-system/styles.css';
+import 'ignition-spark-design-system/styles.css';
 ```
 
 ## Before Building
 
 Read these documentation files for component APIs and guidelines:
-- `node_modules/@ignition/spark-design-system/design-system/COMPONENTS.md` - All 52 components and their APIs
-- `node_modules/@ignition/spark-design-system/design-system/TOKENS.md` - Full tokens reference
-- `node_modules/@ignition/spark-design-system/design-system/AI-PROTOTYPING.md` - Detailed prompts and examples
+- `node_modules/ignition-spark-design-system/design-system/COMPONENTS.md` - All 52 components and their APIs
+- `node_modules/ignition-spark-design-system/design-system/TOKENS.md` - Full tokens reference
+- `node_modules/ignition-spark-design-system/design-system/AI-PROTOTYPING.md` - Detailed prompts and examples
 
 ### Quick Token Reference
 
@@ -81,13 +81,13 @@ Read these documentation files for component APIs and guidelines:
 - **Provide tooltips for icon-only buttons**
 
 ### Icon Guidelines
-- See `node_modules/@ignition/spark-design-system/design-system/components/Icon/GUIDELINES.md` for full icon list and usage rules
+- See `node_modules/ignition-spark-design-system/design-system/components/Icon/GUIDELINES.md` for full icon list and usage rules
 
 ## Component Import Pattern
 
 ```tsx
 // CORRECT
-import { Button, Card, Table, Alert } from '@ignition/spark-design-system';
+import { Button, Card, Table, Alert } from 'ignition-spark-design-system';
 
 // WRONG - don't create your own
 const Button = () => <button>...</button>;
@@ -101,7 +101,7 @@ style={{ color: 'var(--color-primary-500)' }}
 style={{ padding: 'var(--spacing-4)' }}
 
 // For JS token values:
-import { colors, spacing } from '@ignition/spark-design-system/tokens';
+import { colors, spacing } from 'ignition-spark-design-system/tokens';
 colors.primary[500]     // #5A51E7
 spacing[4]              // 16
 
@@ -131,7 +131,7 @@ padding: '16px'         // Don't do this
 Use the `Icon` component for all icons. Icons are locally bundled SVGs (no external dependencies).
 
 ```tsx
-import { Icon } from '@ignition/spark-design-system';
+import { Icon } from 'ignition-spark-design-system';
 
 // Regular variant (default) - use for most UI elements
 <Icon name="circle-info" />
@@ -172,7 +172,7 @@ src/
 
 ## Key Documentation
 
-For detailed information, read these files in node_modules/@ignition/spark-design-system/:
+For detailed information, read these files in node_modules/ignition-spark-design-system/:
 - `design-system/COMPONENTS.md` - Component APIs and props
 - `design-system/TOKENS.md` - Complete tokens reference
 - `design-system/AI-PROTOTYPING.md` - Detailed prompts and examples

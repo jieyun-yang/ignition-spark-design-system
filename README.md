@@ -19,15 +19,15 @@ Then in your app:
 
 ```tsx
 // Import styles (once, in your entry file)
-import '@ignition/spark-design-system/styles.css';
+import 'ignition-spark-design-system/styles.css';
 
 // Import components
-import { Button, Card, Alert } from '@ignition/spark-design-system';
+import { Button, Card, Alert } from 'ignition-spark-design-system';
 ```
 
 **Update to latest:**
 ```bash
-npm update @ignition/spark-design-system
+npm update ignition-spark-design-system
 ```
 
 ### Option B: Clone This Repo

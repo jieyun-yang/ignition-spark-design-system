@@ -1,5 +1,5 @@
 {
-  "name": "@ignition/spark-design-system",
+  "name": "ignition-spark-design-system",
   "version": "1.0.0",
   "description": "Comprehensive React + TypeScript design system with 53 components. 100% token-based architecture.",
   "main": "./dist/index.js",

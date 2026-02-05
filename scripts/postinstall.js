@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Postinstall script for @ignition/spark-design-system
+ * Postinstall script for ignition-spark-design-system
  * Copies CLAUDE.md to the consumer project root for AI-assisted development
  */
 
@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Find the consumer project root (where npm install was run)
-// This is typically 3 levels up from node_modules/@ignition/spark-design-system/scripts/
+// This is typically 3 levels up from node_modules/ignition-spark-design-system/scripts/
 function findProjectRoot() {
   let current = process.cwd();
 
