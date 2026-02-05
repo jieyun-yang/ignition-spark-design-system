@@ -2,7 +2,7 @@
 
 /**
  * Postinstall script for ignition-spark-design-system
- * Copies CLAUDE.md to the consumer project root for AI-assisted development
+ * Copies CLAUDE.md and AGENTS.md to the consumer project root for AI-assisted development
  */
 
 import fs from 'fs';
@@ -30,25 +30,43 @@ function findProjectRoot() {
 function main() {
   const projectRoot = findProjectRoot();
   const sourcePath = path.join(__dirname, 'CLAUDE.template.md');
-  const destPath = path.join(projectRoot, 'CLAUDE.md');
-
-  // Don't overwrite if CLAUDE.md already exists
-  if (fs.existsSync(destPath)) {
-    console.log('  CLAUDE.md already exists in project root, skipping...');
-    return;
-  }
 
   // Don't run if we're in the design system repo itself
   if (fs.existsSync(path.join(projectRoot, 'design-system', 'index.ts'))) {
     return;
   }
 
+  // Files to create (same content, different names for different AI tools)
+  const destFiles = [
+    { name: 'CLAUDE.md', desc: 'Claude Code' },
+    { name: 'AGENTS.md', desc: 'other AI tools' }
+  ];
+
   try {
-    if (fs.existsSync(sourcePath)) {
-      fs.copyFileSync(sourcePath, destPath);
+    if (!fs.existsSync(sourcePath)) {
+      return;
+    }
+
+    const created = [];
+    const skipped = [];
+
+    for (const file of destFiles) {
+      const destPath = path.join(projectRoot, file.name);
+      if (fs.existsSync(destPath)) {
+        skipped.push(file.name);
+      } else {
+        fs.copyFileSync(sourcePath, destPath);
+        created.push(file.name);
+      }
+    }
+
+    if (created.length > 0) {
       console.log('');
-      console.log('  ✓ Created CLAUDE.md with AI prototyping guidelines');
+      console.log(`  ✓ Created ${created.join(' and ')} with AI prototyping guidelines`);
       console.log('');
+    }
+    if (skipped.length > 0) {
+      console.log(`  ${skipped.join(', ')} already exists, skipping...`);
     }
   } catch (error) {
     // Silently fail - postinstall should not break npm install
