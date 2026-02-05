@@ -103,6 +103,32 @@ For broader design decisions, see `./design-system/guidelines/`:
 - **Use design tokens** - never hardcode values (Colours/Spacing guidelines)
 - **Provide tooltips for icon-only buttons** (Button/Icons guidelines)
 
+### When to Read Guidelines
+
+**Decision Points - Read When Unsure About:**
+
+| Decision | Read |
+|----------|------|
+| Which component? (Modal vs Drawer?) | `COMPONENTS.md` |
+| Button hierarchy on a page | `guidelines/foundations/icons.md` + component docs |
+| Writing labels, errors, empty states | `guidelines/content/grammar.md`, `guidelines/content/our-voice.md` |
+| Color choices beyond tokens | `guidelines/foundations/colours.md` |
+| Complex flows (wizards, errors) | `guidelines/patterns/` |
+| Page structure | `guidelines/layouts/layout-anatomy.md` |
+
+**Mandatory Reads For:**
+
+- **New pages/screens**: `guidelines/layouts/layout-anatomy.md`
+- **Forms**: `guidelines/patterns/error-handling.md` + component docs
+- **User-facing copy**: `guidelines/content/grammar.md`, `guidelines/content/our-voice.md`
+- **Icons**: `design-system/components/Icon/GUIDELINES.md`
+
+**Skip Guidelines When:**
+
+- Simple token lookups → use Quick Reference tables above
+- Copying patterns from existing code in this project
+- Using components you've used before with known props
+
 ## Component Import Pattern
 
 ```tsx
