@@ -37,7 +37,8 @@ import 'ignition-spark-design-system/styles.css';
 1. **USE EXISTING COMPONENTS** - Import from `ignition-spark-design-system`, never create new UI components
 2. **USE DESIGN TOKENS** - Never hardcode colors (#hex), spacing (px), or typography values
 3. **NEVER MODIFY node_modules** - All prototype code goes in `src/` folder
-4. **CHECK GUIDELINES WHEN UNCERTAIN** - See "When to Read Guidelines" below
+4. **FOLLOW EXISTING PATTERNS** - Reference templates for correct component usage
+5. **CHECK GUIDELINES WHEN UNCERTAIN** - See "When to Read Guidelines" below
 
 ## When to Read Guidelines
 
@@ -70,10 +71,15 @@ Guidelines are in `node_modules/ignition-spark-design-system/design-system/`.
 
 ## Before Building
 
-Read these documentation files for component APIs and guidelines:
-- `node_modules/ignition-spark-design-system/design-system/COMPONENTS.md` - All 52 components and their APIs
-- `node_modules/ignition-spark-design-system/design-system/TOKENS.md` - Full tokens reference
-- `node_modules/ignition-spark-design-system/design-system/AI-PROTOTYPING.md` - Detailed prompts and examples
+**Read these files first** (in `node_modules/ignition-spark-design-system/`):
+- `design-system/COMPONENTS.md` - All 52 components and their APIs
+- `design-system/TOKENS.md` - Full tokens reference
+- `src/templates/` - **Reference implementations with correct patterns**
+
+**For component implementation details**, read the source files:
+- `design-system/components/Button/Button.tsx` - See props like `iconLeft`, `iconRight`
+- `design-system/components/Icon/Icon.tsx` - See available icon names
+- `design-system/components/SideNav/SideNav.tsx` - See nav structure
 
 ### Quick Token Reference
 
