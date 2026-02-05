@@ -9,12 +9,9 @@
   "files": [
     "design-system",
     "README.md",
-    "AI-PROMPT-GUIDE.md",
-    "AI-PROMPT-EXAMPLES.md",
-    "INSTALLATION.md",
-    "COMPONENTS.md",
-    "DESIGN-SYSTEM.md",
-    "ILLUSTRATIONS_GUIDE.md"
+    "AGENTS.md",
+    "CLAUDE.md",
+    "SETUP-GUIDE.md"
   ],
   "exports": {
     ".": {

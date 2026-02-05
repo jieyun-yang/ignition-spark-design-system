@@ -2,35 +2,30 @@
 
 A comprehensive React + TypeScript design system with 52 components and 100% token-based architecture.
 
-## Installation Options
+## Installation
 
-### Option A: Use in Your Own Project (Recommended)
+### Recommended: Clone as Subfolder
 
-Install the design system in any React project:
+Clone this repository as a subfolder in your project:
 
 ```bash
-# Install from GitHub
-npm install github:jieyun-yang/ignition-spark-design-system
-
-# CLAUDE.md is auto-created with AI guidelines
+# From your project root
+git clone <repo-url> design-system
 ```
 
-Then in your app:
+Then import components:
 
 ```tsx
 // Import styles (once, in your entry file)
-import 'ignition-spark-design-system/styles.css';
+import './design-system/design-system/tokens/tokens.css';
 
 // Import components
-import { Button, Card, Alert } from 'ignition-spark-design-system';
+import { Button, Card, Alert } from './design-system/design-system';
 ```
 
-**Update to latest:**
-```bash
-npm update ignition-spark-design-system
-```
+The `AGENTS.md` and `CLAUDE.md` files provide AI guidelines for tools like Claude Code and Cursor.
 
-### Option B: Clone This Repo
+### Alternative: Development Setup
 
 For working on the design system itself or running the demo:
 
@@ -53,32 +48,29 @@ npm run dev
 - Colors, spacing, typography, shadows
 - Available as CSS variables and JS exports
 
-**AI Guidelines:**
-- CLAUDE.md auto-created on install
-- Teaches AI tools how to use the design system correctly
+**Guidelines:**
+- Component-specific guidelines in each component folder
+- General guidelines in `design-system/guidelines/`
+- Content, foundations, patterns, and layouts
 
-## AI-Assisted Prototyping
-
-When you install via npm, `CLAUDE.md` is automatically created in your project root. This file:
-
-- Tells AI tools (Claude Code, Cursor) to use design system components
+**AI-Ready:**
+- `AGENTS.md` / `CLAUDE.md` teach AI tools to use components correctly
 - Prevents hardcoded colors/spacing
-- Keeps prototype code in `src/`, not in `node_modules/`
+- References templates and patterns
 
 ## Documentation
 
 - [COMPONENTS.md](design-system/COMPONENTS.md) - Component API reference
 - [TOKENS.md](design-system/TOKENS.md) - Design tokens reference
-- [AI-PROTOTYPING.md](design-system/AI-PROTOTYPING.md) - AI prompts & examples
+- [AI-PROTOTYPING.md](design-system/AI-PROTOTYPING.md) - AI prompts and examples
+- [Guidelines](design-system/guidelines/) - Design guidelines
 
 ## Development
 
-To work on the design system itself:
-
 ```bash
 npm run dev          # Start dev server with demo
-npm run build:lib    # Build for distribution
 npm run test         # Run tests
+npm run typecheck    # Type checking
 ```
 
 ## Demo
