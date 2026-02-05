@@ -16,6 +16,7 @@ playwright-report/
 *.tmp
 
 # Production
+dist
 dist-ssr
 *.local
 
@@ -51,4 +52,3 @@ lerna-debug.log*
 .DS_Store
 Thumbs.db
 kit-*/
-*.png
