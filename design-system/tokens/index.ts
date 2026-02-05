@@ -4,6 +4,9 @@
  * Central export for all design tokens
  */
 
+// Import CSS tokens to ensure they're bundled
+import './tokens.css';
+
 import { colors } from './colors';
 import { spacing } from './spacing';
 import { typography } from './typography';

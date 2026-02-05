@@ -4,6 +4,9 @@
  * Central export point for all components, tokens, and utilities
  */
 
+// CSS Tokens (must be first to define CSS custom properties)
+import './tokens/tokens.css';
+
 // Tokens
 export { tokens, colors, spacing, typography, borders, shadows, illustrations } from './tokens';
 export type { Colors, Spacing, Typography, Borders, Shadows, Illustrations } from './tokens';
