@@ -10,7 +10,7 @@ Install the design system in any React project:
 
 ```bash
 # Install from GitHub
-npm install github:your-org/ignition-spark-design-system
+npm install github:jieyun-yang/ignition-spark-design-system
 
 # CLAUDE.md is auto-created with AI guidelines
 ```

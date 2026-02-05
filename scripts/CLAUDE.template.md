@@ -2,19 +2,41 @@
 
 You are helping build prototypes using the Ignition Spark Design System.
 
+## Installation & Updates
+
+**New project setup:**
+```bash
+# 1. Create React + TypeScript project
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+
+# 2. Install design system
+npm install github:jieyun-yang/ignition-spark-design-system
+
+# 3. CLAUDE.md is auto-created with these instructions
+```
+
+**Add to existing project:**
+```bash
+npm install github:jieyun-yang/ignition-spark-design-system
+```
+
+**Update to latest version:**
+```bash
+npm update ignition-spark-design-system
+```
+
+**Required setup in code:**
+```tsx
+// Add to main.tsx or App.tsx (once)
+import 'ignition-spark-design-system/styles.css';
+```
+
 ## Critical Rules
 
 1. **USE EXISTING COMPONENTS** - Import from `ignition-spark-design-system`, never create new UI components
 2. **USE DESIGN TOKENS** - Never hardcode colors (#hex), spacing (px), or typography values
 3. **NEVER MODIFY node_modules** - All prototype code goes in `src/` folder
-
-## Setup Check
-
-Ensure these are in place:
-```tsx
-// In your main entry file (main.tsx or App.tsx)
-import 'ignition-spark-design-system/styles.css';
-```
 
 ## Before Building
 
