@@ -12,9 +12,11 @@
     "design-system/TOKENS.md",
     "design-system/AI-PROTOTYPING.md",
     "design-system/ILLUSTRATIONS_GUIDE.md",
-    "design-system/components/Icon/GUIDELINES.md",
+    "design-system/README.md",
     "design-system/components/*/GUIDELINES.md",
     "design-system/guidelines/**/*.md",
+    "design-system/illustrations/README.md",
+    "design-system/assets/logos/README.md",
     "scripts/postinstall.js",
     "scripts/CLAUDE.template.md",
     "README.md"
