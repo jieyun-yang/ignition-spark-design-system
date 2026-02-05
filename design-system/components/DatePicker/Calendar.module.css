@@ -2,6 +2,7 @@
  * Calendar Component Styles
  *
  * Calendar popover for date selection
+ * Figma: https://www.figma.com/design/pFe8ykz2F9QdvabPsTGl1L/Spark-%7C-Components?node-id=1610-6699
  */
 
 .calendar {
@@ -9,7 +10,7 @@
   border: var(--border-width-default) solid var(--color-gray-190);
   border-radius: var(--border-radius-md);
   padding: var(--spacing-2);
-  box-shadow: 0 var(--border-width-thick) var(--spacing-2) rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 1px 0px rgba(23, 30, 37, 0.31), 0px 3px 5px 0px rgba(23, 30, 37, 0.2);
   font-family: var(--font-family-primary);
 }
 
@@ -23,10 +24,10 @@
 }
 
 .monthYear {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
-  color: var(--color-gray-800);
+  color: var(--color-neutral-beige-800);
   width: var(--width-calendar-month);
 }
 
@@ -70,11 +71,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: var(--spacing-9);
+  height: var(--spacing-9);
   padding: var(--spacing-2);
-  font-size: var(--font-size-sm);
+  font-size: 13px;
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
-  color: var(--color-gray-800);
+  line-height: 20px;
+  color: var(--color-neutral-beige-800);
   text-align: center;
 }
 
@@ -89,13 +92,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: var(--spacing-9);
+  height: var(--spacing-9);
   padding: var(--spacing-2);
-  min-width: var(--spacing-36);
-  min-height: var(--spacing-36);
   border: none;
   background: transparent;
   border-radius: var(--border-radius-pill);
-  font-size: var(--font-size-sm);
+  font-size: 12px;
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
   color: var(--color-gray-800);
@@ -110,23 +113,30 @@
 /* Other month days (grayed out) */
 .day.otherMonth {
   color: var(--color-gray-500);
+  font-size: 14px;
 }
 
-/* Today */
+/* Today - purple text, bold */
 .day.today {
   color: var(--color-primary-500);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  font-size: 13px;
 }
 
-/* Selected day */
+/* Selected day - purple circle background */
 .day.selected {
   background-color: var(--color-primary-500);
   color: var(--color-white);
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
 }
 
 .day.selected:hover {
   background-color: var(--color-primary-450);
+}
+
+/* When today is also selected */
+.day.today.selected {
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
 }
