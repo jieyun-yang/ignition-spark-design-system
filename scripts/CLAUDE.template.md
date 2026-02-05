@@ -37,6 +37,36 @@ import 'ignition-spark-design-system/styles.css';
 1. **USE EXISTING COMPONENTS** - Import from `ignition-spark-design-system`, never create new UI components
 2. **USE DESIGN TOKENS** - Never hardcode colors (#hex), spacing (px), or typography values
 3. **NEVER MODIFY node_modules** - All prototype code goes in `src/` folder
+4. **CHECK GUIDELINES WHEN UNCERTAIN** - See "When to Read Guidelines" below
+
+## When to Read Guidelines
+
+Guidelines are in `node_modules/ignition-spark-design-system/design-system/`.
+
+### Decision Points - Read When Unsure About:
+
+| Decision | Read |
+|----------|------|
+| Which component? (Modal vs Drawer?) | `COMPONENTS.md` + `components/[Name]/GUIDELINES.md` |
+| Button hierarchy on a page | `components/Button/GUIDELINES.md` |
+| Writing labels, errors, empty states | `guidelines/content/grammar.md`, `guidelines/content/our-voice.md` |
+| Color choices beyond tokens | `guidelines/foundations/colours.md` |
+| Complex flows (wizards, errors) | `guidelines/patterns/` |
+| Page structure | `guidelines/layouts/layout-anatomy.md` |
+| Icon usage and selection | `components/Icon/GUIDELINES.md`, `guidelines/foundations/icons.md` |
+
+### Mandatory Reads For:
+
+- **New pages/screens**: `guidelines/layouts/layout-anatomy.md`
+- **Forms**: `guidelines/patterns/error-handling.md` + component GUIDELINES.md
+- **User-facing copy**: `guidelines/content/grammar.md`, `guidelines/content/our-voice.md`
+- **Icons**: `components/Icon/GUIDELINES.md`
+
+### Skip Guidelines When:
+
+- Simple token lookups → use Quick Reference tables below
+- Copying patterns from existing code in this project
+- Using components with known props from prior usage
 
 ## Before Building
 

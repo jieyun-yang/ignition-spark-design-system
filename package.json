@@ -13,6 +13,8 @@
     "design-system/AI-PROTOTYPING.md",
     "design-system/ILLUSTRATIONS_GUIDE.md",
     "design-system/components/Icon/GUIDELINES.md",
+    "design-system/components/*/GUIDELINES.md",
+    "design-system/guidelines/**/*.md",
     "scripts/postinstall.js",
     "scripts/CLAUDE.template.md",
     "README.md"
