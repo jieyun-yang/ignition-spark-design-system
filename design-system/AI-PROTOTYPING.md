@@ -36,7 +36,7 @@ Before writing any code:
 1. REVIEW DOCUMENTATION:
    - Read ./COMPONENTS.md (all 51 components)
    - Read ./design-system/tokens/index.ts (design tokens)
-   - Review ./src/templates/ (existing patterns)
+   - Review ./templates/ (existing patterns)
 
 2. ANALYZE MY DESIGN:
    [If I provide a Figma link, use the Figma MCP tool to analyze it]
@@ -91,7 +91,7 @@ APPROVED MAPPING:
 RULES:
 1. ✅ USE only components from ./design-system
 2. ✅ USE design tokens (NO hardcoded values)
-3. ✅ FOLLOW patterns from ./src/templates/
+3. ✅ FOLLOW patterns from ./templates/
 4. ❌ DO NOT create new UI components
 5. ❌ DO NOT hardcode colors/spacing
 6. ❌ DO NOT use inline styles
@@ -156,12 +156,12 @@ I need you to build a [DESCRIBE WHAT YOU NEED] using the Ignition Spark Design S
 CONTEXT:
 - Complete design system with 51 components in ./design-system
 - Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
+- Reference templates in ./templates/
 
 RULES:
 1. ✅ USE existing components from ./design-system
 2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
+3. ✅ FOLLOW patterns from ./templates/
 4. ❌ DO NOT create new UI components
 5. ❌ DO NOT hardcode colors/spacing
 6. ❌ DO NOT use inline styles
@@ -174,7 +174,7 @@ REQUIREMENTS:
 
 [DESCRIBE YOUR SPECIFIC NEEDS HERE]
 
-Please review ./COMPONENTS.md and ./src/templates/ before starting.
+Please review ./COMPONENTS.md and ./templates/ before starting.
 ```
 
 ---
@@ -252,7 +252,7 @@ I need you to build a User Management Dashboard using the Ignition Spark Design 
 CONTEXT:
 - Complete design system with 51 components in ./design-system
 - Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
+- Reference templates in ./templates/
 
 WHAT I NEED:
 A user management dashboard with:
@@ -267,7 +267,7 @@ A user management dashboard with:
 RULES:
 1. ✅ USE existing components from ./design-system
 2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
+3. ✅ FOLLOW patterns from ./templates/
 4. ❌ DO NOT create new UI components
 5. ❌ DO NOT hardcode colors/spacing
 
@@ -275,7 +275,7 @@ REQUIREMENTS:
 1. Use PageHeader, Table, TableHeader, Badge, Menu, Pagination, and SideNav
 2. Reference colors from design-system/tokens/colors.ts
 3. Use TypeScript interfaces for user data
-4. Follow the layout structure from ./src/templates/ProposalsTemplate.tsx
+4. Follow the layout structure from ./templates/ProposalsTemplate.tsx
 ```
 
 **When to use:** Admin dashboards, data management interfaces, list views with actions
@@ -290,7 +290,7 @@ I need you to build a Client Onboarding Form using the Ignition Spark Design Sys
 CONTEXT:
 - Complete design system with 51 components in ./design-system
 - Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
+- Reference templates in ./templates/
 
 WHAT I NEED:
 A multi-step onboarding form with:
@@ -305,13 +305,13 @@ A multi-step onboarding form with:
 RULES:
 1. ✅ USE existing components from ./design-system
 2. ✅ USE design tokens (colors, spacing, typography)
-3. ✅ FOLLOW patterns from ./src/templates/
+3. ✅ FOLLOW patterns from ./templates/
 
 REQUIREMENTS:
 1. Use ProgressStatus, TextInput, Select, Checkbox, Button, and Alert
 2. Validate all required fields before allowing "Next"
 3. Show success Alert when form is submitted
-4. Follow the wizard pattern from ./src/templates/WizardTemplate.tsx
+4. Follow the wizard pattern from ./templates/WizardTemplate.tsx
 ```
 
 **When to use:** Onboarding flows, checkout processes, configuration wizards
@@ -326,7 +326,7 @@ I need you to build a User Settings Page using the Ignition Spark Design System.
 CONTEXT:
 - Complete design system with 51 components in ./design-system
 - Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
+- Reference templates in ./templates/
 
 WHAT I NEED:
 A settings page with sections for:
@@ -356,7 +356,7 @@ I need you to build a Project Creation Workflow using the Ignition Spark Design 
 CONTEXT:
 - Complete design system with 51 components in ./design-system
 - Design tokens in ./design-system/tokens
-- Reference templates in ./src/templates/
+- Reference templates in ./templates/
 
 WHAT I NEED:
 A project listing page with:
@@ -464,7 +464,7 @@ After building the initial prototype:
 Before building, the AI should review:
 1. **./COMPONENTS.md** - Complete API documentation for all 51 components
 2. **./design-system/tokens/index.ts** - All available design tokens
-3. **./src/templates/** - Reference implementations
+3. **./templates/** - Reference implementations
 4. **./TOKENS.md** - Design system principles and usage
 
 ---

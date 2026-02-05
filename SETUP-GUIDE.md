@@ -3,7 +3,7 @@
 This guide walks you through setting up a clean Mac to work with the Ignition Spark Design System.
 
 **Supported AI Tools:**
-- **Cursor** (built-in AI) → reads `.cursorrules`
+- **Cursor** (built-in AI) → configure with `AGENTS.md` content
 - **Claude Code** (Anthropic CLI) → reads `CLAUDE.md`
 - **Codex** (OpenAI CLI) → reads `AGENTS.md`
 
@@ -18,6 +18,7 @@ This guide walks you through setting up a clean Mac to work with the Ignition Sp
 5. [MCP Setup](#5-mcp-setup) - Optional AI enhancements
 6. [Troubleshooting](#6-troubleshooting) - Common issues
 7. [Quick Reference](#7-quick-reference) - Commands and shortcuts
+8. [Creating New Prototype Projects](#8-creating-new-prototype-projects) - Use symlinks
 
 ---
 
@@ -120,7 +121,7 @@ cursor ~/Documents/ignition-spark-design-system
 
 Or use `File > Open Folder` in Cursor.
 
-**That's it!** Cursor automatically reads `.cursorrules` which contains all the design system rules.
+**Configure rules:** Go to Cursor Settings > Rules and paste the content from `AGENTS.md` to teach Cursor the design system rules.
 
 To chat with AI: Press `Cmd + K`
 
@@ -164,9 +165,8 @@ Codex automatically reads `AGENTS.md` for project rules.
 
 | File | Used By | Auto-reads? |
 |------|---------|-------------|
-| `.cursorrules` | Cursor | Yes |
 | `CLAUDE.md` | Claude Code | Yes |
-| `AGENTS.md` | Codex | Yes |
+| `AGENTS.md` | Codex, Cursor (manual) | Yes / Manual |
 | `design-system/AI-PROTOTYPING.md` | All tools | Manual (copy prompts) |
 
 ---
@@ -333,6 +333,32 @@ If you don't have FontAwesome Pro:
 3. Run `npm install` and `npm run dev`
 
 > Some icons may look different or be missing.
+
+---
+
+## 8. Creating New Prototype Projects
+
+Once the design system is set up, create new prototypes using symlinks:
+
+```bash
+# 1. Create and enter project folder
+mkdir ~/Documents/my-prototype
+cd ~/Documents/my-prototype
+
+# 2. Symlink the design system (inner folder)
+ln -s ~/Documents/ignition-spark-design-system/design-system ./design-system
+
+# 3. Copy agent instructions
+cp ~/Documents/ignition-spark-design-system/AGENTS.md ./AGENTS.md
+ln -s AGENTS.md ./CLAUDE.md
+```
+
+Then start your AI tool (Cursor, Claude Code, Codex) and ask it to set up a React project. The agent can handle `npm init`, installing dependencies, etc.
+
+**Why symlink the inner folder?**
+- Keeps import paths clean: `./design-system/COMPONENTS.md`
+- Components, tokens, and guidelines all accessible
+- Updates to central design system apply to all projects
 
 ---
 

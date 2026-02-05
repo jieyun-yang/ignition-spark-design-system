@@ -4,26 +4,32 @@ A comprehensive React + TypeScript design system with 52 components and 100% tok
 
 ## Installation
 
-### Recommended: Clone as Subfolder
+### For Prototype Projects: Symlink
+
+If you have the design system installed centrally (e.g., `~/Documents/ignition-spark-design-system`):
+
+```bash
+# From your prototype project root
+ln -s ~/Documents/ignition-spark-design-system/design-system ./design-system
+cp ~/Documents/ignition-spark-design-system/AGENTS.md ./AGENTS.md
+ln -s AGENTS.md ./CLAUDE.md
+```
+
+Then start your AI tool and ask it to set up the project. The agent instructions guide correct imports and usage.
+
+### Alternative: Clone as Subfolder
 
 Clone this repository as a subfolder in your project:
 
 ```bash
 # From your project root
-git clone <repo-url> design-system
+git clone <repo-url> spark
+ln -s spark/design-system ./design-system
+cp spark/AGENTS.md ./AGENTS.md
+ln -s AGENTS.md ./CLAUDE.md
 ```
 
-Then import components:
-
-```tsx
-// Import styles (once, in your entry file)
-import './design-system/design-system/tokens/tokens.css';
-
-// Import components
-import { Button, Card, Alert } from './design-system/design-system';
-```
-
-The `AGENTS.md` and `CLAUDE.md` files provide AI guidelines for tools like Claude Code and Cursor.
+This clones the repo and symlinks the inner folder for clean import paths. The agent instructions guide correct usage.
 
 ### Alternative: Development Setup
 

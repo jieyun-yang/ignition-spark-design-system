@@ -265,7 +265,7 @@ Located in [design-system/components/](design-system/components/)
 Pre-built complex layouts for common patterns.
 
 ### WizardTemplate
-**File:** [src/templates/WizardTemplate.tsx](src/templates/WizardTemplate.tsx)
+**File:** [templates/WizardTemplate.tsx](templates/WizardTemplate.tsx)
 
 Multi-step wizard with 5 page variants:
 - **Intro Page** - Hero with CTA (simple, detailed, default layouts)
@@ -277,7 +277,7 @@ Multi-step wizard with 5 page variants:
 **Preview:** `/wizard-template` route
 
 ### EmailTemplate
-**File:** [src/templates/EmailTemplate.tsx](src/templates/EmailTemplate.tsx)
+**File:** [templates/EmailTemplate.tsx](templates/EmailTemplate.tsx)
 
 Email layouts with 5 branding variants:
 - **Not-branded** - Ignition logo with graphics
@@ -289,7 +289,7 @@ Email layouts with 5 branding variants:
 **Preview:** `/email-template` route
 
 ### ProposalsTemplate
-**File:** [src/templates/ProposalsTemplate.tsx](src/templates/ProposalsTemplate.tsx)
+**File:** [templates/ProposalsTemplate.tsx](templates/ProposalsTemplate.tsx)
 
 Professional proposal document layout with sections, pricing tables, and signatures.
 

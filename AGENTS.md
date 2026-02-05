@@ -6,14 +6,14 @@ You are helping build prototypes using the Ignition Spark Design System.
 
 1. **USE EXISTING COMPONENTS** - Import from `./design-system`, never create new UI components
 2. **USE DESIGN TOKENS** - Never hardcode colors (#hex), spacing (px), or typography values
-3. **FOLLOW EXISTING PATTERNS** - Reference `./src/templates/` for layout patterns
+3. **FOLLOW EXISTING PATTERNS** - Reference `./design-system/templates/` for layout patterns
 
 ## Before Building
 
 Always read these files first:
 - `./design-system/COMPONENTS.md` - All 51 components and their APIs
 - `./design-system/tokens/tokens.css` - Available design tokens
-- `./src/templates/` - Reference implementations
+- `./design-system/templates/` - Reference implementations
 
 ### Quick Token Reference
 

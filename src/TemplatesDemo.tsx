@@ -5,9 +5,9 @@
  */
 
 import { useState } from 'react';
-import EmailTemplate from './templates/EmailTemplate';
-import WizardTemplate from './templates/WizardTemplate';
-import ProposalsTemplate from './templates/ProposalsTemplate';
+import EmailTemplate from '../design-system/templates/EmailTemplate';
+import WizardTemplate from '../design-system/templates/WizardTemplate';
+import ProposalsTemplate from '../design-system/templates/ProposalsTemplate';
 import ignitionLogoText from './assets/ignition-logo-text.svg';
 import ignitionStar from './assets/ignition-star.svg';
 import './App.css';
