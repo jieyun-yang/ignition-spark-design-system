@@ -2,27 +2,26 @@
   "name": "@ignition/spark-design-system",
   "version": "1.0.0",
   "description": "Comprehensive React + TypeScript design system with 53 components. 100% token-based architecture.",
-  "main": "./design-system/index.ts",
-  "module": "./design-system/index.ts",
-  "types": "./design-system/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
   "type": "module",
   "files": [
-    "design-system",
-    "README.md",
-    "AI-PROMPT-GUIDE.md",
-    "AI-PROMPT-EXAMPLES.md",
-    "INSTALLATION.md",
-    "COMPONENTS.md",
-    "DESIGN-SYSTEM.md",
-    "ILLUSTRATIONS_GUIDE.md"
+    "dist",
+    "scripts/postinstall.js",
+    "scripts/CLAUDE.template.md",
+    "README.md"
   ],
   "exports": {
     ".": {
-      "import": "./design-system/index.ts",
-      "types": "./design-system/index.ts"
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
     },
-    "./tokens": "./design-system/tokens/index.ts",
-    "./tokens.css": "./design-system/tokens/tokens.css"
+    "./tokens": {
+      "import": "./dist/tokens.js",
+      "types": "./dist/types/tokens/index.d.ts"
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "sideEffects": [
     "**/*.css"
@@ -30,6 +29,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:lib": "vite build --config vite.config.lib.ts && tsc -p tsconfig.lib.json",
+    "prepublishOnly": "npm run build:lib",
+    "postinstall": "node scripts/postinstall.js || true",
     "preview": "vite preview",
     "test": "vitest",
     "test:e2e": "playwright test",
@@ -58,13 +60,11 @@
     "url": "https://github.com/ignition/spark-design-system"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
-    "clsx": "^2.1.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "clsx": "^2.1.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
@@ -72,6 +72,8 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "playwright": "^1.56.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "typed-css-modules": "^0.9.1",
     "typescript": "^5.5.3",
     "vite": "^5.3.4",

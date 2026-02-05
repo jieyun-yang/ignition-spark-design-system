@@ -1,55 +1,86 @@
-# Ignition Spark Prototyping Toolkit
+# Ignition Spark Design System
 
-A ready-to-use environment for building prototypes with the Ignition Spark Design System.
+A comprehensive React + TypeScript design system with 52 components and 100% token-based architecture.
 
-## Quick Start
+## Installation Options
 
-1. **Setup** - Follow [SETUP-GUIDE.md](SETUP-GUIDE.md) to install dependencies
-2. **Run** - `npm run dev` to start the development server
-3. **Build** - Create your prototype in the `src/` folder
+### Option A: Use in Your Own Project (Recommended)
 
-## Project Structure
+Install the design system in any React project:
 
-```
-/
-├── /design-system       # Design system (components, tokens, docs)
-│   ├── /components      # 51 React components
-│   ├── /tokens          # Design tokens (colors, spacing, typography)
-│   ├── README.md        # Design system overview
-│   ├── COMPONENTS.md    # Component API reference
-│   ├── TOKENS.md        # Token reference
-│   └── AI-PROTOTYPING.md # AI prompts for building
-├── /src                 # Your prototype code goes here
-│   ├── /templates       # Layout templates to start from
-│   └── App.tsx          # Main entry point
-├── SETUP-GUIDE.md       # Installation instructions
-├── CLAUDE.md            # Claude Code AI context
-├── AGENTS.md            # Codex AI context
-└── .cursorrules         # Cursor AI context
+```bash
+# Install from GitHub
+npm install github:your-org/ignition-spark-design-system
+
+# CLAUDE.md is auto-created with AI guidelines
 ```
 
-## For AI-Assisted Prototyping
+Then in your app:
 
-This repo is configured for use with AI coding tools:
+```tsx
+// Import styles (once, in your entry file)
+import '@ignition/spark-design-system/styles.css';
 
-| Tool | Context File |
-|------|--------------|
-| Cursor | `.cursorrules` |
-| Claude Code | `CLAUDE.md` |
-| Codex | `AGENTS.md` |
+// Import components
+import { Button, Card, Alert } from '@ignition/spark-design-system';
+```
 
-See [design-system/AI-PROTOTYPING.md](design-system/AI-PROTOTYPING.md) for prompts and examples.
+**Update to latest:**
+```bash
+npm update @ignition/spark-design-system
+```
 
-## Design System Docs
+### Option B: Clone This Repo
 
-All design system documentation is in the `/design-system` folder:
+For working on the design system itself or running the demo:
 
-- [README.md](design-system/README.md) - Overview & component list
+```bash
+git clone <repo-url>
+cd ignition-spark-design-system
+npm install
+npm run dev
+```
+
+## What's Included
+
+**52 Components:**
+- Forms: Button, TextInput, Select, Checkbox, DatePicker, etc.
+- Data Display: Table, Card, Badge, Avatar, etc.
+- Feedback: Alert, Toast, Modal, Spinner, etc.
+- Navigation: Tabs, SideNav, Pagination, Menu, etc.
+
+**Design Tokens:**
+- Colors, spacing, typography, shadows
+- Available as CSS variables and JS exports
+
+**AI Guidelines:**
+- CLAUDE.md auto-created on install
+- Teaches AI tools how to use the design system correctly
+
+## AI-Assisted Prototyping
+
+When you install via npm, `CLAUDE.md` is automatically created in your project root. This file:
+
+- Tells AI tools (Claude Code, Cursor) to use design system components
+- Prevents hardcoded colors/spacing
+- Keeps prototype code in `src/`, not in `node_modules/`
+
+## Documentation
+
 - [COMPONENTS.md](design-system/COMPONENTS.md) - Component API reference
-- [TOKENS.md](design-system/TOKENS.md) - Design tokens
+- [TOKENS.md](design-system/TOKENS.md) - Design tokens reference
 - [AI-PROTOTYPING.md](design-system/AI-PROTOTYPING.md) - AI prompts & examples
-- [ILLUSTRATIONS_GUIDE.md](design-system/ILLUSTRATIONS_GUIDE.md) - Illustration system
+
+## Development
+
+To work on the design system itself:
+
+```bash
+npm run dev          # Start dev server with demo
+npm run build:lib    # Build for distribution
+npm run test         # Run tests
+```
 
 ## Demo
 
-Run `npm run dev` and visit http://localhost:5173 to see all components in action.
+Run `npm run dev` and visit http://localhost:5173 to see all components.
