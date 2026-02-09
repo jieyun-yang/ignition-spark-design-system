@@ -6,21 +6,21 @@
  */
 
 import { useState } from 'react';
-import { Table, TableColumn } from '../../design-system/components/Table';
-import { Badge } from '../../design-system/components/Badge';
-import { Button } from '../../design-system/components/Button';
-import { Search } from '../../design-system/components/Search';
-import { Pagination } from '../../design-system/components/Pagination';
-import { Tabs, Tab } from '../../design-system/components/Tabs';
-import { Checkbox } from '../../design-system/components/Checkbox';
-import { SideNav } from '../../design-system/components/SideNav';
-import { TemplateLayout } from '../../design-system/components/TemplateLayout';
-import { IgnitionLogo } from '../../design-system/components/Card/assets';
-import { Drawer } from '../../design-system/components/Drawer';
-import { Alert } from '../../design-system/components/Alert';
-import { CardContainer } from '../../design-system/components/CardContainer';
-import { Icon } from '../../design-system';
-import '../App.css';
+import { Table, TableColumn } from '../components/Table';
+import { Badge } from '../components/Badge';
+import { Button } from '../components/Button';
+import { Search } from '../components/Search';
+import { Pagination } from '../components/Pagination';
+import { Tabs, Tab } from '../components/Tabs';
+import { Checkbox } from '../components/Checkbox';
+import { SideNav } from '../components/SideNav';
+import { TemplateLayout } from '../components/TemplateLayout';
+import { IgnitionLogo } from '../components/Card/assets';
+import { Drawer } from '../components/Drawer';
+import { Alert } from '../components/Alert';
+import { CardContainer } from '../components/CardContainer';
+import { Icon } from '../index';
+import '../../src/App.css';
 import styles from './ProposalsTemplate.module.css';
 import drawerStyles from './ProposalDrawer.module.css';
 

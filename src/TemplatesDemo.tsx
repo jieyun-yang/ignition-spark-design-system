@@ -8,11 +8,12 @@ import { useState } from 'react';
 import EmailTemplate from '../design-system/templates/EmailTemplate';
 import WizardTemplate from '../design-system/templates/WizardTemplate';
 import ProposalsTemplate from '../design-system/templates/ProposalsTemplate';
+import ProposalEditorTemplate from '../design-system/templates/ProposalEditorTemplate';
 import ignitionLogoText from './assets/ignition-logo-text.svg';
 import ignitionStar from './assets/ignition-star.svg';
 import './App.css';
 
-type TemplateView = 'overview' | 'email' | 'wizard' | 'proposals';
+type TemplateView = 'overview' | 'email' | 'wizard' | 'proposals' | 'proposal-editor';
 
 function TemplatesDemo() {
   const [currentTemplate, setCurrentTemplate] = useState<TemplateView>('overview');
@@ -27,6 +28,10 @@ function TemplatesDemo() {
 
   if (currentTemplate === 'proposals') {
     return <ProposalsTemplate />;
+  }
+
+  if (currentTemplate === 'proposal-editor') {
+    return <ProposalEditorTemplate />;
   }
 
   return (
@@ -530,6 +535,128 @@ function TemplatesDemo() {
             }}
           >
             View Wizard Template
+          </button>
+        </section>
+
+        {/* Proposal Editor Template */}
+        <section className="section">
+          <h2>Proposal Editor Template</h2>
+          <p style={{ marginBottom: '16px', color: '#7b7d85', fontSize: '14px' }}>
+            Multi-step proposal creation wizard with General, Services, Payments, Terms, Presentations, and Send steps.
+            Perfect for complex document creation workflows.
+          </p>
+          <div style={{
+            border: '1px solid #e4e7f5',
+            borderRadius: '8px',
+            overflow: 'hidden',
+            marginBottom: '16px',
+            backgroundColor: '#f8f8fc',
+            padding: '40px 20px',
+            cursor: 'pointer'
+          }}
+          onClick={() => setCurrentTemplate('proposal-editor')}
+          >
+            {/* Proposal Editor Preview */}
+            <div style={{
+              maxWidth: '900px',
+              margin: '0 auto',
+              backgroundColor: 'white',
+              borderRadius: '8px',
+              overflow: 'hidden',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+              fontSize: '12px',
+              transform: 'scale(0.85)',
+              transformOrigin: 'top center'
+            }}>
+              {/* Header */}
+              <div style={{
+                padding: '12px 24px',
+                borderBottom: '1px solid #e4e7f5',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', color: '#7b7d85' }}>
+                  <span>New proposal</span>
+                  <span>›</span>
+                  <span style={{ color: '#1e1e20', fontWeight: 500 }}>Untitled Proposal</span>
+                </div>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <div style={{ padding: '6px 12px', border: '1px solid #e4e7f5', borderRadius: '3px', fontSize: '10px' }}>Preview</div>
+                  <div style={{ padding: '6px 12px', backgroundColor: '#5a51e7', color: 'white', borderRadius: '3px', fontSize: '10px' }}>Next →</div>
+                </div>
+              </div>
+
+              {/* Step Navigation */}
+              <div style={{
+                padding: '16px 24px',
+                borderBottom: '1px solid #e4e7f5',
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '24px'
+              }}>
+                {['General', 'Services', 'Payments', 'Terms', 'Presentations', 'Send'].map((step, i) => (
+                  <div key={step} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{
+                      width: '20px',
+                      height: '20px',
+                      borderRadius: '50%',
+                      backgroundColor: i === 0 ? '#5a51e7' : '#e4e7f5',
+                      color: i === 0 ? 'white' : '#7b7d85',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '10px',
+                      fontWeight: 500
+                    }}>
+                      {i + 1}
+                    </div>
+                    <span style={{ fontSize: '11px', color: i === 0 ? '#1e1e20' : '#7b7d85', fontWeight: i === 0 ? 500 : 400 }}>{step}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Content Preview */}
+              <div style={{ padding: '24px', backgroundColor: '#f8f8fc' }}>
+                <div style={{
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  padding: '20px',
+                  border: '1px solid #e4e7f5'
+                }}>
+                  <div style={{ fontWeight: 600, marginBottom: '12px', color: '#1e1e20' }}>Proposal</div>
+                  <div style={{
+                    padding: '8px 12px',
+                    border: '1px solid #e4e7f5',
+                    borderRadius: '4px',
+                    fontSize: '11px',
+                    color: '#7b7d85',
+                    marginBottom: '12px'
+                  }}>
+                    Proposal name...
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', color: '#7b7d85' }}>
+                    <div style={{ width: '28px', height: '14px', backgroundColor: '#08a674', borderRadius: '7px' }} />
+                    <span>Proposal auto-expires</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={() => setCurrentTemplate('proposal-editor')}
+            style={{
+              padding: '8px 16px',
+              backgroundColor: '#5a51e7',
+              color: 'white',
+              border: 'none',
+              borderRadius: '3px',
+              cursor: 'pointer',
+              fontSize: '14px',
+              fontWeight: 500
+            }}
+          >
+            View Proposal Editor Template
           </button>
         </section>
       </main>

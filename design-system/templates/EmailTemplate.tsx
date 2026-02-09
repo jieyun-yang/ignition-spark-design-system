@@ -6,10 +6,10 @@
  */
 
 import { useState } from 'react';
-import '../App.css';
+import '../../src/App.css';
 import styles from './EmailTemplate.module.css';
-import ignitionLogoText from '../assets/ignition-logo-text.svg';
-import ignitionStar from '../assets/ignition-star.svg';
+import ignitionLogoText from '../../src/assets/ignition-logo-text.svg';
+import ignitionStar from '../../src/assets/ignition-star.svg';
 
 type EmailVariant = 'not-branded' | 'branded' | 'not-branded-no-images' | 'branded-no-images' | 'branded-no-logo';
 

@@ -5,9 +5,9 @@
  */
 
 import { useState } from 'react';
-import { Icon } from '../../design-system';
-import { IgnitionLogo } from '../../design-system/components/Card/assets';
-import '../App.css';
+import { Icon } from '../index';
+import { IgnitionLogo } from '../components/Card/assets';
+import '../../src/App.css';
 import styles from './WizardTemplate.module.css';
 
 type WizardStep = 'intro' | 'form' | 'table' | 'loading' | 'transition';
