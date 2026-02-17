@@ -11,8 +11,8 @@ If you have the design system installed centrally (e.g., `~/Documents/ignition-s
 ```bash
 # From your prototype project root
 ln -s ~/Documents/ignition-spark-design-system/design-system ./design-system
-cp ~/Documents/ignition-spark-design-system/AGENTS.md ./AGENTS.md
-ln -s AGENTS.md ./CLAUDE.md
+ln -s ~/Documents/ignition-spark-design-system/AGENTS.md ./AGENTS.md
+ln -s ./AGENTS.md ./CLAUDE.md
 ```
 
 Then start your AI tool and ask it to set up the project. The agent instructions guide correct imports and usage.
@@ -25,8 +25,8 @@ Clone this repository as a subfolder in your project:
 # From your project root
 git clone <repo-url> spark
 ln -s spark/design-system ./design-system
-cp spark/AGENTS.md ./AGENTS.md
-ln -s AGENTS.md ./CLAUDE.md
+ln -s spark/AGENTS.md ./AGENTS.md
+ln -s ./AGENTS.md ./CLAUDE.md
 ```
 
 This clones the repo and symlinks the inner folder for clean import paths. The agent instructions guide correct usage.

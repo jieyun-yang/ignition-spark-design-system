@@ -348,17 +348,17 @@ cd ~/Documents/my-prototype
 # 2. Symlink the design system (inner folder)
 ln -s ~/Documents/ignition-spark-design-system/design-system ./design-system
 
-# 3. Copy agent instructions
-cp ~/Documents/ignition-spark-design-system/AGENTS.md ./AGENTS.md
-ln -s AGENTS.md ./CLAUDE.md
+# 3. Symlink agent instructions
+ln -s ~/Documents/ignition-spark-design-system/AGENTS.md ./AGENTS.md
+ln -s ./AGENTS.md ./CLAUDE.md
 ```
 
 Then start your AI tool (Cursor, Claude Code, Codex) and ask it to set up a React project. The agent can handle `npm init`, installing dependencies, etc.
 
-**Why symlink the inner folder?**
+**Why symlinks instead of copies?**
+- Updates to the central design system and agent instructions propagate to all projects automatically
 - Keeps import paths clean: `./design-system/COMPONENTS.md`
 - Components, tokens, and guidelines all accessible
-- Updates to central design system apply to all projects
 
 ---
 
