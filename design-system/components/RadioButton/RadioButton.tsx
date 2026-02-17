@@ -23,7 +23,10 @@ import styles from './RadioButton.module.css';
 
 export interface RadioButtonProps {
   /** Radio button label */
-  children: React.ReactNode;
+  children?: React.ReactNode;
+
+  /** Label text (alias for children) */
+  label?: React.ReactNode;
 
   /** Radio button name (group identifier) */
   name: string;
@@ -49,6 +52,7 @@ export interface RadioButtonProps {
 
 export const RadioButton: React.FC<RadioButtonProps> = ({
   children,
+  label,
   name,
   value,
   checked,
@@ -99,7 +103,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
       >
         {checked && <div className={styles.dot} />}
       </div>
-      <span className={styles.label}>{children}</span>
+      <span className={styles.label}>{children || label}</span>
     </label>
   );
 };

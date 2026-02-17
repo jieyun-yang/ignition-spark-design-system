@@ -28,6 +28,9 @@ export interface CheckboxProps {
   /** Label text for the checkbox */
   children?: React.ReactNode;
 
+  /** Label text (alias for children) */
+  label?: React.ReactNode;
+
   /** Checked state */
   checked: boolean;
 
@@ -63,6 +66,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (
     {
       children,
+      label,
       checked,
       indeterminate = false,
       onChange,
@@ -129,7 +133,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             <span className={styles.indeterminateIcon}>−</span>
           )}
         </span>
-        {children && <span className={styles.label}>{children}</span>}
+        {(children || label) && <span className={styles.label}>{children || label}</span>}
       </label>
     );
   }
